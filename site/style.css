@@ -39,6 +39,20 @@ main {
   letter-spacing: 0.2em;
 }
 
+.hero-brand {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.repo-icon {
+  width: clamp(74px, 13vw, 108px);
+  height: clamp(74px, 13vw, 108px);
+  border-radius: 24%;
+  object-fit: contain;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+}
+
 h1 {
   margin: 0;
   font-size: clamp(44px, 9vw, 78px);
@@ -114,6 +128,7 @@ footer {
 
 @media (max-width: 560px) {
   main { padding-top: 28px; }
+  .hero-brand { align-items: flex-start; flex-direction: column; }
   .actions { flex-direction: column; }
   .button { text-align: center; }
 }

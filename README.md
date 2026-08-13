@@ -1,4 +1,4 @@
-# IYAWAY Repo
+# Banana Repo
 
 APT repository for iOS jailbreak packages, published at <https://iyaway.github.io/>.
 

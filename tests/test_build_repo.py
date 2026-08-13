@@ -119,6 +119,8 @@ class BuildRepoTests(unittest.TestCase):
             self.assertIn("Filename: debs/demo.deb", packages)
             self.assertIn("SHA256:", packages)
             self.assertIn("Architectures: iphoneos-arm64", release)
+            self.assertIn("Origin: Banana", release)
+            self.assertIn("Label: Banana", release)
             self.assertTrue((root / "public" / "debs" / "demo.deb").is_file())
             self.assertEqual((root / "public" / "index.html").read_text(), "repo")
             self.assertEqual(depiction["class"], "DepictionTabView")

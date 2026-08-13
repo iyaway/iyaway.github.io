@@ -414,13 +414,13 @@ def make_html_depiction(info: dict, info_dir: Path) -> str:
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="{html.escape(info['tint'])}">
-    <title>{html.escape(info['name'])} · IYAWAY Repo</title>
+    <title>{html.escape(info['name'])} · Banana Repo</title>
     <meta name="description" content="{html.escape(info['tagline'], quote=True)}">
     <link rel="stylesheet" href="/depiction.css">
   </head>
   <body style="--accent: {html.escape(info['tint'])}">
     <main>
-      <a class="back" href="/">← IYAWAY Repo</a>
+      <a class="back" href="/">← Banana Repo</a>
       <header>{icon}<div><p class="package-id">{package}</p><h1>{html.escape(info['name'])}</h1><p class="tagline">{html.escape(info['tagline'])}</p></div></header>
       <div class="compatibility">{compatibility}</div>
       <section class="description">{description}</section>
@@ -457,14 +457,14 @@ def build_depictions(output: Path, package_infos: dict[str, tuple[dict, Path]]) 
 def write_release(output: Path, index_names: list[str], architectures: set[str]) -> None:
     visible_architectures = sorted(architectures - {"all"}) or ["iphoneos-arm", "iphoneos-arm64"]
     lines = [
-        "Origin: IYAWAY",
-        "Label: IYAWAY",
+        "Origin: Banana",
+        "Label: Banana",
         "Suite: stable",
         "Version: 1.0",
         "Codename: ios",
         f"Architectures: {' '.join(visible_architectures)}",
         "Components: main",
-        "Description: IYAWAY jailbreak repository",
+        "Description: Banana jailbreak repository",
         f"Date: {format_datetime(datetime.now(UTC), usegmt=True)}",
     ]
     for label, algorithm in (

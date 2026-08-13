@@ -1,0 +1,39 @@
+{
+  "package": "com.banana.trollpadex",
+  "name": "TrollPadEx",
+  "tagline": "为 iPhone 带来更灵活的多任务、窗口与外接显示体验。",
+  "developer": "khanhduytran0 与 Banana",
+  "tint": "#0A84FF",
+  "description": [
+    "TrollPadEx 将熟悉的 iPad 多任务体验带到 iPhone，让应用切换、分屏和窗口管理更加顺手。",
+    "各项功能均可在设置中按需开启，适合希望提升大屏利用率和多任务效率的用户。"
+  ],
+  "features": [
+    "网格应用切换器与浮动 Dock",
+    "分屏浏览、侧拉窗口与多任务按钮",
+    "台前调度与外接显示器支持",
+    "浮动键盘及常用键盘选项",
+    "横屏主屏幕、窗口缩放与显示偏好"
+  ],
+  "compatibility": [
+    "iOS 14–18",
+    "Rootless",
+    "RootHide",
+    "台前调度需 iOS 16 或更高版本"
+  ],
+  "usage": [
+    "安装后打开“设置”中的 TrollPadEx。",
+    "开启需要的多任务、Dock、键盘或显示选项。",
+    "iOS 16 可通过控制中心切换多任务模式；较新系统可使用系统的“多任务与手势”设置。",
+    "建议逐项启用并确认效果。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "2.0.1",
+      "changes": [
+        "改善台前调度与新系统版本上的使用体验。"
+      ]
+    }
+  ]
+}

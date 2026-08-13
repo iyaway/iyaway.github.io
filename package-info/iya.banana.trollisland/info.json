@@ -1,16 +1,16 @@
 {
   "package": "iya.banana.trollisland",
   "name": "TrollIsland",
-  "tagline": "在非灵动岛设备上启用并重新定位系统原生灵动岛。",
+  "tagline": "在非灵动岛设备上启用系统原生灵动岛，并自由调整显示位置。",
   "developer": "Banana",
   "tint": "#0A84FF",
   "description": [
-    "TrollIsland 在运行时启用系统原生灵动岛，并允许调整垂直位置；它不会持久修改 MobileGestalt 文件或 CacheExtra。",
-    "配置只有在点击“保存配置”后才会写入。位置调整立即生效；启用灵动岛或切换模拟机型后需要注销桌面。"
+    "TrollIsland 为更多 iPhone 带来原生灵动岛体验，并提供简单直观的位置调节。",
+    "你可以选择适合设备的显示样式，预览位置后保存配置。"
   ],
   "features": [
-    "在不原生支持灵动岛的设备上启用设备模拟",
-    "模拟 iPhone 14 Pro、14 Pro Max；iOS 18 另支持 16 Pro、16 Pro Max",
+    "在非灵动岛设备上启用原生灵动岛",
+    "提供多种机型显示样式",
     "通过滑块或数值输入调整灵动岛垂直位置",
     "一键重置位置，保存前保持草稿状态"
   ],
@@ -25,19 +25,12 @@
     "逐步调整垂直偏移，直到胶囊与内容完整可见。",
     "点击“保存配置”；启用灵动岛或切换机型时按提示注销桌面。"
   ],
-  "source": "https://github.com/hxhlb/TrollIsland",
   "screenshots": [],
   "changelog": [
     {
       "version": "0.1.4",
       "changes": [
-        "将支持的固件范围明确限制为 iOS 16 至 iOS 18。"
-      ]
-    },
-    {
-      "version": "0.1.0",
-      "changes": [
-        "TrollIsland 首次发布。"
+        "改善 iOS 16 至 iOS 18 的兼容性。"
       ]
     }
   ]
