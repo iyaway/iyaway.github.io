@@ -7,8 +7,11 @@ import argparse
 import bz2
 import gzip
 import hashlib
+import html
 import io
+import json
 import lzma
+import re
 import shutil
 import subprocess
 import tarfile
@@ -26,6 +29,16 @@ GENERATED_FIELDS = {
     "sha512",
 }
 REQUIRED_FIELDS = {"package", "version", "architecture", "description"}
+REPO_URL = "https://iyaway.github.io"
+PACKAGE_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9+.-]+$")
+METADATA_CONTROL_FIELDS = {
+    "name",
+    "description",
+    "author",
+    "depiction",
+    "sileodepiction",
+    "icon",
+}
 
 
 def read_ar_members(path: Path) -> dict[str, bytes]:
@@ -128,14 +141,41 @@ def digest(path: Path, algorithm: str) -> str:
     return value.hexdigest()
 
 
-def package_paragraph(deb: Path, relative_name: str) -> tuple[str, str]:
+def metadata_control_lines(info: dict, has_icon: bool) -> list[str]:
+    package = info["package"]
+    depiction_url = f"{REPO_URL}/depictions/{package}"
+    lines = [
+        f"Name: {info['name']}",
+        f"Description: {info['tagline']}",
+        f"Author: {info['developer']}",
+        f"Depiction: {depiction_url}/",
+        f"SileoDepiction: {depiction_url}/sileo.json",
+    ]
+    if has_icon:
+        lines.append(f"Icon: {depiction_url}/icon.png")
+    return lines
+
+
+def package_paragraph(
+    deb: Path,
+    relative_name: str,
+    package_infos: dict[str, tuple[dict, Path]],
+) -> tuple[str, str]:
     fields = extract_control(deb)
+    package = control_value(fields, "Package") or ""
+    info_entry = package_infos.get(package)
     lines: list[str] = []
     for key, values in fields:
         if key.casefold() in GENERATED_FIELDS:
             continue
+        if info_entry and key.casefold() in METADATA_CONTROL_FIELDS:
+            continue
         lines.append(f"{key}: {values[0]}")
         lines.extend(values[1:])
+
+    if info_entry:
+        info, info_dir = info_entry
+        lines.extend(metadata_control_lines(info, (info_dir / "icon.png").is_file()))
 
     lines.extend(
         [
@@ -149,6 +189,269 @@ def package_paragraph(deb: Path, relative_name: str) -> tuple[str, str]:
     )
     architecture = control_value(fields, "Architecture") or "all"
     return "\n".join(lines), architecture
+
+
+def require_string(info: dict, key: str, source: Path) -> str:
+    value = info.get(key)
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(f"{source}: {key} must be a non-empty string")
+    return value.strip()
+
+
+def load_package_infos(root: Path) -> dict[str, tuple[dict, Path]]:
+    package_infos: dict[str, tuple[dict, Path]] = {}
+    info_root = root / "package-info"
+    if not info_root.exists():
+        return package_infos
+
+    for source in sorted(info_root.glob("*/info.json")):
+        with source.open(encoding="utf-8") as stream:
+            info = json.load(stream)
+        if not isinstance(info, dict):
+            raise ValueError(f"{source}: root value must be an object")
+
+        for key in ("package", "name", "tagline", "developer"):
+            info[key] = require_string(info, key, source)
+        package = info["package"]
+        if not PACKAGE_ID_PATTERN.fullmatch(package):
+            raise ValueError(f"{source}: invalid package identifier")
+        if source.parent.name != package:
+            raise ValueError(f"{source}: directory name must match package identifier")
+        if package in package_infos:
+            raise ValueError(f"{source}: duplicate package metadata")
+
+        for key in ("description", "features", "compatibility", "usage", "screenshots"):
+            value = info.get(key, [])
+            if not isinstance(value, list) or not all(isinstance(item, str) and item for item in value):
+                raise ValueError(f"{source}: {key} must be an array of non-empty strings")
+            info[key] = value
+
+        changelog = info.get("changelog", [])
+        if not isinstance(changelog, list):
+            raise ValueError(f"{source}: changelog must be an array")
+        for release in changelog:
+            if not isinstance(release, dict):
+                raise ValueError(f"{source}: changelog entries must be objects")
+            require_string(release, "version", source)
+            changes = release.get("changes")
+            if not isinstance(changes, list) or not all(isinstance(item, str) and item for item in changes):
+                raise ValueError(f"{source}: changelog changes must be non-empty strings")
+        info["changelog"] = changelog
+
+        tint = info.get("tint", "#725AFF")
+        if not isinstance(tint, str) or not re.fullmatch(r"#[0-9A-Fa-f]{6}", tint):
+            raise ValueError(f"{source}: tint must be a six-digit hex color")
+        info["tint"] = tint
+
+        for screenshot in info["screenshots"]:
+            screenshot_path = source.parent / "screenshots" / screenshot
+            if Path(screenshot).name != screenshot or not screenshot_path.is_file():
+                raise ValueError(f"{source}: missing or unsafe screenshot {screenshot!r}")
+        package_infos[package] = (info, source.parent)
+    return package_infos
+
+
+def markdown_list(items: list[str]) -> str:
+    return "\n".join(f"- {item}" for item in items)
+
+
+def make_sileo_depiction(info: dict, info_dir: Path) -> dict:
+    package = info["package"]
+    asset_url = f"{REPO_URL}/depictions/{package}"
+    details: list[dict] = [
+        {
+            "class": "DepictionSubheaderView",
+            "title": info["name"],
+            "useBoldText": True,
+            "useBottomMargin": False,
+        },
+        {
+            "class": "DepictionMarkdownView",
+            "markdown": info["tagline"],
+            "useSpacing": True,
+        },
+    ]
+    if info["screenshots"]:
+        details.append(
+            {
+                "class": "DepictionScreenshotsView",
+                "itemSize": "{160, 346}",
+                "itemCornerRadius": 12,
+                "screenshots": [
+                    {
+                        "url": f"{asset_url}/screenshots/{filename}",
+                        "accessibilityText": f"{info['name']} screenshot {index}",
+                    }
+                    for index, filename in enumerate(info["screenshots"], start=1)
+                ],
+            }
+        )
+
+    markdown_sections: list[str] = []
+    if info["description"]:
+        markdown_sections.append("\n\n".join(info["description"]))
+    if info["features"]:
+        markdown_sections.append(f"## 功能\n{markdown_list(info['features'])}")
+    if info["usage"]:
+        markdown_sections.append(f"## 使用方法\n{markdown_list(info['usage'])}")
+    if markdown_sections:
+        details.append(
+            {
+                "class": "DepictionMarkdownView",
+                "markdown": "\n\n".join(markdown_sections),
+                "useSpacing": True,
+            }
+        )
+    if info["compatibility"]:
+        details.append(
+            {
+                "class": "DepictionTableTextView",
+                "title": "兼容性",
+                "text": " · ".join(info["compatibility"]),
+            }
+        )
+    details.append(
+        {
+            "class": "DepictionTableTextView",
+            "title": "开发者",
+            "text": info["developer"],
+        }
+    )
+    source_url = info.get("source")
+    if source_url:
+        details.append(
+            {
+                "class": "DepictionTableButtonView",
+                "title": "查看源代码",
+                "action": source_url,
+                "openExternal": True,
+            }
+        )
+
+    tabs = [
+        {
+            "class": "DepictionStackView",
+            "tabname": "详情",
+            "views": details,
+        }
+    ]
+    if info["changelog"]:
+        change_views: list[dict] = []
+        for release in info["changelog"]:
+            title = f"版本 {release['version']}"
+            if release.get("date"):
+                title += f" · {release['date']}"
+            change_views.extend(
+                [
+                    {
+                        "class": "DepictionSubheaderView",
+                        "title": title,
+                        "useBoldText": True,
+                    },
+                    {
+                        "class": "DepictionMarkdownView",
+                        "markdown": markdown_list(release["changes"]),
+                        "useSpacing": True,
+                    },
+                ]
+            )
+        tabs.append(
+            {
+                "class": "DepictionStackView",
+                "tabname": "更新日志",
+                "views": change_views,
+            }
+        )
+
+    depiction = {
+        "minVersion": "0.1",
+        "class": "DepictionTabView",
+        "tintColor": info["tint"],
+        "tabs": tabs,
+    }
+    if (info_dir / "banner.png").is_file():
+        depiction["headerImage"] = f"{asset_url}/banner.png"
+    return depiction
+
+
+def html_list(items: list[str]) -> str:
+    return "".join(f"<li>{html.escape(item)}</li>" for item in items)
+
+
+def make_html_depiction(info: dict, info_dir: Path) -> str:
+    package = html.escape(info["package"])
+    icon = '<img class="package-icon" src="icon.png" alt="">' if (info_dir / "icon.png").is_file() else ""
+    screenshots = "".join(
+        f'<img src="screenshots/{html.escape(filename)}" alt="{html.escape(info["name"])} 截图 {index}">' 
+        for index, filename in enumerate(info["screenshots"], start=1)
+    )
+    screenshot_section = (
+        f'<section><h2>截图</h2><div class="screenshots">{screenshots}</div></section>'
+        if screenshots
+        else ""
+    )
+    description = "".join(f"<p>{html.escape(paragraph)}</p>" for paragraph in info["description"])
+    features = f'<section><h2>功能</h2><ul>{html_list(info["features"])}</ul></section>' if info["features"] else ""
+    usage = f'<section><h2>使用方法</h2><ol>{html_list(info["usage"])}</ol></section>' if info["usage"] else ""
+    compatibility = "".join(f"<span>{html.escape(item)}</span>" for item in info["compatibility"])
+    changes = "".join(
+        "<article class=\"release\">"
+        f"<h3>版本 {html.escape(release['version'])}"
+        f"{f' · {html.escape(release.get('date', ''))}' if release.get('date') else ''}</h3>"
+        f"<ul>{html_list(release['changes'])}</ul></article>"
+        for release in info["changelog"]
+    )
+    changelog = f"<section><h2>更新日志</h2>{changes}</section>" if changes else ""
+    source_url = info.get("source")
+    source_link = (
+        f'<a class="source-link" href="{html.escape(source_url, quote=True)}">查看源代码</a>'
+        if source_url
+        else ""
+    )
+    return f"""<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="{html.escape(info['tint'])}">
+    <title>{html.escape(info['name'])} · IYAWAY Repo</title>
+    <meta name="description" content="{html.escape(info['tagline'], quote=True)}">
+    <link rel="stylesheet" href="/depiction.css">
+  </head>
+  <body style="--accent: {html.escape(info['tint'])}">
+    <main>
+      <a class="back" href="/">← IYAWAY Repo</a>
+      <header>{icon}<div><p class="package-id">{package}</p><h1>{html.escape(info['name'])}</h1><p class="tagline">{html.escape(info['tagline'])}</p></div></header>
+      <div class="compatibility">{compatibility}</div>
+      <section class="description">{description}</section>
+      {screenshot_section}
+      {features}
+      {usage}
+      {changelog}
+      <footer><span>开发者：{html.escape(info['developer'])}</span>{source_link}</footer>
+    </main>
+  </body>
+</html>
+"""
+
+
+def build_depictions(output: Path, package_infos: dict[str, tuple[dict, Path]]) -> None:
+    for package, (info, info_dir) in package_infos.items():
+        target = output / "depictions" / package
+        target.mkdir(parents=True)
+        for item in info_dir.iterdir():
+            if item.name == "info.json":
+                continue
+            destination = target / item.name
+            if item.is_dir():
+                shutil.copytree(item, destination)
+            elif item.is_file():
+                shutil.copy2(item, destination)
+        (target / "index.html").write_text(make_html_depiction(info, info_dir), encoding="utf-8")
+        (target / "sileo.json").write_text(
+            json.dumps(make_sileo_depiction(info, info_dir), ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
 
 
 def write_release(output: Path, index_names: list[str], architectures: set[str]) -> None:
@@ -186,6 +489,9 @@ def build(root: Path, output: Path) -> int:
     if site.exists():
         shutil.copytree(site, output, dirs_exist_ok=True)
 
+    package_infos = load_package_infos(root)
+    build_depictions(output, package_infos)
+
     source_debs = root / "debs"
     published_debs = output / "debs"
     published_debs.mkdir()
@@ -196,7 +502,11 @@ def build(root: Path, output: Path) -> int:
         target = published_debs / deb.name
         shutil.copy2(deb, target)
         try:
-            paragraph, architecture = package_paragraph(deb, f"debs/{deb.name}")
+            paragraph, architecture = package_paragraph(
+                deb,
+                f"debs/{deb.name}",
+                package_infos,
+            )
         except Exception as error:
             raise RuntimeError(f"{deb.name}: {error}") from error
         paragraphs.append(paragraph)

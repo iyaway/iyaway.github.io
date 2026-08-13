@@ -33,7 +33,17 @@ async function showPackages() {
   try {
     const response = await fetch(`Packages?${Date.now()}`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const packages = parsePackages(await response.text());
+    const rawPackages = parsePackages(await response.text());
+    const grouped = new Map();
+    for (const item of rawPackages) {
+      const current = grouped.get(item.Package);
+      if (!current) {
+        grouped.set(item.Package, { ...item, architectures: [item.Architecture] });
+      } else if (!current.architectures.includes(item.Architecture)) {
+        current.architectures.push(item.Architecture);
+      }
+    }
+    const packages = [...grouped.values()];
     count.textContent = `${packages.length} 个`;
     if (!packages.length) {
       list.innerHTML = '<p class="empty">首批插件正在准备中。</p>';
@@ -43,12 +53,19 @@ async function showPackages() {
       const card = document.createElement("article");
       card.className = "package-card";
       const title = document.createElement("h3");
-      title.textContent = item.Name || item.Package;
+      if (item.Depiction) {
+        const link = document.createElement("a");
+        link.href = item.Depiction;
+        link.textContent = item.Name || item.Package;
+        title.append(link);
+      } else {
+        title.textContent = item.Name || item.Package;
+      }
       const description = document.createElement("p");
       description.textContent = (item.Description || "").split("\n")[0];
       const meta = document.createElement("div");
       meta.className = "package-meta";
-      meta.textContent = `${item.Package} · ${item.Version} · ${item.Architecture}`;
+      meta.textContent = `${item.Package} · ${item.Version} · ${item.architectures.join(" / ")}`;
       card.append(title, description, meta);
       list.append(card);
     }

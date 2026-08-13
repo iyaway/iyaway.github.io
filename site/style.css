@@ -99,6 +99,8 @@ h2 { margin: 0 0 20px; font-size: 28px; letter-spacing: -0.03em; }
 }
 
 .package-card h3 { margin: 0 0 8px; font-size: 19px; }
+.package-card h3 a { color: inherit; text-decoration: none; }
+.package-card h3 a::after { content: " →"; color: #7166d8; }
 .package-card p { margin: 0; color: #9ca3b2; line-height: 1.55; }
 .package-meta { margin-top: 13px; color: #7166d8; font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; }
 .empty { color: #777e8d; }

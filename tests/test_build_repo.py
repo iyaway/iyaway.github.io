@@ -1,6 +1,7 @@
 import gzip
 import importlib.util
 import io
+import json
 import tarfile
 import tempfile
 import unittest
@@ -54,6 +55,28 @@ class BuildRepoTests(unittest.TestCase):
             (root / "debs").mkdir()
             (root / "site").mkdir()
             (root / "site" / "index.html").write_text("repo", encoding="utf-8")
+            info_dir = root / "package-info" / "com.iyaway.demo"
+            info_dir.mkdir(parents=True)
+            (info_dir / "icon.png").write_bytes(b"icon")
+            (info_dir / "info.json").write_text(
+                json.dumps(
+                    {
+                        "package": "com.iyaway.demo",
+                        "name": "Demo Metadata",
+                        "tagline": "Metadata tagline",
+                        "developer": "IYAWAY",
+                        "description": ["Long description"],
+                        "features": ["Feature one"],
+                        "compatibility": ["iOS 16–18", "Rootless"],
+                        "usage": ["Install the package"],
+                        "screenshots": [],
+                        "changelog": [
+                            {"version": "1.0.0", "changes": ["Initial release"]}
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
             make_deb(
                 root / "debs" / "demo.deb",
                 "\n".join(
@@ -73,14 +96,36 @@ class BuildRepoTests(unittest.TestCase):
             count = build_repo.build(root, root / "public")
             packages = (root / "public" / "Packages").read_text()
             release = (root / "public" / "Release").read_text()
+            depiction = json.loads(
+                (root / "public" / "depictions" / "com.iyaway.demo" / "sileo.json").read_text()
+            )
 
             self.assertEqual(count, 1)
             self.assertIn("Package: com.iyaway.demo", packages)
+            self.assertIn("Name: Demo Metadata", packages)
+            self.assertIn("Description: Metadata tagline", packages)
+            self.assertIn(
+                "Depiction: https://iyaway.github.io/depictions/com.iyaway.demo/",
+                packages,
+            )
+            self.assertIn(
+                "SileoDepiction: https://iyaway.github.io/depictions/com.iyaway.demo/sileo.json",
+                packages,
+            )
+            self.assertIn(
+                "Icon: https://iyaway.github.io/depictions/com.iyaway.demo/icon.png",
+                packages,
+            )
             self.assertIn("Filename: debs/demo.deb", packages)
             self.assertIn("SHA256:", packages)
             self.assertIn("Architectures: iphoneos-arm64", release)
             self.assertTrue((root / "public" / "debs" / "demo.deb").is_file())
             self.assertEqual((root / "public" / "index.html").read_text(), "repo")
+            self.assertEqual(depiction["class"], "DepictionTabView")
+            self.assertEqual([tab["tabname"] for tab in depiction["tabs"]], ["详情", "更新日志"])
+            self.assertTrue(
+                (root / "public" / "depictions" / "com.iyaway.demo" / "index.html").is_file()
+            )
 
 
 if __name__ == "__main__":
