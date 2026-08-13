@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0d12">
+    <title>IYAWAY Repo</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="eyebrow">APT REPOSITORY</p>
+        <h1>IYAWAY Repo</h1>
+        <p class="intro">iOS 越狱插件源，兼容 rootless 与 rootful 软件包。</p>
+        <div class="actions">
+          <a class="button primary" href="sileo://source/https://iyaway.github.io/">添加到 Sileo</a>
+          <a class="button" href="zbra://sources/add/https://iyaway.github.io/">添加到 Zebra</a>
+          <button class="button" id="copy" type="button">复制源地址</button>
+        </div>
+        <code id="repo-url">https://iyaway.github.io/</code>
+      </section>
+
+      <section class="packages" aria-labelledby="packages-title">
+        <div class="section-heading">
+          <h2 id="packages-title">软件包</h2>
+          <span id="package-count">读取中</span>
+        </div>
+        <div id="package-list" class="package-list"></div>
+      </section>
+    </main>
+    <footer>由 GitHub Pages 自动构建与发布</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
