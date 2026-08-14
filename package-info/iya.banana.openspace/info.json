@@ -1,0 +1,40 @@
+{
+  "package": "iya.banana.openspace",
+  "name": "OpenSpace",
+  "tagline": "在 iOS 17.0–17.3.1 上实现主屏幕自由布局与小组件尺寸切换。",
+  "developer": "Banana",
+  "tint": "#725AFF",
+  "description": [
+    "OpenSpace 让主屏幕图标保留在任意网格位置，并提供更方便的小组件尺寸切换。",
+    "关闭总开关并 Respring 后即可返回原始系统布局。"
+  ],
+  "features": [
+    "主屏幕图标可停留在任意空白网格位置",
+    "在小组件快捷菜单中切换支持的尺寸",
+    "可在设置中立即保存当前布局",
+    "关闭后恢复原始系统布局",
+    "支持 English、简体中文和繁體中文"
+  ],
+  "compatibility": [
+    "仅支持 iOS 17.0–17.3.1",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "安装后打开“设置”中的 OpenSpace。",
+    "开启总开关，并按提示 Respring。",
+    "移动图标或通过小组件快捷菜单选择需要的尺寸。",
+    "需要返回原始布局时，关闭总开关并 Respring。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.3",
+      "changes": [
+        "新增在设置中立即保存当前布局。",
+        "修复 Respring 后图标空白位置或页面排列可能变化的问题。",
+        "增强多页面自由布局的保存与恢复体验。"
+      ]
+    }
+  ]
+}
