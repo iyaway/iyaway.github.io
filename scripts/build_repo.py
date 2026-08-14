@@ -394,13 +394,15 @@ def make_html_depiction(info: dict, info_dir: Path) -> str:
     features = f'<section><h2>功能</h2><ul>{html_list(info["features"])}</ul></section>' if info["features"] else ""
     usage = f'<section><h2>使用方法</h2><ol>{html_list(info["usage"])}</ol></section>' if info["usage"] else ""
     compatibility = "".join(f"<span>{html.escape(item)}</span>" for item in info["compatibility"])
-    changes = "".join(
-        "<article class=\"release\">"
-        f"<h3>版本 {html.escape(release['version'])}"
-        f"{f' · {html.escape(release.get('date', ''))}' if release.get('date') else ''}</h3>"
-        f"<ul>{html_list(release['changes'])}</ul></article>"
-        for release in info["changelog"]
-    )
+    change_parts: list[str] = []
+    for release in info["changelog"]:
+        date_suffix = f" · {html.escape(release['date'])}" if release.get("date") else ""
+        change_parts.append(
+            "<article class=\"release\">"
+            f"<h3>版本 {html.escape(release['version'])}{date_suffix}</h3>"
+            f"<ul>{html_list(release['changes'])}</ul></article>"
+        )
+    changes = "".join(change_parts)
     changelog = f"<section><h2>更新日志</h2>{changes}</section>" if changes else ""
     source_url = info.get("source")
     source_link = (
