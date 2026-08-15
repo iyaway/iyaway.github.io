@@ -1,15 +1,16 @@
 {
   "package": "iya.banana.trollisland",
   "name": "TrollIsland",
-  "tagline": "为 iOS 16–18 带来原生灵动岛，并提供空闲隐藏与位置调节。",
+  "tagline": "为 iOS 16–18 带来灵动岛显示，并提供空闲隐藏与位置调节。",
   "developer": "Banana",
   "tint": "#0A84FF",
   "description": [
-    "TrollIsland 为更多 iPhone 带来原生灵动岛体验，支持 iOS 16 至 iOS 18。",
-    "你可以根据系统版本使用空闲隐藏、机型样式和位置调节等功能。"
+    "TrollIsland 为更多 iPhone 带来灵动岛体验，支持 iOS 16 至 iOS 18。",
+    "iOS 16 支持目前为实验性，仅提供灵动岛显示，无法通过计时器、录音、录屏等活动触发灵动岛操作。iOS 17/18 可使用更完整的灵动岛体验。"
   ],
   "features": [
-    "支持 iOS 16–18 启用原生灵动岛",
+    "支持 iOS 16–18 显示灵动岛",
+    "iOS 16 提供实验性基础显示支持",
     "iOS 16/17 支持「不用时隐藏」",
     "iOS 18 支持透明空闲状态与位置预览",
     "提供多种机型显示样式",
@@ -29,6 +30,13 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.6",
+      "changes": [
+        "增强 iOS 16/17「不用时隐藏」的稳定性。",
+        "增强 iOS 16 实验性兼容性。"
+      ]
+    },
     {
       "version": "0.1.5",
       "changes": [
