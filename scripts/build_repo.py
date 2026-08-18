@@ -335,24 +335,43 @@ def markdown_list(items: list[str]) -> str:
     return "\n".join(f"- {item}" for item in items)
 
 
-def make_sileo_depiction(info: dict, info_dir: Path) -> dict:
-    package = info["package"]
-    asset_url = f"{REPO_URL}/depictions/{package}"
-    details: list[dict] = [
+def make_sileo_language_views(info: dict, info_dir: Path, locale: str) -> list[dict]:
+    localized = web_locale(info, locale)
+    is_english = locale == "en"
+    labels = {
+        "features": "Features" if is_english else "功能",
+        "usage": "Usage" if is_english else "使用方法",
+        "compatibility": "Compatibility" if is_english else "兼容性",
+        "developer": "Developer" if is_english else "开发者",
+        "source": "View Source" if is_english else "查看源代码",
+        "changelog": "Changelog" if is_english else "更新日志",
+        "version": "Version" if is_english else "版本",
+        "screenshot": "screenshot" if is_english else "截图",
+    }
+    asset_url = f"{REPO_URL}/depictions/{info['package']}"
+    views: list[dict] = [
         {
             "class": "DepictionSubheaderView",
-            "title": info["name"],
+            "title": localized["name"],
             "useBoldText": True,
             "useBottomMargin": False,
         },
         {
             "class": "DepictionMarkdownView",
-            "markdown": info["tagline"],
+            "markdown": localized["tagline"],
             "useSpacing": True,
         },
     ]
+    if localized.get("notice"):
+        views.append(
+            {
+                "class": "DepictionMarkdownView",
+                "markdown": f"> **{localized['notice']}**",
+                "useSpacing": True,
+            }
+        )
     if info["screenshots"]:
-        details.append(
+        views.append(
             {
                 "class": "DepictionScreenshotsView",
                 "itemSize": "{160, 346}",
@@ -360,7 +379,7 @@ def make_sileo_depiction(info: dict, info_dir: Path) -> dict:
                 "screenshots": [
                     {
                         "url": f"{asset_url}/screenshots/{filename}",
-                        "accessibilityText": f"{info['name']} screenshot {index}",
+                        "accessibilityText": f"{localized['name']} {labels['screenshot']} {index}",
                     }
                     for index, filename in enumerate(info["screenshots"], start=1)
                 ],
@@ -368,60 +387,63 @@ def make_sileo_depiction(info: dict, info_dir: Path) -> dict:
         )
 
     markdown_sections: list[str] = []
-    if info["description"]:
-        markdown_sections.append("\n\n".join(info["description"]))
-    if info["features"]:
-        markdown_sections.append(f"## 功能\n{markdown_list(info['features'])}")
-    if info["usage"]:
-        markdown_sections.append(f"## 使用方法\n{markdown_list(info['usage'])}")
+    if localized["description"]:
+        markdown_sections.append("\n\n".join(localized["description"]))
+    if localized["features"]:
+        markdown_sections.append(
+            f"## {labels['features']}\n{markdown_list(localized['features'])}"
+        )
+    if localized["usage"]:
+        markdown_sections.append(
+            f"## {labels['usage']}\n{markdown_list(localized['usage'])}"
+        )
     if markdown_sections:
-        details.append(
+        views.append(
             {
                 "class": "DepictionMarkdownView",
                 "markdown": "\n\n".join(markdown_sections),
                 "useSpacing": True,
             }
         )
-    if info["compatibility"]:
-        details.append(
+    if localized["compatibility"]:
+        views.append(
             {
                 "class": "DepictionTableTextView",
-                "title": "兼容性",
-                "text": " · ".join(info["compatibility"]),
+                "title": labels["compatibility"],
+                "text": " · ".join(localized["compatibility"]),
             }
         )
-    details.append(
+    views.append(
         {
             "class": "DepictionTableTextView",
-            "title": "开发者",
+            "title": labels["developer"],
             "text": info["developer"],
         }
     )
     source_url = info.get("source")
     if source_url:
-        details.append(
+        views.append(
             {
                 "class": "DepictionTableButtonView",
-                "title": "查看源代码",
+                "title": labels["source"],
                 "action": source_url,
                 "openExternal": True,
             }
         )
 
-    tabs = [
-        {
-            "class": "DepictionStackView",
-            "tabname": "详情",
-            "views": details,
-        }
-    ]
-    if info["changelog"]:
-        change_views: list[dict] = []
-        for release in info["changelog"]:
-            title = f"版本 {release['version']}"
+    if localized["changelog"]:
+        views.append(
+            {
+                "class": "DepictionSubheaderView",
+                "title": labels["changelog"],
+                "useBoldText": True,
+            }
+        )
+        for release in localized["changelog"]:
+            title = f"{labels['version']} {release['version']}"
             if release.get("date"):
                 title += f" · {release['date']}"
-            change_views.extend(
+            views.extend(
                 [
                     {
                         "class": "DepictionSubheaderView",
@@ -435,13 +457,19 @@ def make_sileo_depiction(info: dict, info_dir: Path) -> dict:
                     },
                 ]
             )
-        tabs.append(
-            {
-                "class": "DepictionStackView",
-                "tabname": "更新日志",
-                "views": change_views,
-            }
-        )
+    return views
+
+
+def make_sileo_depiction(info: dict, info_dir: Path) -> dict:
+    asset_url = f"{REPO_URL}/depictions/{info['package']}"
+    tabs = [
+        {
+            "class": "DepictionStackView",
+            "tabname": label,
+            "views": make_sileo_language_views(info, info_dir, locale),
+        }
+        for locale, label in (("zh-Hans", "中文"), ("en", "English"))
+    ]
 
     depiction = {
         "minVersion": "0.1",

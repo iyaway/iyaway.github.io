@@ -144,20 +144,22 @@ class BuildRepoTests(unittest.TestCase):
             self.assertTrue((root / "public" / "debs" / "demo.deb").is_file())
             self.assertEqual((root / "public" / "index.html").read_text(), "repo")
             self.assertEqual(depiction["class"], "DepictionTabView")
-            self.assertEqual([tab["tabname"] for tab in depiction["tabs"]], ["详情", "更新日志"])
+            self.assertEqual([tab["tabname"] for tab in depiction["tabs"]], ["中文", "English"])
             self.assertEqual(
                 web_metadata["com.iyaway.demo"]["en"]["tagline"],
                 "English metadata tagline",
             )
             self.assertEqual(web_metadata["com.iyaway.demo"]["zh-Hans"]["name"], "演示插件")
-            self.assertEqual(depiction["tabs"][0]["views"][0]["title"], "Demo Metadata")
+            self.assertEqual(depiction["tabs"][0]["views"][0]["title"], "演示插件")
+            self.assertEqual(depiction["tabs"][1]["views"][0]["title"], "Demo Metadata")
             self.assertIn("演示插件", html_depiction)
             self.assertIn('data-language="zh-Hans"', html_depiction)
             self.assertIn('data-language="en"', html_depiction)
             self.assertIn("English initial release", html_depiction)
             self.assertIn("Web notice", html_depiction)
             self.assertIn("English web notice", html_depiction)
-            self.assertNotIn("Web notice", json.dumps(depiction))
+            self.assertIn("Web notice", json.dumps(depiction))
+            self.assertIn("English web notice", json.dumps(depiction))
             self.assertTrue(
                 (root / "public" / "depictions" / "com.iyaway.demo" / "index.html").is_file()
             )
