@@ -1,0 +1,78 @@
+{
+  "package": "iya.banana.spatialscene",
+  "name": "SpatialScene",
+  "tagline": "在 iOS 16–18 上导入、下载并呈现具有空间层次的动态壁纸。",
+  "developer": "Banana",
+  "tint": "#5E5CE6",
+  "description": [
+    "SpatialScene 让你通过 App 导入或在线下载空间壁纸，进行预览、管理并设为当前壁纸。",
+    "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果。"
+  ],
+  "features": [
+    "导入兼容的空间壁纸包",
+    "浏览带预览图的在线壁纸库",
+    "预览、管理并设置当前壁纸",
+    "随设备姿态呈现空间层次效果",
+    "可按需启用主屏幕动态效果"
+  ],
+  "compatibility": [
+    "iOS 16–18",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "安装后打开 SpatialScene App。",
+    "从在线壁纸库下载，或导入兼容的空间壁纸包。",
+    "预览壁纸并将喜欢的项目设为当前。",
+    "在系统“设置”中启用 SpatialScene，并按需开启主屏幕动态效果。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.0.25",
+      "changes": [
+        "新增在线壁纸库，可直接浏览预览并下载空间壁纸。",
+        "新增后台下载支持，离开 App 后仍可继续完成下载与安装。",
+        "增强下载校验、失败恢复及预览加载稳定性。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "SpatialScene",
+      "tagline": "Import, download, and enjoy layered spatial wallpapers on iOS 16–18.",
+      "description": [
+        "SpatialScene lets you import or download spatial wallpapers in the app, preview and manage them, and set one as current.",
+        "Once enabled, wallpapers respond to device movement with natural layered depth effects."
+      ],
+      "features": [
+        "Import compatible spatial wallpaper packages",
+        "Browse an online wallpaper library with previews",
+        "Preview, manage, and set the current wallpaper",
+        "Motion-responsive layered depth effects",
+        "Optional Home Screen animation"
+      ],
+      "compatibility": [
+        "iOS 16–18",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Open the SpatialScene app after installation.",
+        "Download a wallpaper from the online library or import a compatible package.",
+        "Preview a wallpaper and set your preferred item as current.",
+        "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired."
+      ],
+      "changelog": [
+        {
+          "version": "0.0.25",
+          "changes": [
+            "Added an online wallpaper library with previews and direct downloads.",
+            "Added background downloads that can continue outside the app.",
+            "Improved download verification, failure recovery, and preview loading reliability."
+          ]
+        }
+      ]
+    }
+  }
+}

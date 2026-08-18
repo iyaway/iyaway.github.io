@@ -1,0 +1,76 @@
+{
+  "package": "iya.banana.tweak.loader",
+  "name": "Tweak Loader",
+  "tagline": "在 iOS 18“设置”首页集中查看插件设置与常用设备信息。",
+  "developer": "Banana",
+  "tint": "#0A84FF",
+  "description": [
+    "Tweak Loader 在 iOS 18“设置”首页提供统一插件入口，可集中查看并打开已安装插件的设置页面。",
+    "主页还可按需显示局域网 IP、存储占用、电池健康及密码生成入口。"
+  ],
+  "features": [
+    "集中查看已安装插件的设置页面",
+    "直接打开兼容的插件设置面板",
+    "显示局域网 IP、存储占用与电池健康",
+    "快速生成并复制密码",
+    "自定义入口名称及主页显示项目"
+  ],
+  "compatibility": [
+    "iOS 18.0+",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "安装后打开系统“设置”。",
+    "点击插件入口查看并打开已安装插件的设置页面。",
+    "在列表底部的设置中调整入口名称和主页显示项目。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.4.3",
+      "changes": [
+        "修复复杂网络环境下可能显示错误 IP 地址的问题。",
+        "修复部分插件名称未跟随系统语言显示的问题。",
+        "增强插件列表与设置主页信息的显示体验。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "Tweak Loader",
+      "tagline": "Access tweak settings and useful device information from the iOS 18 Settings home screen.",
+      "description": [
+        "Tweak Loader adds a unified entry to the iOS 18 Settings home screen for viewing and opening installed tweak preference panes.",
+        "It can also show the local IP address, storage usage, battery health, and a password generator."
+      ],
+      "features": [
+        "View installed tweak preference panes in one place",
+        "Open compatible tweak settings directly",
+        "Show local IP address, storage usage, and battery health",
+        "Generate and copy passwords quickly",
+        "Customize the entry name and visible information rows"
+      ],
+      "compatibility": [
+        "iOS 18.0+",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Open the system Settings app after installation.",
+        "Tap the tweaks entry to view and open installed preference panes.",
+        "Use Settings at the bottom of the list to customize the entry name and visible information rows."
+      ],
+      "changelog": [
+        {
+          "version": "0.4.3",
+          "changes": [
+            "Fixed incorrect IP address selection on complex network configurations.",
+            "Fixed some tweak names not following the system language.",
+            "Improved the tweak list and Settings home information display."
+          ]
+        }
+      ]
+    }
+  }
+}

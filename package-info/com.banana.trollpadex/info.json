@@ -35,5 +35,42 @@
         "改善台前调度与新系统版本上的使用体验。"
       ]
     }
-  ]
+  ],
+  "locales": {
+    "en": {
+      "name": "TrollPadEx",
+      "tagline": "Bring more flexible multitasking, windowing, and external display experiences to iPhone.",
+      "description": [
+        "TrollPadEx brings familiar iPad multitasking features to iPhone for easier app switching, split views, and window management.",
+        "Features can be enabled individually in Settings to match your preferred multitasking workflow."
+      ],
+      "features": [
+        "Grid app switcher and floating Dock",
+        "Split View, Slide Over, and multitasking controls",
+        "Stage Manager and external display support",
+        "Floating keyboard and common keyboard options",
+        "Landscape Home Screen, window scaling, and display preferences"
+      ],
+      "compatibility": [
+        "iOS 14–18",
+        "Rootless",
+        "RootHide",
+        "Stage Manager requires iOS 16 or later"
+      ],
+      "usage": [
+        "Open TrollPadEx in Settings after installation.",
+        "Enable the multitasking, Dock, keyboard, or display options you need.",
+        "On iOS 16, switch multitasking modes from Control Center; newer systems can use the system Multitasking & Gestures settings.",
+        "Enable options gradually and confirm their effect on your device."
+      ],
+      "changelog": [
+        {
+          "version": "2.0.1",
+          "changes": [
+            "Improved Stage Manager and the experience on newer iOS versions."
+          ]
+        }
+      ]
+    }
+  }
 }

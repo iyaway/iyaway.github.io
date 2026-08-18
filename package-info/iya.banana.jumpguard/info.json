@@ -38,5 +38,45 @@
         "增强关键系统流程的兼容性与使用稳定性。"
       ]
     }
-  ]
+  ],
+  "locales": {
+    "en": {
+      "name": "JumpGuard",
+      "tagline": "Confirm, allow, or block cross-app launch requests on iOS 17.0–17.3.1.",
+      "description": [
+        "JumpGuard provides confirmation and rule management when third-party apps try to open another app, reducing unwanted automatic launches.",
+        "All rules and launch history remain on your device; JumpGuard does not remove or block advertisements."
+      ],
+      "features": [
+        "Confirm before one app opens another",
+        "Allow once, always allow, always deny, or cancel",
+        "Silently block all external launches from selected source apps",
+        "Manage URL allow rules and source-to-destination allow or deny rules",
+        "Record launch source, destination, count, and time",
+        "Hide sensitive URL parameters by default",
+        "English, Simplified Chinese, and Traditional Chinese"
+      ],
+      "compatibility": [
+        "iOS 17.0–17.3.1 only",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Open JumpGuard in Settings after installation.",
+        "Enable the main switch and configure source-app blocking or launch rules as needed.",
+        "Choose a one-time or persistent action when a cross-app launch is requested.",
+        "Review or delete launch history and saved rules from Settings."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.1",
+          "changes": [
+            "Added cross-app launch confirmation, source-app blocking, and allow or deny rules.",
+            "Added on-device launch history and URL privacy controls.",
+            "Improved compatibility and stability for critical system flows."
+          ]
+        }
+      ]
+    }
+  }
 }

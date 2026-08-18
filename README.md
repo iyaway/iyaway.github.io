@@ -31,3 +31,7 @@ package-info/<package-id>/
 └── screenshots/
     └── 01.png
 ```
+
+The top-level copy remains the package-index and native Sileo depiction language.
+Add a complete `locales.en` object to generate English website copy. The website
+automatically follows the browser language and also provides a manual language switch.

@@ -238,6 +238,44 @@ def load_package_infos(root: Path) -> dict[str, tuple[dict, Path]]:
                 raise ValueError(f"{source}: changelog changes must be non-empty strings")
         info["changelog"] = changelog
 
+        locales = info.get("locales", {})
+        if not isinstance(locales, dict):
+            raise ValueError(f"{source}: locales must be an object")
+        for locale, localized in locales.items():
+            if locale != "en":
+                raise ValueError(f"{source}: unsupported locale {locale!r}")
+            if not isinstance(localized, dict):
+                raise ValueError(f"{source}: locale {locale!r} must be an object")
+            localized["name"] = require_string(localized, "name", source)
+            localized["tagline"] = require_string(localized, "tagline", source)
+            for key in ("description", "features", "compatibility", "usage"):
+                value = localized.get(key, [])
+                if not isinstance(value, list) or not all(
+                    isinstance(item, str) and item for item in value
+                ):
+                    raise ValueError(
+                        f"{source}: locales.{locale}.{key} must be an array of non-empty strings"
+                    )
+                localized[key] = value
+            localized_changelog = localized.get("changelog", [])
+            if not isinstance(localized_changelog, list):
+                raise ValueError(f"{source}: locales.{locale}.changelog must be an array")
+            for release in localized_changelog:
+                if not isinstance(release, dict):
+                    raise ValueError(
+                        f"{source}: locales.{locale}.changelog entries must be objects"
+                    )
+                require_string(release, "version", source)
+                changes = release.get("changes")
+                if not isinstance(changes, list) or not all(
+                    isinstance(item, str) and item for item in changes
+                ):
+                    raise ValueError(
+                        f"{source}: locales.{locale}.changelog changes must be non-empty strings"
+                    )
+            localized["changelog"] = localized_changelog
+        info["locales"] = locales
+
         tint = info.get("tint", "#725AFF")
         if not isinstance(tint, str) or not re.fullmatch(r"#[0-9A-Fa-f]{6}", tint):
             raise ValueError(f"{source}: tint must be a six-digit hex color")
@@ -249,6 +287,28 @@ def load_package_infos(root: Path) -> dict[str, tuple[dict, Path]]:
                 raise ValueError(f"{source}: missing or unsafe screenshot {screenshot!r}")
         package_infos[package] = (info, source.parent)
     return package_infos
+
+
+def web_locale(info: dict, locale: str) -> dict:
+    if locale == "zh-Hans":
+        return info
+    return info.get("locales", {}).get(locale, info)
+
+
+def write_web_metadata(output: Path, package_infos: dict[str, tuple[dict, Path]]) -> None:
+    metadata = {}
+    for package, (info, _) in package_infos.items():
+        metadata[package] = {
+            locale: {
+                "name": web_locale(info, locale)["name"],
+                "tagline": web_locale(info, locale)["tagline"],
+            }
+            for locale in ("zh-Hans", "en")
+        }
+    (output / "package-metadata.json").write_text(
+        json.dumps(metadata, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
 
 def markdown_list(items: list[str]) -> str:
@@ -378,60 +438,111 @@ def html_list(items: list[str]) -> str:
     return "".join(f"<li>{html.escape(item)}</li>" for item in items)
 
 
-def make_html_depiction(info: dict, info_dir: Path) -> str:
+def make_html_locale(info: dict, info_dir: Path, locale: str) -> str:
+    localized = web_locale(info, locale)
+    is_english = locale == "en"
+    labels = {
+        "back": "← Banana Repo",
+        "screenshots": "Screenshots" if is_english else "截图",
+        "features": "Features" if is_english else "功能",
+        "usage": "Usage" if is_english else "使用方法",
+        "changelog": "Changelog" if is_english else "更新日志",
+        "version": "Version" if is_english else "版本",
+        "developer": "Developer" if is_english else "开发者",
+        "source": "View Source" if is_english else "查看源代码",
+    }
     package = html.escape(info["package"])
-    icon = '<img class="package-icon" src="icon.png" alt="">' if (info_dir / "icon.png").is_file() else ""
+    icon = (
+        '<img class="package-icon" src="icon.png" alt="">'
+        if (info_dir / "icon.png").is_file()
+        else ""
+    )
     screenshots = "".join(
-        f'<img src="screenshots/{html.escape(filename)}" alt="{html.escape(info["name"])} 截图 {index}">' 
+        f'<img src="screenshots/{html.escape(filename)}" '
+        f'alt="{html.escape(localized["name"])} {labels["screenshots"]} {index}">'
         for index, filename in enumerate(info["screenshots"], start=1)
     )
     screenshot_section = (
-        f'<section><h2>截图</h2><div class="screenshots">{screenshots}</div></section>'
+        f'<section><h2>{labels["screenshots"]}</h2><div class="screenshots">{screenshots}</div></section>'
         if screenshots
         else ""
     )
-    description = "".join(f"<p>{html.escape(paragraph)}</p>" for paragraph in info["description"])
-    features = f'<section><h2>功能</h2><ul>{html_list(info["features"])}</ul></section>' if info["features"] else ""
-    usage = f'<section><h2>使用方法</h2><ol>{html_list(info["usage"])}</ol></section>' if info["usage"] else ""
-    compatibility = "".join(f"<span>{html.escape(item)}</span>" for item in info["compatibility"])
+    description = "".join(
+        f"<p>{html.escape(paragraph)}</p>" for paragraph in localized["description"]
+    )
+    description_section = (
+        f'<section class="description">{description}</section>' if description else ""
+    )
+    features = (
+        f'<section><h2>{labels["features"]}</h2><ul>{html_list(localized["features"])}</ul></section>'
+        if localized["features"]
+        else ""
+    )
+    usage = (
+        f'<section><h2>{labels["usage"]}</h2><ol>{html_list(localized["usage"])}</ol></section>'
+        if localized["usage"]
+        else ""
+    )
+    compatibility = "".join(
+        f"<span>{html.escape(item)}</span>" for item in localized["compatibility"]
+    )
     change_parts: list[str] = []
-    for release in info["changelog"]:
+    for release in localized["changelog"]:
         date_suffix = f" · {html.escape(release['date'])}" if release.get("date") else ""
         change_parts.append(
-            "<article class=\"release\">"
-            f"<h3>版本 {html.escape(release['version'])}{date_suffix}</h3>"
-            f"<ul>{html_list(release['changes'])}</ul></article>"
+            '<article class="release">'
+            f'<h3>{labels["version"]} {html.escape(release["version"])}{date_suffix}</h3>'
+            f'<ul>{html_list(release["changes"])}</ul></article>'
         )
     changes = "".join(change_parts)
-    changelog = f"<section><h2>更新日志</h2>{changes}</section>" if changes else ""
+    changelog = (
+        f'<section><h2>{labels["changelog"]}</h2>{changes}</section>' if changes else ""
+    )
     source_url = info.get("source")
     source_link = (
-        f'<a class="source-link" href="{html.escape(source_url, quote=True)}">查看源代码</a>'
+        f'<a class="source-link" href="{html.escape(source_url, quote=True)}">{labels["source"]}</a>'
         if source_url
         else ""
     )
+    developer_separator = ": " if is_english else "："
+    hidden = " hidden" if is_english else ""
+    return f"""<div data-language="{locale}" lang="{'en' if is_english else 'zh-CN'}"{hidden}>
+      <a class="back" href="/">{labels["back"]}</a>
+      <header>{icon}<div><p class="package-id">{package}</p><h1>{html.escape(localized["name"])}</h1><p class="tagline">{html.escape(localized["tagline"])}</p></div></header>
+      <div class="compatibility">{compatibility}</div>
+      {description_section}
+      {screenshot_section}
+      {features}
+      {usage}
+      {changelog}
+      <footer><span>{labels["developer"]}{developer_separator}{html.escape(info["developer"])}</span>{source_link}</footer>
+    </div>"""
+
+
+def make_html_depiction(info: dict, info_dir: Path) -> str:
+    zh = web_locale(info, "zh-Hans")
+    en = web_locale(info, "en")
     return f"""<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="{html.escape(info['tint'])}">
-    <title>{html.escape(info['name'])} · Banana Repo</title>
-    <meta name="description" content="{html.escape(info['tagline'], quote=True)}">
+    <title>{html.escape(zh['name'])} / {html.escape(en['name'])} · Banana Repo</title>
+    <meta name="description" content="{html.escape(zh['tagline'] + ' / ' + en['tagline'], quote=True)}">
+    <link rel="icon" href="/icon.png">
     <link rel="stylesheet" href="/depiction.css">
   </head>
   <body style="--accent: {html.escape(info['tint'])}">
     <main>
-      <a class="back" href="/">← Banana Repo</a>
-      <header>{icon}<div><p class="package-id">{package}</p><h1>{html.escape(info['name'])}</h1><p class="tagline">{html.escape(info['tagline'])}</p></div></header>
-      <div class="compatibility">{compatibility}</div>
-      <section class="description">{description}</section>
-      {screenshot_section}
-      {features}
-      {usage}
-      {changelog}
-      <footer><span>开发者：{html.escape(info['developer'])}</span>{source_link}</footer>
+      <nav class="language-switcher" aria-label="Language">
+        <button type="button" data-language-button="zh-Hans" aria-pressed="true">中文</button>
+        <button type="button" data-language-button="en" aria-pressed="false">English</button>
+      </nav>
+      {make_html_locale(info, info_dir, "zh-Hans")}
+      {make_html_locale(info, info_dir, "en")}
     </main>
+    <script src="/depiction.js"></script>
   </body>
 </html>
 """
@@ -493,6 +604,7 @@ def build(root: Path, output: Path) -> int:
 
     package_infos = load_package_infos(root)
     build_depictions(output, package_infos)
+    write_web_metadata(output, package_infos)
 
     source_debs = root / "debs"
     published_debs = output / "debs"

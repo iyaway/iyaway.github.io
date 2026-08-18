@@ -73,6 +73,19 @@ class BuildRepoTests(unittest.TestCase):
                         "changelog": [
                             {"version": "1.0.0", "changes": ["Initial release"]}
                         ],
+                        "locales": {
+                            "en": {
+                                "name": "Demo Metadata",
+                                "tagline": "English metadata tagline",
+                                "description": ["English long description"],
+                                "features": ["English feature"],
+                                "compatibility": ["iOS 16–18", "Rootless"],
+                                "usage": ["Install the package"],
+                                "changelog": [
+                                    {"version": "1.0.0", "changes": ["English initial release"]}
+                                ],
+                            }
+                        },
                     }
                 ),
                 encoding="utf-8",
@@ -99,6 +112,10 @@ class BuildRepoTests(unittest.TestCase):
             depiction = json.loads(
                 (root / "public" / "depictions" / "com.iyaway.demo" / "sileo.json").read_text()
             )
+            web_metadata = json.loads((root / "public" / "package-metadata.json").read_text())
+            html_depiction = (
+                root / "public" / "depictions" / "com.iyaway.demo" / "index.html"
+            ).read_text()
 
             self.assertEqual(count, 1)
             self.assertIn("Package: com.iyaway.demo", packages)
@@ -125,6 +142,13 @@ class BuildRepoTests(unittest.TestCase):
             self.assertEqual((root / "public" / "index.html").read_text(), "repo")
             self.assertEqual(depiction["class"], "DepictionTabView")
             self.assertEqual([tab["tabname"] for tab in depiction["tabs"]], ["详情", "更新日志"])
+            self.assertEqual(
+                web_metadata["com.iyaway.demo"]["en"]["tagline"],
+                "English metadata tagline",
+            )
+            self.assertIn('data-language="zh-Hans"', html_depiction)
+            self.assertIn('data-language="en"', html_depiction)
+            self.assertIn("English initial release", html_depiction)
             self.assertTrue(
                 (root / "public" / "depictions" / "com.iyaway.demo" / "index.html").is_file()
             )

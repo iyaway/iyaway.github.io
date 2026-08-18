@@ -21,6 +21,29 @@ main {
   padding: 42px 0 60px;
 }
 
+.language-switcher {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.language-switcher button {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #9ca3b2;
+  font: inherit;
+  cursor: pointer;
+}
+
+.language-switcher button[aria-pressed="true"] {
+  border-color: color-mix(in srgb, var(--accent) 65%, transparent);
+  background: color-mix(in srgb, var(--accent) 22%, transparent);
+  color: #fff;
+}
+
 .back {
   display: inline-block;
   margin-bottom: 30px;

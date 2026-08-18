@@ -22,6 +22,29 @@ main {
   padding: 88px 0 44px;
 }
 
+.language-switcher {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.language-switcher button {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #9ca3b2;
+  font: inherit;
+  cursor: pointer;
+}
+
+.language-switcher button[aria-pressed="true"] {
+  border-color: #725aff;
+  background: rgba(114, 90, 255, 0.22);
+  color: #fff;
+}
+
 .hero {
   padding: clamp(28px, 6vw, 56px);
   border: 1px solid rgba(255, 255, 255, 0.1);

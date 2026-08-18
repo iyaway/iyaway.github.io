@@ -51,5 +51,58 @@
         "改善 iOS 16 至 iOS 18 的兼容性。"
       ]
     }
-  ]
+  ],
+  "locales": {
+    "en": {
+      "name": "TrollIsland",
+      "tagline": "Bring Dynamic Island display to iOS 16–18 with idle hiding and position controls.",
+      "description": [
+        "TrollIsland brings the Dynamic Island experience to more iPhones on iOS 16 through iOS 18.",
+        "iOS 16 support is experimental and currently provides display only; activities such as timers, recording, and screen recording cannot trigger Dynamic Island interactions. iOS 17 and iOS 18 provide a more complete experience."
+      ],
+      "features": [
+        "Display the Dynamic Island on iOS 16–18",
+        "Experimental basic display support on iOS 16",
+        "Hide the island when idle on iOS 16 and iOS 17",
+        "Transparent idle state and position preview on iOS 18",
+        "Multiple device display styles",
+        "Adjust vertical position with a slider or numeric input",
+        "Reset position with one tap while keeping changes as a draft until saved"
+      ],
+      "compatibility": [
+        "iOS 16–18",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Open TrollIsland in Settings after installation.",
+        "Choose a display style for your device; on iOS 16 and iOS 17, enable idle hiding if desired.",
+        "Adjust the vertical offset gradually until the island and its content remain fully visible.",
+        "Tap Save Configuration; iOS 18 provides a brief position preview, and enabling the island or changing device style may require a SpringBoard restart."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.6",
+          "changes": [
+            "Improved idle-hiding stability on iOS 16 and iOS 17.",
+            "Improved experimental iOS 16 compatibility."
+          ]
+        },
+        {
+          "version": "0.1.5",
+          "changes": [
+            "Added iOS 18 Dynamic Island support and position preview.",
+            "Added idle hiding on iOS 16 and iOS 17.",
+            "Fixed flickering in some situations and improved idle-state and position stability."
+          ]
+        },
+        {
+          "version": "0.1.4",
+          "changes": [
+            "Improved compatibility across iOS 16 through iOS 18."
+          ]
+        }
+      ]
+    }
+  }
 }

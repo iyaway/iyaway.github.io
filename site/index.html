@@ -12,6 +12,10 @@
   </head>
   <body>
     <main>
+      <nav class="language-switcher" aria-label="Language">
+        <button type="button" data-language-button="zh-Hans" aria-pressed="true">中文</button>
+        <button type="button" data-language-button="en" aria-pressed="false">English</button>
+      </nav>
       <section class="hero">
         <div class="hero-brand">
           <img class="repo-icon" src="icon.png" alt="Banana">
@@ -20,24 +24,24 @@
             <h1>Banana</h1>
           </div>
         </div>
-        <p class="intro">Banana 的 iOS 越狱插件源，提供 Rootless 与 RootHide 软件包。</p>
+        <p class="intro" data-i18n="intro">Banana 的 iOS 越狱插件源，提供 Rootless 与 RootHide 软件包。</p>
         <div class="actions">
-          <a class="button primary" href="sileo://source/https://iyaway.github.io/">添加到 Sileo</a>
-          <a class="button" href="zbra://sources/add/https://iyaway.github.io/">添加到 Zebra</a>
-          <button class="button" id="copy" type="button">复制源地址</button>
+          <a class="button primary" href="sileo://source/https://iyaway.github.io/" data-i18n="addSileo">添加到 Sileo</a>
+          <a class="button" href="zbra://sources/add/https://iyaway.github.io/" data-i18n="addZebra">添加到 Zebra</a>
+          <button class="button" id="copy" type="button" data-i18n="copy">复制源地址</button>
         </div>
         <code id="repo-url">https://iyaway.github.io/</code>
       </section>
 
       <section class="packages" aria-labelledby="packages-title">
         <div class="section-heading">
-          <h2 id="packages-title">软件包</h2>
-          <span id="package-count">读取中</span>
+          <h2 id="packages-title" data-i18n="packages">软件包</h2>
+          <span id="package-count" data-i18n="loading">读取中</span>
         </div>
         <div id="package-list" class="package-list"></div>
       </section>
     </main>
-    <footer>Banana · 由 GitHub Pages 自动构建与发布</footer>
+    <footer data-i18n="footer">Banana · 由 GitHub Pages 自动构建与发布</footer>
     <script src="app.js"></script>
   </body>
 </html>
