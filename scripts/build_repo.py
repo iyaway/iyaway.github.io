@@ -212,6 +212,11 @@ def load_package_infos(root: Path) -> dict[str, tuple[dict, Path]]:
 
         for key in ("package", "name", "tagline", "developer"):
             info[key] = require_string(info, key, source)
+        web_name = info.get("web_name")
+        if web_name is not None:
+            if not isinstance(web_name, str) or not web_name.strip():
+                raise ValueError(f"{source}: web_name must be a non-empty string")
+            info["web_name"] = web_name.strip()
         package = info["package"]
         if not PACKAGE_ID_PATTERN.fullmatch(package):
             raise ValueError(f"{source}: invalid package identifier")
@@ -304,7 +309,9 @@ def load_package_infos(root: Path) -> dict[str, tuple[dict, Path]]:
 
 def web_locale(info: dict, locale: str) -> dict:
     if locale == "zh-Hans":
-        return info
+        localized = dict(info)
+        localized["name"] = info.get("web_name", info["name"])
+        return localized
     return info.get("locales", {}).get(locale, info)
 
 

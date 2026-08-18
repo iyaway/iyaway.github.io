@@ -1,6 +1,7 @@
 {
   "package": "iya.banana.openspace",
   "name": "OpenSpace",
+  "web_name": "自由空间",
   "tagline": "在 iOS 17.0–17.3.1 上实现主屏幕自由布局与小组件尺寸切换。",
   "developer": "Banana",
   "tint": "#725AFF",

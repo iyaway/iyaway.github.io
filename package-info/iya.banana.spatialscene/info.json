@@ -1,6 +1,7 @@
 {
   "package": "iya.banana.spatialscene",
   "name": "SpatialScene",
+  "web_name": "空间场景",
   "tagline": "在 iOS 16–18 上导入、下载并呈现具有空间层次的动态壁纸。",
   "developer": "Banana",
   "tint": "#5E5CE6",

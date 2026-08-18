@@ -1,6 +1,7 @@
 {
   "package": "iya.banana.lenticularwallpaper",
   "name": "Lenticular Wallpaper",
+  "web_name": "趣味壁纸",
   "tagline": "在 iOS 16–18 上随设备倾斜呈现趣味壁纸切换与视差效果。",
   "developer": "Banana",
   "tint": "#BF5AF2",

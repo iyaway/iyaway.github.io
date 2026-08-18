@@ -63,6 +63,7 @@ class BuildRepoTests(unittest.TestCase):
                     {
                         "package": "com.iyaway.demo",
                         "name": "Demo Metadata",
+                        "web_name": "演示插件",
                         "tagline": "Metadata tagline",
                         "developer": "IYAWAY",
                         "description": ["Long description"],
@@ -148,6 +149,9 @@ class BuildRepoTests(unittest.TestCase):
                 web_metadata["com.iyaway.demo"]["en"]["tagline"],
                 "English metadata tagline",
             )
+            self.assertEqual(web_metadata["com.iyaway.demo"]["zh-Hans"]["name"], "演示插件")
+            self.assertEqual(depiction["tabs"][0]["views"][0]["title"], "Demo Metadata")
+            self.assertIn("演示插件", html_depiction)
             self.assertIn('data-language="zh-Hans"', html_depiction)
             self.assertIn('data-language="en"', html_depiction)
             self.assertIn("English initial release", html_depiction)

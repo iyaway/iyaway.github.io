@@ -1,6 +1,7 @@
 {
   "package": "iya.banana.tweak.loader",
   "name": "Tweak Loader",
+  "web_name": "插件加载器",
   "tagline": "在 iOS 18“设置”首页集中查看插件设置与常用设备信息。",
   "developer": "Banana",
   "tint": "#0A84FF",
