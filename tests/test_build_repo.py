@@ -66,6 +66,7 @@ class BuildRepoTests(unittest.TestCase):
                         "tagline": "Metadata tagline",
                         "developer": "IYAWAY",
                         "description": ["Long description"],
+                        "notice": "Web notice",
                         "features": ["Feature one"],
                         "compatibility": ["iOS 16–18", "Rootless"],
                         "usage": ["Install the package"],
@@ -78,6 +79,7 @@ class BuildRepoTests(unittest.TestCase):
                                 "name": "Demo Metadata",
                                 "tagline": "English metadata tagline",
                                 "description": ["English long description"],
+                                "notice": "English web notice",
                                 "features": ["English feature"],
                                 "compatibility": ["iOS 16–18", "Rootless"],
                                 "usage": ["Install the package"],
@@ -149,6 +151,9 @@ class BuildRepoTests(unittest.TestCase):
             self.assertIn('data-language="zh-Hans"', html_depiction)
             self.assertIn('data-language="en"', html_depiction)
             self.assertIn("English initial release", html_depiction)
+            self.assertIn("Web notice", html_depiction)
+            self.assertIn("English web notice", html_depiction)
+            self.assertNotIn("Web notice", json.dumps(depiction))
             self.assertTrue(
                 (root / "public" / "depictions" / "com.iyaway.demo" / "index.html").is_file()
             )

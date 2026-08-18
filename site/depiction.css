@@ -79,6 +79,18 @@ h1 { margin: 0; font-size: clamp(38px, 8vw, 62px); letter-spacing: -0.05em; }
 .compatibility { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 38px; }
 .compatibility span { padding: 7px 11px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 17%, transparent); color: #d8d4ff; font-size: 13px; }
 
+.notice {
+  margin: 0 0 28px;
+  padding: 18px 20px;
+  border: 1px solid rgba(255, 190, 70, 0.45);
+  border-radius: 16px;
+  background: rgba(255, 159, 10, 0.14);
+  color: #ffd98a;
+  font-size: 16px;
+  line-height: 1.65;
+  box-shadow: 0 12px 35px rgba(255, 149, 0, 0.08);
+}
+
 section {
   margin-top: 18px;
   padding: 27px;

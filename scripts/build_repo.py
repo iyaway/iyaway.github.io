@@ -226,6 +226,12 @@ def load_package_infos(root: Path) -> dict[str, tuple[dict, Path]]:
                 raise ValueError(f"{source}: {key} must be an array of non-empty strings")
             info[key] = value
 
+        notice = info.get("notice")
+        if notice is not None:
+            if not isinstance(notice, str) or not notice.strip():
+                raise ValueError(f"{source}: notice must be a non-empty string")
+            info["notice"] = notice.strip()
+
         changelog = info.get("changelog", [])
         if not isinstance(changelog, list):
             raise ValueError(f"{source}: changelog must be an array")
@@ -248,6 +254,13 @@ def load_package_infos(root: Path) -> dict[str, tuple[dict, Path]]:
                 raise ValueError(f"{source}: locale {locale!r} must be an object")
             localized["name"] = require_string(localized, "name", source)
             localized["tagline"] = require_string(localized, "tagline", source)
+            localized_notice = localized.get("notice")
+            if localized_notice is not None:
+                if not isinstance(localized_notice, str) or not localized_notice.strip():
+                    raise ValueError(
+                        f"{source}: locales.{locale}.notice must be a non-empty string"
+                    )
+                localized["notice"] = localized_notice.strip()
             for key in ("description", "features", "compatibility", "usage"):
                 value = localized.get(key, [])
                 if not isinstance(value, list) or not all(
@@ -473,6 +486,11 @@ def make_html_locale(info: dict, info_dir: Path, locale: str) -> str:
     description_section = (
         f'<section class="description">{description}</section>' if description else ""
     )
+    notice = (
+        f'<aside class="notice" role="note"><strong>{html.escape(localized["notice"])}</strong></aside>'
+        if localized.get("notice")
+        else ""
+    )
     features = (
         f'<section><h2>{labels["features"]}</h2><ul>{html_list(localized["features"])}</ul></section>'
         if localized["features"]
@@ -510,6 +528,7 @@ def make_html_locale(info: dict, info_dir: Path, locale: str) -> str:
       <a class="back" href="/">{labels["back"]}</a>
       <header>{icon}<div><p class="package-id">{package}</p><h1>{html.escape(localized["name"])}</h1><p class="tagline">{html.escape(localized["tagline"])}</p></div></header>
       <div class="compatibility">{compatibility}</div>
+      {notice}
       {description_section}
       {screenshot_section}
       {features}

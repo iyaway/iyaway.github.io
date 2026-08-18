@@ -8,6 +8,7 @@
     "趣味壁纸会随设备倾斜在多张预设壁纸间动态切换，呈现类似光栅卡片的视差效果。",
     "支持 APNG 动画、多种切换方式，以及可选的角度光效。"
   ],
+  "notice": "⚠️ 使用前请在“照片”App 中创建名为「Banana」的相册，并将壁纸图片放入其中。最多读取 9 张图片。",
   "features": [
     "随设备倾斜切换预设壁纸",
     "支持 APNG 动画播放",
@@ -45,6 +46,7 @@
         "Lenticular Wallpaper switches between prepared wallpapers as you tilt your device, creating a lenticular-style parallax effect.",
         "It supports APNG playback, multiple transition styles, and optional angle-responsive lighting."
       ],
+      "notice": "⚠️ Before use, create an album named “Banana” in the Photos app and add your wallpaper images. Up to 9 images are loaded.",
       "features": [
         "Switch between prepared wallpapers as the device tilts",
         "APNG animation playback",
