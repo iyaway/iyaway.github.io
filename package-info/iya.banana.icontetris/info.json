@@ -1,0 +1,83 @@
+{
+  "package": "iya.banana.icontetris",
+  "name": "IconTetris",
+  "web_name": "图标俄罗斯方块",
+  "tagline": "使用已安装 App 的图标，在主屏幕上玩俄罗斯方块。",
+  "developer": "Banana",
+  "tint": "#64D2FF",
+  "description": [
+    "图标俄罗斯方块让你直接在主屏幕上游玩经典俄罗斯方块，每个方块都由设备中已安装 App 的图标组成。",
+    "消行可以获得分数，等级提升后下落速度会逐渐增加；游戏结束后可再次游玩或恢复原主屏幕。"
+  ],
+  "notice": "🎮 长按主屏幕底部的 Search 按钮或页面指示器开始；轻触旋转，左右滑动平移，下滑软降，双击硬降。",
+  "features": [
+    "使用已安装 App 图标组成俄罗斯方块",
+    "在主屏幕上直接开始全屏游戏",
+    "支持旋转、左右移动、软降与硬降",
+    "消行计分、等级提升与逐渐加速",
+    "游戏结束后可重开或恢复主屏幕",
+    "支持 English、简体中文和繁體中文"
+  ],
+  "compatibility": [
+    "iOS 16–18",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "安装后打开“设置”中的图标俄罗斯方块，确认总开关已启用。",
+    "返回主屏幕，长按底部 Search 按钮或页面指示器开始游戏。",
+    "轻触旋转；左右滑动平移；下滑软降；双击硬降。",
+    "游戏结束后选择再次游玩或恢复主屏幕。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.1",
+      "changes": [
+        "新增使用已安装 App 图标游玩的主屏幕俄罗斯方块。",
+        "新增旋转、移动、软降、硬降、消行计分与等级加速。",
+        "增强全屏透明游戏体验，并修复设置图标与方块初始显示问题。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "IconTetris",
+      "tagline": "Play Tetris on the Home Screen using icons from installed apps.",
+      "description": [
+        "IconTetris brings the classic Tetris experience directly to the Home Screen, with every block built from icons of installed apps.",
+        "Clear lines to score points as the falling speed increases with each level, then play again or restore the original Home Screen when the game ends."
+      ],
+      "notice": "🎮 Long-press the Search button or page indicator at the bottom of the Home Screen to start. Tap to rotate, swipe left or right to move, swipe down for a soft drop, and double-tap for a hard drop.",
+      "features": [
+        "Build Tetris pieces from installed app icons",
+        "Play full-screen directly on the Home Screen",
+        "Rotate, move left or right, soft drop, and hard drop",
+        "Line clearing, scoring, levels, and increasing speed",
+        "Play again or restore the Home Screen after a game",
+        "English, Simplified Chinese, and Traditional Chinese"
+      ],
+      "compatibility": [
+        "iOS 16–18",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Open IconTetris in Settings after installation and make sure it is enabled.",
+        "Return to the Home Screen and long-press the Search button or page indicator to start.",
+        "Tap to rotate, swipe left or right to move, swipe down for a soft drop, and double-tap for a hard drop.",
+        "Choose Play Again or Restore Home Screen when the game ends."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.1",
+          "changes": [
+            "Added a Home Screen Tetris game using icons from installed apps.",
+            "Added rotation, movement, soft drop, hard drop, line scoring, and level-based speed increases.",
+            "Improved the transparent full-screen experience and fixed the Settings icon and initial block appearance."
+          ]
+        }
+      ]
+    }
+  }
+}
