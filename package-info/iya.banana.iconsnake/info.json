@@ -1,0 +1,83 @@
+{
+  "package": "iya.banana.iconsnake",
+  "name": "IconSnake",
+  "web_name": "图标贪吃蛇",
+  "tagline": "把已安装 App 的图标变成主屏幕上的贪吃蛇。",
+  "developer": "Banana",
+  "tint": "#30D158",
+  "description": [
+    "图标贪吃蛇让你直接在主屏幕上玩贪吃蛇，蛇身和食物均由设备中已安装 App 的图标组成。",
+    "游戏会随得分逐渐加速，结束后可以再次游玩或恢复原主屏幕。"
+  ],
+  "notice": "🎮 长按主屏幕底部的 Search 按钮或页面指示器开始游戏；在屏幕任意位置滑动即可改变方向。",
+  "features": [
+    "使用全部可启动且具有可见图标的已安装 App",
+    "在主屏幕上直接开始游戏",
+    "全屏滑动转向并随得分逐渐加速",
+    "图标耗尽后可选择胜利或重新洗牌继续",
+    "游戏结束后可重开或恢复主屏幕",
+    "支持 English、简体中文和繁體中文"
+  ],
+  "compatibility": [
+    "iOS 16–18",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "安装后打开“设置”中的图标贪吃蛇，确认总开关已启用。",
+    "选择图标耗尽后直接胜利或重新洗牌继续。",
+    "返回主屏幕，长按底部 Search 按钮或页面指示器开始游戏。",
+    "在屏幕任意位置滑动改变方向。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.2",
+      "changes": [
+        "新增使用全部已安装 App 图标游玩主屏幕贪吃蛇。",
+        "新增图标耗尽后胜利或重新洗牌继续的选项。",
+        "修复长按启动可能进入主屏幕编辑模式的问题，并增强启动可靠性。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "IconSnake",
+      "tagline": "Turn installed app icons into a Snake game on your Home Screen.",
+      "description": [
+        "IconSnake lets you play Snake directly on the Home Screen, using icons from installed apps as the snake and food.",
+        "The game gradually speeds up with your score, and you can play again or restore the original Home Screen when it ends."
+      ],
+      "notice": "🎮 Long-press the Search button or page indicator at the bottom of the Home Screen to start. Swipe anywhere to change direction.",
+      "features": [
+        "Use all launchable installed apps with visible icons",
+        "Start and play directly on the Home Screen",
+        "Swipe anywhere to turn while speed increases with score",
+        "Win or reshuffle and continue when the icon pool runs out",
+        "Play again or restore the Home Screen after a game",
+        "English, Simplified Chinese, and Traditional Chinese"
+      ],
+      "compatibility": [
+        "iOS 16–18",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Open IconSnake in Settings after installation and make sure it is enabled.",
+        "Choose whether an exhausted icon pool should end in a win or reshuffle and continue.",
+        "Return to the Home Screen and long-press the Search button or page indicator to start.",
+        "Swipe anywhere on the screen to change direction."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.2",
+          "changes": [
+            "Added a Home Screen Snake game using icons from all installed apps.",
+            "Added options to win or reshuffle and continue when the icon pool runs out.",
+            "Fixed long-press activation entering Home Screen edit mode and improved launch reliability."
+          ]
+        }
+      ]
+    }
+  }
+}
