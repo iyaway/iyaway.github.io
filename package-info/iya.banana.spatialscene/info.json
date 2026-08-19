@@ -2,7 +2,7 @@
   "package": "iya.banana.spatialscene",
   "name": "SpatialScene",
   "web_name": "空间场景",
-  "tagline": "在 iOS 16–18 上导入、下载并呈现具有空间层次的动态壁纸。",
+  "tagline": "在 iOS 15–18 上导入、下载并呈现具有空间层次的动态壁纸。",
   "developer": "Banana",
   "tint": "#5E5CE6",
   "description": [
@@ -17,7 +17,7 @@
     "可按需启用主屏幕动态效果"
   ],
   "compatibility": [
-    "iOS 16–18",
+    "iOS 15–18",
     "Rootless",
     "RootHide"
   ],
@@ -29,6 +29,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.0.28",
+      "changes": [
+        "新增 iOS 15 支持，并恢复 App 网络与在线壁纸下载。",
+        "修复 iOS 16 上的兼容性问题与部分功能异常。",
+        "修复 RootHide 环境下在线壁纸下载失败的问题。"
+      ]
+    },
     {
       "version": "0.0.26",
       "changes": [
@@ -47,7 +55,7 @@
   "locales": {
     "en": {
       "name": "SpatialScene",
-      "tagline": "Import, download, and enjoy layered spatial wallpapers on iOS 16–18.",
+      "tagline": "Import, download, and enjoy layered spatial wallpapers on iOS 15–18.",
       "description": [
         "SpatialScene lets you import or download spatial wallpapers in the app, preview and manage them, and set one as current.",
         "Once enabled, wallpapers respond to device movement with natural layered depth effects."
@@ -60,7 +68,7 @@
         "Optional Home Screen animation"
       ],
       "compatibility": [
-        "iOS 16–18",
+        "iOS 15–18",
         "Rootless",
         "RootHide"
       ],
@@ -71,6 +79,14 @@
         "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired."
       ],
       "changelog": [
+        {
+          "version": "0.0.28",
+          "changes": [
+            "Added iOS 15 support and restored app networking and online wallpaper downloads.",
+            "Fixed compatibility issues and feature failures on iOS 16.",
+            "Fixed online wallpaper download failures in RootHide environments."
+          ]
+        },
         {
           "version": "0.0.26",
           "changes": [
