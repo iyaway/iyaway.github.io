@@ -1,0 +1,83 @@
+{
+  "package": "iya.banana.springboardgame",
+  "name": "SpringBoardGame",
+  "web_name": "主屏幕游戏",
+  "tagline": "长按主屏幕后选择使用 App 图标游玩贪吃蛇或俄罗斯方块。",
+  "developer": "Banana",
+  "tint": "#5856D6",
+  "description": [
+    "主屏幕游戏将图标贪吃蛇和图标俄罗斯方块合并到同一个插件中，并共用一次长按启动与游戏选择界面。",
+    "两款游戏都使用设备中已安装 App 的图标，结束后可以再次游玩或恢复原主屏幕。"
+  ],
+  "notice": "🎮 长按主屏幕底部的 Search 按钮或页面指示器，然后选择贪吃蛇或俄罗斯方块。安装本插件时会自动替换已安装的 IconSnake 与 IconTetris。",
+  "features": [
+    "长按后选择贪吃蛇或俄罗斯方块",
+    "使用已安装 App 的图标作为游戏元素",
+    "贪吃蛇支持滑动转向、成长、计分与逐渐加速",
+    "俄罗斯方块支持旋转、移动、软降、硬降、消行与等级加速",
+    "游戏结束后可重开或恢复主屏幕",
+    "支持 English、简体中文和繁體中文"
+  ],
+  "compatibility": [
+    "iOS 16–18",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "安装后打开“设置”中的主屏幕游戏，确认总开关已启用。",
+    "阅读两款游戏的玩法说明，并按需选择贪吃蛇图标耗尽后的行为。",
+    "返回主屏幕，长按底部 Search 按钮或页面指示器。",
+    "选择贪吃蛇或俄罗斯方块并开始游戏。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.0.1",
+      "changes": [
+        "新增长按后选择贪吃蛇或俄罗斯方块的统一游戏入口。",
+        "新增两款游戏的完整玩法、计分、加速与主屏幕恢复功能。",
+        "增强三语设置说明，并自动替换独立的 IconSnake 与 IconTetris 包。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "SpringBoardGame",
+      "tagline": "Long-press the Home Screen, then choose Snake or Tetris using installed app icons.",
+      "description": [
+        "SpringBoardGame combines IconSnake and IconTetris into one tweak with a shared long-press launcher and game selection screen.",
+        "Both games use icons from installed apps, and you can play again or restore the original Home Screen when a game ends."
+      ],
+      "notice": "🎮 Long-press the Search button or page indicator at the bottom of the Home Screen, then choose Snake or Tetris. Installing this package automatically replaces installed IconSnake and IconTetris packages.",
+      "features": [
+        "Choose Snake or Tetris after a single long press",
+        "Use icons from installed apps as game elements",
+        "Snake with swipe steering, growth, scoring, and increasing speed",
+        "Tetris with rotation, movement, soft drop, hard drop, line clearing, and level speed",
+        "Play again or restore the Home Screen after a game",
+        "English, Simplified Chinese, and Traditional Chinese"
+      ],
+      "compatibility": [
+        "iOS 16–18",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Open SpringBoardGame in Settings after installation and make sure it is enabled.",
+        "Read the instructions for both games and choose the Snake icon-pool behavior if needed.",
+        "Return to the Home Screen and long-press the Search button or page indicator.",
+        "Choose Snake or Tetris and start playing."
+      ],
+      "changelog": [
+        {
+          "version": "0.0.1",
+          "changes": [
+            "Added a unified launcher for choosing Snake or Tetris after a long press.",
+            "Added complete gameplay, scoring, speed progression, and Home Screen restoration for both games.",
+            "Improved trilingual instructions and automatically replaced the standalone IconSnake and IconTetris packages."
+          ]
+        }
+      ]
+    }
+  }
+}
