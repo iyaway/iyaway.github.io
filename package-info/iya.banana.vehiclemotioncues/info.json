@@ -1,0 +1,85 @@
+{
+  "package": "iya.banana.vehiclemotioncues",
+  "name": "Vehicle Motion Cues",
+  "web_name": "车辆运动提示",
+  "tagline": "在 iOS 15–17 的屏幕边缘显示车辆加速、减速与转向提示。",
+  "developer": "Banana",
+  "tint": "#34C759",
+  "description": [
+    "车辆运动提示会在屏幕边缘显示动态圆点，让乘客更直观看到车辆加速、减速和转向的方向变化。",
+    "支持自动、开启和关闭模式、灵敏度调节、控制中心快捷开关，以及无需乘车即可检查动画方向的模拟场景。"
+  ],
+  "notice": "⚠️ 仅供乘客使用，驾驶时请勿操作设备。模拟运动只用于检查动画与方向，不代表真实乘车效果。",
+  "features": [
+    "屏幕边缘圆点响应加速、减速与转向",
+    "自动、开启和关闭三种运行模式",
+    "可调节圆点响应灵敏度",
+    "提供控制中心快捷开关",
+    "内置自动演示、左右转、加速、刹车和 S 弯模拟场景",
+    "支持 English、简体中文和繁體中文"
+  ],
+  "compatibility": [
+    "iOS 15–17",
+    "Rootless",
+    "RootHide",
+    "需要 CCSupport"
+  ],
+  "usage": [
+    "安装后打开“设置”中的车辆运动提示。",
+    "选择自动、开启或关闭模式，并按需要调整灵敏度。",
+    "可将车辆运动提示模块添加到控制中心以快速开关。",
+    "需要原地检查动画时，选择测试场景并开启模拟运动；测试完成后请关闭模拟运动。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.0.2",
+      "changes": [
+        "新增随车辆加速、减速与转向变化的屏幕边缘运动提示。",
+        "新增自动模式、灵敏度调节、控制中心开关与多种模拟测试场景。",
+        "修复设置修改未即时生效及控制中心模块不可用的问题，并增强三语显示。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "Vehicle Motion Cues",
+      "tagline": "Show acceleration, braking, and turning cues at the screen edges on iOS 15–17.",
+      "description": [
+        "Vehicle Motion Cues displays animated dots along the screen edges so passengers can see directional changes during acceleration, braking, and turns.",
+        "It provides Automatic, On, and Off modes, sensitivity adjustment, a Control Center toggle, and simulated scenarios for checking animation direction without a moving vehicle."
+      ],
+      "notice": "⚠️ For passenger use only. Do not operate the device while driving. Simulated motion only checks animation and direction; it does not represent real-world effectiveness.",
+      "features": [
+        "Edge dots respond to acceleration, braking, and turns",
+        "Automatic, On, and Off operating modes",
+        "Adjustable cue sensitivity",
+        "Control Center toggle for quick access",
+        "Automatic demo, left turn, right turn, acceleration, braking, and S-curve simulations",
+        "English, Simplified Chinese, and Traditional Chinese"
+      ],
+      "compatibility": [
+        "iOS 15–17",
+        "Rootless",
+        "RootHide",
+        "Requires CCSupport"
+      ],
+      "usage": [
+        "Open Vehicle Motion Cues in Settings after installation.",
+        "Choose Automatic, On, or Off and adjust sensitivity as needed.",
+        "Add the Vehicle Motion Cues module to Control Center for quick toggling.",
+        "To check animation while stationary, choose a test scenario and enable Simulated Motion; turn simulation off when finished."
+      ],
+      "changelog": [
+        {
+          "version": "0.0.2",
+          "changes": [
+            "Added screen-edge motion cues that respond to vehicle acceleration, braking, and turns.",
+            "Added Automatic mode, sensitivity adjustment, a Control Center toggle, and multiple simulated test scenarios.",
+            "Fixed Settings changes not applying immediately and the Control Center module being unavailable, and improved trilingual presentation."
+          ]
+        }
+      ]
+    }
+  }
+}
