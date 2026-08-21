@@ -1,0 +1,76 @@
+{
+  "package": "com.kdt.unrestrictmirroring",
+  "name": "UnrestrictMirroring",
+  "tagline": "在 iOS 18.0+ 解锁设备时继续使用 iPhone Mirroring，并启用 Device Hub 远程控制。",
+  "developer": "khanhduytran0",
+  "tint": "#0A84FF",
+  "description": [
+    "UnrestrictMirroring 允许设备保持解锁时继续使用 iPhone Mirroring 与相机，从而在手机和镜像画面中同时运行不同 App。",
+    "它还可在 iOS 18.0+ 启用新版 Device Hub 远程控制功能。此包由上游作者 khanhduytran0 开发，Banana 源仅提供安装镜像。"
+  ],
+  "notice": "⚠️ 实验性预发布。连接镜像时设备仍会锁定，并存在双端键盘焦点冲突、锁屏后镜像异常及 Spotlight 互斥等已知限制。",
+  "features": [
+    "设备解锁时继续使用 iPhone Mirroring",
+    "镜像期间继续使用设备相机",
+    "在手机和镜像画面中同时运行不同 App",
+    "在 iOS 18.0+ 启用 Device Hub 远程控制"
+  ],
+  "compatibility": [
+    "iOS 18.0+",
+    "Rootless",
+    "RootHide",
+    "实验性预发布"
+  ],
+  "usage": [
+    "安装与你越狱环境对应的软件包并 Respring。",
+    "按照系统原有方式连接 iPhone Mirroring 或 Device Hub。",
+    "若锁屏后镜像无法继续启动 App，请先解锁设备再重新连接。",
+    "避免同时在设备与镜像画面中争夺键盘焦点。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.0.2",
+      "changes": [
+        "修复可能影响无关 App 或系统进程的问题，并增强使用稳定性。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "UnrestrictMirroring",
+      "tagline": "Keep using iPhone Mirroring while unlocked and enable Device Hub remote control on iOS 18.0+.",
+      "description": [
+        "UnrestrictMirroring allows iPhone Mirroring and the camera to remain usable while the device is unlocked, letting different apps run on the device and mirrored display at the same time.",
+        "It also enables newer Device Hub remote control on iOS 18.0+. The package is developed upstream by khanhduytran0; the Banana repository only provides an installation mirror."
+      ],
+      "notice": "⚠️ Experimental pre-release. The device still locks when mirroring connects, with known limitations including keyboard-focus conflicts, broken mirroring after locking, and Spotlight being available on only one screen at a time.",
+      "features": [
+        "Keep using iPhone Mirroring while the device is unlocked",
+        "Continue using the device camera during mirroring",
+        "Run different apps on the device and mirrored display simultaneously",
+        "Enable Device Hub remote control on iOS 18.0+"
+      ],
+      "compatibility": [
+        "iOS 18.0+",
+        "Rootless",
+        "RootHide",
+        "Experimental pre-release"
+      ],
+      "usage": [
+        "Install the package matching your jailbreak environment and Respring.",
+        "Connect through iPhone Mirroring or Device Hub normally.",
+        "If mirroring stops launching apps after the device locks, unlock it and reconnect.",
+        "Avoid competing for keyboard focus on the device and mirrored screen at the same time."
+      ],
+      "changelog": [
+        {
+          "version": "0.0.2",
+          "changes": [
+            "Fixed an issue that could affect unrelated apps or system processes and improved stability."
+          ]
+        }
+      ]
+    }
+  }
+}
