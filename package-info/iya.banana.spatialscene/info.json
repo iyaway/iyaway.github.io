@@ -30,6 +30,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.0.29",
+      "changes": [
+        "修复插件关闭后，下拉锁屏或通知中心的壁纸图层仍可能保持透明的问题。",
+        "增强与其他壁纸插件同时安装时的图层状态恢复稳定性。"
+      ]
+    },
+    {
       "version": "0.0.28",
       "changes": [
         "新增 iOS 15 支持，并恢复 App 网络与在线壁纸下载。",
@@ -79,6 +86,13 @@
         "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired."
       ],
       "changelog": [
+        {
+          "version": "0.0.29",
+          "changes": [
+            "Fixed wallpaper layers remaining transparent in the Lock Screen or Notification Center after the tweak was disabled.",
+            "Improved layer-state restoration when used alongside other wallpaper tweaks."
+          ]
+        },
         {
           "version": "0.0.28",
           "changes": [

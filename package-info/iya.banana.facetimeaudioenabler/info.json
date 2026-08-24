@@ -1,0 +1,83 @@
+{
+  "package": "iya.banana.facetimeaudioenabler",
+  "name": "FaceTime Audio Enabler",
+  "web_name": "FaceTime Audio启用器",
+  "tagline": "在 iOS 15–18 上启用 FaceTime Audio，并按系统版本采用对应的安全流程。",
+  "developer": "Banana",
+  "tint": "#30D158",
+  "description": [
+    "FaceTime Audio启用器为受区域限制的设备恢复 FaceTime Audio 功能，并保留 FaceTime Video 与 iMessage 的正常使用。",
+    "iOS 15–17 使用可逆的即时启用方式；iOS 18 使用带兼容性探测、原始备份、应用与恢复校验的持久管理流程。"
+  ],
+  "notice": "⚠️ iOS 18 启用或停用后必须完整重启设备；Respring、sbreload 和 Userspace Reboot 均无效。若要卸载，请先在设置中停用并完整重启，确认恢复后再卸载。",
+  "features": [
+    "在受区域限制的设备上启用 FaceTime Audio",
+    "iOS 15–17 修改后自动重新加载相关服务",
+    "iOS 18 提供兼容性探测、原始备份、应用与恢复校验",
+    "显示系统版本、实现方式、当前状态、备份状态与安全结果",
+    "检测到不兼容或状态异常时自动禁止修改",
+    "支持 English、简体中文和繁體中文"
+  ],
+  "compatibility": [
+    "iOS 15–18",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "安装后打开“设置”中的 FaceTime Audio启用器。",
+    "确认兼容性探测与状态检查通过后，开启 FaceTime Audio。",
+    "iOS 15–17 会自动重新加载相关服务；通常无需 Respring。",
+    "iOS 18 必须按提示完整重启设备；需要恢复原状态时先关闭开关并再次完整重启。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "1.0.5",
+      "changes": [
+        "新增针对 iOS 15–17 与 iOS 18 的分版本 FaceTime Audio 启用流程。",
+        "新增兼容性探测、状态显示、原始备份及受保护的应用与恢复管理。",
+        "修复旧系统状态读取与设置入口显示问题，并增强三语设置体验。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "FaceTime Audio Enabler",
+      "tagline": "Enable FaceTime Audio on iOS 15–18 with a version-appropriate guarded workflow.",
+      "description": [
+        "FaceTime Audio Enabler restores FaceTime Audio on region-restricted devices while preserving normal FaceTime Video and iMessage use.",
+        "iOS 15–17 uses an immediate reversible method, while iOS 18 uses a guarded persistent workflow with compatibility probing, original backup, apply verification, and restore verification."
+      ],
+      "notice": "⚠️ On iOS 18, enabling or disabling requires a complete device reboot; Respring, sbreload, and Userspace Reboot are not sufficient. Before uninstalling, disable the feature, complete a full reboot, and confirm restoration first.",
+      "features": [
+        "Enable FaceTime Audio on region-restricted devices",
+        "Automatically reload related services after changes on iOS 15–17",
+        "Compatibility probing, original backup, apply verification, and restore verification on iOS 18",
+        "Display system version, method, current state, backup state, and safety result",
+        "Refuse changes automatically when compatibility or state validation fails",
+        "English, Simplified Chinese, and Traditional Chinese"
+      ],
+      "compatibility": [
+        "iOS 15–18",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Open FaceTime Audio Enabler in Settings after installation.",
+        "Enable FaceTime Audio after the compatibility probe and status checks pass.",
+        "On iOS 15–17, related services reload automatically and a Respring is normally unnecessary.",
+        "On iOS 18, complete a full device reboot as instructed; to restore the original state, disable the switch and complete another full reboot."
+      ],
+      "changelog": [
+        {
+          "version": "1.0.5",
+          "changes": [
+            "Added version-specific FaceTime Audio enablement workflows for iOS 15–17 and iOS 18.",
+            "Added compatibility probing, status reporting, original backup, and guarded apply and restore management.",
+            "Fixed legacy status loading and Settings entry presentation, and improved trilingual Settings support."
+          ]
+        }
+      ]
+    }
+  }
+}
