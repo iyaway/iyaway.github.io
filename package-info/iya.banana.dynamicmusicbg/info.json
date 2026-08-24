@@ -1,0 +1,79 @@
+{
+  "package": "iya.banana.dynamicmusicbg",
+  "name": "DynamicMusicBG",
+  "web_name": "动态音乐锁屏背景",
+  "tagline": "根据当前音乐封面，在锁屏正在播放控件后方生成流动的动态色彩背景。",
+  "developer": "Banana",
+  "tint": "#7C4DFF",
+  "description": [
+    "动态音乐锁屏背景会从当前音乐封面提取代表色，并在锁屏正在播放控件后方呈现平滑流动的色彩背景。",
+    "切换歌曲时颜色自然过渡；暂停播放、开启减弱动态效果或屏幕进入暗显状态时，动画会自动暂停。"
+  ],
+  "features": [
+    "根据当前音乐封面自动生成动态色彩背景",
+    "经典流动、氛围流动和轻柔流动三种动画效果",
+    "切换歌曲时平滑过渡至新封面配色",
+    "播放暂停、减弱动态效果及屏幕暗显时自动暂停动画",
+    "可与空间场景和趣味壁纸同时使用",
+    "设置修改立即生效，并支持 English、简体中文和繁體中文"
+  ],
+  "compatibility": [
+    "iOS 15–18",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "安装后打开“设置”中的动态音乐锁屏背景并启用插件。",
+    "选择经典流动、氛围流动或轻柔流动效果。",
+    "播放带有有效封面的音乐并进入锁屏；正在播放控件出现时，动态背景会自动显示。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "1.0.10",
+      "changes": [
+        "新增根据音乐封面生成锁屏动态色彩背景，并提供三种动画效果。",
+        "新增切歌配色平滑过渡，以及播放暂停、减弱动态效果和屏幕暗显联动。",
+        "增强与空间场景、趣味壁纸同时使用时的显示兼容性。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "DynamicMusicBG",
+      "tagline": "Create a flowing album-art-driven color background behind Lock Screen Now Playing.",
+      "description": [
+        "DynamicMusicBG extracts representative colors from the current album artwork and presents a smoothly animated background behind Lock Screen Now Playing.",
+        "Colors transition naturally when tracks change, while motion pauses automatically when playback pauses, Reduce Motion is enabled, or the display enters its dim state."
+      ],
+      "features": [
+        "Generate an animated color background from the current album artwork",
+        "Legacy, Ambient, and Subtle animation styles",
+        "Smooth palette transitions when tracks change",
+        "Pause motion automatically with playback, Reduce Motion, and display dimming",
+        "Coexist with SpatialScene and Lenticular Wallpaper",
+        "Apply Settings changes immediately with English, Simplified Chinese, and Traditional Chinese support"
+      ],
+      "compatibility": [
+        "iOS 15–18",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Open DynamicMusicBG in Settings after installation and enable the tweak.",
+        "Choose the Legacy, Ambient, or Subtle animation style.",
+        "Play music with valid artwork and open the Lock Screen; the animated background appears automatically with Now Playing."
+      ],
+      "changelog": [
+        {
+          "version": "1.0.10",
+          "changes": [
+            "Added album-art-driven animated Lock Screen colors with three animation styles.",
+            "Added smooth track-change transitions and motion control for playback, Reduce Motion, and display dimming.",
+            "Improved display compatibility when used with SpatialScene and Lenticular Wallpaper."
+          ]
+        }
+      ]
+    }
+  }
+}
