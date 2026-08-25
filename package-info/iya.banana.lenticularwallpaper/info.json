@@ -15,6 +15,8 @@
     "支持 APNG 动画播放",
     "淡入淡出、棱镜光栅、磨砂玻璃与景深切换效果",
     "可选的角度光效与两种光效样式",
+    "保持锁屏时间、通知与正在播放控件正常显示和交互",
+    "可与 DynamicMusicBG 同时使用",
     "支持 English、简体中文和繁體中文"
   ],
   "compatibility": [
@@ -30,6 +32,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.0.9",
+      "changes": [
+        "修复锁屏壁纸可能遮挡时间、通知或正在播放控件并影响交互的问题。",
+        "修复通知中心下拉、停住与收回时壁纸不同步或残留的问题。",
+        "增强与 DynamicMusicBG 同时使用及插件禁用后的壁纸状态恢复稳定性。"
+      ]
+    },
     {
       "version": "0.0.8",
       "changes": [
@@ -60,6 +70,8 @@
         "APNG animation playback",
         "Cross-fade, Prism, Frosted Glass, and Depth transitions",
         "Optional angle-responsive lighting with two visual styles",
+        "Keep the clock, notifications, and Now Playing controls visible and interactive",
+        "Coexist with DynamicMusicBG",
         "English, Simplified Chinese, and Traditional Chinese"
       ],
       "compatibility": [
@@ -74,6 +86,14 @@
         "Tap Open Settings to enter the wallpaper configuration panel."
       ],
       "changelog": [
+        {
+          "version": "0.0.9",
+          "changes": [
+            "Fixed the Lock Screen wallpaper covering or blocking the clock, notifications, or Now Playing controls.",
+            "Fixed wallpaper movement or residue issues while pulling down, holding, or dismissing Notification Center.",
+            "Improved coexistence with DynamicMusicBG and wallpaper-state restoration after disabling the tweak."
+          ]
+        },
         {
           "version": "0.0.8",
           "changes": [

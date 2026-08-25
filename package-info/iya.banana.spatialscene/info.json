@@ -14,7 +14,9 @@
     "浏览带预览图的在线壁纸库",
     "预览、管理并设置当前壁纸",
     "随设备姿态呈现空间层次效果",
-    "可按需启用主屏幕动态效果"
+    "可按需启用主屏幕动态效果",
+    "保持锁屏时间、通知与正在播放控件正常显示和交互",
+    "可与 DynamicMusicBG 同时使用"
   ],
   "compatibility": [
     "iOS 15–18",
@@ -29,6 +31,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.1",
+      "changes": [
+        "修复锁屏壁纸可能遮挡时间、通知或正在播放控件并影响交互的问题。",
+        "修复通知中心下拉、停住与收回时壁纸不同步或残留的问题。",
+        "增强与 DynamicMusicBG 同时使用及插件禁用后的壁纸状态恢复稳定性。"
+      ]
+    },
     {
       "version": "0.0.29",
       "changes": [
@@ -72,7 +82,9 @@
         "Browse an online wallpaper library with previews",
         "Preview, manage, and set the current wallpaper",
         "Motion-responsive layered depth effects",
-        "Optional Home Screen animation"
+        "Optional Home Screen animation",
+        "Keep the clock, notifications, and Now Playing controls visible and interactive",
+        "Coexist with DynamicMusicBG"
       ],
       "compatibility": [
         "iOS 15–18",
@@ -86,6 +98,14 @@
         "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired."
       ],
       "changelog": [
+        {
+          "version": "1.0.1",
+          "changes": [
+            "Fixed the Lock Screen wallpaper covering or blocking the clock, notifications, or Now Playing controls.",
+            "Fixed wallpaper movement or residue issues while pulling down, holding, or dismissing Notification Center.",
+            "Improved coexistence with DynamicMusicBG and wallpaper-state restoration after disabling the tweak."
+          ]
+        },
         {
           "version": "0.0.29",
           "changes": [
