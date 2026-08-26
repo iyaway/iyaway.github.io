@@ -6,14 +6,14 @@
   "developer": "Banana",
   "tint": "#7C4DFF",
   "description": [
-    "动态音乐锁屏背景会从当前音乐封面提取代表色，并在锁屏正在播放控件后方呈现平滑流动的色彩背景。",
+    "动态音乐锁屏背景会根据完整音乐封面生成更匹配的配色，并在锁屏正在播放控件后方呈现平滑流动的动态背景。",
     "切换歌曲时颜色自然过渡；暂停播放、开启减弱动态效果或屏幕进入暗显状态时，动画会自动暂停。",
     "控制 Apple TV 等远程播放设备时，也会根据当前远程封面与播放状态更新背景。"
   ],
   "features": [
-    "根据当前音乐封面自动生成动态色彩背景",
-    "经典流动、氛围流动和轻柔流动三种动画效果",
-    "切换歌曲时平滑过渡至新封面配色",
+    "根据完整音乐封面自动生成更匹配的动态色彩背景",
+    "经典流动、氛围流动和轻柔流动三种多层动画效果",
+    "切换歌曲时通过 0.8 秒渐变过渡至新封面配色",
     "支持 Apple TV 等远程播放设备的封面与播放状态",
     "播放暂停、减弱动态效果及屏幕暗显时自动暂停动画",
     "支持调节背景不透明度，并可与空间场景和趣味壁纸同时使用",
@@ -32,6 +32,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.15",
+      "changes": [
+        "新增完整封面驱动的多层动态背景，配色与流动效果更加自然。",
+        "新增切歌 0.8 秒平滑渐变，避免背景闪烁或瞬间消失。",
+        "修复 Apple TV 远程切歌后配色不更新，并优化三种动画效果。"
+      ]
+    },
     {
       "version": "1.0.12",
       "changes": [
@@ -54,14 +62,14 @@
       "name": "DynamicMusicBG",
       "tagline": "Create a flowing album-art-driven color background behind Lock Screen Now Playing.",
       "description": [
-        "DynamicMusicBG extracts representative colors from the current album artwork and presents a smoothly animated background behind Lock Screen Now Playing.",
+        "DynamicMusicBG uses the complete album artwork to create a better-matched palette and a smoothly animated background behind Lock Screen Now Playing.",
         "Colors transition naturally when tracks change, while motion pauses automatically when playback pauses, Reduce Motion is enabled, or the display enters its dim state.",
         "When controlling an Apple TV or another remote playback device, the background also follows the visible remote artwork and playback state."
       ],
       "features": [
-        "Generate an animated color background from the current album artwork",
-        "Legacy, Ambient, and Subtle animation styles",
-        "Smooth palette transitions when tracks change",
+        "Generate a better-matched animated color background from the complete album artwork",
+        "Multi-layer Legacy, Ambient, and Subtle animation styles",
+        "Transition to new artwork colors with a smooth 0.8-second crossfade",
         "Artwork and playback-state support for Apple TV and other remote playback devices",
         "Pause motion automatically with playback, Reduce Motion, and display dimming",
         "Adjust background opacity and coexist with SpatialScene and Lenticular Wallpaper",
@@ -79,6 +87,14 @@
         "Play music with valid artwork and open the Lock Screen; the animated background appears automatically with Now Playing."
       ],
       "changelog": [
+        {
+          "version": "1.0.15",
+          "changes": [
+            "Added a complete-artwork-driven multi-layer background with more natural colors and motion.",
+            "Added a smooth 0.8-second track-change crossfade to prevent flashes or disappearing backgrounds.",
+            "Fixed stale colors after Apple TV track changes and refined all three animation styles."
+          ]
+        },
         {
           "version": "1.0.12",
           "changes": [
