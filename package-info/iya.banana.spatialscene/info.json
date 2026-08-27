@@ -7,7 +7,8 @@
   "tint": "#5E5CE6",
   "description": [
     "SpatialScene 让你通过 App 导入或在线下载空间壁纸，进行预览、管理并设为当前壁纸。",
-    "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果。"
+    "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果。",
+    "你还可以调整锁屏时间外观，并尝试让壁纸前景自然遮挡时间的实验性景深效果。"
   ],
   "features": [
     "导入兼容的空间壁纸包",
@@ -15,6 +16,9 @@
     "预览、管理并设置当前壁纸",
     "随设备姿态呈现空间层次效果",
     "可按需启用主屏幕动态效果",
+    "调整锁屏时间高度、粗细、颜色与不透明度",
+    "根据当前壁纸自动匹配时间颜色，或手动选择颜色",
+    "实验性景深效果可让壁纸前景自然遮挡时间",
     "保持锁屏时间、通知与正在播放控件正常显示和交互",
     "可与 DynamicMusicBG 同时使用"
   ],
@@ -27,10 +31,19 @@
     "安装后打开 SpatialScene App。",
     "从在线壁纸库下载，或导入兼容的空间壁纸包。",
     "预览壁纸并将喜欢的项目设为当前。",
-    "在系统“设置”中启用 SpatialScene，并按需开启主屏幕动态效果。"
+    "在系统“设置”中启用 SpatialScene，并按需开启主屏幕动态效果。",
+    "在时间设置中调整高度、粗细与颜色；实验性景深效果可按需开启。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.0",
+      "changes": [
+        "新增 iOS 15–18 锁屏时间高度、粗细、颜色与不透明度调整，并支持自动匹配壁纸颜色。",
+        "新增实验性景深效果，可让 3D 壁纸前景自然遮挡时间。",
+        "修复 iOS 15 放大时间后的日期布局，并完善三语设置文本与实时生效体验。"
+      ]
+    },
     {
       "version": "1.0.1",
       "changes": [
@@ -75,7 +88,8 @@
       "tagline": "Import, download, and enjoy layered spatial wallpapers on iOS 15–18.",
       "description": [
         "SpatialScene lets you import or download spatial wallpapers in the app, preview and manage them, and set one as current.",
-        "Once enabled, wallpapers respond to device movement with natural layered depth effects."
+        "Once enabled, wallpapers respond to device movement with natural layered depth effects.",
+        "You can also customize the Lock Screen clock and try an experimental depth effect that lets wallpaper foregrounds naturally overlap it."
       ],
       "features": [
         "Import compatible spatial wallpaper packages",
@@ -83,6 +97,9 @@
         "Preview, manage, and set the current wallpaper",
         "Motion-responsive layered depth effects",
         "Optional Home Screen animation",
+        "Adjust Lock Screen clock height, weight, color, and opacity",
+        "Match the clock color to the current wallpaper automatically or choose one manually",
+        "Experimental depth effect that lets wallpaper foregrounds overlap the clock",
         "Keep the clock, notifications, and Now Playing controls visible and interactive",
         "Coexist with DynamicMusicBG"
       ],
@@ -95,9 +112,18 @@
         "Open the SpatialScene app after installation.",
         "Download a wallpaper from the online library or import a compatible package.",
         "Preview a wallpaper and set your preferred item as current.",
-        "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired."
+        "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired.",
+        "Use Clock settings to adjust height, weight, and color, and optionally enable the experimental depth effect."
       ],
       "changelog": [
+        {
+          "version": "1.1.0",
+          "changes": [
+            "Added Lock Screen clock height, weight, color, and opacity controls on iOS 15–18, including automatic wallpaper color matching.",
+            "Added an experimental depth effect that lets 3D wallpaper foregrounds naturally overlap the clock.",
+            "Fixed date layout after enlarging the clock on iOS 15 and improved trilingual Settings text and live updates."
+          ]
+        },
         {
           "version": "1.0.1",
           "changes": [
