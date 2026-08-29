@@ -7,18 +7,22 @@
   "tint": "#5E5CE6",
   "description": [
     "SpatialScene 让你通过 App 导入或在线下载空间壁纸，进行预览、管理并设为当前壁纸。",
-    "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果。",
+    "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果，并减少旋转或转场时短暂露出系统原壁纸。",
     "你还可以调整锁屏时间外观，并尝试让壁纸前景自然遮挡时间的实验性景深效果。"
   ],
+  "notice": "⚠️ 如同时使用 LiquidAss 自定义时钟，请前往 LiquidAss > 表面 > 锁屏 > 时钟，关闭“启用”，避免与 SpatialScene 时间样式冲突。",
   "features": [
     "导入兼容的空间壁纸包",
     "浏览带预览图的在线壁纸库",
     "预览、管理并设置当前壁纸",
     "随设备姿态呈现空间层次效果",
     "可按需启用主屏幕动态效果",
+    "支持实时切换“桌面使用原壁纸”，无需 Respring",
+    "旋转与转场期间提供静态回退，减少系统原壁纸露出",
     "调整锁屏时间高度、粗细、颜色与不透明度",
     "根据当前壁纸自动匹配时间颜色，或手动选择颜色",
     "实验性景深效果可让壁纸前景自然遮挡时间",
+    "检测 LiquidAss 自定义时钟冲突并提供关闭指引",
     "保持锁屏时间、通知与正在播放控件正常显示和交互",
     "可与 DynamicMusicBG 同时使用"
   ],
@@ -32,10 +36,19 @@
     "从在线壁纸库下载，或导入兼容的空间壁纸包。",
     "预览壁纸并将喜欢的项目设为当前。",
     "在系统“设置”中启用 SpatialScene，并按需开启主屏幕动态效果。",
-    "在时间设置中调整高度、粗细与颜色；实验性景深效果可按需开启。"
+    "在时间设置中调整高度、粗细与颜色；实验性景深效果可按需开启。",
+    "如需保留系统桌面壁纸，可开启“桌面使用原壁纸”，设置会立即生效。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.1",
+      "changes": [
+        "新增旋转与转场静态回退，并支持实时切换“桌面使用原壁纸”。",
+        "新增 LiquidAss 自定义时钟冲突检测及明确的关闭指引。",
+        "重新设计设置页 Slider，修复重复覆盖冲突并完善三语文本。"
+      ]
+    },
     {
       "version": "1.1.0",
       "changes": [
@@ -88,18 +101,22 @@
       "tagline": "Import, download, and enjoy layered spatial wallpapers on iOS 15–18.",
       "description": [
         "SpatialScene lets you import or download spatial wallpapers in the app, preview and manage them, and set one as current.",
-        "Once enabled, wallpapers respond to device movement with natural layered depth effects.",
+        "Once enabled, wallpapers respond to device movement with natural layered depth effects while reducing brief flashes of the stock wallpaper during rotations and transitions.",
         "You can also customize the Lock Screen clock and try an experimental depth effect that lets wallpaper foregrounds naturally overlap it."
       ],
+      "notice": "⚠️ If you use LiquidAss clock customization, open LiquidAss > Surfaces > Lock Screen > Clock and disable “Enabled” to avoid conflicts with SpatialScene clock styling.",
       "features": [
         "Import compatible spatial wallpaper packages",
         "Browse an online wallpaper library with previews",
         "Preview, manage, and set the current wallpaper",
         "Motion-responsive layered depth effects",
         "Optional Home Screen animation",
+        "Switch to the stock Home Screen wallpaper instantly without a Respring",
+        "Static fallback during rotations and transitions to reduce stock-wallpaper flashes",
         "Adjust Lock Screen clock height, weight, color, and opacity",
         "Match the clock color to the current wallpaper automatically or choose one manually",
         "Experimental depth effect that lets wallpaper foregrounds overlap the clock",
+        "Detect LiquidAss custom-clock conflicts and provide clear disable guidance",
         "Keep the clock, notifications, and Now Playing controls visible and interactive",
         "Coexist with DynamicMusicBG"
       ],
@@ -113,9 +130,18 @@
         "Download a wallpaper from the online library or import a compatible package.",
         "Preview a wallpaper and set your preferred item as current.",
         "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired.",
-        "Use Clock settings to adjust height, weight, and color, and optionally enable the experimental depth effect."
+        "Use Clock settings to adjust height, weight, and color, and optionally enable the experimental depth effect.",
+        "Enable Use Stock Home Wallpaper to keep the system Home Screen wallpaper; the change applies immediately."
       ],
       "changelog": [
+        {
+          "version": "1.1.1",
+          "changes": [
+            "Added static fallback during rotations and transitions, plus instant switching to the stock Home Screen wallpaper.",
+            "Added LiquidAss custom-clock conflict detection with clear disable guidance.",
+            "Redesigned Settings sliders, fixed duplicate overlay conflicts, and improved trilingual text."
+          ]
+        },
         {
           "version": "1.1.0",
           "changes": [
