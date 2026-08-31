@@ -1,0 +1,100 @@
+{
+  "package": "iya.iapple.liquidass",
+  "name": "Liquid (Gl)ass",
+  "tagline": "为 iOS 14–18 的系统界面带来可实时调整的液态玻璃效果。",
+  "developer": "dylv & banana",
+  "tint": "#76B7C5",
+  "description": [
+    "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
+    "banana11 增强版支持设置自动保存和实时生效、完整恢复系统原始样式，并改善 iOS 17–18 的图标与文件夹效果。",
+    "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & banana 共同署名。"
+  ],
+  "notice": "⚠️ 新包会替换原版 dylv.liquidass 并继承已有设置。安装完成或使用“重启桌面”时会自动重新加载系统界面，期间可能短暂黑屏或中断触控。",
+  "features": [
+    "为多种系统界面提供实时液态玻璃效果",
+    "设置自动保存并实时生效，无需额外 Apply",
+    "总开关关闭后完整恢复系统原始样式",
+    "轻量图标高光，适配不同屏幕尺寸及 iOS 17–18",
+    "Widget 与 RWB 独立控制及关闭后的状态恢复",
+    "提供 Rootless、RootHide 与八种语言本地化"
+  ],
+  "compatibility": [
+    "iOS 14–18",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "根据越狱环境安装 Rootless 或 RootHide 软件包；旧版会被自动替换并保留原设置。",
+    "打开系统“设置”中的 Liquid (Gl)ass，修改会自动保存并实时生效。",
+    "如需重新加载效果，可使用设置页中的“重启桌面”。",
+    "如出现掉帧或耗电增加，请减少同时启用的组件。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.0b+banana11",
+      "changes": [
+        "新增设置自动保存与实时生效，并在总开关关闭后完整恢复系统原始样式。",
+        "新增轻量图标高光和 Widget/RWB 独立控制，修复 iOS 18 文件夹玻璃效果消失。",
+        "增强 Rootless/RootHide 一致性、旧包迁移、系统界面重载与八语言本地化。"
+      ]
+    },
+    {
+      "version": "0.1.0b",
+      "changes": [
+        "新增重新设计的实时液态玻璃效果。",
+        "增强系统界面覆盖、折射、色调、高光与转场表现。",
+        "优化空闲性能及关闭插件后的系统材质恢复。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "Liquid (Gl)ass",
+      "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
+      "description": [
+        "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
+        "The banana11 build adds automatic live preference updates, full stock-style restoration, and improved icon and folder behavior on iOS 17–18.",
+        "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & banana."
+      ],
+      "notice": "⚠️ This package replaces dylv.liquidass while preserving existing preferences. Installation and Restart Home Screen automatically reload the system interface, which may briefly blank the display or interrupt touch input.",
+      "features": [
+        "Live liquid-glass styling across multiple system surfaces",
+        "Preferences save and apply instantly without a separate Apply action",
+        "Full stock-style restoration when the global switch is disabled",
+        "Lightweight Icon Highlights across screen sizes and iOS 17–18",
+        "Independent Widget and RWB controls with proper disable restoration",
+        "Rootless and RootHide packages with eight-language localization"
+      ],
+      "compatibility": [
+        "iOS 14–18",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Install the Rootless or RootHide package matching your jailbreak environment; the previous package is replaced while preferences are preserved.",
+        "Open Liquid (Gl)ass in Settings; changes save and apply instantly.",
+        "Use Restart Home Screen in Settings if the effects need to be reloaded.",
+        "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.0b+banana11",
+          "changes": [
+            "Added automatic live preference updates and full stock-style restoration when the global switch is disabled.",
+            "Added lightweight Icon Highlights and independent Widget/RWB controls, and fixed disappearing folder glass on iOS 18.",
+            "Improved Rootless/RootHide consistency, legacy-package migration, interface reloads, and eight-language localization."
+          ]
+        },
+        {
+          "version": "0.1.0b",
+          "changes": [
+            "Added redesigned real-time liquid-glass styling.",
+            "Expanded system-surface coverage and improved refraction, tint, highlights, and transitions.",
+            "Optimized idle performance and stock-material restoration after disabling the tweak."
+          ]
+        }
+      ]
+    }
+  }
+}
