@@ -6,7 +6,7 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana24 增强版加入 iOS 26 风格应用图标、可调着色和更多旧系统适配，同时保留设置实时生效与系统原始样式恢复。",
+    "banana26 增强版加入 iOS 26 风格应用图标、可调着色和更多旧系统适配，并完善文件夹预览图标的效果同步与恢复。",
     "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & banana 共同署名。"
   ],
   "notice": "⚠️ 新包会替换 dylv.liquidass 与 dylv.liquidass.zh-hans，并继承已有设置。安装完成或使用“重启桌面”时会自动重新加载系统界面，期间可能短暂黑屏或中断触控。",
@@ -35,6 +35,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.0b+banana26",
+      "changes": [
+        "修复 iOS 17.2.1 等旧系统关闭图标效果后，文件夹预览仍显示原始彩色图标的问题。",
+        "增强文件夹预览小图标在布局刷新、缓存更新及视图复用时的效果覆盖。",
+        "优化文件夹图标效果同步与原始状态恢复稳定性。"
+      ]
+    },
     {
       "version": "0.1.0b+banana24",
       "changes": [
@@ -66,7 +74,7 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "The banana24 build adds iOS 26-style app icons, adjustable tinting, and broader legacy-system support while retaining instant preference updates and full stock-style restoration.",
+        "The banana26 build adds iOS 26-style app icons, adjustable tinting, and broader legacy-system support while improving effect synchronization and restoration for folder preview icons.",
         "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & banana."
       ],
       "notice": "⚠️ This package replaces dylv.liquidass and dylv.liquidass.zh-hans while preserving existing preferences. Installation and Restart Home Screen automatically reload the system interface, which may briefly blank the display or interrupt touch input.",
@@ -94,6 +102,14 @@
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.0b+banana26",
+          "changes": [
+            "Fixed folder previews retaining original colored icons after disabling icon effects on older releases such as iOS 17.2.1.",
+            "Improved effect coverage for folder preview icons during layout refreshes, cache updates, and view reuse.",
+            "Improved folder icon effect synchronization and stock-state restoration stability."
+          ]
+        },
         {
           "version": "0.1.0b+banana24",
           "changes": [
