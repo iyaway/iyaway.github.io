@@ -6,15 +6,18 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana11 增强版支持设置自动保存和实时生效、完整恢复系统原始样式，并改善 iOS 17–18 的图标与文件夹效果。",
+    "banana24 增强版加入 iOS 26 风格应用图标、可调着色和更多旧系统适配，同时保留设置实时生效与系统原始样式恢复。",
     "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & banana 共同署名。"
   ],
-  "notice": "⚠️ 新包会替换原版 dylv.liquidass 并继承已有设置。安装完成或使用“重启桌面”时会自动重新加载系统界面，期间可能短暂黑屏或中断触控。",
+  "notice": "⚠️ 新包会替换 dylv.liquidass 与 dylv.liquidass.zh-hans，并继承已有设置。安装完成或使用“重启桌面”时会自动重新加载系统界面，期间可能短暂黑屏或中断触控。",
   "features": [
     "为多种系统界面提供实时液态玻璃效果",
     "设置自动保存并实时生效，无需额外 Apply",
     "总开关关闭后完整恢复系统原始样式",
-    "轻量图标高光，适配不同屏幕尺寸及 iOS 17–18",
+    "iOS 26 风格应用图标，支持透明与统一着色模式",
+    "支持调整图标渲染算法、着色色相与着色强度",
+    "适配主屏幕、App 资源库、文件夹及动态时钟图标",
+    "支持 iOS 15 浮动式与 iPad 风格 Dock 玻璃效果",
     "Widget 与 RWB 独立控制及关闭后的状态恢复",
     "提供 Rootless、RootHide 与八种语言本地化"
   ],
@@ -26,11 +29,20 @@
   "usage": [
     "根据越狱环境安装 Rootless 或 RootHide 软件包；旧版会被自动替换并保留原设置。",
     "打开系统“设置”中的 Liquid (Gl)ass，修改会自动保存并实时生效。",
+    "在应用图标设置中选择透明或统一着色模式，并按需调整算法、色相和强度。",
     "如需重新加载效果，可使用设置页中的“重启桌面”。",
     "如出现掉帧或耗电增加，请减少同时启用的组件。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.0b+banana24",
+      "changes": [
+        "新增 iOS 26 风格应用图标，支持透明、统一着色及算法、色相和强度调整。",
+        "新增 iOS 15 浮动式/iPad 风格 Dock，并完善主屏幕、资源库、文件夹和动态时钟图标适配。",
+        "修复设置状态、功能冲突和文件夹透明问题，增强多语言及旧系统稳定性。"
+      ]
+    },
     {
       "version": "0.1.0b+banana11",
       "changes": [
@@ -54,15 +66,18 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "The banana11 build adds automatic live preference updates, full stock-style restoration, and improved icon and folder behavior on iOS 17–18.",
+        "The banana24 build adds iOS 26-style app icons, adjustable tinting, and broader legacy-system support while retaining instant preference updates and full stock-style restoration.",
         "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & banana."
       ],
-      "notice": "⚠️ This package replaces dylv.liquidass while preserving existing preferences. Installation and Restart Home Screen automatically reload the system interface, which may briefly blank the display or interrupt touch input.",
+      "notice": "⚠️ This package replaces dylv.liquidass and dylv.liquidass.zh-hans while preserving existing preferences. Installation and Restart Home Screen automatically reload the system interface, which may briefly blank the display or interrupt touch input.",
       "features": [
         "Live liquid-glass styling across multiple system surfaces",
         "Preferences save and apply instantly without a separate Apply action",
         "Full stock-style restoration when the global switch is disabled",
-        "Lightweight Icon Highlights across screen sizes and iOS 17–18",
+        "iOS 26-style app icons with transparent and unified-tint modes",
+        "Adjustable icon rendering algorithm, tint hue, and tint strength",
+        "App icon support across the Home Screen, App Library, folders, and dynamic clock",
+        "Floating and iPad-style glass Dock support on iOS 15",
         "Independent Widget and RWB controls with proper disable restoration",
         "Rootless and RootHide packages with eight-language localization"
       ],
@@ -74,10 +89,19 @@
       "usage": [
         "Install the Rootless or RootHide package matching your jailbreak environment; the previous package is replaced while preferences are preserved.",
         "Open Liquid (Gl)ass in Settings; changes save and apply instantly.",
+        "Choose transparent or unified tinting in App Icon settings, then adjust the algorithm, hue, and strength as desired.",
         "Use Restart Home Screen in Settings if the effects need to be reloaded.",
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.0b+banana24",
+          "changes": [
+            "Added iOS 26-style app icons with transparent and unified tinting plus algorithm, hue, and strength controls.",
+            "Added floating and iPad-style Dock glass on iOS 15 and improved Home Screen, App Library, folder, and dynamic-clock icon support.",
+            "Fixed preference state, feature conflicts, and folder transparency, and improved localization and legacy-system stability."
+          ]
+        },
         {
           "version": "0.1.0b+banana11",
           "changes": [
