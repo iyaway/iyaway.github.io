@@ -6,7 +6,7 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana26 增强版加入 iOS 26 风格应用图标、可调着色和更多旧系统适配，并完善文件夹预览图标的效果同步与恢复。",
+    "banana27 增强版加入 iOS 26 风格应用图标、可调着色和更多旧系统适配，并恢复锁屏日期格式定制。",
     "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & banana 共同署名。"
   ],
   "notice": "⚠️ 新包会替换 dylv.liquidass 与 dylv.liquidass.zh-hans，并继承已有设置。安装完成或使用“重启桌面”时会自动重新加载系统界面，期间可能短暂黑屏或中断触控。",
@@ -19,6 +19,7 @@
     "适配主屏幕、App 资源库、文件夹及动态时钟图标",
     "支持 iOS 15 浮动式与 iPad 风格 Dock 玻璃效果",
     "Widget 与 RWB 独立控制及关闭后的状态恢复",
+    "锁屏日期格式开关与 Unicode 格式编辑器",
     "提供 Rootless、RootHide 与八种语言本地化"
   ],
   "compatibility": [
@@ -30,11 +31,20 @@
     "根据越狱环境安装 Rootless 或 RootHide 软件包；旧版会被自动替换并保留原设置。",
     "打开系统“设置”中的 Liquid (Gl)ass，修改会自动保存并实时生效。",
     "在应用图标设置中选择透明或统一着色模式，并按需调整算法、色相和强度。",
+    "在锁屏日期设置中启用、编辑或关闭自定义 Unicode 格式。",
     "如需重新加载效果，可使用设置页中的“重启桌面”。",
     "如出现掉帧或耗电增加，请减少同时启用的组件。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.0b+banana27",
+      "changes": [
+        "修复部分小组件相关问题。",
+        "恢复锁屏日期格式开关与 Unicode 格式编辑器。",
+        "支持修改或关闭旧版本遗留的锁屏日期格式。"
+      ]
+    },
     {
       "version": "0.1.0b+banana26",
       "changes": [
@@ -74,7 +84,7 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "The banana26 build adds iOS 26-style app icons, adjustable tinting, and broader legacy-system support while improving effect synchronization and restoration for folder preview icons.",
+        "The banana27 build adds iOS 26-style app icons, adjustable tinting, and broader legacy-system support while restoring Lock Screen date-format customization.",
         "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & banana."
       ],
       "notice": "⚠️ This package replaces dylv.liquidass and dylv.liquidass.zh-hans while preserving existing preferences. Installation and Restart Home Screen automatically reload the system interface, which may briefly blank the display or interrupt touch input.",
@@ -87,6 +97,7 @@
         "App icon support across the Home Screen, App Library, folders, and dynamic clock",
         "Floating and iPad-style glass Dock support on iOS 15",
         "Independent Widget and RWB controls with proper disable restoration",
+        "Lock Screen date-format toggle and Unicode format editor",
         "Rootless and RootHide packages with eight-language localization"
       ],
       "compatibility": [
@@ -98,10 +109,19 @@
         "Install the Rootless or RootHide package matching your jailbreak environment; the previous package is replaced while preferences are preserved.",
         "Open Liquid (Gl)ass in Settings; changes save and apply instantly.",
         "Choose transparent or unified tinting in App Icon settings, then adjust the algorithm, hue, and strength as desired.",
+        "Use Lock Screen Date settings to enable, edit, or disable a custom Unicode format.",
         "Use Restart Home Screen in Settings if the effects need to be reloaded.",
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.0b+banana27",
+          "changes": [
+            "Fixed several widget-related issues.",
+            "Restored the Lock Screen date-format toggle and Unicode format editor.",
+            "Added support for editing or disabling Lock Screen date formats left by previous versions."
+          ]
+        },
         {
           "version": "0.1.0b+banana26",
           "changes": [
