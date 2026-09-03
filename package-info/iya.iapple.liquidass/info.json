@@ -6,10 +6,10 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana27 增强版加入 iOS 26 风格应用图标、可调着色和更多旧系统适配，并恢复锁屏日期格式定制。",
+    "banana28 增强版加入 iOS 26 风格应用图标、可调着色和完整的小组件透明模式，并持续改善旧系统兼容性。",
     "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & banana 共同署名。"
   ],
-  "notice": "⚠️ 新包会替换 dylv.liquidass 与 dylv.liquidass.zh-hans，并继承已有设置。安装完成或使用“重启桌面”时会自动重新加载系统界面，期间可能短暂黑屏或中断触控。",
+  "notice": "⚠️ 新包会替换 dylv.liquidass 与 dylv.liquidass.zh-hans，并继承已有设置。修改“移除小组件背景”后请返回插件首页执行“重启系统界面”；期间可能短暂黑屏或中断触控。",
   "features": [
     "为多种系统界面提供实时液态玻璃效果",
     "设置自动保存并实时生效，无需额外 Apply",
@@ -18,6 +18,8 @@
     "支持调整图标渲染算法、着色色相与着色强度",
     "适配主屏幕、App 资源库、文件夹及动态时钟图标",
     "支持 iOS 15 浮动式与 iPad 风格 Dock 玻璃效果",
+    "全部小组件透明模式，可在移除背景后叠加玻璃效果",
+    "小组件背景移除与玻璃亮边独立控制",
     "Widget 与 RWB 独立控制及关闭后的状态恢复",
     "锁屏日期格式开关与 Unicode 格式编辑器",
     "提供 Rootless、RootHide 与八种语言本地化"
@@ -32,11 +34,19 @@
     "打开系统“设置”中的 Liquid (Gl)ass，修改会自动保存并实时生效。",
     "在应用图标设置中选择透明或统一着色模式，并按需调整算法、色相和强度。",
     "在锁屏日期设置中启用、编辑或关闭自定义 Unicode 格式。",
-    "如需重新加载效果，可使用设置页中的“重启桌面”。",
+    "修改“移除小组件背景”后，请返回插件首页使用“重启系统界面”。",
     "如出现掉帧或耗电增加，请减少同时启用的组件。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.0b+banana28",
+      "changes": [
+        "新增“全部小组件透明”模式，并支持独立控制背景移除与玻璃亮边。",
+        "修复 iOS 15 小组件透明但缺少玻璃效果，并增强 iOS 15/16 兼容性与重启引导。",
+        "优化小组件默认外观与系统界面重启流程，修复锁屏切换和文件夹刷新时的潜在崩溃。"
+      ]
+    },
     {
       "version": "0.1.0b+banana27",
       "changes": [
@@ -84,10 +94,10 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "The banana27 build adds iOS 26-style app icons, adjustable tinting, and broader legacy-system support while restoring Lock Screen date-format customization.",
+        "The banana28 build adds iOS 26-style app icons, adjustable tinting, and a complete transparent-widget mode while continuing to improve legacy-system compatibility.",
         "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & banana."
       ],
-      "notice": "⚠️ This package replaces dylv.liquidass and dylv.liquidass.zh-hans while preserving existing preferences. Installation and Restart Home Screen automatically reload the system interface, which may briefly blank the display or interrupt touch input.",
+      "notice": "⚠️ This package replaces dylv.liquidass and dylv.liquidass.zh-hans while preserving existing preferences. After changing Remove Widget Background, return to the main page and use Restart System UI; the display or touch input may be interrupted briefly.",
       "features": [
         "Live liquid-glass styling across multiple system surfaces",
         "Preferences save and apply instantly without a separate Apply action",
@@ -96,6 +106,8 @@
         "Adjustable icon rendering algorithm, tint hue, and tint strength",
         "App icon support across the Home Screen, App Library, folders, and dynamic clock",
         "Floating and iPad-style glass Dock support on iOS 15",
+        "All Widgets Transparent mode that layers glass over removed widget backgrounds",
+        "Independent widget background removal and glass edge controls",
         "Independent Widget and RWB controls with proper disable restoration",
         "Lock Screen date-format toggle and Unicode format editor",
         "Rootless and RootHide packages with eight-language localization"
@@ -110,10 +122,18 @@
         "Open Liquid (Gl)ass in Settings; changes save and apply instantly.",
         "Choose transparent or unified tinting in App Icon settings, then adjust the algorithm, hue, and strength as desired.",
         "Use Lock Screen Date settings to enable, edit, or disable a custom Unicode format.",
-        "Use Restart Home Screen in Settings if the effects need to be reloaded.",
+        "After changing Remove Widget Background, return to the main page and use Restart System UI.",
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.0b+banana28",
+          "changes": [
+            "Added All Widgets Transparent mode with independent widget background removal and glass edge controls.",
+            "Fixed transparent widgets missing the glass effect on iOS 15 and improved iOS 15/16 compatibility and restart guidance.",
+            "Improved default widget appearance and the Restart System UI flow, and fixed potential crashes during Lock Screen transitions and folder refreshes."
+          ]
+        },
         {
           "version": "0.1.0b+banana27",
           "changes": [
