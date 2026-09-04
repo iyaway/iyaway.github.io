@@ -7,7 +7,7 @@
   "tint": "#5E5CE6",
   "description": [
     "SpatialScene 让你通过 App 导入或在线下载空间壁纸，进行预览、管理并设为当前壁纸。",
-    "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果，并减少旋转或转场时短暂露出系统原壁纸。",
+    "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果，并自动跟随系统浅色或深色外观。",
     "你还可以调整锁屏时间外观，并尝试让壁纸前景自然遮挡时间的实验性景深效果。"
   ],
   "notice": "⚠️ 如同时使用 LiquidAss 自定义时钟，请前往 LiquidAss > 表面 > 锁屏 > 时钟，关闭“启用”，避免与 SpatialScene 时间样式冲突。",
@@ -19,6 +19,10 @@
     "可按需启用主屏幕动态效果",
     "支持实时切换“桌面使用原壁纸”，无需 Respring",
     "旋转与转场期间提供静态回退，减少系统原壁纸露出",
+    "自动跟随系统 Light/Dark Mode，并在唤醒后复核外观",
+    "balanced-v1 色彩分级，改善高光、中间调与暗部细节",
+    "每张壁纸可独立保存深色强度",
+    "Mac Preview 支持深色/浅色预览与强度调整",
     "调整锁屏时间高度、粗细、颜色与不透明度",
     "根据当前壁纸自动匹配时间颜色，或手动选择颜色",
     "实验性景深效果可让壁纸前景自然遮挡时间",
@@ -37,10 +41,19 @@
     "预览壁纸并将喜欢的项目设为当前。",
     "在系统“设置”中启用 SpatialScene，并按需开启主屏幕动态效果。",
     "在时间设置中调整高度、粗细与颜色；实验性景深效果可按需开启。",
-    "如需保留系统桌面壁纸，可开启“桌面使用原壁纸”，设置会立即生效。"
+    "如需保留系统桌面壁纸，可开启“桌面使用原壁纸”，设置会立即生效。",
+    "在壁纸设置中调整深色强度；旧壁纸默认使用完整深色效果。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.2",
+      "changes": [
+        "新增跟随系统 Light/Dark Mode 自动切换，并增强息屏切换与唤醒后的显示刷新。",
+        "新增 balanced-v1 色彩分级，压低高光、适度降低中间调并保留暗部细节。",
+        "新增每张壁纸独立深色强度，以及 Mac Preview 深色/浅色预览与调节。"
+      ]
+    },
     {
       "version": "1.1.1",
       "changes": [
@@ -101,7 +114,7 @@
       "tagline": "Import, download, and enjoy layered spatial wallpapers on iOS 15–18.",
       "description": [
         "SpatialScene lets you import or download spatial wallpapers in the app, preview and manage them, and set one as current.",
-        "Once enabled, wallpapers respond to device movement with natural layered depth effects while reducing brief flashes of the stock wallpaper during rotations and transitions.",
+        "Once enabled, wallpapers respond to device movement with natural layered depth effects and automatically follow the system Light or Dark appearance.",
         "You can also customize the Lock Screen clock and try an experimental depth effect that lets wallpaper foregrounds naturally overlap it."
       ],
       "notice": "⚠️ If you use LiquidAss clock customization, open LiquidAss > Surfaces > Lock Screen > Clock and disable “Enabled” to avoid conflicts with SpatialScene clock styling.",
@@ -113,6 +126,10 @@
         "Optional Home Screen animation",
         "Switch to the stock Home Screen wallpaper instantly without a Respring",
         "Static fallback during rotations and transitions to reduce stock-wallpaper flashes",
+        "Automatic Light/Dark Mode switching with appearance checks after wake",
+        "balanced-v1 color grading for improved highlights, midtones, and shadow detail",
+        "Per-wallpaper dark intensity",
+        "Dark and Light previews with intensity control in Mac Preview",
         "Adjust Lock Screen clock height, weight, color, and opacity",
         "Match the clock color to the current wallpaper automatically or choose one manually",
         "Experimental depth effect that lets wallpaper foregrounds overlap the clock",
@@ -131,9 +148,18 @@
         "Preview a wallpaper and set your preferred item as current.",
         "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired.",
         "Use Clock settings to adjust height, weight, and color, and optionally enable the experimental depth effect.",
-        "Enable Use Stock Home Wallpaper to keep the system Home Screen wallpaper; the change applies immediately."
+        "Enable Use Stock Home Wallpaper to keep the system Home Screen wallpaper; the change applies immediately.",
+        "Adjust Dark Intensity in wallpaper settings; existing wallpapers default to the full dark effect."
       ],
       "changelog": [
+        {
+          "version": "1.1.2",
+          "changes": [
+            "Added automatic system Light/Dark Mode switching with improved display refresh after appearance changes while the screen is off.",
+            "Added balanced-v1 color grading to reduce highlights and midtones while preserving shadow detail.",
+            "Added per-wallpaper dark intensity plus Dark/Light preview and intensity controls in Mac Preview."
+          ]
+        },
         {
           "version": "1.1.1",
           "changes": [
