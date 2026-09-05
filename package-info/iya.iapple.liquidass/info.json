@@ -6,7 +6,7 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana28 增强版加入 iOS 26 风格应用图标、可调着色和完整的小组件透明模式，并持续改善旧系统兼容性。",
+    "banana29 增强版进一步改善透明图标，新增灵动岛玻璃效果，并完善 iPad Dock 与 App 资源库体验。",
     "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & banana 共同署名。"
   ],
   "notice": "⚠️ 新包会替换 dylv.liquidass 与 dylv.liquidass.zh-hans，并继承已有设置。修改“移除小组件背景”后请返回插件首页执行“重启系统界面”；期间可能短暂黑屏或中断触控。",
@@ -17,7 +17,9 @@
     "iOS 26 风格应用图标，支持透明与统一着色模式",
     "支持调整图标渲染算法、着色色相与着色强度",
     "适配主屏幕、App 资源库、文件夹及动态时钟图标",
+    "灵动岛玻璃效果，支持展开、收起与闲置隐藏",
     "支持 iOS 15 浮动式与 iPad 风格 Dock 玻璃效果",
+    "优化 iPad Dock 的 App 资源库按钮与转场",
     "全部小组件透明模式，可在移除背景后叠加玻璃效果",
     "小组件背景移除与玻璃亮边独立控制",
     "Widget 与 RWB 独立控制及关闭后的状态恢复",
@@ -39,6 +41,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.0b+banana29",
+      "changes": [
+        "全面改进透明图标的层次与玻璃质感，完善文件夹小图标及更多系统图标场景。",
+        "新增灵动岛玻璃效果，优化展开、收起、黑底消除、闲置隐藏与亮边状态。",
+        "优化 iPad Dock 的 App 资源库按钮和退出动画，并增强小组件与刷新稳定性。"
+      ]
+    },
     {
       "version": "0.1.0b+banana28",
       "changes": [
@@ -94,7 +104,7 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "The banana28 build adds iOS 26-style app icons, adjustable tinting, and a complete transparent-widget mode while continuing to improve legacy-system compatibility.",
+        "The banana29 build further improves transparent icons, adds Dynamic Island glass, and refines the iPad Dock and App Library experience.",
         "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & banana."
       ],
       "notice": "⚠️ This package replaces dylv.liquidass and dylv.liquidass.zh-hans while preserving existing preferences. After changing Remove Widget Background, return to the main page and use Restart System UI; the display or touch input may be interrupted briefly.",
@@ -105,7 +115,9 @@
         "iOS 26-style app icons with transparent and unified-tint modes",
         "Adjustable icon rendering algorithm, tint hue, and tint strength",
         "App icon support across the Home Screen, App Library, folders, and dynamic clock",
+        "Dynamic Island glass with expansion, collapse, and idle hiding",
         "Floating and iPad-style glass Dock support on iOS 15",
+        "Improved iPad Dock App Library button and transitions",
         "All Widgets Transparent mode that layers glass over removed widget backgrounds",
         "Independent widget background removal and glass edge controls",
         "Independent Widget and RWB controls with proper disable restoration",
@@ -126,6 +138,14 @@
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.0b+banana29",
+          "changes": [
+            "Improved transparent icon depth and glass styling across folder previews and more system icon surfaces.",
+            "Added Dynamic Island glass with refined expansion, collapse, black-background removal, idle hiding, and edge highlights.",
+            "Improved the iPad Dock App Library button and exit transition, plus widget and refresh stability."
+          ]
+        },
         {
           "version": "0.1.0b+banana28",
           "changes": [
