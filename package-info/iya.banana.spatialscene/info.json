@@ -23,6 +23,7 @@
     "balanced-v1 色彩分级，改善高光、中间调与暗部细节",
     "每张壁纸可独立保存深色强度",
     "Mac Preview 支持深色/浅色预览与强度调整",
+    "可单独关闭锁屏时间外观修改，同时继续使用壁纸景深效果",
     "调整锁屏时间高度、粗细、颜色与不透明度",
     "根据当前壁纸自动匹配时间颜色，或手动选择颜色",
     "实验性景深效果可让壁纸前景自然遮挡时间",
@@ -40,12 +41,20 @@
     "从在线壁纸库下载，或导入兼容的空间壁纸包。",
     "预览壁纸并将喜欢的项目设为当前。",
     "在系统“设置”中启用 SpatialScene，并按需开启主屏幕动态效果。",
+    "如只需壁纸景深效果，可关闭“修改锁屏时间”以保留系统时间外观。",
     "在时间设置中调整高度、粗细与颜色；实验性景深效果可按需开启。",
     "如需保留系统桌面壁纸，可开启“桌面使用原壁纸”，设置会立即生效。",
     "在壁纸设置中调整深色强度；旧壁纸默认使用完整深色效果。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.3",
+      "changes": [
+        "新增“修改锁屏时间”开关；关闭后保留系统时间外观，同时继续支持壁纸景深效果。",
+        "修复设置 Slider 无法实时生效或保存的问题，并更新英文、简体中文和繁体中文文本。"
+      ]
+    },
     {
       "version": "1.1.2",
       "changes": [
@@ -130,6 +139,7 @@
         "balanced-v1 color grading for improved highlights, midtones, and shadow detail",
         "Per-wallpaper dark intensity",
         "Dark and Light previews with intensity control in Mac Preview",
+        "Disable Lock Screen clock appearance adjustments while keeping wallpaper depth effects",
         "Adjust Lock Screen clock height, weight, color, and opacity",
         "Match the clock color to the current wallpaper automatically or choose one manually",
         "Experimental depth effect that lets wallpaper foregrounds overlap the clock",
@@ -147,11 +157,19 @@
         "Download a wallpaper from the online library or import a compatible package.",
         "Preview a wallpaper and set your preferred item as current.",
         "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired.",
+        "Disable Modify Lock Screen Clock to preserve the system clock appearance while keeping wallpaper depth effects.",
         "Use Clock settings to adjust height, weight, and color, and optionally enable the experimental depth effect.",
         "Enable Use Stock Home Wallpaper to keep the system Home Screen wallpaper; the change applies immediately.",
         "Adjust Dark Intensity in wallpaper settings; existing wallpapers default to the full dark effect."
       ],
       "changelog": [
+        {
+          "version": "1.1.3",
+          "changes": [
+            "Added an option to disable Lock Screen clock appearance adjustments while keeping wallpaper depth effects enabled.",
+            "Fixed Settings sliders not applying or saving values, and updated English, Simplified Chinese, and Traditional Chinese text."
+          ]
+        },
         {
           "version": "1.1.2",
           "changes": [
