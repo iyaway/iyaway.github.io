@@ -24,8 +24,9 @@
     "每张壁纸可独立保存深色强度",
     "Mac Preview 支持深色/浅色预览与强度调整",
     "可单独关闭锁屏时间外观修改，同时继续使用壁纸景深效果",
-    "调整锁屏时间高度、粗细、颜色与不透明度",
+    "无需 LiquidAss 即可调整锁屏时间字体大小、字重、字宽、字高与柔和度",
     "根据当前壁纸自动匹配时间颜色，或手动选择颜色",
+    "时钟自动取色可与 LiquidAss 自适应颜色联动",
     "实验性景深效果可让壁纸前景自然遮挡时间",
     "检测 LiquidAss 自定义时钟冲突并提供关闭指引",
     "保持锁屏时间、通知与正在播放控件正常显示和交互",
@@ -42,12 +43,20 @@
     "预览壁纸并将喜欢的项目设为当前。",
     "在系统“设置”中启用 SpatialScene，并按需开启主屏幕动态效果。",
     "如只需壁纸景深效果，可关闭“修改锁屏时间”以保留系统时间外观。",
-    "在时间设置中调整高度、粗细与颜色；实验性景深效果可按需开启。",
+    "在时间设置中调整字体大小、字重、字宽、字高、柔和度与颜色；实验性景深效果可按需开启。",
     "如需保留系统桌面壁纸，可开启“桌面使用原壁纸”，设置会立即生效。",
     "在壁纸设置中调整深色强度；旧壁纸默认使用完整深色效果。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.5",
+      "changes": [
+        "新增独立的锁屏时间字体大小、字重、字宽、字高与柔和度调节，无需安装 LiquidAss。",
+        "修复景深遮罩、重复时间轮廓与异常裁剪，并增强时钟自动取色及 LiquidAss 联动。",
+        "优化设置顺序与开关联动，关闭时间修改后恢复系统字体和布局，并更新三语文本。"
+      ]
+    },
     {
       "version": "1.1.3",
       "changes": [
@@ -140,8 +149,9 @@
         "Per-wallpaper dark intensity",
         "Dark and Light previews with intensity control in Mac Preview",
         "Disable Lock Screen clock appearance adjustments while keeping wallpaper depth effects",
-        "Adjust Lock Screen clock height, weight, color, and opacity",
+        "Adjust Lock Screen clock font size, weight, width, height, and softness without LiquidAss",
         "Match the clock color to the current wallpaper automatically or choose one manually",
+        "Link automatic clock coloring with LiquidAss adaptive colors",
         "Experimental depth effect that lets wallpaper foregrounds overlap the clock",
         "Detect LiquidAss custom-clock conflicts and provide clear disable guidance",
         "Keep the clock, notifications, and Now Playing controls visible and interactive",
@@ -158,11 +168,19 @@
         "Preview a wallpaper and set your preferred item as current.",
         "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired.",
         "Disable Modify Lock Screen Clock to preserve the system clock appearance while keeping wallpaper depth effects.",
-        "Use Clock settings to adjust height, weight, and color, and optionally enable the experimental depth effect.",
+        "Use Clock settings to adjust font size, weight, width, height, softness, and color, and optionally enable the experimental depth effect.",
         "Enable Use Stock Home Wallpaper to keep the system Home Screen wallpaper; the change applies immediately.",
         "Adjust Dark Intensity in wallpaper settings; existing wallpapers default to the full dark effect."
       ],
       "changelog": [
+        {
+          "version": "1.1.5",
+          "changes": [
+            "Added independent Lock Screen clock font size, weight, width, height, and softness controls without requiring LiquidAss.",
+            "Fixed depth masking, duplicate clock outlines, and clipping, and improved automatic clock colors and LiquidAss integration.",
+            "Improved Settings order and toggle behavior, restored system fonts and layout when disabled, and updated trilingual text."
+          ]
+        },
         {
           "version": "1.1.3",
           "changes": [

@@ -6,12 +6,13 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana29 增强版进一步改善透明图标，新增灵动岛玻璃效果，并完善 iPad Dock 与 App 资源库体验。",
+    "banana30 同步上游 0.1.1b，进一步改善系统玻璃效果、透明图标、锁屏时钟与多种界面转场。",
     "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & banana 共同署名。"
   ],
-  "notice": "⚠️ 新包会替换 dylv.liquidass 与 dylv.liquidass.zh-hans，并继承已有设置。修改“移除小组件背景”后请返回插件首页执行“重启系统界面”；期间可能短暂黑屏或中断触控。",
+  "notice": "⚠️ 新包会替换 dylv.liquidass 与 dylv.liquidass.zh-hans，并继承已有设置。修改“移除小组件背景”后请返回插件首页执行“重启系统界面”。开启运动高光可能增加卡顿、发热和耗电。",
   "features": [
     "为多种系统界面提供实时液态玻璃效果",
+    "支持经典与增强渲染器手动切换",
     "设置自动保存并实时生效，无需额外 Apply",
     "总开关关闭后完整恢复系统原始样式",
     "iOS 26 风格应用图标，支持透明与统一着色模式",
@@ -24,6 +25,7 @@
     "小组件背景移除与玻璃亮边独立控制",
     "Widget 与 RWB 独立控制及关闭后的状态恢复",
     "锁屏日期格式开关与 Unicode 格式编辑器",
+    "优化锁屏玻璃时钟、日期与解锁转场",
     "提供 Rootless、RootHide 与八种语言本地化"
   ],
   "compatibility": [
@@ -41,6 +43,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.1b+banana30~upstream28",
+      "changes": [
+        "同步上游 0.1.1b，改善多种系统界面的玻璃效果与解锁转场，并新增经典/增强渲染器切换。",
+        "优化透明图标、Dock 图标及锁屏玻璃时钟与日期，修复 iOS 15/18 的显示问题。",
+        "优化运动高光与设置滑块性能，增强异常保护与整体稳定性。"
+      ]
+    },
     {
       "version": "0.1.0b+banana29",
       "changes": [
@@ -104,12 +114,13 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "The banana29 build further improves transparent icons, adds Dynamic Island glass, and refines the iPad Dock and App Library experience.",
+        "The banana30 build integrates upstream 0.1.1b and further improves system glass effects, transparent icons, the Lock Screen clock, and interface transitions.",
         "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & banana."
       ],
-      "notice": "⚠️ This package replaces dylv.liquidass and dylv.liquidass.zh-hans while preserving existing preferences. After changing Remove Widget Background, return to the main page and use Restart System UI; the display or touch input may be interrupted briefly.",
+      "notice": "⚠️ This package replaces dylv.liquidass and dylv.liquidass.zh-hans while preserving existing preferences. After changing Remove Widget Background, return to the main page and use Restart System UI. Motion highlights may increase lag, heat, and battery use.",
       "features": [
         "Live liquid-glass styling across multiple system surfaces",
+        "Manual switching between Classic and Enhanced renderers",
         "Preferences save and apply instantly without a separate Apply action",
         "Full stock-style restoration when the global switch is disabled",
         "iOS 26-style app icons with transparent and unified-tint modes",
@@ -122,6 +133,7 @@
         "Independent widget background removal and glass edge controls",
         "Independent Widget and RWB controls with proper disable restoration",
         "Lock Screen date-format toggle and Unicode format editor",
+        "Improved glass Lock Screen clock, date, and unlock transitions",
         "Rootless and RootHide packages with eight-language localization"
       ],
       "compatibility": [
@@ -138,6 +150,14 @@
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.1b+banana30~upstream28",
+          "changes": [
+            "Integrated upstream 0.1.1b improvements across system glass surfaces and unlock transitions, and added Classic/Enhanced renderer switching.",
+            "Improved transparent and Dock icons plus the glass Lock Screen clock and date, fixing display issues on iOS 15 and iOS 18.",
+            "Optimized motion highlights and Settings slider performance, with stronger failure protection and overall stability."
+          ]
+        },
         {
           "version": "0.1.0b+banana29",
           "changes": [
