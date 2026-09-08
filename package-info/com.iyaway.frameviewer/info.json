@@ -1,0 +1,81 @@
+{
+  "package": "com.iyaway.frameviewer",
+  "name": "FrameViewer",
+  "web_name": "帧检视器",
+  "tagline": "在照片视频播放页显示胶片式画面预览，拖动即可快速定位。",
+  "developer": "iyaway",
+  "tint": "#0A7AFF",
+  "description": [
+    "FrameViewer（帧检视器）会在系统“照片”的普通视频播放页面底部显示连续缩略图，方便直接拖动并定位视频画面。",
+    "无需进入编辑模式，也不会修改原始视频；新版照片界面和原生进度条会继续保留。"
+  ],
+  "notice": "⚠️ 最低需要 iOS 18.0。Rootless 已在 iPhone 11 Pro / iOS 18.5 上确认可用；RootHide 与其他系统版本仍需测试。",
+  "features": [
+    "胶片式视频缩略图预览",
+    "支持左右拖动快速定位视频画面",
+    "无需进入编辑模式且不会修改原始视频",
+    "保留新版照片界面与原生进度条",
+    "默认关闭，可随时在设置中启用或停用",
+    "支持 English、简体中文和繁體中文"
+  ],
+  "compatibility": [
+    "iOS 18.0+",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "安装后重新打开“设置”和“照片”。",
+    "前往“设置”中的帧检视器并开启“启用帧检视器”。",
+    "在照片中正常播放视频，通过底部胶片预览左右拖动定位。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.3",
+      "changes": [
+        "首次发布：在普通视频播放页面显示胶片预览并支持拖动定位。",
+        "新增默认关闭的设置开关、设置图标与三语言界面。",
+        "提供 Rootless 与 RootHide 软件包，最低支持 iOS 18.0。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "FrameViewer",
+      "tagline": "A filmstrip of video previews in Photos with drag-to-seek controls.",
+      "description": [
+        "FrameViewer adds a continuous thumbnail filmstrip to the bottom of the normal Photos video playback screen, letting you drag directly to the moment you want.",
+        "It works without entering Edit or changing the original video, while preserving the redesigned Photos interface and native progress bar."
+      ],
+      "notice": "⚠️ Requires iOS 18.0 or later. Rootless is user-confirmed on an iPhone 11 Pro running iOS 18.5; RootHide and other system versions still require testing.",
+      "features": [
+        "Filmstrip-style video thumbnail previews",
+        "Drag horizontally to seek quickly through a video",
+        "No need to enter Edit and no changes to the original video",
+        "Preserves the redesigned Photos interface and native progress bar",
+        "Disabled by default with an enable or disable switch in Settings",
+        "English, Simplified Chinese, and Traditional Chinese"
+      ],
+      "compatibility": [
+        "iOS 18.0+",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Reopen Settings and Photos after installation.",
+        "Open FrameViewer in Settings and enable Enable FrameViewer.",
+        "Play a video normally in Photos and drag through the bottom filmstrip to seek."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.3",
+          "changes": [
+            "Initial release with filmstrip previews and drag-to-seek controls during normal video playback.",
+            "Added a disabled-by-default Settings switch, Settings icon, and three-language interface.",
+            "Added Rootless and RootHide packages with iOS 18.0 as the minimum version."
+          ]
+        }
+      ]
+    }
+  }
+}
