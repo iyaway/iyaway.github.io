@@ -6,7 +6,7 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana30 同步上游 0.1.1b，进一步改善系统玻璃效果、透明图标、锁屏时钟与多种界面转场。",
+    "banana32 基于上游 0.1.1b，进一步改善系统玻璃效果、透明图标、锁屏时钟与小组件兼容性。",
     "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & banana 共同署名。"
   ],
   "notice": "⚠️ 新包会替换 dylv.liquidass 与 dylv.liquidass.zh-hans，并继承已有设置。修改“移除小组件背景”后请返回插件首页执行“重启系统界面”。开启运动高光可能增加卡顿、发热和耗电。",
@@ -43,6 +43,12 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.1b+banana32",
+      "changes": [
+        "修复 iOS 18 小组件移除背景后没有玻璃效果的问题。"
+      ]
+    },
     {
       "version": "0.1.1b+banana30~upstream28",
       "changes": [
@@ -114,7 +120,7 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "The banana30 build integrates upstream 0.1.1b and further improves system glass effects, transparent icons, the Lock Screen clock, and interface transitions.",
+        "The banana32 build is based on upstream 0.1.1b and further improves system glass effects, transparent icons, the Lock Screen clock, and widget compatibility.",
         "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & banana."
       ],
       "notice": "⚠️ This package replaces dylv.liquidass and dylv.liquidass.zh-hans while preserving existing preferences. After changing Remove Widget Background, return to the main page and use Restart System UI. Motion highlights may increase lag, heat, and battery use.",
@@ -150,6 +156,12 @@
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.1b+banana32",
+          "changes": [
+            "Fixed widgets missing the glass effect after their backgrounds were removed on iOS 18."
+          ]
+        },
         {
           "version": "0.1.1b+banana30~upstream28",
           "changes": [
