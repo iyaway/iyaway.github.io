@@ -32,6 +32,12 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.0.6",
+      "changes": [
+        "增强 iOS 18 的备份与恢复逻辑。"
+      ]
+    },
+    {
       "version": "1.0.5",
       "changes": [
         "新增针对 iOS 15–17 与 iOS 18 的分版本 FaceTime Audio 启用流程。",
@@ -69,6 +75,12 @@
         "On iOS 18, complete a full device reboot as instructed; to restore the original state, disable the switch and complete another full reboot."
       ],
       "changelog": [
+        {
+          "version": "1.0.6",
+          "changes": [
+            "Improved backup and restore handling on iOS 18."
+          ]
+        },
         {
           "version": "1.0.5",
           "changes": [
