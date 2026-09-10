@@ -44,6 +44,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.1b+banana33",
+      "changes": [
+        "修复部分设置页面恢复控件后，玻璃开关仍无法点击的问题。",
+        "增强开关状态同步，保持原有状态与外观，无需额外刷新页面。"
+      ]
+    },
+    {
       "version": "0.1.1b+banana32",
       "changes": [
         "修复 iOS 18 小组件移除背景后没有玻璃效果的问题。"
@@ -156,6 +163,13 @@
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.1b+banana33",
+          "changes": [
+            "Fixed glass switches remaining unresponsive after controls were restored on some settings pages.",
+            "Improved switch state synchronization while preserving existing values and appearance, without requiring an extra page refresh."
+          ]
+        },
         {
           "version": "0.1.1b+banana32",
           "changes": [
