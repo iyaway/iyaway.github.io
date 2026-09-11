@@ -35,6 +35,7 @@ METADATA_CONTROL_FIELDS = {
     "name",
     "description",
     "author",
+    "maintainer",
     "depiction",
     "sileodepiction",
     "icon",
@@ -147,6 +148,7 @@ def metadata_control_lines(info: dict, has_icon: bool) -> list[str]:
     lines = [
         f"Name: {info['name']}",
         f"Description: {info['tagline']}",
+        "Maintainer: Banana",
         f"Author: {info['developer']}",
         f"Depiction: {depiction_url}/",
         f"SileoDepiction: {depiction_url}/sileo.json",
@@ -212,6 +214,13 @@ def load_package_infos(root: Path) -> dict[str, tuple[dict, Path]]:
 
         for key in ("package", "name", "tagline", "developer"):
             info[key] = require_string(info, key, source)
+        developer = info["developer"]
+        if developer != "Banana" and not developer.endswith(" & Banana"):
+            raise ValueError(
+                f"{source}: developer must be 'Banana' or '<original author> & Banana'"
+            )
+        if re.search(r"(?:hades|iyaway)", developer, re.IGNORECASE):
+            raise ValueError(f"{source}: developer must not expose a local account name")
         web_name = info.get("web_name")
         if web_name is not None:
             if not isinstance(web_name, str) or not web_name.strip():

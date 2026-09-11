@@ -3,7 +3,7 @@
   "name": "DarkIcon",
   "web_name": "深色图标",
   "tagline": "为 iOS 15–17 自动生成随系统外观切换的深色桌面图标。",
-  "developer": "hades",
+  "developer": "Banana",
   "description": [
     "DarkIcon 会在深色模式下自动为普通 App 图标生成深色版本，无需安装图标包或连接网络。",
     "默认混合模式会按图标选择合适的处理结果，也可单独选择 Apple 或 Chroma 模式。",

@@ -3,7 +3,7 @@
   "name": "FrameViewer",
   "web_name": "帧检视器",
   "tagline": "启用照片原生连续胶片，拖动定位视频并连贯切换相邻内容。",
-  "developer": "iyaway",
+  "developer": "Banana",
   "tint": "#0A7AFF",
   "description": [
     "FrameViewer（帧检视器）启用系统“照片”的原生连续胶片浏览，让照片缩略图与视频画面在同一条滚动带中移动。",

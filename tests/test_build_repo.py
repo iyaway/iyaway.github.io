@@ -65,7 +65,7 @@ class BuildRepoTests(unittest.TestCase):
                         "name": "Demo Metadata",
                         "web_name": "演示插件",
                         "tagline": "Metadata tagline",
-                        "developer": "IYAWAY",
+                        "developer": "Banana",
                         "description": ["Long description"],
                         "notice": "Web notice",
                         "features": ["Feature one"],
@@ -124,6 +124,8 @@ class BuildRepoTests(unittest.TestCase):
             self.assertIn("Package: com.iyaway.demo", packages)
             self.assertIn("Name: Demo Metadata", packages)
             self.assertIn("Description: Metadata tagline", packages)
+            self.assertIn("Maintainer: Banana", packages)
+            self.assertIn("Author: Banana", packages)
             self.assertIn(
                 "Depiction: https://iyaway.github.io/depictions/com.iyaway.demo/",
                 packages,
@@ -163,6 +165,31 @@ class BuildRepoTests(unittest.TestCase):
             self.assertTrue(
                 (root / "public" / "depictions" / "com.iyaway.demo" / "index.html").is_file()
             )
+
+    def test_rejects_non_banana_developer_attribution(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            info_dir = root / "package-info" / "com.iyaway.demo"
+            info_dir.mkdir(parents=True)
+            (info_dir / "info.json").write_text(
+                json.dumps(
+                    {
+                        "package": "com.iyaway.demo",
+                        "name": "Demo",
+                        "tagline": "Demo",
+                        "developer": "hades",
+                        "description": [],
+                        "features": [],
+                        "compatibility": [],
+                        "usage": [],
+                        "screenshots": [],
+                        "changelog": [],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(ValueError, "developer must be"):
+                build_repo.load_package_infos(root)
 
 
 if __name__ == "__main__":

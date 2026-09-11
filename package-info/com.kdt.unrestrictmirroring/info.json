@@ -2,7 +2,7 @@
   "package": "com.kdt.unrestrictmirroring",
   "name": "UnrestrictMirroring",
   "tagline": "在 iOS 18.0+ 解锁设备时继续使用 iPhone Mirroring，并启用 Device Hub 远程控制。",
-  "developer": "khanhduytran0",
+  "developer": "khanhduytran0 & Banana",
   "tint": "#0A84FF",
   "description": [
     "UnrestrictMirroring 允许设备保持解锁时继续使用 iPhone Mirroring 与相机，从而在手机和镜像画面中同时运行不同 App。",

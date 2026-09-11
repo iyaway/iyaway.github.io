@@ -2,7 +2,7 @@
   "package": "iya.iapple.liquidass",
   "name": "Liquid (Gl)ass",
   "tagline": "为 iOS 14–18 的系统界面带来可实时调整的液态玻璃效果。",
-  "developer": "dylv & banana",
+  "developer": "dylv & Banana",
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
