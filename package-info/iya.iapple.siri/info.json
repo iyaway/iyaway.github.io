@@ -28,6 +28,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.1.3",
+      "changes": [
+        "修复 iOS 15 打开 LiquidSiri 设置时可能崩溃的问题。",
+        "修正设置入口，并增强旧版 iOS 设置列表的刷新兼容性。"
+      ]
+    },
+    {
       "version": "1.1.2",
       "changes": [
         "新增 NewSiri 屏幕扫光、彩色边缘流光与语音响应波动效果。",
@@ -64,6 +71,13 @@
         "Respring again after changing the effect or enabled state"
       ],
       "changelog": [
+        {
+          "version": "1.1.3",
+          "changes": [
+            "Fixed a crash that could occur when opening LiquidSiri settings on iOS 15.",
+            "Corrected the Settings entry and improved list refresh compatibility on older iOS versions."
+          ]
+        },
         {
           "version": "1.1.2",
           "changes": [
