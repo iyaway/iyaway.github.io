@@ -1,0 +1,81 @@
+{
+  "package": "iya.banana.appleintelligenceenabler",
+  "name": "Apple Intelligence Enabler",
+  "web_name": "Apple 智能启用器",
+  "tagline": "为 iOS 18.1–18.x 提供 Apple 智能相关配置与安全恢复工具。",
+  "developer": "Banana",
+  "description": [
+    "Apple 智能启用器默认使用 iPhone 15 Pro 配置，帮助受支持的 iOS 18.x 系统准备 Apple 智能相关能力。",
+    "美版地区配置可独立启用和恢复；模型下载完成后，可尝试恢复真实机型并保留 AI 能力。",
+    "分项备份与恢复只处理本插件负责的配置，并与 FaceTime Audio Enabler 1.0.6 保持兼容。"
+  ],
+  "notice": "⚠️ 应用配置后请自行完整重启，并等待模型下载完成后再恢复真实机型。机型伪装可能影响 Face ID；恢复后的 Face ID 和 AI 持续可用性仍需实测。测试环境中请停用 Immortalizer 2.0.1.1 注入，否则唤起原生 Siri 可能进入安全模式。",
+  "features": [
+    "默认使用 iPhone 15 Pro 的 Apple 智能兼容配置",
+    "独立启用或恢复 US / LL/A 美版地区配置",
+    "恢复真实机型并保留当前 AI 能力",
+    "分项备份、冲突处理及 FaceTime Audio Enabler 1.0.6 共存",
+    "简体中文、繁体中文和英文设置界面"
+  ],
+  "compatibility": [
+    "iOS 18.1–18.x",
+    "Rootless 与 RootHide",
+    "兼容 FaceTime Audio Enabler 1.0.6"
+  ],
+  "usage": [
+    "安装后进入“设置 → Apple 智能启用器”应用所需配置",
+    "由你自行完整重启手机，并按系统提示等待模型下载完成",
+    "确认 Siri 可用后，再按需执行“恢复真实机型，保留 AI”"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "changes": [
+        "新增 iOS 18.1–18.x Apple 智能配置，默认使用 iPhone 15 Pro 兼容配置。",
+        "新增独立 US / LL/A 地区配置与“恢复真实机型，保留 AI”操作。",
+        "新增分项备份与恢复、三语言设置及 Rootless / RootHide 支持，并兼容 FaceTime Audio Enabler 1.0.6。"
+      ]
+    }
+  ],
+  "tint": "#5B6DFF",
+  "locales": {
+    "en": {
+      "name": "Apple Intelligence Enabler",
+      "tagline": "Apple Intelligence configuration and safe restoration tools for iOS 18.1–18.x.",
+      "description": [
+        "Apple Intelligence Enabler uses an iPhone 15 Pro profile by default to prepare related capabilities on supported iOS 18.x systems.",
+        "U.S. region settings can be enabled and restored independently. After model downloads finish, the real device model can be restored while retaining the AI capability.",
+        "Per-setting backup and restoration only manage this tweak's configuration and remain compatible with FaceTime Audio Enabler 1.0.6."
+      ],
+      "notice": "⚠️ Fully reboot the device yourself after applying the configuration, and wait for model downloads to finish before restoring the real model. Model spoofing may affect Face ID; continued Face ID and AI availability after restoration still require device testing. Disable Immortalizer 2.0.1.1 injection in the tested environment, or invoking native Siri may enter Safe Mode.",
+      "features": [
+        "iPhone 15 Pro Apple Intelligence compatibility profile by default",
+        "Independent enable and restore controls for the US / LL/A region profile",
+        "Restore the real device model while retaining the current AI capability",
+        "Per-setting backups, conflict handling, and coexistence with FaceTime Audio Enabler 1.0.6",
+        "Settings in English, Simplified Chinese, and Traditional Chinese"
+      ],
+      "compatibility": [
+        "iOS 18.1–18.x",
+        "Rootless and RootHide",
+        "Compatible with FaceTime Audio Enabler 1.0.6"
+      ],
+      "usage": [
+        "Install the package and apply the required configuration in Settings → Apple Intelligence Enabler",
+        "Fully reboot the device yourself and wait for the system to finish downloading its models",
+        "After confirming that Siri works, optionally use Restore Real Model, Keep AI"
+      ],
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Added Apple Intelligence configuration for iOS 18.1–18.x, using an iPhone 15 Pro compatibility profile by default.",
+            "Added independent US / LL/A region configuration and a Restore Real Model, Keep AI option.",
+            "Added per-setting backup and restore, trilingual settings, Rootless and RootHide support, and compatibility with FaceTime Audio Enabler 1.0.6."
+          ]
+        }
+      ]
+    }
+  }
+}
