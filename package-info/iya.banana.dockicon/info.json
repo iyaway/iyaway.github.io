@@ -1,0 +1,79 @@
+{
+  "package": "iya.banana.dockicon",
+  "name": "DarkIcon",
+  "web_name": "深色图标",
+  "tagline": "为 iOS 15–17 自动生成随系统外观切换的深色桌面图标。",
+  "developer": "hades",
+  "description": [
+    "DarkIcon 会在深色模式下自动为普通 App 图标生成深色版本，无需安装图标包或连接网络。",
+    "默认混合模式会按图标选择合适的处理结果，也可单独选择 Apple 或 Chroma 模式。",
+    "优先使用 App 自带深色图标，并提供浅色反转、占位图深色处理和缓存复用。"
+  ],
+  "notice": "当前为测试版；首次生成或切换设置时可能短暂卡顿，完成后翻页会复用缓存。iOS 18 及以上不会启用。",
+  "features": [
+    "跟随系统深浅色外观自动切换桌面图标",
+    "默认混合模式，并可单独选择 Apple 或 Chroma 模式",
+    "优先使用 App 自带深色图标，可选白色与浅灰色反转",
+    "支持在设置中刷新效果或重启桌面"
+  ],
+  "compatibility": [
+    "iOS 15–17",
+    "Rootless 与 RootHide",
+    "iOS 18 及以上不会启用"
+  ],
+  "usage": [
+    "安装插件后重新加载桌面",
+    "进入“设置 → 深色图标”选择处理模式及反转选项",
+    "首次生成或切换设置时请等待处理完成，之后翻页会复用缓存"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.8.1",
+      "changes": [
+        "新增默认混合模式，结合 Apple 与 Chroma 两种处理方式，改善不同图标的深色效果。",
+        "新增 App 自带深色图标优先与白色、浅灰色反转选项，并支持在设置中重启桌面。",
+        "优化首次生成后的缓存复用；首次生成或切换设置时可能短暂卡顿。"
+      ]
+    }
+  ],
+  "tint": "#26313C",
+  "locales": {
+    "en": {
+      "name": "DarkIcon",
+      "tagline": "Automatically generate dark Home Screen icons that follow system appearance on iOS 15–17.",
+      "description": [
+        "DarkIcon automatically generates dark versions of ordinary app icons in Dark Mode without requiring an icon pack or network connection.",
+        "The default hybrid mode selects a suitable result for each icon, while Apple and Chroma modes remain individually selectable.",
+        "App-provided dark icons are preferred, with optional light-color inversion, dark placeholder handling, and reusable caching."
+      ],
+      "notice": "This is a preview release. Initial generation or settings changes may cause a brief slowdown; completed results are reused while paging. The tweak is disabled on iOS 18 and later.",
+      "features": [
+        "Home Screen icons that automatically follow Light and Dark appearance",
+        "Default hybrid mode with individually selectable Apple and Chroma modes",
+        "Preference for app-provided dark icons with optional white and light-gray inversion",
+        "Refresh effects or restart the Home Screen from Settings"
+      ],
+      "compatibility": [
+        "iOS 15–17",
+        "Rootless and RootHide",
+        "Disabled on iOS 18 and later"
+      ],
+      "usage": [
+        "Install the package and respring",
+        "Open Settings → DarkIcon to select a processing mode and inversion options",
+        "Allow initial generation or settings changes to finish; subsequent paging reuses cached results"
+      ],
+      "changelog": [
+        {
+          "version": "0.8.1",
+          "changes": [
+            "Added a default hybrid mode that combines Apple and Chroma processing for better results across different icons.",
+            "Added preference for app-provided dark icons, optional white and light-gray inversion, and a Home Screen restart action in Settings.",
+            "Improved cache reuse after initial generation; the first generation or a settings change may cause a brief slowdown."
+          ]
+        }
+      ]
+    }
+  }
+}
