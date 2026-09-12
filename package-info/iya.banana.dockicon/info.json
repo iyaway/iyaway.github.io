@@ -2,32 +2,42 @@
   "package": "iya.banana.dockicon",
   "name": "DarkIcon",
   "web_name": "深色图标",
-  "tagline": "为 iOS 15–17 自动生成随系统外观切换的深色桌面图标。",
+  "tagline": "为 iOS 15–18 提供深色图标与图片壁纸暗化。",
   "developer": "Banana",
   "description": [
-    "DarkIcon 会在深色模式下自动为普通 App 图标生成深色版本，无需安装图标包或连接网络。",
-    "默认混合模式会按图标选择合适的处理结果，也可单独选择 Apple 或 Chroma 模式。",
-    "优先使用 App 自带深色图标，并提供浅色反转、占位图深色处理和缓存复用。"
+    "DarkIcon 可在 iOS 15–17 自动生成随系统外观切换的深色 App 图标，并在 iOS 17–18 为普通图片壁纸提供暗化效果。",
+    "壁纸与图标功能可独立控制；壁纸暗化默认关闭，可调节暗化强度并跟随系统深色模式。",
+    "iOS 18 保留系统原生深色图标，插件图标功能不会启用；iOS 17 及以下继续提供原有图标模式。"
   ],
-  "notice": "当前为测试版；首次生成或切换设置时可能短暂卡顿，完成后翻页会复用缓存。iOS 18 及以上不会启用。",
+  "notice": "当前为测试版。壁纸暗化目前仅测试普通图片壁纸，暂不支持 Apple Emoji、天气等系统壁纸。首次生成图标或切换相关设置时可能短暂卡顿，完成后翻页会复用缓存。",
   "features": [
-    "跟随系统深浅色外观自动切换桌面图标",
+    "iOS 17–18 图片壁纸暗化，跟随深色模式并支持强度调节",
+    "壁纸与图标开关独立控制，壁纸暗化默认关闭",
+    "iOS 15–17 跟随系统深浅色外观自动切换桌面图标",
     "默认混合模式，并可单独选择 Apple 或 Chroma 模式",
-    "优先使用 App 自带深色图标，可选白色与浅灰色反转",
-    "支持在设置中刷新效果或重启桌面"
+    "优先使用 App 自带深色图标，可选白色与浅灰色反转"
   ],
   "compatibility": [
-    "iOS 15–17",
+    "iOS 15–18",
     "Rootless 与 RootHide",
-    "iOS 18 及以上不会启用"
+    "图标功能支持 iOS 15–17；图片壁纸暗化支持 iOS 17–18",
+    "iOS 18 使用系统原生深色图标"
   ],
   "usage": [
     "安装插件后重新加载桌面",
-    "进入“设置 → 深色图标”选择处理模式及反转选项",
+    "进入“设置 → 深色图标”分别配置图标与壁纸暗化；壁纸暗化默认关闭",
     "首次生成或切换设置时请等待处理完成，之后翻页会复用缓存"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.9.1",
+      "changes": [
+        "新增 iOS 17–18 图片壁纸暗化，跟随系统深色模式并支持调节强度。",
+        "壁纸与图标功能现可独立控制；壁纸暗化默认关闭。",
+        "iOS 18 保留系统原生深色图标；iOS 17 及以下继续使用插件图标功能。"
+      ]
+    },
     {
       "version": "0.8.1",
       "changes": [
@@ -41,30 +51,40 @@
   "locales": {
     "en": {
       "name": "DarkIcon",
-      "tagline": "Automatically generate dark Home Screen icons that follow system appearance on iOS 15–17.",
+      "tagline": "Dark icons and image wallpaper dimming for iOS 15–18.",
       "description": [
-        "DarkIcon automatically generates dark versions of ordinary app icons in Dark Mode without requiring an icon pack or network connection.",
-        "The default hybrid mode selects a suitable result for each icon, while Apple and Chroma modes remain individually selectable.",
-        "App-provided dark icons are preferred, with optional light-color inversion, dark placeholder handling, and reusable caching."
+        "DarkIcon automatically generates dark app icons that follow system appearance on iOS 15–17 and dims ordinary image wallpapers on iOS 17–18.",
+        "Wallpaper and icon features are controlled independently. Wallpaper dimming is off by default, follows Dark Mode, and offers adjustable intensity.",
+        "On iOS 18, native system dark icons are preserved and the tweak's icon feature stays disabled. The original icon modes remain available on iOS 17 and earlier."
       ],
-      "notice": "This is a preview release. Initial generation or settings changes may cause a brief slowdown; completed results are reused while paging. The tweak is disabled on iOS 18 and later.",
+      "notice": "This is a preview release. Wallpaper dimming has only been tested with ordinary image wallpapers; Apple Emoji, Weather, and other system wallpapers are not currently supported. Initial icon generation or related settings changes may cause a brief slowdown; completed results are reused while paging.",
       "features": [
-        "Home Screen icons that automatically follow Light and Dark appearance",
+        "Image wallpaper dimming on iOS 17–18 with Dark Mode tracking and adjustable intensity",
+        "Independent wallpaper and icon controls, with wallpaper dimming off by default",
+        "Home Screen icons that follow system appearance on iOS 15–17",
         "Default hybrid mode with individually selectable Apple and Chroma modes",
-        "Preference for app-provided dark icons with optional white and light-gray inversion",
-        "Refresh effects or restart the Home Screen from Settings"
+        "Preference for app-provided dark icons with optional white and light-gray inversion"
       ],
       "compatibility": [
-        "iOS 15–17",
+        "iOS 15–18",
         "Rootless and RootHide",
-        "Disabled on iOS 18 and later"
+        "Icon features support iOS 15–17; image wallpaper dimming supports iOS 17–18",
+        "Uses native system dark icons on iOS 18"
       ],
       "usage": [
         "Install the package and respring",
-        "Open Settings → DarkIcon to select a processing mode and inversion options",
+        "Open Settings → DarkIcon to configure icon and wallpaper dimming independently; wallpaper dimming is off by default",
         "Allow initial generation or settings changes to finish; subsequent paging reuses cached results"
       ],
       "changelog": [
+        {
+          "version": "0.9.1",
+          "changes": [
+            "Added image wallpaper dimming on iOS 17–18 with Dark Mode tracking and adjustable intensity.",
+            "Wallpaper and icon features can now be controlled independently; wallpaper dimming is off by default.",
+            "On iOS 18, native system dark icons are preserved and the tweak icon feature stays disabled; the original icon feature remains available on iOS 17 and earlier."
+          ]
+        },
         {
           "version": "0.8.1",
           "changes": [
