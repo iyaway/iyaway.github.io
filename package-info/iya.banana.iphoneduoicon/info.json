@@ -7,17 +7,18 @@
   "description": [
     "iPhoneDuoIcon 提供星环与胶囊两种状态栏样式，将电量、Wi-Fi 和蜂窝信号整合为紧凑的信息区域。",
     "胶囊样式整合时间、电量百分比和网络状态，支持双卡独立分段信号，并会根据状态栏可用空间自动避让刘海。",
-    "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标，3 秒后自动合拢，再次点击可延长停留。",
+    "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标；电池沿边界展开，信号与 Wi-Fi 错峰运动，3 秒后自动合拢。",
     "支持 VPN 状态着色、充电与低电量模式显示，并提供三语言设置界面。"
   ],
   "notice": "⚠️ 当前为测试版，具体机型和网络切换场景仍需验证。与 SingleVPN 冲突。",
   "features": [
     "星环与胶囊两种状态栏样式",
+    "星环左侧可选显示电量百分比，默认关闭并即时生效",
     "胶囊整合时间、电量百分比和网络状态",
     "单卡电量轮廓与双卡独立分段信号显示",
     "根据状态栏可用空间自动调整胶囊大小，空间不足时等比缩小避让刘海",
     "小屏设备保持右侧定位与时间基线，点击区域及展开动画同步适配",
-    "点击展开系统原生信号、Wi-Fi 与电池图标，3 秒后自动合拢",
+    "电池沿边界展开，信号与 Wi-Fi 错峰运动并带轻微回弹，3 秒后自动合拢",
     "再次点击延长展开停留，并提供三语言操作提示",
     "0–20 pt 右侧留白调节，增大数值可向左移动",
     "VPN 状态着色、充电及低电量模式提示",
@@ -30,12 +31,20 @@
   ],
   "usage": [
     "安装时确认移除存在冲突的 SingleVPN",
-    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式，并调整右侧留白与 VPN 指示；胶囊会自动适配刘海可用空间",
+    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式，并调整星环电量百分比、右侧留白与 VPN 指示；胶囊会自动适配刘海可用空间",
     "点击状态栏组合图标可展开原生图标；再次点击可延长停留",
     "设置修改即时生效；需要时可使用设置内按钮手动重新加载 SpringBoard"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.16",
+      "changes": [
+        "新增星环左侧电量百分比开关，默认关闭、即时生效，字体跟随系统样式。",
+        "重做电池、信号与 Wi-Fi 展开动画，加入边界绕行、错峰曲线与轻微回弹，并保留双卡独立信号和 3 秒停留。",
+        "优化小屏胶囊显示与自动刘海避让，空间不足时等比缩小，空间充足时保持原尺寸。"
+      ]
+    },
     {
       "version": "0.1.15",
       "changes": [
@@ -83,17 +92,18 @@
       "description": [
         "iPhoneDuoIcon offers Orbit and Capsule status bar styles that combine battery, Wi-Fi, and cellular information in a compact area.",
         "Capsule mode combines time, battery percentage, and network status, with independent segmented signal indicators for dual SIM and automatic notch avoidance based on available status bar space.",
-        "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. They automatically combine again after three seconds, and another tap extends the hold.",
+        "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. The battery follows the boundary while cellular and Wi-Fi move on staggered paths, then combine again after three seconds.",
         "It includes VPN status coloring, charging and Low Power Mode indicators, and trilingual settings."
       ],
       "notice": "⚠️ This is a testing release; device-specific behavior and network transitions still require validation. Conflicts with SingleVPN.",
       "features": [
         "Orbit and Capsule status bar styles",
+        "Optional battery percentage to the left of Orbit, off by default and applied immediately",
         "Capsule mode with time, battery percentage, and network status",
         "Single-line battery outline and independent segmented dual-SIM indicators",
         "Automatic Capsule sizing based on available status bar space, scaling proportionally when needed to avoid the notch",
         "Small-screen alignment that keeps right positioning and the time baseline while adapting the tap area and unfold animation",
-        "Tap to reveal native cellular, Wi-Fi, and battery icons, which combine again after three seconds",
+        "Boundary-following battery motion with staggered cellular and Wi-Fi paths, subtle bounce, and automatic recombination after three seconds",
         "Tap again to extend the hold, with localized interaction hints in three languages",
         "Adjustable 0–20 pt right-side spacing; larger values move the item left",
         "VPN status coloring, charging, and Low Power Mode indicators",
@@ -106,11 +116,19 @@
       ],
       "usage": [
         "Confirm removal of the conflicting SingleVPN package during installation",
-        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule and adjust right-side spacing and the VPN indicator; Capsule automatically adapts to available notch space",
+        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule and adjust Orbit battery percentage, right-side spacing, and the VPN indicator; Capsule automatically adapts to available notch space",
         "Tap the combined status bar icon to reveal native icons; tap again to extend the hold",
         "Settings changes apply immediately; use the manual Restart SpringBoard button when needed"
       ],
       "changelog": [
+        {
+          "version": "0.1.16",
+          "changes": [
+            "Added an optional battery percentage to the left of Orbit, off by default and applied immediately with the system battery percentage font.",
+            "Redesigned battery, cellular, and Wi-Fi unfold animations with boundary-following motion, staggered curves, and subtle bounce, while retaining independent dual-SIM signals and the three-second hold.",
+            "Improved Capsule display and automatic notch avoidance on smaller screens, scaling proportionally when space is limited while preserving full size when space allows."
+          ]
+        },
         {
           "version": "0.1.15",
           "changes": [
