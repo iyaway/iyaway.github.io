@@ -6,7 +6,7 @@
   "developer": "Banana",
   "description": [
     "iPhoneDuoIcon 提供星环与胶囊两种状态栏样式，将电量、Wi-Fi 和蜂窝信号整合为紧凑的信息区域。",
-    "胶囊样式整合时间、电量百分比和网络状态，并支持双卡独立分段信号显示。",
+    "胶囊样式整合时间、电量百分比和网络状态，支持双卡独立分段信号，并会根据状态栏可用空间自动避让刘海。",
     "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标，3 秒后自动合拢，再次点击可延长停留。",
     "支持 VPN 状态着色、充电与低电量模式显示，并提供三语言设置界面。"
   ],
@@ -15,6 +15,8 @@
     "星环与胶囊两种状态栏样式",
     "胶囊整合时间、电量百分比和网络状态",
     "单卡电量轮廓与双卡独立分段信号显示",
+    "根据状态栏可用空间自动调整胶囊大小，空间不足时等比缩小避让刘海",
+    "小屏设备保持右侧定位与时间基线，点击区域及展开动画同步适配",
     "点击展开系统原生信号、Wi-Fi 与电池图标，3 秒后自动合拢",
     "再次点击延长展开停留，并提供三语言操作提示",
     "0–20 pt 右侧留白调节，增大数值可向左移动",
@@ -28,12 +30,20 @@
   ],
   "usage": [
     "安装时确认移除存在冲突的 SingleVPN",
-    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式，并调整右侧留白与 VPN 指示",
+    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式，并调整右侧留白与 VPN 指示；胶囊会自动适配刘海可用空间",
     "点击状态栏组合图标可展开原生图标；再次点击可延长停留",
     "设置修改即时生效；需要时可使用设置内按钮手动重新加载 SpringBoard"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.15",
+      "changes": [
+        "新增自动刘海避让，根据状态栏可用空间调整胶囊大小；空间不足时等比缩小。",
+        "优化小屏设备的右侧定位、时间基线、点击区域与展开动画，避免内容被刘海遮挡。",
+        "保留右侧留白调节，并更新简体中文、繁体中文和英文设置说明。"
+      ]
+    },
     {
       "version": "0.1.13",
       "changes": [
@@ -72,7 +82,7 @@
       "tagline": "Unified battery, Wi-Fi, and cellular status with Orbit and Capsule styles.",
       "description": [
         "iPhoneDuoIcon offers Orbit and Capsule status bar styles that combine battery, Wi-Fi, and cellular information in a compact area.",
-        "Capsule mode combines time, battery percentage, and network status, with independent segmented signal indicators for dual SIM.",
+        "Capsule mode combines time, battery percentage, and network status, with independent segmented signal indicators for dual SIM and automatic notch avoidance based on available status bar space.",
         "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. They automatically combine again after three seconds, and another tap extends the hold.",
         "It includes VPN status coloring, charging and Low Power Mode indicators, and trilingual settings."
       ],
@@ -81,6 +91,8 @@
         "Orbit and Capsule status bar styles",
         "Capsule mode with time, battery percentage, and network status",
         "Single-line battery outline and independent segmented dual-SIM indicators",
+        "Automatic Capsule sizing based on available status bar space, scaling proportionally when needed to avoid the notch",
+        "Small-screen alignment that keeps right positioning and the time baseline while adapting the tap area and unfold animation",
         "Tap to reveal native cellular, Wi-Fi, and battery icons, which combine again after three seconds",
         "Tap again to extend the hold, with localized interaction hints in three languages",
         "Adjustable 0–20 pt right-side spacing; larger values move the item left",
@@ -94,11 +106,19 @@
       ],
       "usage": [
         "Confirm removal of the conflicting SingleVPN package during installation",
-        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule and adjust right-side spacing and the VPN indicator",
+        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule and adjust right-side spacing and the VPN indicator; Capsule automatically adapts to available notch space",
         "Tap the combined status bar icon to reveal native icons; tap again to extend the hold",
         "Settings changes apply immediately; use the manual Restart SpringBoard button when needed"
       ],
       "changelog": [
+        {
+          "version": "0.1.15",
+          "changes": [
+            "Added automatic notch avoidance that adjusts Capsule size to available status bar space and scales proportionally when space is limited.",
+            "Improved right-side positioning, the time baseline, tap area, and unfold animation on smaller screens to prevent content from being obscured by the notch.",
+            "Retained right-side spacing controls and updated the English, Simplified Chinese, and Traditional Chinese settings descriptions."
+          ]
+        },
         {
           "version": "0.1.13",
           "changes": [
