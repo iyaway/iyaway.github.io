@@ -6,14 +6,16 @@
   "developer": "Banana",
   "description": [
     "iPhoneDuoIcon 提供星环与胶囊两种状态栏样式，将电量、Wi-Fi 和蜂窝信号整合为紧凑的信息区域。",
-    "胶囊样式整合时间、电量百分比和网络状态，支持双卡独立分段信号，并会根据状态栏可用空间自动避让刘海。",
+    "胶囊样式整合时间、电量百分比和网络状态，支持双卡独立分段信号，并会根据状态栏可用空间自动避让刘海；电量数字可统一开关。",
     "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标；电池沿边界展开，信号与 Wi-Fi 错峰运动，3 秒后自动合拢。",
     "支持 VPN 状态着色、充电与低电量模式显示，并提供三语言设置界面。"
   ],
   "notice": "⚠️ 当前为测试版，具体机型和网络切换场景仍需验证。与 SingleVPN 冲突。",
   "features": [
     "星环与胶囊两种状态栏样式",
-    "星环左侧可选显示电量百分比，默认关闭并即时生效",
+    "共用电量百分比开关同时控制星环和胶囊，默认关闭并即时生效",
+    "星环电量百分比支持左侧或顶部缺口位置",
+    "胶囊电量百分比固定顶部，关闭数字后自动补齐轮廓",
     "胶囊整合时间、电量百分比和网络状态",
     "单卡电量轮廓与双卡独立分段信号显示",
     "根据状态栏可用空间自动调整胶囊大小，空间不足时等比缩小避让刘海",
@@ -31,12 +33,20 @@
   ],
   "usage": [
     "安装时确认移除存在冲突的 SingleVPN",
-    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式，并调整星环电量百分比、右侧留白与 VPN 指示；胶囊会自动适配刘海可用空间",
+    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式，并调整电量百分比、星环数字位置、右侧留白与 VPN 指示；胶囊会自动适配刘海可用空间",
     "点击状态栏组合图标可展开原生图标；再次点击可延长停留",
     "设置修改即时生效；需要时可使用设置内按钮手动重新加载 SpringBoard"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.18",
+      "changes": [
+        "新增共用电量百分比开关，同时控制星环和胶囊；星环支持左侧或顶部缺口位置。",
+        "胶囊数字固定顶部，关闭数字时自动补齐轮廓，并隐藏不适用的位置选项。",
+        "设置修改即时生效，并兼容旧版开关保存值。"
+      ]
+    },
     {
       "version": "0.1.17",
       "changes": [
@@ -98,14 +108,16 @@
       "tagline": "Unified battery, Wi-Fi, and cellular status with Orbit and Capsule styles.",
       "description": [
         "iPhoneDuoIcon offers Orbit and Capsule status bar styles that combine battery, Wi-Fi, and cellular information in a compact area.",
-        "Capsule mode combines time, battery percentage, and network status, with independent segmented signal indicators for dual SIM and automatic notch avoidance based on available status bar space.",
+        "Capsule mode combines time, battery percentage, and network status, with independent segmented signal indicators for dual SIM and automatic notch avoidance based on available status bar space. One shared switch controls battery numbers in both styles.",
         "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. The battery follows the boundary while cellular and Wi-Fi move on staggered paths, then combine again after three seconds.",
         "It includes VPN status coloring, charging and Low Power Mode indicators, and trilingual settings."
       ],
       "notice": "⚠️ This is a testing release; device-specific behavior and network transitions still require validation. Conflicts with SingleVPN.",
       "features": [
         "Orbit and Capsule status bar styles",
-        "Optional battery percentage to the left of Orbit, off by default and applied immediately",
+        "One shared battery percentage switch for Orbit and Capsule, off by default and applied immediately",
+        "Orbit battery percentage positioned on the left or in the top gap",
+        "Capsule battery percentage fixed at the top, completing the outline when numbers are hidden",
         "Capsule mode with time, battery percentage, and network status",
         "Single-line battery outline and independent segmented dual-SIM indicators",
         "Automatic Capsule sizing based on available status bar space, scaling proportionally when needed to avoid the notch",
@@ -123,11 +135,19 @@
       ],
       "usage": [
         "Confirm removal of the conflicting SingleVPN package during installation",
-        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule and adjust Orbit battery percentage, right-side spacing, and the VPN indicator; Capsule automatically adapts to available notch space",
+        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule and adjust battery percentage, Orbit number position, right-side spacing, and the VPN indicator; Capsule automatically adapts to available notch space",
         "Tap the combined status bar icon to reveal native icons; tap again to extend the hold",
         "Settings changes apply immediately; use the manual Restart SpringBoard button when needed"
       ],
       "changelog": [
+        {
+          "version": "0.1.18",
+          "changes": [
+            "Added a shared battery percentage switch for Orbit and Capsule; Orbit supports left-side or top-gap placement.",
+            "Capsule keeps the percentage at the top, completes its outline when numbers are hidden, and removes the unnecessary position option.",
+            "Settings changes apply immediately and remain compatible with values saved by earlier versions."
+          ]
+        },
         {
           "version": "0.1.17",
           "changes": [
