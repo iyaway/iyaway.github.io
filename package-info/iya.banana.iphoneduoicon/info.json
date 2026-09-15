@@ -8,6 +8,7 @@
     "iPhoneDuoIcon 提供星环与胶囊两种状态栏样式，将电量、Wi-Fi 和蜂窝信号整合为紧凑的信息区域。",
     "胶囊样式整合时间、电量百分比和网络状态，支持双卡独立分段信号，并会根据状态栏可用空间自动避让刘海；电量数字可统一开关。",
     "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标；电池沿边界展开，信号与 Wi-Fi 错峰运动，3 秒后自动合拢。",
+    "电池、Wi-Fi、5G/LTE 与两张 SIM 卡信号可分别设置颜色；星环和胶囊也可独立调整大小与位置。",
     "支持 VPN 状态着色、充电与低电量模式显示，并提供三语言设置界面。"
   ],
   "notice": "⚠️ 当前为测试版，具体机型、VPN 与定位状态兼容性仍需实机复测。与 SingleVPN 冲突。",
@@ -17,6 +18,7 @@
     "星环电量百分比支持左侧或顶部缺口位置",
     "星环整体大小、水平偏移与垂直偏移调节，默认保持居中",
     "星环顶部电量百分比支持独立缩放",
+    "星环与胶囊分别支持大小、水平偏移和垂直偏移调节，并可一键恢复居中默认值",
     "星环与胶囊专属设置按当前样式互斥显示并即时生效",
     "胶囊电量百分比固定顶部，关闭数字后自动补齐轮廓",
     "胶囊整合时间、电量百分比和网络状态",
@@ -26,6 +28,9 @@
     "电池沿边界展开，信号与 Wi-Fi 错峰运动并带轻微回弹，3 秒后自动合拢",
     "再次点击延长展开停留，并提供三语言操作提示",
     "0–20 pt 右侧留白调节，增大数值可向左移动",
+    "电池、Wi-Fi、5G/LTE、卡 1 与卡 2 信号独立配色，自绘动画同步使用所选颜色",
+    "自定义配色启用后，VPN、充电、低电量与省电模式不会覆盖用户颜色",
+    "颜色一键重置为默认绿色",
     "VPN 状态着色、充电及低电量模式提示",
     "启用开关及简体中文、繁体中文和英文设置"
   ],
@@ -36,12 +41,21 @@
   ],
   "usage": [
     "安装时确认移除存在冲突的 SingleVPN",
-    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式；星环可调整整体大小、水平/垂直偏移、数字位置与顶部数字缩放，胶囊可调整右侧留白",
+    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式；两种样式可分别调整大小、水平/垂直偏移与相关专属选项",
+    "按需启用独立配色，分别设置电池、Wi-Fi、5G/LTE 与两张 SIM 卡信号颜色；可一键重置颜色或布局",
     "点击状态栏组合图标可展开原生图标；再次点击可延长停留",
     "设置修改即时生效；需要时可使用设置内按钮手动重新加载 SpringBoard"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.20",
+      "changes": [
+        "新增独立配色：电池、Wi-Fi、5G/LTE、卡 1/卡 2 信号可分别设色并同步动画；启用后不再被系统状态颜色覆盖。",
+        "星环与胶囊均支持独立大小、水平/垂直位置调节，默认居中并支持一键重置。",
+        "新增颜色重置为默认绿色，并优化星环顶部电量数字缩放、宽度与圆弧间距。"
+      ]
+    },
     {
       "version": "0.1.19",
       "changes": [
@@ -121,6 +135,7 @@
         "iPhoneDuoIcon offers Orbit and Capsule status bar styles that combine battery, Wi-Fi, and cellular information in a compact area.",
         "Capsule mode combines time, battery percentage, and network status, with independent segmented signal indicators for dual SIM and automatic notch avoidance based on available status bar space. One shared switch controls battery numbers in both styles.",
         "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. The battery follows the boundary while cellular and Wi-Fi move on staggered paths, then combine again after three seconds.",
+        "Battery, Wi-Fi, 5G/LTE, and each SIM signal can use separate colors, while Orbit and Capsule have independent size and position controls.",
         "It includes VPN status coloring, charging and Low Power Mode indicators, and trilingual settings."
       ],
       "notice": "⚠️ This is a testing release; device-specific behavior and compatibility with VPN and location status still require device retesting. Conflicts with SingleVPN.",
@@ -130,6 +145,7 @@
         "Orbit battery percentage positioned on the left or in the top gap",
         "Orbit size, horizontal offset, and vertical offset controls, centered by default",
         "Independent scaling for the top Orbit battery percentage",
+        "Independent size, horizontal offset, and vertical offset controls for Orbit and Capsule, with one-tap layout reset",
         "Style-specific Orbit and Capsule settings shown exclusively for the selected style and applied immediately",
         "Capsule battery percentage fixed at the top, completing the outline when numbers are hidden",
         "Capsule mode with time, battery percentage, and network status",
@@ -139,6 +155,9 @@
         "Boundary-following battery motion with staggered cellular and Wi-Fi paths, subtle bounce, and automatic recombination after three seconds",
         "Tap again to extend the hold, with localized interaction hints in three languages",
         "Adjustable 0–20 pt right-side spacing; larger values move the item left",
+        "Separate colors for battery, Wi-Fi, 5G/LTE, SIM 1, and SIM 2 signals, synchronized with custom animations",
+        "User colors take priority over VPN, charging, low-battery, and Low Power Mode colors when customization is enabled",
+        "One-tap color reset to the default green",
         "VPN status coloring, charging, and Low Power Mode indicators",
         "Enable switch and settings in English, Simplified Chinese, and Traditional Chinese"
       ],
@@ -149,11 +168,20 @@
       ],
       "usage": [
         "Confirm removal of the conflicting SingleVPN package during installation",
-        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule; adjust Orbit size, horizontal and vertical offsets, number placement, and top-number scale, or Capsule right-side spacing",
+        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule; configure size, horizontal and vertical offsets, and style-specific options independently",
+        "Optionally enable custom colors for battery, Wi-Fi, 5G/LTE, SIM 1, and SIM 2; reset colors or layout with one tap",
         "Tap the combined status bar icon to reveal native icons; tap again to extend the hold",
         "Settings changes apply immediately; use the manual Restart SpringBoard button when needed"
       ],
       "changelog": [
+        {
+          "version": "0.1.20",
+          "changes": [
+            "Added independent colors for battery, Wi-Fi, 5G/LTE, SIM 1, and SIM 2 signals, synchronized with animations and protected from system status color overrides.",
+            "Orbit and Capsule now have independent size, horizontal, and vertical position controls, centered by default with one-tap reset.",
+            "Added color reset to the default green and improved top Orbit battery percentage scaling, digit width, and arc spacing."
+          ]
+        },
         {
           "version": "0.1.19",
           "changes": [
