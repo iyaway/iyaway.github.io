@@ -7,7 +7,7 @@
   "description": [
     "iPhoneDuoIcon 提供星环与胶囊两种状态栏样式，将电量、Wi-Fi 和蜂窝信号整合为紧凑的信息区域。",
     "胶囊样式整合时间、电量百分比和网络状态，支持双卡独立分段信号，并会根据状态栏可用空间自动避让刘海；电量数字可统一开关。",
-    "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标；电池沿边界展开，信号与 Wi-Fi 错峰运动，3 秒后自动合拢。",
+    "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标；星环展开/合拢约 3 秒，胶囊约 4 秒，中间原生图标停留 3 秒。",
     "电池、Wi-Fi、5G/LTE 与两张 SIM 卡信号可分别设置颜色；星环和胶囊也可独立调整大小与位置。",
     "支持 VPN 状态着色、充电与低电量模式显示，并提供三语言设置界面。"
   ],
@@ -20,12 +20,15 @@
     "星环顶部电量百分比支持独立缩放",
     "星环与胶囊分别支持大小、水平偏移和垂直偏移调节，并可一键恢复居中默认值",
     "星环与胶囊专属设置按当前样式互斥显示并即时生效",
+    "星环与胶囊分别提供隐藏 AM/PM 开关，仅在 12 小时制下生效",
     "胶囊电量百分比固定顶部，关闭数字后自动补齐轮廓",
+    "胶囊顶部电量数字支持独立字体缩放与重置，缺口随数字大小调整",
     "胶囊整合时间、电量百分比和网络状态",
     "单卡电量轮廓与双卡独立分段信号显示",
     "根据状态栏可用空间自动调整胶囊大小，空间不足时等比缩小避让刘海",
     "小屏设备保持右侧定位与时间基线，点击区域及展开动画同步适配",
-    "电池沿边界展开，信号与 Wi-Fi 错峰运动并带轻微回弹，3 秒后自动合拢",
+    "Wi-Fi 使用双弧线与圆角扇形底部，并加粗 Wi-Fi、电量轮廓及信号点线",
+    "星环展开/合拢约 3 秒，胶囊约 4 秒，中间原生图标停留 3 秒",
     "再次点击延长展开停留，并提供三语言操作提示",
     "0–20 pt 右侧留白调节，增大数值可向左移动",
     "电池、Wi-Fi、5G/LTE、卡 1 与卡 2 信号独立配色，自绘动画同步使用所选颜色",
@@ -41,13 +44,21 @@
   ],
   "usage": [
     "安装时确认移除存在冲突的 SingleVPN",
-    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式；两种样式可分别调整大小、水平/垂直偏移与相关专属选项",
+    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式；两种样式可分别调整大小、位置、AM/PM 显示及相关专属选项",
     "按需启用独立配色，分别设置电池、Wi-Fi、5G/LTE 与两张 SIM 卡信号颜色；可一键重置颜色或布局",
     "点击状态栏组合图标可展开原生图标；再次点击可延长停留",
     "设置修改即时生效；需要时可使用设置内按钮手动重新加载 SpringBoard"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.21",
+      "changes": [
+        "星环与胶囊新增独立隐藏 AM/PM 开关，仅在 12 小时制下生效；24 小时制时自动禁用。",
+        "优化 Wi-Fi、电量轮廓、信号点线和顶部电量数字，并为胶囊顶部数字新增独立缩放与重置。",
+        "调整动画节奏：星环展开/合拢约 3 秒，胶囊约 4 秒，原生图标继续停留 3 秒。"
+      ]
+    },
     {
       "version": "0.1.20",
       "changes": [
@@ -134,7 +145,7 @@
       "description": [
         "iPhoneDuoIcon offers Orbit and Capsule status bar styles that combine battery, Wi-Fi, and cellular information in a compact area.",
         "Capsule mode combines time, battery percentage, and network status, with independent segmented signal indicators for dual SIM and automatic notch avoidance based on available status bar space. One shared switch controls battery numbers in both styles.",
-        "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. The battery follows the boundary while cellular and Wi-Fi move on staggered paths, then combine again after three seconds.",
+        "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. Orbit takes about three seconds to unfold or combine, Capsule about four seconds, with a three-second native-icon hold.",
         "Battery, Wi-Fi, 5G/LTE, and each SIM signal can use separate colors, while Orbit and Capsule have independent size and position controls.",
         "It includes VPN status coloring, charging and Low Power Mode indicators, and trilingual settings."
       ],
@@ -147,12 +158,15 @@
         "Independent scaling for the top Orbit battery percentage",
         "Independent size, horizontal offset, and vertical offset controls for Orbit and Capsule, with one-tap layout reset",
         "Style-specific Orbit and Capsule settings shown exclusively for the selected style and applied immediately",
+        "Independent Hide AM/PM switches for Orbit and Capsule, active only in 12-hour time",
         "Capsule battery percentage fixed at the top, completing the outline when numbers are hidden",
+        "Independent Capsule top-battery font scaling and reset, with the gap adapting to number size",
         "Capsule mode with time, battery percentage, and network status",
         "Single-line battery outline and independent segmented dual-SIM indicators",
         "Automatic Capsule sizing based on available status bar space, scaling proportionally when needed to avoid the notch",
         "Small-screen alignment that keeps right positioning and the time baseline while adapting the tap area and unfold animation",
-        "Boundary-following battery motion with staggered cellular and Wi-Fi paths, subtle bounce, and automatic recombination after three seconds",
+        "Two-arc Wi-Fi design with a rounded fan base and thicker Wi-Fi, battery outlines, and signal dots or lines",
+        "About three seconds for Orbit and four seconds for Capsule to unfold or combine, with a three-second native-icon hold",
         "Tap again to extend the hold, with localized interaction hints in three languages",
         "Adjustable 0–20 pt right-side spacing; larger values move the item left",
         "Separate colors for battery, Wi-Fi, 5G/LTE, SIM 1, and SIM 2 signals, synchronized with custom animations",
@@ -168,12 +182,20 @@
       ],
       "usage": [
         "Confirm removal of the conflicting SingleVPN package during installation",
-        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule; configure size, horizontal and vertical offsets, and style-specific options independently",
+        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule; configure size, position, AM/PM visibility, and style-specific options independently",
         "Optionally enable custom colors for battery, Wi-Fi, 5G/LTE, SIM 1, and SIM 2; reset colors or layout with one tap",
         "Tap the combined status bar icon to reveal native icons; tap again to extend the hold",
         "Settings changes apply immediately; use the manual Restart SpringBoard button when needed"
       ],
       "changelog": [
+        {
+          "version": "0.1.21",
+          "changes": [
+            "Added independent Hide AM/PM switches for Orbit and Capsule, active only in 12-hour time and automatically disabled in 24-hour time.",
+            "Improved Wi-Fi, battery outlines, signal dots and lines, and top battery numbers, with independent scaling and reset for the Capsule top number.",
+            "Adjusted animation timing: Orbit unfolds and combines in about three seconds, Capsule in about four seconds, while native icons remain visible for three seconds."
+          ]
+        },
         {
           "version": "0.1.20",
           "changes": [
