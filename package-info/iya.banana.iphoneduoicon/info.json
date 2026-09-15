@@ -10,11 +10,14 @@
     "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标；电池沿边界展开，信号与 Wi-Fi 错峰运动，3 秒后自动合拢。",
     "支持 VPN 状态着色、充电与低电量模式显示，并提供三语言设置界面。"
   ],
-  "notice": "⚠️ 当前为测试版，具体机型和网络切换场景仍需验证。与 SingleVPN 冲突。",
+  "notice": "⚠️ 当前为测试版，具体机型、VPN 与定位状态兼容性仍需实机复测。与 SingleVPN 冲突。",
   "features": [
     "星环与胶囊两种状态栏样式",
     "共用电量百分比开关同时控制星环和胶囊，默认关闭并即时生效",
     "星环电量百分比支持左侧或顶部缺口位置",
+    "星环整体大小、水平偏移与垂直偏移调节，默认保持居中",
+    "星环顶部电量百分比支持独立缩放",
+    "星环与胶囊专属设置按当前样式互斥显示并即时生效",
     "胶囊电量百分比固定顶部，关闭数字后自动补齐轮廓",
     "胶囊整合时间、电量百分比和网络状态",
     "单卡电量轮廓与双卡独立分段信号显示",
@@ -33,12 +36,20 @@
   ],
   "usage": [
     "安装时确认移除存在冲突的 SingleVPN",
-    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式，并调整电量百分比、星环数字位置、右侧留白与 VPN 指示；胶囊会自动适配刘海可用空间",
+    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式；星环可调整整体大小、水平/垂直偏移、数字位置与顶部数字缩放，胶囊可调整右侧留白",
     "点击状态栏组合图标可展开原生图标；再次点击可延长停留",
     "设置修改即时生效；需要时可使用设置内按钮手动重新加载 SpringBoard"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.19",
+      "changes": [
+        "新增星环整体大小、水平/垂直偏移与顶部电量独立缩放，默认保持居中。",
+        "星环与胶囊专属设置仅按当前样式显示，所有调整即时生效。",
+        "优化百分比数字宽度并减少对其他状态栏图标的影响；VPN 与定位兼容性仍需实机复测。"
+      ]
+    },
     {
       "version": "0.1.18",
       "changes": [
@@ -112,11 +123,14 @@
         "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. The battery follows the boundary while cellular and Wi-Fi move on staggered paths, then combine again after three seconds.",
         "It includes VPN status coloring, charging and Low Power Mode indicators, and trilingual settings."
       ],
-      "notice": "⚠️ This is a testing release; device-specific behavior and network transitions still require validation. Conflicts with SingleVPN.",
+      "notice": "⚠️ This is a testing release; device-specific behavior and compatibility with VPN and location status still require device retesting. Conflicts with SingleVPN.",
       "features": [
         "Orbit and Capsule status bar styles",
         "One shared battery percentage switch for Orbit and Capsule, off by default and applied immediately",
         "Orbit battery percentage positioned on the left or in the top gap",
+        "Orbit size, horizontal offset, and vertical offset controls, centered by default",
+        "Independent scaling for the top Orbit battery percentage",
+        "Style-specific Orbit and Capsule settings shown exclusively for the selected style and applied immediately",
         "Capsule battery percentage fixed at the top, completing the outline when numbers are hidden",
         "Capsule mode with time, battery percentage, and network status",
         "Single-line battery outline and independent segmented dual-SIM indicators",
@@ -135,11 +149,19 @@
       ],
       "usage": [
         "Confirm removal of the conflicting SingleVPN package during installation",
-        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule and adjust battery percentage, Orbit number position, right-side spacing, and the VPN indicator; Capsule automatically adapts to available notch space",
+        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule; adjust Orbit size, horizontal and vertical offsets, number placement, and top-number scale, or Capsule right-side spacing",
         "Tap the combined status bar icon to reveal native icons; tap again to extend the hold",
         "Settings changes apply immediately; use the manual Restart SpringBoard button when needed"
       ],
       "changelog": [
+        {
+          "version": "0.1.19",
+          "changes": [
+            "Added Orbit size, horizontal and vertical offsets, centered by default, plus independent scaling for the top battery percentage.",
+            "Orbit- and Capsule-specific settings now appear only for the selected style, with all adjustments applied immediately.",
+            "Improved percentage digit width and reduced interference with other status bar icons; VPN and location compatibility still require device retesting."
+          ]
+        },
         {
           "version": "0.1.18",
           "changes": [
