@@ -38,6 +38,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.17",
+      "changes": [
+        "优化展开后原生电池的电量同步，修复偶发显示红色 1% 或缺失电量的问题。",
+        "展开交接时及时刷新电池状态，同时保持真实低电量、充电及低电量模式的正确显示。"
+      ]
+    },
+    {
       "version": "0.1.16",
       "changes": [
         "新增星环左侧电量百分比开关，默认关闭、即时生效，字体跟随系统样式。",
@@ -121,6 +128,13 @@
         "Settings changes apply immediately; use the manual Restart SpringBoard button when needed"
       ],
       "changelog": [
+        {
+          "version": "0.1.17",
+          "changes": [
+            "Improved native battery level synchronization after unfolding, fixing occasional red 1% or missing battery readings.",
+            "Battery status now refreshes during the unfold handoff while preserving accurate low-battery, charging, and Low Power Mode indicators."
+          ]
+        },
         {
           "version": "0.1.16",
           "changes": [
