@@ -8,6 +8,7 @@
     "iPhoneDuoIcon 提供星环与胶囊两种状态栏样式，将电量、Wi-Fi 和蜂窝信号整合为紧凑的信息区域。",
     "胶囊样式整合时间、电量百分比和网络状态，支持双卡独立分段信号，并会根据状态栏可用空间自动避让刘海；电量数字可统一开关。",
     "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标；星环展开/合拢约 3 秒，胶囊约 4 秒，中间原生图标停留 3 秒。",
+    "充电时可沿电池轮廓显示循环流光，高亮头部搭配渐隐拖尾，并同步使用自定义电池颜色。",
     "电池、Wi-Fi、5G/LTE 与两张 SIM 卡信号可分别设置颜色；星环和胶囊也可独立调整大小与位置。",
     "支持 VPN 状态着色、充电与低电量模式显示，并提供三语言设置界面。"
   ],
@@ -29,6 +30,8 @@
     "小屏设备保持右侧定位与时间基线，点击区域及展开动画同步适配",
     "Wi-Fi 使用双弧线与圆角扇形底部，并加粗 Wi-Fi、电量轮廓及信号点线",
     "星环展开/合拢约 3 秒，胶囊约 4 秒，中间原生图标停留 3 秒",
+    "沿电池轮廓循环的充电流光，高亮头部搭配渐隐拖尾",
+    "充电流光支持自定义电池颜色，并保留真实电量比例与数字缺口",
     "再次点击延长展开停留，并提供三语言操作提示",
     "0–20 pt 右侧留白调节，增大数值可向左移动",
     "电池、Wi-Fi、5G/LTE、卡 1 与卡 2 信号独立配色，自绘动画同步使用所选颜色",
@@ -51,6 +54,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.22",
+      "changes": [
+        "新增沿电池轮廓循环的充电流光，高亮头部搭配渐隐拖尾。",
+        "充电流光支持自定义电池颜色，并保留真实电量比例与数字缺口。",
+        "优化动画流畅度，修复可能遮挡其他状态栏图标的问题。"
+      ]
+    },
     {
       "version": "0.1.21",
       "changes": [
@@ -146,6 +157,7 @@
         "iPhoneDuoIcon offers Orbit and Capsule status bar styles that combine battery, Wi-Fi, and cellular information in a compact area.",
         "Capsule mode combines time, battery percentage, and network status, with independent segmented signal indicators for dual SIM and automatic notch avoidance based on available status bar space. One shared switch controls battery numbers in both styles.",
         "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. Orbit takes about three seconds to unfold or combine, Capsule about four seconds, with a three-second native-icon hold.",
+        "While charging, a looping highlight travels around the battery outline with a bright head and fading trail, using the selected custom battery color.",
         "Battery, Wi-Fi, 5G/LTE, and each SIM signal can use separate colors, while Orbit and Capsule have independent size and position controls.",
         "It includes VPN status coloring, charging and Low Power Mode indicators, and trilingual settings."
       ],
@@ -167,6 +179,8 @@
         "Small-screen alignment that keeps right positioning and the time baseline while adapting the tap area and unfold animation",
         "Two-arc Wi-Fi design with a rounded fan base and thicker Wi-Fi, battery outlines, and signal dots or lines",
         "About three seconds for Orbit and four seconds for Capsule to unfold or combine, with a three-second native-icon hold",
+        "Looping charging highlight around the battery outline with a bright head and fading trail",
+        "Custom battery color support while preserving the real charge level and percentage gap",
         "Tap again to extend the hold, with localized interaction hints in three languages",
         "Adjustable 0–20 pt right-side spacing; larger values move the item left",
         "Separate colors for battery, Wi-Fi, 5G/LTE, SIM 1, and SIM 2 signals, synchronized with custom animations",
@@ -188,6 +202,14 @@
         "Settings changes apply immediately; use the manual Restart SpringBoard button when needed"
       ],
       "changelog": [
+        {
+          "version": "0.1.22",
+          "changes": [
+            "Added a looping charging highlight around the battery outline, with a bright head and fading trail.",
+            "The charging highlight supports custom battery colors while preserving the real charge level and percentage gap.",
+            "Improved animation smoothness and fixed an issue that could obscure other status bar icons."
+          ]
+        },
         {
           "version": "0.1.21",
           "changes": [
