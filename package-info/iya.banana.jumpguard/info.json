@@ -12,6 +12,7 @@
   "features": [
     "跨 App 跳转前弹窗确认",
     "支持仅允许一次、始终允许、始终不允许和取消",
+    "锁屏、系统关闭弹窗或 30 秒未选择时自动取消本次跳转",
     "可将指定来源 App 加入黑名单并静默阻止其外跳",
     "管理 URL 放行规则及来源到目标的允许或阻止规则",
     "记录跳转来源、目标、次数与时间",
@@ -32,6 +33,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.2",
+      "changes": [
+        "修复跳转确认弹窗无法点击、影响正常操作的问题。",
+        "锁屏、系统关闭弹窗或 30 秒未选择时自动取消跳转，并避免同一请求重复执行。"
+      ]
+    },
+    {
       "version": "0.1.1",
       "changes": [
         "新增跨 App 跳转确认、来源黑名单和允许或阻止规则。",
@@ -51,6 +59,7 @@
       "features": [
         "Confirm before one app opens another",
         "Allow once, always allow, always deny, or cancel",
+        "Cancel the current launch when the device locks, the system closes the prompt, or no choice is made within 30 seconds",
         "Silently block all external launches from selected source apps",
         "Manage URL allow rules and source-to-destination allow or deny rules",
         "Record launch source, destination, count, and time",
@@ -69,6 +78,13 @@
         "Review or delete launch history and saved rules from Settings."
       ],
       "changelog": [
+        {
+          "version": "0.1.2",
+          "changes": [
+            "Fixed an issue where the launch confirmation prompt became unresponsive and interfered with normal use.",
+            "Launches now cancel when the device locks, the system dismisses the prompt, or no choice is made within 30 seconds; the same request is no longer handled twice."
+          ]
+        },
         {
           "version": "0.1.1",
           "changes": [
