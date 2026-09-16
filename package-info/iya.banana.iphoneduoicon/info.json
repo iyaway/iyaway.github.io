@@ -9,7 +9,8 @@
     "胶囊样式整合时间、电量百分比和网络状态，支持双卡独立分段信号，并会根据状态栏可用空间自动避让刘海；电量数字可统一开关。",
     "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标；星环展开/合拢约 3 秒，胶囊约 4 秒，中间原生图标停留 3 秒。",
     "充电时可沿电池轮廓显示循环流光，高亮头部搭配渐隐拖尾，并同步使用自定义电池颜色。",
-    "电池、Wi-Fi、5G/LTE 与两张 SIM 卡信号可分别设置颜色；星环和胶囊也可独立调整大小与位置。",
+    "电池、Wi-Fi、5G/LTE 与两张 SIM 卡信号可分别设置颜色，并可让配色自动适应深浅背景；星环和胶囊也可独立调整大小与位置。",
+    "胶囊左侧可显示自定义格式日期，提供预览与格式校验，并改善与其他插件同时使用时的日期显示。",
     "支持 VPN 状态着色、充电与低电量模式显示，并提供三语言设置界面。"
   ],
   "notice": "⚠️ 当前为测试版，具体机型、VPN 与定位状态兼容性仍需实机复测。与 SingleVPN 冲突。",
@@ -35,9 +36,14 @@
     "再次点击延长展开停留，并提供三语言操作提示",
     "0–20 pt 右侧留白调节，增大数值可向左移动",
     "电池、Wi-Fi、5G/LTE、卡 1 与卡 2 信号独立配色，自绘动画同步使用所选颜色",
-    "自定义配色启用后，VPN、充电、低电量与省电模式不会覆盖用户颜色",
+    "自定义配色可自动适应浅色与深色背景",
+    "充电时可选用系统电池颜色，拔电后恢复自定义颜色",
+    "自定义配色启用后，VPN、低电量与省电模式不会覆盖用户颜色；充电颜色可单独选择",
     "颜色一键重置为默认绿色",
-    "VPN 状态着色、充电及低电量模式提示",
+    "系统 VPN 图标隐藏与 VPN 状态着色独立控制",
+    "胶囊左侧日期支持自定义格式、预览、保存与格式校验",
+    "日期宽度与自动缩字优化，改善与其他插件同时使用时的显示",
+    "充电及低电量模式提示",
     "启用开关及简体中文、繁体中文和英文设置"
   ],
   "compatibility": [
@@ -49,11 +55,21 @@
     "安装时确认移除存在冲突的 SingleVPN",
     "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式；两种样式可分别调整大小、位置、AM/PM 显示及相关专属选项",
     "按需启用独立配色，分别设置电池、Wi-Fi、5G/LTE 与两张 SIM 卡信号颜色；可一键重置颜色或布局",
+    "按需开启背景自适应配色、充电时系统电池颜色，或分别控制 VPN 图标隐藏与着色",
+    "在胶囊设置中自定义左侧日期格式，预览并通过格式校验后保存",
     "点击状态栏组合图标可展开原生图标；再次点击可延长停留",
     "设置修改即时生效；需要时可使用设置内按钮手动重新加载 SpringBoard"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.24",
+      "changes": [
+        "新增独立 VPN 图标隐藏开关，与 VPN 着色分开控制，并改善系统 VPN 显示兼容性。",
+        "自定义配色可自动适应深浅背景；充电时可选用系统电池颜色，拔电后恢复自定义颜色。",
+        "胶囊左侧新增可预览、校验格式的日期，并优化日期排版、动画及与其他插件共用时的显示。"
+      ]
+    },
     {
       "version": "0.1.22",
       "changes": [
@@ -158,7 +174,8 @@
         "Capsule mode combines time, battery percentage, and network status, with independent segmented signal indicators for dual SIM and automatic notch avoidance based on available status bar space. One shared switch controls battery numbers in both styles.",
         "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. Orbit takes about three seconds to unfold or combine, Capsule about four seconds, with a three-second native-icon hold.",
         "While charging, a looping highlight travels around the battery outline with a bright head and fading trail, using the selected custom battery color.",
-        "Battery, Wi-Fi, 5G/LTE, and each SIM signal can use separate colors, while Orbit and Capsule have independent size and position controls.",
+        "Battery, Wi-Fi, 5G/LTE, and each SIM signal can use separate colors that adapt to light and dark backgrounds, while Orbit and Capsule have independent size and position controls.",
+        "Capsule can show a custom-formatted date on the left, with preview and format validation, and improved date display alongside other tweaks.",
         "It includes VPN status coloring, charging and Low Power Mode indicators, and trilingual settings."
       ],
       "notice": "⚠️ This is a testing release; device-specific behavior and compatibility with VPN and location status still require device retesting. Conflicts with SingleVPN.",
@@ -184,9 +201,14 @@
         "Tap again to extend the hold, with localized interaction hints in three languages",
         "Adjustable 0–20 pt right-side spacing; larger values move the item left",
         "Separate colors for battery, Wi-Fi, 5G/LTE, SIM 1, and SIM 2 signals, synchronized with custom animations",
-        "User colors take priority over VPN, charging, low-battery, and Low Power Mode colors when customization is enabled",
+        "Custom colors can adapt automatically to light and dark backgrounds",
+        "Optionally use the system battery color while charging and restore the custom color after unplugging",
+        "User colors take priority over VPN, low-battery, and Low Power Mode colors; charging color is controlled separately",
         "One-tap color reset to the default green",
-        "VPN status coloring, charging, and Low Power Mode indicators",
+        "Independent controls for hiding the system VPN icon and coloring VPN status",
+        "Custom-formatted date to the left of Capsule with preview, saving, and format validation",
+        "Improved date width and automatic text fitting when used with other tweaks",
+        "Charging and Low Power Mode indicators",
         "Enable switch and settings in English, Simplified Chinese, and Traditional Chinese"
       ],
       "compatibility": [
@@ -198,10 +220,20 @@
         "Confirm removal of the conflicting SingleVPN package during installation",
         "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule; configure size, position, AM/PM visibility, and style-specific options independently",
         "Optionally enable custom colors for battery, Wi-Fi, 5G/LTE, SIM 1, and SIM 2; reset colors or layout with one tap",
+        "Optionally enable background-adaptive colors or the system battery color while charging, and control VPN icon hiding separately from VPN status coloring",
+        "In Capsule settings, customize and preview the left-side date format, then save it after validation",
         "Tap the combined status bar icon to reveal native icons; tap again to extend the hold",
         "Settings changes apply immediately; use the manual Restart SpringBoard button when needed"
       ],
       "changelog": [
+        {
+          "version": "0.1.24",
+          "changes": [
+            "Added a separate VPN icon hiding switch, independent of VPN coloring, and improved compatibility with the system VPN indicator.",
+            "Custom colors can adapt to light and dark backgrounds; optionally use the system battery color while charging and restore the custom color after unplugging.",
+            "Added a custom-formatted date to the left of Capsule with preview and validation, and improved date layout, animation, and display alongside other tweaks."
+          ]
+        },
         {
           "version": "0.1.22",
           "changes": [
