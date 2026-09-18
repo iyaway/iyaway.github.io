@@ -7,7 +7,7 @@
   "tint": "#5E5CE6",
   "description": [
     "SpatialScene 让你通过 App 导入或在线下载空间壁纸，进行预览、管理并设为当前壁纸。",
-    "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果，并通过 Apple 自适应暗化跟随系统浅色或深色外观。",
+    "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果；深色壁纸可独立开关并通过 Apple 自适应暗化跟随系统外观。",
     "你还可以调整锁屏时间外观，并尝试让壁纸前景自然遮挡时间的实验性景深效果。"
   ],
   "notice": "⚠️ 如同时使用 LiquidAss 自定义时钟，请前往 LiquidAss > 表面 > 锁屏 > 时钟，关闭“启用”，避免与 SpatialScene 时间样式冲突。",
@@ -20,6 +20,9 @@
     "支持实时切换“桌面使用原壁纸”，无需 Respring",
     "旋转与转场期间提供静态回退，减少系统原壁纸露出",
     "默认采用 Apple 自适应壁纸暗化，亮图多暗、暗图少暗并保持原有色彩比例",
+    "深色壁纸开关默认开启；关闭后保持壁纸原始亮度",
+    "0–100% 全局暗化强度，按比例调整每张壁纸已保存的暗化程度",
+    "深色开关与强度即时生效并保存，无需重新加载场景或桌面",
     "统一锁屏、桌面与景深前景的暗化效果",
     "暗化结果同步适配时钟自动取色",
     "每张壁纸可独立保存深色强度",
@@ -46,10 +49,18 @@
     "如只需壁纸景深效果，可关闭“修改锁屏时间”以保留系统时间外观。",
     "在时间设置中调整字体大小、字重、字宽、字高、柔和度与颜色；实验性景深效果可按需开启。",
     "如需保留系统桌面壁纸，可开启“桌面使用原壁纸”，设置会立即生效。",
-    "在壁纸设置中调整深色强度；现有壁纸继续兼容，无需重新导入或转换。"
+    "在壁纸设置中开启或关闭深色壁纸，并使用 0–100% 强度调节整体暗化；0% 保持原图，现有壁纸无需重新导入或转换。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.7",
+      "changes": [
+        "新增“启用深色壁纸”开关，默认开启并跟随系统外观；关闭后保留壁纸原始亮度。",
+        "新增 0–100% 全局暗化强度，按比例调整每张壁纸已保存的暗化效果，0% 保持原图。",
+        "开关与强度即时生效并保存，同时更新时钟取色与回退快照，无需重新加载场景或桌面。"
+      ]
+    },
     {
       "version": "1.1.6",
       "changes": [
@@ -141,7 +152,7 @@
       "tagline": "Import, download, and enjoy layered spatial wallpapers on iOS 15–18.",
       "description": [
         "SpatialScene lets you import or download spatial wallpapers in the app, preview and manage them, and set one as current.",
-        "Once enabled, wallpapers respond to device movement with natural layered depth effects and use Apple adaptive dimming to follow the system Light or Dark appearance.",
+        "Once enabled, wallpapers respond to device movement with natural layered depth effects. Dark wallpaper behavior can be toggled independently and uses Apple adaptive dimming to follow system appearance.",
         "You can also customize the Lock Screen clock and try an experimental depth effect that lets wallpaper foregrounds naturally overlap it."
       ],
       "notice": "⚠️ If you use LiquidAss clock customization, open LiquidAss > Surfaces > Lock Screen > Clock and disable “Enabled” to avoid conflicts with SpatialScene clock styling.",
@@ -154,6 +165,9 @@
         "Switch to the stock Home Screen wallpaper instantly without a Respring",
         "Static fallback during rotations and transitions to reduce stock-wallpaper flashes",
         "Apple adaptive wallpaper dimming by default, applying more dimming to bright images and less to dark images while preserving color balance",
+        "Dark Wallpaper toggle enabled by default; disabling it preserves the wallpaper's original brightness",
+        "Global 0–100% dimming intensity that scales each wallpaper's saved dark effect proportionally",
+        "Dark wallpaper controls apply and save immediately without reloading the scene or Home Screen",
         "Unified dimming across the Lock Screen, Home Screen, and depth foreground",
         "Clock color adaptation synchronized with the dimmed wallpaper result",
         "Per-wallpaper dark intensity",
@@ -180,9 +194,17 @@
         "Disable Modify Lock Screen Clock to preserve the system clock appearance while keeping wallpaper depth effects.",
         "Use Clock settings to adjust font size, weight, width, height, softness, and color, and optionally enable the experimental depth effect.",
         "Enable Use Stock Home Wallpaper to keep the system Home Screen wallpaper; the change applies immediately.",
-        "Adjust Dark Intensity in wallpaper settings; existing wallpapers remain compatible without re-importing or conversion."
+        "Enable or disable Dark Wallpaper and adjust global dimming from 0–100%; 0% keeps the original image, and existing wallpapers require no re-import or conversion."
       ],
       "changelog": [
+        {
+          "version": "1.1.7",
+          "changes": [
+            "Added an Enable Dark Wallpaper toggle, enabled by default and following system appearance; disabling it preserves the wallpaper original brightness.",
+            "Added global 0–100% dimming intensity that proportionally scales each wallpaper saved dark effect; 0% keeps the original image.",
+            "The toggle and intensity apply and save immediately while updating clock colors and fallback snapshots, without reloading the scene or Home Screen."
+          ]
+        },
         {
           "version": "1.1.6",
           "changes": [
