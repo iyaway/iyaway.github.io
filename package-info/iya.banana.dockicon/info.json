@@ -9,9 +9,9 @@
     "壁纸暗化可根据图片亮度自适应调整，亮图增强暗化、暗图减少处理；也可手动调节强度并跟随系统深色模式。",
     "iOS 18 保留系统原生深色图标，插件图标功能不会启用；iOS 17 及以下继续提供原有图标模式。",
     "设置中的图标预览列表支持搜索、Light/Dark 对比，并标明使用 App 原生深色素材还是算法处理。",
-    "浅色模式直接使用原图；深色结果通过磁盘缓存与 64 MiB 热缓存按需复用，磁盘已有成品时立即显示。"
+    "浅色模式直接使用原图；深色结果按 App 身份统一复用磁盘缓存与 64 MiB 热缓存，磁盘已有成品时立即显示。"
   ],
-  "notice": "更新后请重新加载 SpringBoard。首次生成或清除图标缓存后可能短暂显示原图。壁纸暗化不保证对所有系统、动态或特殊壁纸类型生效；iOS 15 使用系统自带壁纸暗化。",
+  "notice": "更新后请重新加载 SpringBoard，无需清除图标缓存。首次尚未生成的图标可能短暂显示原图，并会在后台完成处理。壁纸暗化不保证对所有系统、动态或特殊壁纸类型生效；iOS 15 使用系统自带壁纸暗化。",
   "features": [
     "iOS 16–18 主屏幕与锁屏壁纸自适应暗化",
     "根据图片亮度自动调整暗化程度，并支持手动强度调节",
@@ -22,8 +22,12 @@
     "预览与图标生成在后台按需执行，避免一次处理全部 App",
     "浅色模式直接返回原图，避免不必要处理并改善桌面启动",
     "深色图标使用磁盘缓存与 64 MiB 热缓存，减少重复读盘并支持内存压力回收",
+    "统一按 App 身份获取图标并复用缓存，减少重复生成和替换",
     "磁盘已有深色成品时立即使用，避免延迟替换",
+    "内存压力与排队任务不会阻挡已有磁盘缓存命中",
     "设置内可清除图标缓存；预览直接复用磁盘结果",
+    "改善 Spotlight 重复打开及深浅色切换后的图标恢复",
+    "扩展通知、按钮及其他小图标适配，同时保留原始色彩",
     "默认混合模式，并可单独选择 Apple 或 Chroma 模式",
     "优先使用 App 自带深色图标，并增强 iOS 17 原生 Dark 素材读取；可选白色与浅灰色反转",
     "改善浅底、渐变、圆角和备用图标的深色效果",
@@ -39,11 +43,19 @@
     "安装插件后重新加载桌面",
     "进入“设置 → 深色图标”分别配置图标与壁纸暗化；壁纸暗化默认关闭，可选择自适应或手动强度",
     "在图标预览列表中搜索 App，对比 Light/Dark 效果并查看原生或算法处理来源",
-    "需要时可在设置中使用“清除图标缓存”；首次生成或清缓存后可能短暂显示原图，随后主屏幕、文件夹、Spotlight 与预览会复用结果",
-    "更新插件后重新加载 SpringBoard"
+    "需要时仍可在设置中使用“清除图标缓存”；主屏幕、文件夹、Spotlight 与预览会统一复用结果",
+    "更新插件后重新加载 SpringBoard，无需清除缓存；首次未生成图标会在后台处理"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.9.7",
+      "changes": [
+        "统一按 App 身份获取图标并复用缓存，减少重复生成与替换，并改善 Spotlight 重复打开及深浅色切换后的恢复。",
+        "扩展通知、按钮及其他小图标适配，同时保留原始色彩。",
+        "修复内存压力和排队任务阻挡磁盘缓存的问题，并保留原生 Dark 优先与 64 MiB 热缓存。"
+      ]
+    },
     {
       "version": "0.9.6",
       "changes": [
@@ -111,9 +123,9 @@
         "Adaptive wallpaper dimming responds to image brightness, applying more dimming to bright images and less to dark images. Manual intensity control and Dark Mode tracking remain available.",
         "On iOS 18, native system dark icons are preserved and the tweak's icon feature stays disabled. The original icon modes remain available on iOS 17 and earlier.",
         "The searchable icon preview list compares Light and Dark results and identifies whether an app-provided dark asset or an algorithm was used.",
-        "Light Mode uses original icons directly. Dark results are reused through disk cache and a 64 MiB hot cache, and existing disk results appear immediately."
+        "Light Mode uses original icons directly. Dark results reuse disk cache and a 64 MiB hot cache by app identity, and existing disk results appear immediately."
       ],
-      "notice": "Respring after updating. Original icons may appear briefly during initial generation or after clearing the icon cache. Wallpaper dimming is not guaranteed to work with every system, dynamic, or special wallpaper type; iOS 15 uses the system's wallpaper dimming.",
+      "notice": "Respring after updating; clearing the icon cache is not required. Icons that have not been generated yet may briefly show their originals while background processing finishes. Wallpaper dimming is not guaranteed to work with every system, dynamic, or special wallpaper type; iOS 15 uses the system's wallpaper dimming.",
       "features": [
         "Adaptive Home Screen and Lock Screen wallpaper dimming on iOS 16–18",
         "Brightness-aware automatic dimming with optional manual intensity control",
@@ -124,8 +136,12 @@
         "On-demand background preview and icon generation instead of processing every app at once",
         "Use original icons directly in Light Mode for better Home Screen startup",
         "Disk cache plus a 64 MiB hot cache for dark icons, reducing disk reads while retaining memory-pressure cleanup",
+        "Retrieve icons and reuse cache consistently by app identity to reduce repeated generation and replacement",
         "Use existing dark disk results immediately to avoid delayed replacement",
+        "Memory pressure and queued work do not block existing disk-cache hits",
         "Clear Icon Cache in Settings; previews directly reuse disk results",
+        "Improved icon restoration after repeatedly opening Spotlight or switching appearance",
+        "Support for notification, button, and other small icons while preserving original colors",
         "Default hybrid mode with individually selectable Apple and Chroma modes",
         "Preference for app-provided dark icons with improved iOS 17 Dark-asset loading and optional white and light-gray inversion",
         "Improved dark results for light backgrounds, gradients, rounded artwork, and fallback icons",
@@ -141,10 +157,18 @@
         "Install the package and respring",
         "Open Settings → DarkIcon to configure icon and wallpaper dimming independently; wallpaper dimming is off by default with adaptive or manual intensity options",
         "Search apps in the icon preview list, compare Light and Dark results, and check whether each result uses a native asset or an algorithm",
-        "Use Clear Icon Cache in Settings when needed; original icons may appear briefly while the Home Screen, folders, Spotlight, and previews rebuild and reuse results",
-        "Respring after updating the package"
+        "Clear Icon Cache remains available when needed; the Home Screen, folders, Spotlight, and previews consistently reuse results",
+        "Respring after updating; no cache clearing is required, and previously ungenerated icons finish in the background"
       ],
       "changelog": [
+        {
+          "version": "0.9.7",
+          "changes": [
+            "Unified icon lookup and cache reuse by app identity, reducing repeated generation and replacement while improving recovery after reopening Spotlight or switching appearance.",
+            "Expanded support for notification, button, and other small icons while preserving their original colors.",
+            "Fixed memory pressure and queued work blocking existing disk-cache results while preserving native Dark priority and the 64 MiB hot cache."
+          ]
+        },
         {
           "version": "0.9.6",
           "changes": [
