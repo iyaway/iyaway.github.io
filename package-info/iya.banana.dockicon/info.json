@@ -9,9 +9,9 @@
     "壁纸暗化可根据图片亮度自适应调整，亮图增强暗化、暗图减少处理；也可手动调节强度并跟随系统深色模式。",
     "iOS 18 保留系统原生深色图标，插件图标功能不会启用；iOS 17 及以下继续提供原有图标模式。",
     "设置中的图标预览列表支持搜索、Light/Dark 对比，并标明使用 App 原生深色素材还是算法处理。",
-    "浅色模式跳过不必要的深色图标处理；深色结果通过磁盘缓存与限额内存缓存按需复用。"
+    "浅色模式直接使用原图；深色结果通过磁盘缓存与 64 MiB 热缓存按需复用，磁盘已有成品时立即显示。"
   ],
-  "notice": "⚠️ 0.9.4 存在浅色模式下不必要处理图标的问题，建议尽快升级至 0.9.5。壁纸暗化不保证对所有系统、动态或特殊壁纸类型生效。iOS 15 使用系统自带壁纸暗化，不启用插件壁纸功能。",
+  "notice": "更新后请重新加载 SpringBoard。首次生成或清除图标缓存后可能短暂显示原图。壁纸暗化不保证对所有系统、动态或特殊壁纸类型生效；iOS 15 使用系统自带壁纸暗化。",
   "features": [
     "iOS 16–18 主屏幕与锁屏壁纸自适应暗化",
     "根据图片亮度自动调整暗化程度，并支持手动强度调节",
@@ -20,8 +20,9 @@
     "支持 Spotlight 下拉搜索中的深色图标显示",
     "可搜索的图标预览列表，支持 Light/Dark 对比并标明原生或算法处理",
     "预览与图标生成在后台按需执行，避免一次处理全部 App",
-    "浅色模式跳过不必要的深色图标处理，改善桌面启动",
-    "深色图标使用磁盘缓存与限额内存缓存，降低长期内存占用",
+    "浅色模式直接返回原图，避免不必要处理并改善桌面启动",
+    "深色图标使用磁盘缓存与 64 MiB 热缓存，减少重复读盘并支持内存压力回收",
+    "磁盘已有深色成品时立即使用，避免延迟替换",
     "设置内可清除图标缓存；预览直接复用磁盘结果",
     "默认混合模式，并可单独选择 Apple 或 Chroma 模式",
     "优先使用 App 自带深色图标，并增强 iOS 17 原生 Dark 素材读取；可选白色与浅灰色反转",
@@ -38,11 +39,19 @@
     "安装插件后重新加载桌面",
     "进入“设置 → 深色图标”分别配置图标与壁纸暗化；壁纸暗化默认关闭，可选择自适应或手动强度",
     "在图标预览列表中搜索 App，对比 Light/Dark 效果并查看原生或算法处理来源",
-    "需要时可在设置中使用“清除图标缓存”；主屏幕、文件夹、Spotlight 与预览会按需重建并复用结果",
+    "需要时可在设置中使用“清除图标缓存”；首次生成或清缓存后可能短暂显示原图，随后主屏幕、文件夹、Spotlight 与预览会复用结果",
     "更新插件后重新加载 SpringBoard"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.9.6",
+      "changes": [
+        "修复翻页时深色图标先变亮再重复替换的问题。",
+        "深色图标热缓存提升至 64 MiB，配合磁盘缓存减少淘汰与重复读盘，并保留内存压力回收。",
+        "磁盘已有成品时直接使用；浅色模式继续返回原图，并保留原生 Dark 优先与缓存清理。"
+      ]
+    },
     {
       "version": "0.9.5",
       "changes": [
@@ -102,9 +111,9 @@
         "Adaptive wallpaper dimming responds to image brightness, applying more dimming to bright images and less to dark images. Manual intensity control and Dark Mode tracking remain available.",
         "On iOS 18, native system dark icons are preserved and the tweak's icon feature stays disabled. The original icon modes remain available on iOS 17 and earlier.",
         "The searchable icon preview list compares Light and Dark results and identifies whether an app-provided dark asset or an algorithm was used.",
-        "Light Mode skips unnecessary dark icon work, while dark results are reused through disk cache and a bounded memory cache."
+        "Light Mode uses original icons directly. Dark results are reused through disk cache and a 64 MiB hot cache, and existing disk results appear immediately."
       ],
-      "notice": "⚠️ Version 0.9.4 performs unnecessary icon processing in Light Mode; upgrading to 0.9.5 is strongly recommended. Wallpaper dimming is not guaranteed to work with every system, dynamic, or special wallpaper type. iOS 15 uses the system's wallpaper dimming and does not enable the tweak's wallpaper feature.",
+      "notice": "Respring after updating. Original icons may appear briefly during initial generation or after clearing the icon cache. Wallpaper dimming is not guaranteed to work with every system, dynamic, or special wallpaper type; iOS 15 uses the system's wallpaper dimming.",
       "features": [
         "Adaptive Home Screen and Lock Screen wallpaper dimming on iOS 16–18",
         "Brightness-aware automatic dimming with optional manual intensity control",
@@ -113,8 +122,9 @@
         "Dark icon support in Spotlight search",
         "Searchable icon preview list with Light/Dark comparison and native-versus-algorithm labels",
         "On-demand background preview and icon generation instead of processing every app at once",
-        "Skip unnecessary dark icon processing in Light Mode for better Home Screen startup",
-        "Disk cache plus bounded memory cache for dark icons to reduce long-term memory use",
+        "Use original icons directly in Light Mode for better Home Screen startup",
+        "Disk cache plus a 64 MiB hot cache for dark icons, reducing disk reads while retaining memory-pressure cleanup",
+        "Use existing dark disk results immediately to avoid delayed replacement",
         "Clear Icon Cache in Settings; previews directly reuse disk results",
         "Default hybrid mode with individually selectable Apple and Chroma modes",
         "Preference for app-provided dark icons with improved iOS 17 Dark-asset loading and optional white and light-gray inversion",
@@ -131,10 +141,18 @@
         "Install the package and respring",
         "Open Settings → DarkIcon to configure icon and wallpaper dimming independently; wallpaper dimming is off by default with adaptive or manual intensity options",
         "Search apps in the icon preview list, compare Light and Dark results, and check whether each result uses a native asset or an algorithm",
-        "Use Clear Icon Cache in Settings when needed; the Home Screen, folders, Spotlight, and previews rebuild on demand and reuse results",
+        "Use Clear Icon Cache in Settings when needed; original icons may appear briefly while the Home Screen, folders, Spotlight, and previews rebuild and reuse results",
         "Respring after updating the package"
       ],
       "changelog": [
+        {
+          "version": "0.9.6",
+          "changes": [
+            "Fixed dark icons briefly turning light and then being replaced again while paging.",
+            "Raised the dark icon hot cache to 64 MiB, reducing eviction and repeated disk reads while retaining memory-pressure cleanup.",
+            "Existing disk results are used immediately; Light Mode continues to use original icons while preserving native Dark priority and cache clearing."
+          ]
+        },
         {
           "version": "0.9.5",
           "changes": [
