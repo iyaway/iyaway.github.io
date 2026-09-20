@@ -7,7 +7,8 @@
   "description": [
     "DarkIcon 可在 iOS 15–17 为主屏幕、文件夹与 Spotlight 自动生成随系统外观切换的深色 App 图标，并在 iOS 16–18 为主屏幕与锁屏壁纸提供暗化效果。",
     "壁纸暗化可根据图片亮度自适应调整，亮图增强暗化、暗图减少处理；也可手动调节强度并跟随系统深色模式。",
-    "iOS 18 保留系统原生深色图标，插件图标功能不会启用；iOS 17 及以下继续提供原有图标模式。"
+    "iOS 18 保留系统原生深色图标，插件图标功能不会启用；iOS 17 及以下继续提供原有图标模式。",
+    "设置中的图标预览列表支持搜索、Light/Dark 对比，并标明使用 App 原生深色素材还是算法处理。"
   ],
   "notice": "壁纸暗化不保证对所有系统、动态或特殊壁纸类型生效。iOS 15 使用系统自带壁纸暗化，不启用插件壁纸功能。首次生成图标或切换相关设置时可能短暂卡顿，完成后会复用缓存。",
   "features": [
@@ -16,9 +17,11 @@
     "壁纸与图标开关独立控制，壁纸暗化默认关闭",
     "iOS 15–17 跟随系统深浅色外观自动切换桌面图标",
     "支持 Spotlight 下拉搜索中的深色图标显示",
+    "可搜索的图标预览列表，支持 Light/Dark 对比并标明原生或算法处理",
+    "预览按需加载并复用缓存，避免一次处理全部 App",
     "浅色模式下保留已生成的深色成品，减少翻页、文件夹与图标刷新时的重复处理",
     "默认混合模式，并可单独选择 Apple 或 Chroma 模式",
-    "优先使用 App 自带深色图标，可选白色与浅灰色反转",
+    "优先使用 App 自带深色图标，并增强 iOS 17 原生 Dark 素材读取；可选白色与浅灰色反转",
     "改善浅底、渐变、圆角和备用图标的深色效果",
     "改善日历日期与星期的可读性，同时保留主体颜色和细节"
   ],
@@ -31,11 +34,20 @@
   "usage": [
     "安装插件后重新加载桌面",
     "进入“设置 → 深色图标”分别配置图标与壁纸暗化；壁纸暗化默认关闭，可选择自适应或手动强度",
+    "在图标预览列表中搜索 App，对比 Light/Dark 效果并查看原生或算法处理来源",
     "首次生成或切换设置时请等待处理完成，之后主屏幕、文件夹与 Spotlight 会复用缓存",
     "更新插件后重新加载 SpringBoard"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.9.4",
+      "changes": [
+        "新增可搜索的图标预览列表，可对比 Light/Dark 效果并标明原生素材或算法处理。",
+        "预览按需加载并复用缓存；修复浅色模式残留深色图标，完善主屏幕、文件夹与 Spotlight 刷新。",
+        "增强 iOS 17 原生 Dark 素材优先策略，并修复错误图集和预览缩放导致的显示异常。"
+      ]
+    },
     {
       "version": "0.9.3",
       "changes": [
@@ -77,7 +89,8 @@
       "description": [
         "DarkIcon automatically generates dark app icons that follow system appearance across the Home Screen, folders, and Spotlight on iOS 15–17, and dims Home Screen and Lock Screen wallpapers on iOS 16–18.",
         "Adaptive wallpaper dimming responds to image brightness, applying more dimming to bright images and less to dark images. Manual intensity control and Dark Mode tracking remain available.",
-        "On iOS 18, native system dark icons are preserved and the tweak's icon feature stays disabled. The original icon modes remain available on iOS 17 and earlier."
+        "On iOS 18, native system dark icons are preserved and the tweak's icon feature stays disabled. The original icon modes remain available on iOS 17 and earlier.",
+        "The searchable icon preview list compares Light and Dark results and identifies whether an app-provided dark asset or an algorithm was used."
       ],
       "notice": "Wallpaper dimming is not guaranteed to work with every system, dynamic, or special wallpaper type. iOS 15 uses the system's wallpaper dimming and does not enable the tweak's wallpaper feature. Initial icon generation or related settings changes may cause a brief slowdown; completed results are reused from cache.",
       "features": [
@@ -86,9 +99,11 @@
         "Independent wallpaper and icon controls, with wallpaper dimming off by default",
         "Home Screen icons that follow system appearance on iOS 15–17",
         "Dark icon support in Spotlight search",
+        "Searchable icon preview list with Light/Dark comparison and native-versus-algorithm labels",
+        "On-demand preview loading with reusable caching instead of processing every app at once",
         "Keep generated dark results while in Light Mode to reduce repeated work during paging, folder access, and icon refreshes",
         "Default hybrid mode with individually selectable Apple and Chroma modes",
-        "Preference for app-provided dark icons with optional white and light-gray inversion",
+        "Preference for app-provided dark icons with improved iOS 17 Dark-asset loading and optional white and light-gray inversion",
         "Improved dark results for light backgrounds, gradients, rounded artwork, and fallback icons",
         "Improved Calendar date and weekday readability while preserving subject colors and details"
       ],
@@ -101,10 +116,19 @@
       "usage": [
         "Install the package and respring",
         "Open Settings → DarkIcon to configure icon and wallpaper dimming independently; wallpaper dimming is off by default with adaptive or manual intensity options",
+        "Search apps in the icon preview list, compare Light and Dark results, and check whether each result uses a native asset or an algorithm",
         "Allow initial generation or settings changes to finish; the Home Screen, folders, and Spotlight then reuse cached results",
         "Respring after updating the package"
       ],
       "changelog": [
+        {
+          "version": "0.9.4",
+          "changes": [
+            "Added a searchable icon preview list with Light/Dark comparison and native-versus-algorithm labels.",
+            "Previews now load on demand and reuse cache; fixed dark icons lingering in Light Mode and improved Home Screen, folder, and Spotlight refreshes.",
+            "Improved preference for native Dark assets on iOS 17 and fixed display issues caused by incorrect artwork selection and preview scaling."
+          ]
+        },
         {
           "version": "0.9.3",
           "changes": [
