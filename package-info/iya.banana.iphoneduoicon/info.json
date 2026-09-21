@@ -1,50 +1,30 @@
 {
   "package": "iya.banana.iphoneduoicon",
-  "name": "iPhoneDuoIcon",
-  "web_name": "iPhoneDuo图标",
-  "tagline": "电量、Wi-Fi 与蜂窝信号一体化，提供星环和胶囊两种状态栏样式。",
+  "name": "Lunora",
+  "web_name": "Lunora · 月珞",
+  "tagline": "自由组合玻璃信息胶囊、Duo 状态环与 mini Dock，打造完整状态栏体验。",
   "developer": "Banana",
   "description": [
-    "iPhoneDuoIcon 提供星环与胶囊两种状态栏样式，将电量、Wi-Fi 和蜂窝信号整合为紧凑的信息区域。",
-    "胶囊样式整合时间、电量百分比和网络状态，支持双卡独立分段信号，并会根据状态栏可用空间自动避让刘海；电量数字可统一开关。",
-    "点击组合图标可动画展开系统原生的蜂窝信号、Wi-Fi 和电池图标；星环展开/合拢约 3 秒，胶囊约 4 秒，中间原生图标停留 3 秒。",
-    "充电时可沿电池轮廓显示循环流光，高亮头部搭配渐隐拖尾，并同步使用自定义电池颜色。",
-    "电池、Wi-Fi、5G/LTE 与两张 SIM 卡信号可分别设置颜色，并可让配色自动适应深浅背景；星环和胶囊也可独立调整大小与位置。",
-    "胶囊左侧可显示自定义格式日期，提供预览与格式校验，并改善与其他插件同时使用时的日期显示。",
-    "支持 VPN 状态着色、充电与低电量模式显示，并提供三语言设置界面。"
+    "iPhoneDuoIcon 正式更名为 Lunora · 月珞，带来全新图标与更完整的状态栏体验，升级会保留现有配置。",
+    "左侧玻璃信息胶囊与右侧 Duo 或 mini Dock 可独立设置并自由组合，显示时间日期、天气、媒体、音量、通知和 App 等内容。",
+    "提供灵活布局、独立配色、精确数值输入、天气响应优化和 Discord 反馈入口。"
   ],
-  "notice": "⚠️ 当前为测试版，具体机型、VPN 与定位状态兼容性仍需实机复测。与 SingleVPN 冲突。",
+  "notice": "从 iPhoneDuoIcon 升级会保留现有配置。与 SingleVPN 冲突；更新后请重新加载 SpringBoard。",
   "features": [
-    "星环与胶囊两种状态栏样式",
-    "共用电量百分比开关同时控制星环和胶囊，默认关闭并即时生效",
-    "星环电量百分比支持左侧或顶部缺口位置",
-    "星环整体大小、水平偏移与垂直偏移调节，默认保持居中",
-    "星环顶部电量百分比支持独立缩放",
-    "星环与胶囊分别支持大小、水平偏移和垂直偏移调节，并可一键恢复居中默认值",
-    "星环与胶囊专属设置按当前样式互斥显示并即时生效",
-    "星环与胶囊分别提供隐藏 AM/PM 开关，仅在 12 小时制下生效",
-    "胶囊电量百分比固定顶部，关闭数字后自动补齐轮廓",
-    "胶囊顶部电量数字支持独立字体缩放与重置，缺口随数字大小调整",
-    "胶囊整合时间、电量百分比和网络状态",
-    "单卡电量轮廓与双卡独立分段信号显示",
-    "根据状态栏可用空间自动调整胶囊大小，空间不足时等比缩小避让刘海",
-    "小屏设备保持右侧定位与时间基线，点击区域及展开动画同步适配",
-    "Wi-Fi 使用双弧线与圆角扇形底部，并加粗 Wi-Fi、电量轮廓及信号点线",
-    "星环展开/合拢约 3 秒，胶囊约 4 秒，中间原生图标停留 3 秒",
-    "沿电池轮廓循环的充电流光，高亮头部搭配渐隐拖尾",
-    "充电流光支持自定义电池颜色，并保留真实电量比例与数字缺口",
-    "再次点击延长展开停留，并提供三语言操作提示",
-    "0–20 pt 右侧留白调节，增大数值可向左移动",
-    "电池、Wi-Fi、5G/LTE、卡 1 与卡 2 信号独立配色，自绘动画同步使用所选颜色",
-    "自定义配色可自动适应浅色与深色背景",
-    "充电时可选用系统电池颜色，拔电后恢复自定义颜色",
-    "自定义配色启用后，VPN、低电量与省电模式不会覆盖用户颜色；充电颜色可单独选择",
-    "颜色一键重置为默认绿色",
-    "系统 VPN 图标隐藏与 VPN 状态着色独立控制",
-    "胶囊左侧日期支持自定义格式、预览、保存与格式校验",
-    "日期宽度与自动缩字优化，改善与其他插件同时使用时的显示",
-    "充电及低电量模式提示",
-    "启用开关及简体中文、繁体中文和英文设置"
+    "左侧信息胶囊与右侧 Duo 或 mini Dock 独立配置、自由组合",
+    "分区玻璃、圆形分区和一体玻璃三种信息胶囊样式",
+    "时间日期、天气、媒体、音量和通知等胶囊模块，支持左右滑动切换常驻模块",
+    "mini Dock 支持固定或最近使用 App、应用搜索和拖动排序",
+    "mini Dock 可与星环共存，支持独立位置调整并在星环展开时自动避让",
+    "通知 App 图标、内容滚动、点击跳转及从灵动岛或刘海区域展开的横幅动画",
+    "支持隐藏系统音量条",
+    "胶囊水平加长及 AM/PM 同行、上方或下方排列",
+    "优化小屏、锁屏和通知中心布局，并正确应用强制 12/24 小时设置",
+    "独立边框、模块图标与 VPN 指示颜色设置",
+    "点按滑杆数值可手动输入精确参数",
+    "天气与定位后台响应，保留缓存与刷新限频以减少界面卡顿",
+    "设置主页提供 Discord BUG 反馈与建议入口",
+    "简体中文、繁体中文和英文设置界面"
   ],
   "compatibility": [
     "iOS 16–18",
@@ -52,16 +32,23 @@
     "与 SingleVPN 冲突"
   ],
   "usage": [
-    "安装时确认移除存在冲突的 SingleVPN",
-    "进入“设置 → iPhoneDuoIcon”选择星环或胶囊样式；两种样式可分别调整大小、位置、AM/PM 显示及相关专属选项",
-    "按需启用独立配色，分别设置电池、Wi-Fi、5G/LTE 与两张 SIM 卡信号颜色；可一键重置颜色或布局",
-    "按需开启背景自适应配色、充电时系统电池颜色，或分别控制 VPN 图标隐藏与着色",
-    "在胶囊设置中自定义左侧日期格式，预览并通过格式校验后保存",
-    "点击状态栏组合图标可展开原生图标；再次点击可延长停留",
-    "设置修改即时生效；需要时可使用设置内按钮手动重新加载 SpringBoard"
+    "安装时确认移除存在冲突的 SingleVPN；升级自 iPhoneDuoIcon 会保留原有配置。",
+    "进入“设置 → Lunora”分别配置左侧信息胶囊与右侧 Duo 或 mini Dock。",
+    "选择胶囊玻璃样式与常驻模块，横向滑动可切换当前模块。",
+    "在 mini Dock 中选择固定或最近使用 App，并可搜索、排序和调整位置。",
+    "按需调整布局、配色与精确数值；设置修改即时生效。",
+    "需要帮助时可通过设置主页的 Discord 入口反馈 BUG 或提出建议。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.0",
+      "changes": [
+        "iPhoneDuoIcon 正式更名为 Lunora · 月珞，升级保留现有配置；左侧信息胶囊与右侧 Duo／mini Dock 可独立组合。",
+        "新增多种玻璃信息胶囊、mini Dock、通知与音量模块，支持常驻模块切换、App 搜索排序及通知交互动画。",
+        "扩展布局、配色与精确数值设置，优化小屏/锁屏、12/24 小时和天气响应，并新增 Discord 反馈入口。"
+      ]
+    },
     {
       "version": "0.1.24",
       "changes": [
@@ -164,52 +151,32 @@
       ]
     }
   ],
-  "tint": "#199BD5",
+  "tint": "#248CFF",
   "locales": {
     "en": {
-      "name": "iPhoneDuoIcon",
-      "tagline": "Unified battery, Wi-Fi, and cellular status with Orbit and Capsule styles.",
+      "name": "Lunora",
+      "tagline": "Freely combine a glass information capsule, Duo status ring, and mini Dock for a complete status bar experience.",
       "description": [
-        "iPhoneDuoIcon offers Orbit and Capsule status bar styles that combine battery, Wi-Fi, and cellular information in a compact area.",
-        "Capsule mode combines time, battery percentage, and network status, with independent segmented signal indicators for dual SIM and automatic notch avoidance based on available status bar space. One shared switch controls battery numbers in both styles.",
-        "Tap the combined icon to reveal the system's native cellular, Wi-Fi, and battery icons. Orbit takes about three seconds to unfold or combine, Capsule about four seconds, with a three-second native-icon hold.",
-        "While charging, a looping highlight travels around the battery outline with a bright head and fading trail, using the selected custom battery color.",
-        "Battery, Wi-Fi, 5G/LTE, and each SIM signal can use separate colors that adapt to light and dark backgrounds, while Orbit and Capsule have independent size and position controls.",
-        "Capsule can show a custom-formatted date on the left, with preview and format validation, and improved date display alongside other tweaks.",
-        "It includes VPN status coloring, charging and Low Power Mode indicators, and trilingual settings."
+        "iPhoneDuoIcon is now Lunora, with a new icon and a more complete status bar experience. Existing settings are preserved during the upgrade.",
+        "Configure the left glass information capsule separately from the right Duo or mini Dock, combining time and date, weather, media, volume, notifications, apps, and more.",
+        "Lunora also provides flexible layouts, independent colors, exact numeric input, improved weather responsiveness, and a Discord feedback entry."
       ],
-      "notice": "⚠️ This is a testing release; device-specific behavior and compatibility with VPN and location status still require device retesting. Conflicts with SingleVPN.",
+      "notice": "Upgrading from iPhoneDuoIcon preserves existing settings. Conflicts with SingleVPN; respring after updating.",
       "features": [
-        "Orbit and Capsule status bar styles",
-        "One shared battery percentage switch for Orbit and Capsule, off by default and applied immediately",
-        "Orbit battery percentage positioned on the left or in the top gap",
-        "Orbit size, horizontal offset, and vertical offset controls, centered by default",
-        "Independent scaling for the top Orbit battery percentage",
-        "Independent size, horizontal offset, and vertical offset controls for Orbit and Capsule, with one-tap layout reset",
-        "Style-specific Orbit and Capsule settings shown exclusively for the selected style and applied immediately",
-        "Independent Hide AM/PM switches for Orbit and Capsule, active only in 12-hour time",
-        "Capsule battery percentage fixed at the top, completing the outline when numbers are hidden",
-        "Independent Capsule top-battery font scaling and reset, with the gap adapting to number size",
-        "Capsule mode with time, battery percentage, and network status",
-        "Single-line battery outline and independent segmented dual-SIM indicators",
-        "Automatic Capsule sizing based on available status bar space, scaling proportionally when needed to avoid the notch",
-        "Small-screen alignment that keeps right positioning and the time baseline while adapting the tap area and unfold animation",
-        "Two-arc Wi-Fi design with a rounded fan base and thicker Wi-Fi, battery outlines, and signal dots or lines",
-        "About three seconds for Orbit and four seconds for Capsule to unfold or combine, with a three-second native-icon hold",
-        "Looping charging highlight around the battery outline with a bright head and fading trail",
-        "Custom battery color support while preserving the real charge level and percentage gap",
-        "Tap again to extend the hold, with localized interaction hints in three languages",
-        "Adjustable 0–20 pt right-side spacing; larger values move the item left",
-        "Separate colors for battery, Wi-Fi, 5G/LTE, SIM 1, and SIM 2 signals, synchronized with custom animations",
-        "Custom colors can adapt automatically to light and dark backgrounds",
-        "Optionally use the system battery color while charging and restore the custom color after unplugging",
-        "User colors take priority over VPN, low-battery, and Low Power Mode colors; charging color is controlled separately",
-        "One-tap color reset to the default green",
-        "Independent controls for hiding the system VPN icon and coloring VPN status",
-        "Custom-formatted date to the left of Capsule with preview, saving, and format validation",
-        "Improved date width and automatic text fitting when used with other tweaks",
-        "Charging and Low Power Mode indicators",
-        "Enable switch and settings in English, Simplified Chinese, and Traditional Chinese"
+        "Independent left information capsule and right Duo or mini Dock configurations",
+        "Split Glass, Circular Partition, and Continuous Glass capsule styles",
+        "Time and date, weather, media, volume, notification, and other capsule modules with horizontal resting-module switching",
+        "mini Dock with pinned or recent apps, app search, and drag reordering",
+        "Use mini Dock alongside Orbit with independent positioning and automatic avoidance during Orbit expansion",
+        "Notification app icons, scrolling content, tap-to-open actions, and banners expanding from the Dynamic Island or notch",
+        "Option to hide the system volume HUD",
+        "Extended capsule width and inline, above, or below AM/PM placement",
+        "Improved compact, Lock Screen, and Notification Center layouts with correct forced 12/24-hour behavior",
+        "Independent border, module-icon, and VPN-indicator colors",
+        "Tap slider values to enter exact numbers",
+        "Responsive background weather and location work with cached data and refresh limits",
+        "Discord entry for bug reports and suggestions",
+        "Settings in English, Simplified Chinese, and Traditional Chinese"
       ],
       "compatibility": [
         "iOS 16–18",
@@ -217,15 +184,22 @@
         "Conflicts with SingleVPN"
       ],
       "usage": [
-        "Confirm removal of the conflicting SingleVPN package during installation",
-        "Open Settings → iPhoneDuoIcon to choose Orbit or Capsule; configure size, position, AM/PM visibility, and style-specific options independently",
-        "Optionally enable custom colors for battery, Wi-Fi, 5G/LTE, SIM 1, and SIM 2; reset colors or layout with one tap",
-        "Optionally enable background-adaptive colors or the system battery color while charging, and control VPN icon hiding separately from VPN status coloring",
-        "In Capsule settings, customize and preview the left-side date format, then save it after validation",
-        "Tap the combined status bar icon to reveal native icons; tap again to extend the hold",
-        "Settings changes apply immediately; use the manual Restart SpringBoard button when needed"
+        "Confirm removal of the conflicting SingleVPN package during installation; upgrading from iPhoneDuoIcon preserves existing settings.",
+        "Open Settings → Lunora to configure the left information capsule separately from the right Duo or mini Dock.",
+        "Choose a capsule glass style and resting module; swipe horizontally to switch the active module.",
+        "Choose pinned or recent apps in mini Dock, then search, reorder, and position them as needed.",
+        "Adjust layouts, colors, and exact values as desired; settings changes apply immediately.",
+        "Use the Discord entry on the main Settings page for bug reports or suggestions."
       ],
       "changelog": [
+        {
+          "version": "1.0.0",
+          "changes": [
+            "iPhoneDuoIcon is now Lunora, preserving existing settings while allowing independent combinations of the left information capsule and right Duo or mini Dock.",
+            "Added multiple glass information capsule styles, mini Dock, notification and volume modules, resting-module switching, app search and sorting, and interactive notification animations.",
+            "Expanded layouts, colors, and exact numeric controls; improved compact and Lock Screen layouts, 12/24-hour handling, and weather responsiveness; and added Discord feedback."
+          ]
+        },
         {
           "version": "0.1.24",
           "changes": [
