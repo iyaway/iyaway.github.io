@@ -8,16 +8,18 @@
   "description": [
     "SpatialScene 让你通过 App 导入或在线下载空间壁纸，进行预览、管理并设为当前壁纸。",
     "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果；深色壁纸可独立开关并通过 Apple 自适应暗化跟随系统外观。",
-    "你还可以调整锁屏时间外观，并尝试让壁纸前景自然遮挡时间的实验性景深效果。"
+    "你还可以独立使用锁屏时间功能；锁屏和桌面均使用系统原壁纸时，无需导入空间场景也能调整时间字体、手动填充颜色和不透明度。"
   ],
-  "notice": "⚠️ 如同时使用 LiquidAss 自定义时钟，请前往 LiquidAss > 表面 > 锁屏 > 时钟，关闭“启用”，避免与 SpatialScene 时间样式冲突。",
   "features": [
     "导入兼容的空间壁纸包",
     "浏览带预览图的在线壁纸库",
     "预览、管理并设置当前壁纸",
     "随设备姿态呈现空间层次效果",
     "可按需启用主屏幕动态效果",
-    "支持实时切换“桌面使用原壁纸”，无需 Respring",
+    "支持实时切换“锁屏使用原壁纸”和“桌面使用原壁纸”，无需 Respring",
+    "锁屏与桌面均使用原壁纸时，无需导入空间场景也可独立调整时间字体、手动填充颜色和不透明度",
+    "锁屏使用原壁纸时自动停用景深和时钟自动取色",
+    "锁屏与桌面均使用原壁纸时停止壁纸渲染和姿态采样",
     "旋转与转场期间提供静态回退，减少系统原壁纸露出",
     "默认采用 Apple 自适应壁纸暗化，亮图多暗、暗图少暗并保持原有色彩比例",
     "深色壁纸开关默认开启；关闭后保持壁纸原始亮度",
@@ -32,7 +34,6 @@
     "根据当前壁纸自动匹配时间颜色，或手动选择颜色",
     "时钟自动取色可与 LiquidAss 自适应颜色联动",
     "实验性景深效果可让壁纸前景自然遮挡时间",
-    "检测 LiquidAss 自定义时钟冲突并提供关闭指引",
     "保持锁屏时间、通知与正在播放控件正常显示和交互",
     "可与 DynamicMusicBG 同时使用"
   ],
@@ -49,10 +50,20 @@
     "如只需壁纸景深效果，可关闭“修改锁屏时间”以保留系统时间外观。",
     "在时间设置中调整字体大小、字重、字宽、字高、柔和度与颜色；实验性景深效果可按需开启。",
     "如需保留系统桌面壁纸，可开启“桌面使用原壁纸”，设置会立即生效。",
+    "如需保留系统锁屏壁纸，可开启“锁屏使用原壁纸”；此时景深与自动取色会停用。",
+    "锁屏和桌面均使用原壁纸时，无需导入空间场景，仍可调整时间字体、手动填充颜色和不透明度。",
     "在壁纸设置中开启或关闭深色壁纸，并使用 0–100% 强度调节整体暗化；0% 保持原图，现有壁纸无需重新导入或转换。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.8",
+      "changes": [
+        "新增“锁屏使用原壁纸”，可独立使用时间功能；锁屏和桌面都用原壁纸时无需导入空间场景。",
+        "原壁纸模式仍可调整时间字体、手动填充颜色和不透明度；锁屏原壁纸会停用景深与自动取色。",
+        "两边均使用原壁纸时停止壁纸渲染和姿态采样，并移除时间插件冲突提示、完善三语说明。"
+      ]
+    },
     {
       "version": "1.1.7",
       "changes": [
@@ -153,16 +164,18 @@
       "description": [
         "SpatialScene lets you import or download spatial wallpapers in the app, preview and manage them, and set one as current.",
         "Once enabled, wallpapers respond to device movement with natural layered depth effects. Dark wallpaper behavior can be toggled independently and uses Apple adaptive dimming to follow system appearance.",
-        "You can also customize the Lock Screen clock and try an experimental depth effect that lets wallpaper foregrounds naturally overlap it."
+        "You can use Lock Screen clock customization independently. When both the Lock Screen and Home Screen use stock wallpapers, no spatial scene import is required to adjust clock fonts, manual fill color, or opacity."
       ],
-      "notice": "⚠️ If you use LiquidAss clock customization, open LiquidAss > Surfaces > Lock Screen > Clock and disable “Enabled” to avoid conflicts with SpatialScene clock styling.",
       "features": [
         "Import compatible spatial wallpaper packages",
         "Browse an online wallpaper library with previews",
         "Preview, manage, and set the current wallpaper",
         "Motion-responsive layered depth effects",
         "Optional Home Screen animation",
-        "Switch to the stock Home Screen wallpaper instantly without a Respring",
+        "Switch the Lock Screen or Home Screen to the stock wallpaper instantly without a Respring",
+        "Use clock font, manual fill color, and opacity controls without importing a spatial scene when both screens use stock wallpapers",
+        "Automatically disable depth and automatic clock coloring when using the stock Lock Screen wallpaper",
+        "Stop wallpaper rendering and motion sampling when both screens use stock wallpapers",
         "Static fallback during rotations and transitions to reduce stock-wallpaper flashes",
         "Apple adaptive wallpaper dimming by default, applying more dimming to bright images and less to dark images while preserving color balance",
         "Dark Wallpaper toggle enabled by default; disabling it preserves the wallpaper's original brightness",
@@ -177,7 +190,6 @@
         "Match the clock color to the current wallpaper automatically or choose one manually",
         "Link automatic clock coloring with LiquidAss adaptive colors",
         "Experimental depth effect that lets wallpaper foregrounds overlap the clock",
-        "Detect LiquidAss custom-clock conflicts and provide clear disable guidance",
         "Keep the clock, notifications, and Now Playing controls visible and interactive",
         "Coexist with DynamicMusicBG"
       ],
@@ -194,9 +206,19 @@
         "Disable Modify Lock Screen Clock to preserve the system clock appearance while keeping wallpaper depth effects.",
         "Use Clock settings to adjust font size, weight, width, height, softness, and color, and optionally enable the experimental depth effect.",
         "Enable Use Stock Home Wallpaper to keep the system Home Screen wallpaper; the change applies immediately.",
+        "Enable Use Stock Lock Wallpaper to keep the system Lock Screen wallpaper; depth and automatic clock coloring are then disabled.",
+        "When both screens use stock wallpapers, no spatial scene import is required to adjust clock fonts, manual fill color, or opacity.",
         "Enable or disable Dark Wallpaper and adjust global dimming from 0–100%; 0% keeps the original image, and existing wallpapers require no re-import or conversion."
       ],
       "changelog": [
+        {
+          "version": "1.1.8",
+          "changes": [
+            "Added Use Stock Lock Wallpaper for independent clock features; no spatial scene import is required when both screens use stock wallpapers.",
+            "Stock wallpaper mode still supports clock font, manual fill color, and opacity controls; stock Lock Screen wallpaper disables depth and automatic coloring.",
+            "When both screens use stock wallpapers, wallpaper rendering and motion sampling stop; clock-plugin conflict guidance was removed and trilingual text was improved."
+          ]
+        },
         {
           "version": "1.1.7",
           "changes": [
