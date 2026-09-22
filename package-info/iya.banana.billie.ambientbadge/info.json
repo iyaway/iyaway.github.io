@@ -37,6 +37,14 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.11",
+      "changes": [
+        "修复部分环境下偏移移动跨度异常、微调位置却移动过大的问题。",
+        "修复打开应用再返回桌面后，角标位置跳变、前后不一致的问题。",
+        "胶囊与光环两种样式同步修复，保留已有位置设置和小数精度，无需重新调整。"
+      ]
+    },
+    {
       "version": "0.1.10",
       "changes": [
         "新增小数位移，支持更精细的角标位置调整。",
@@ -89,6 +97,14 @@
         "Optionally enable notification pulses; saved settings apply immediately."
       ],
       "changelog": [
+        {
+          "version": "0.1.11",
+          "changes": [
+            "Fixed excessive offset movement in some environments, where small adjustments moved badges too far.",
+            "Fixed badge position changes after opening an app and returning to the Home Screen.",
+            "Applied the fix to Capsule and Orbit while preserving saved offsets and decimal precision, with no readjustment required."
+          ]
+        },
         {
           "version": "0.1.10",
           "changes": [
