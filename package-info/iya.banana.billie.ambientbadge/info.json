@@ -3,39 +3,49 @@
   "name": "AmbientBadge",
   "web_name": "微光角标",
   "tagline": "为桌面通知角标加入玻璃质感与柔和光晕。",
+  "tint": "#367DFF",
   "developer": "Banana",
-  "description": [
-    "微光角标为桌面通知角标加入玻璃质感与柔和光晕，提供胶囊和光环两种可切换样式。",
-    "两种样式共享位置与大小设置，可分别调整模糊底材强度，并支持应用配色或统一自定义颜色。",
-    "沿用系统原生角标数量，数量增加可触发柔和脉冲，关闭插件后恢复系统角标。"
-  ],
-  "notice": "给我的朋友:Billie",
-  "features": [
-    "胶囊与光环两种玻璃角标样式",
-    "自动跟随系统 Light / Dark 外观调整底材、文字和描边",
-    "使用 App 配色或统一自定义颜色",
-    "可调节外围环境光晕强度",
-    "胶囊与光环分别保存 0–100% Blur Opacity，不影响文字、描边和光晕",
-    "横向与纵向 −30～+30 pt 小数位移，滑块步进 0.1，并支持一键归零",
-    "50%～150% 整体缩放，文字、符号和光晕同步调整",
-    "位置支持最多两位小数的手动输入；大小与 Blur Opacity 同样支持滑块和数值输入",
-    "新通知或数量增加时可选单次柔和脉冲，并遵循系统“减弱动态效果”",
-    "保留 App 原有角标数量，大数量显示为 99+，关闭插件后恢复系统角标",
-    "简体中文、繁体中文和英文设置，保存后即时应用"
-  ],
   "compatibility": [
     "iOS 15–18",
     "Rootless 与 RootHide"
   ],
+  "description": [
+    "微光角标为桌面通知角标加入玻璃质感与柔和光晕，提供胶囊、光环、悬浮光球、侧边胶囊、玻璃圆环和渐变光线六种样式。",
+    "每种样式独立保存大小、Blur Opacity 和位置，支持应用配色或统一自定义颜色，并保留已有设置与小数精度。",
+    "沿用系统原生角标数量，数量增加可触发柔和脉冲；关闭插件后恢复系统角标。"
+  ],
+  "features": [
+    "胶囊、光环、悬浮光球、侧边胶囊、玻璃圆环和渐变光线六种玻璃角标样式",
+    "自动跟随系统 Light / Dark 外观调整底材、文字和描边",
+    "使用 App 配色或统一自定义颜色",
+    "可调节外围环境光晕强度",
+    "每种样式分别保存 0–100% Blur Opacity，不影响文字、描边和光晕",
+    "每种样式独立保存横向与纵向 −30～+30 pt 小数位移，滑块步进 0.1，位置归零仅影响当前样式",
+    "每种样式独立保存 50%～150% 整体缩放，文字、符号和光晕同步调整",
+    "位置支持最多两位小数的手动输入；大小与 Blur Opacity 同样支持滑块和数值输入",
+    "新通知或数量增加时可选单次柔和脉冲，并遵循系统“减弱动态效果”",
+    "保留 App 原有角标数量，大数量显示为 99+，关闭插件后恢复系统角标",
+    "优化图标动画跟随和首次显示时机，减少角标提前出现或与图标分离",
+    "简体中文、繁体中文和英文设置，保存后即时应用"
+  ],
   "usage": [
     "安装后打开“设置 → 微光角标”并开启插件。",
-    "选择胶囊或光环样式，并按需设置应用配色、自定义颜色和环境光晕强度。",
-    "分别调整两种样式的 Blur Opacity；位置与大小由两种样式共用。",
+    "从六种角标样式中选择一种，并按需设置应用配色、自定义颜色和环境光晕强度。",
+    "进入当前样式的独立设置页，调整大小、Blur Opacity 和位置；位置归零仅影响当前样式。",
     "拖动滑块后松手应用，或点击数值手动输入位置、大小和 Blur Opacity；位置支持最多两位小数。",
     "按需开启通知脉冲；所有设置保存后即时生效。"
   ],
+  "notice": "给我的朋友:Billie。首次显示时序修正仍需实机复测。",
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.12",
+      "changes": [
+        "新增悬浮光球、侧边胶囊、玻璃圆环和渐变光线，连同胶囊与光环共六种样式。",
+        "新增独立样式设置页，每种样式分别保存大小、Blur Opacity 和位置；保留旧数值与小数精度，位置归零仅影响当前样式。",
+        "优化图标动画跟随和首次显示时机，减少角标提前出现或与图标分离，并完善三语言文案与版本显示。"
+      ]
+    },
     {
       "version": "0.1.11",
       "changes": [
@@ -61,28 +71,28 @@
       ]
     }
   ],
-  "tint": "#367DFF",
   "locales": {
     "en": {
       "name": "AmbientBadge",
       "tagline": "Give notification badges a glass appearance and a soft ambient glow.",
       "description": [
-        "AmbientBadge gives Home Screen notification badges a glass appearance and a soft ambient glow, with selectable Capsule and Orbit styles.",
-        "Both styles share position and size controls, keep separate blurred-background intensity, and support app-based or unified custom colors.",
+        "AmbientBadge gives Home Screen notification badges a glass appearance and a soft ambient glow, with six styles: Capsule, Orbit, Floating Orb, Side Capsule, Glass Ring, and Gradient Light.",
+        "Each style keeps independent size, Blur Opacity, and position settings, supports app-based or unified custom colors, and preserves existing values and decimal precision.",
         "It preserves native badge counts, can pulse gently when counts increase, and restores system badges when disabled."
       ],
-      "notice": "Made by Banana, for Billie.",
+      "notice": "Made by Banana, for Billie. The first-display timing fix still requires device verification.",
       "features": [
-        "Capsule and Orbit glass badge styles",
+        "Six glass badge styles: Capsule, Orbit, Floating Orb, Side Capsule, Glass Ring, and Gradient Light",
         "Automatic material, text, and outline adaptation for system Light and Dark appearance",
         "App-based colors or one unified custom color",
         "Adjustable ambient glow intensity",
-        "Independent 0–100% Blur Opacity for Capsule and Orbit without fading text, outline, or glow",
-        "Decimal horizontal and vertical offsets from −30 to +30 pt with 0.1 slider steps and position reset",
-        "50%–150% overall scaling for badges, text, glyphs, and glow",
+        "Independent 0–100% Blur Opacity for each style without fading text, outline, or glow",
+        "Independent decimal horizontal and vertical offsets from −30 to +30 pt for each style, with 0.1 slider steps and a reset that affects only the current style",
+        "Independent 50%–150% overall scaling for each style, including badges, text, glyphs, and glow",
         "Manual position input with up to two decimal places, plus slider and numeric input for size and Blur Opacity",
         "Optional single pulse for new or increased badge counts, respecting Reduce Motion",
         "Native badge counts with 99+ display and system-badge restoration when disabled",
+        "Improved icon animation following and first-display timing to reduce early or detached badges",
         "Settings in English, Simplified Chinese, and Traditional Chinese with immediate application"
       ],
       "compatibility": [
@@ -91,12 +101,20 @@
       ],
       "usage": [
         "Open Settings → AmbientBadge after installation and enable the tweak.",
-        "Choose Capsule or Orbit, then configure app colors, a custom color, and ambient glow intensity as desired.",
-        "Adjust each style's Blur Opacity independently; position and size are shared between styles.",
+        "Choose one of the six badge styles, then configure app colors, a custom color, and ambient glow intensity as desired.",
+        "Open the current style's settings page to adjust size, Blur Opacity, and position; position reset affects only that style.",
         "Release sliders to apply changes, or tap values to enter position, size, and Blur Opacity manually; position accepts up to two decimal places.",
         "Optionally enable notification pulses; saved settings apply immediately."
       ],
       "changelog": [
+        {
+          "version": "0.1.12",
+          "changes": [
+            "Added Floating Orb, Side Capsule, Glass Ring, and Gradient Light, for six styles including Capsule and Orbit.",
+            "Added per-style settings with independent size, Blur Opacity, and position; existing values and decimal precision are preserved, and position reset affects only the current style.",
+            "Improved icon animation following and first-display timing to reduce early or detached badges, and completed trilingual text and version display."
+          ]
+        },
         {
           "version": "0.1.11",
           "changes": [
