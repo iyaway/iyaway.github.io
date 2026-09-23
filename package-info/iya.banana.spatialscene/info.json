@@ -8,12 +8,14 @@
   "description": [
     "SpatialScene 让你通过 App 导入或在线下载空间壁纸，进行预览、管理并设为当前壁纸。",
     "启用后，壁纸会随设备姿态呈现自然的空间层次与动态效果；深色壁纸可独立开关并通过 Apple 自适应暗化跟随系统外观。",
-    "你还可以独立使用锁屏时间功能；锁屏和桌面均使用系统原壁纸时，无需导入空间场景也能调整时间字体、手动填充颜色和不透明度。"
+    "你还可以独立使用锁屏时间功能；锁屏和桌面均使用系统原壁纸时，无需导入空间场景也能调整时间字体、手动填充颜色和不透明度。",
+    "iOS App 提供锁屏景深预览，可使用真实时钟与插件参数检查时间遮挡，无需更换当前壁纸。"
   ],
   "features": [
     "导入兼容的空间壁纸包",
     "浏览带预览图的在线壁纸库",
     "预览、管理并设置当前壁纸",
+    "iOS App 锁屏景深预览，支持“景深 / 无景深”对照和姿态联动，不会修改当前壁纸或插件设置",
     "随设备姿态呈现空间层次效果",
     "可按需启用主屏幕动态效果",
     "支持实时切换“锁屏使用原壁纸”和“桌面使用原壁纸”，无需 Respring",
@@ -46,6 +48,8 @@
     "安装后打开 SpatialScene App。",
     "从在线壁纸库下载，或导入兼容的空间壁纸包。",
     "预览壁纸并将喜欢的项目设为当前。",
+    "在 iOS App 中使用锁屏景深预览检查时间遮挡；首次使用前先锁屏并点亮屏幕采集数据，修改时间或插件相关设置后请重新采集。",
+    "预览使用真实时钟字形、位置、尺寸及插件参数，并可切换“景深 / 无景深”进行对照；此操作不会更换当前壁纸或修改插件设置。",
     "在系统“设置”中启用 SpatialScene，并按需开启主屏幕动态效果。",
     "如只需壁纸景深效果，可关闭“修改锁屏时间”以保留系统时间外观。",
     "在时间设置中调整字体大小、字重、字宽、字高、柔和度与颜色；实验性景深效果可按需开启。",
@@ -56,6 +60,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.9",
+      "changes": [
+        "iOS App 新增锁屏景深预览，无需更换当前壁纸即可检查时间遮挡，并支持“景深 / 无景深”对照与姿态联动。",
+        "预览使用真实时钟字形、位置、尺寸及插件参数，并按设备屏幕比例呈现；首次使用先锁屏并点亮屏幕采集数据，修改相关设置后需重新采集。",
+        "预览不会修改当前壁纸或插件设置，并完善简体中文、繁体中文及英文提示。"
+      ]
+    },
     {
       "version": "1.1.8",
       "changes": [
@@ -164,12 +176,14 @@
       "description": [
         "SpatialScene lets you import or download spatial wallpapers in the app, preview and manage them, and set one as current.",
         "Once enabled, wallpapers respond to device movement with natural layered depth effects. Dark wallpaper behavior can be toggled independently and uses Apple adaptive dimming to follow system appearance.",
-        "You can use Lock Screen clock customization independently. When both the Lock Screen and Home Screen use stock wallpapers, no spatial scene import is required to adjust clock fonts, manual fill color, or opacity."
+        "You can use Lock Screen clock customization independently. When both the Lock Screen and Home Screen use stock wallpapers, no spatial scene import is required to adjust clock fonts, manual fill color, or opacity.",
+        "The iOS app includes a Lock Screen depth preview that uses the actual clock and tweak settings to check overlap without changing the current wallpaper."
       ],
       "features": [
         "Import compatible spatial wallpaper packages",
         "Browse an online wallpaper library with previews",
         "Preview, manage, and set the current wallpaper",
+        "Lock Screen depth preview in the iOS app with Depth / No Depth comparison and motion response, without changing the current wallpaper or tweak settings",
         "Motion-responsive layered depth effects",
         "Optional Home Screen animation",
         "Switch the Lock Screen or Home Screen to the stock wallpaper instantly without a Respring",
@@ -202,6 +216,8 @@
         "Open the SpatialScene app after installation.",
         "Download a wallpaper from the online library or import a compatible package.",
         "Preview a wallpaper and set your preferred item as current.",
+        "Use Lock Screen Depth Preview in the iOS app to check clock overlap. Before the first preview, lock and wake the device to capture data; recapture after changing related clock or tweak settings.",
+        "The preview uses actual clock glyphs, position, size, and tweak settings, and can compare Depth and No Depth views without changing the current wallpaper or tweak settings.",
         "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired.",
         "Disable Modify Lock Screen Clock to preserve the system clock appearance while keeping wallpaper depth effects.",
         "Use Clock settings to adjust font size, weight, width, height, softness, and color, and optionally enable the experimental depth effect.",
@@ -211,6 +227,14 @@
         "Enable or disable Dark Wallpaper and adjust global dimming from 0–100%; 0% keeps the original image, and existing wallpapers require no re-import or conversion."
       ],
       "changelog": [
+        {
+          "version": "1.1.9",
+          "changes": [
+            "Added a Lock Screen depth preview to the iOS app, allowing clock-overlap checks without changing the current wallpaper, with Depth / No Depth comparison and motion response.",
+            "The preview uses actual clock glyphs, position, size, and tweak settings at the device screen ratio. Lock and wake the device once to capture data, and recapture after changing related settings.",
+            "The preview does not change the current wallpaper or tweak settings, and its Simplified Chinese, Traditional Chinese, and English guidance has been completed."
+          ]
+        },
         {
           "version": "1.1.8",
           "changes": [
