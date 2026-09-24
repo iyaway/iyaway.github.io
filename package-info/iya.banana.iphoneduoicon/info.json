@@ -7,15 +7,15 @@
   "description": [
     "iPhoneDuoIcon 正式更名为 Lunora · 月珞，带来全新图标与更完整的状态栏体验，升级会保留现有配置。",
     "左侧玻璃信息胶囊与右侧 Duo 或 mini Dock 可独立设置并自由组合，显示时间日期、天气、媒体、音量、通知和 App 等内容。",
-    "提供灵活布局、独立字体与配色、运营商和网络文字、精确数值输入、天气响应优化和 Discord 反馈入口。"
+    "提供灵活布局、独立字体与配色、运营商和网络文字、精确数值输入、诊断导出，以及 Discord 与 QQ 反馈入口。"
   ],
-  "notice": "升级会保留现有配置。部分动画与机型兼容性仍需实际使用反馈，液态玻璃效果仍在完善。与 SingleVPN 冲突；更新后请重新加载 SpringBoard。",
+  "notice": "1.0.2 为公开测试版。升级会保留现有配置；部分机型转场位移和第三方灵动岛兼容性仍需反馈，蓝色圆形定位图标短暂闪现的问题仍在排查。支持安装及运行至 iOS 26，但不代表所有新系统功能均已验证。与 SingleVPN 冲突；更新后请重新加载 SpringBoard。",
   "features": [
     "左侧信息胶囊与右侧 Duo 或 mini Dock 独立配置、自由组合",
     "分区玻璃、圆形分区和一体玻璃三种信息胶囊样式",
     "时间日期、天气、媒体、音量和通知等胶囊模块，支持左右滑动切换常驻模块",
-    "mini Dock 支持固定或最近使用 App、应用搜索和拖动排序",
-    "mini Dock 可与星环共存，支持独立位置调整并在星环展开时自动避让",
+    "mini Dock 支持固定或最近使用 App、应用搜索和拖动排序，最多选择 8 个 App 并按可用空间显示",
+    "mini Dock 可与星环共存，也可关闭星环仅保留 App Dock；支持独立位置调整并在星环展开时自动避让",
     "通知 App 图标、内容滚动、点击跳转及从灵动岛或刘海区域展开的横幅动画",
     "支持隐藏系统音量条",
     "胶囊水平加长及 AM/PM 同行、上方或下方排列",
@@ -24,7 +24,7 @@
     "时间、日期和运营商支持系统字体或已安装自定义字体，可搜索、预览和选择",
     "除天气与温度外，各模块可独立隐藏图标",
     "右侧网络区域支持自定义文字、字号和位置",
-    "主页灵动岛避让开关",
+    "灵动岛避让支持隐藏或横向收窄，左右可独立保留文字区或图标区，收窄时保持高度",
     "锁屏显示原生右侧状态，解锁后收拢为胶囊或星环",
     "岛内展开通知样式，并修正活动窗口判断导致的通知回退",
     "优化小屏、锁屏和通知中心布局，并正确应用强制 12/24 小时设置",
@@ -32,12 +32,17 @@
     "点按滑杆数值可手动输入精确参数",
     "天气与定位后台响应，保留缓存与刷新限频以减少界面卡顿",
     "恢复电池轮廓绕行动画，并优化手动尺寸下的文字比例、描边与信号间隙",
-    "改善充电展开时的电池尺寸与媒体图标显示",
-    "设置主页提供 Discord BUG 反馈与建议入口",
+    "改善充电展开时的电池尺寸与媒体图标显示，并为左侧电池轮廓加入镜像充电效果",
+    "右侧胶囊、独立星环与 mini Dock 支持内置玻璃外观及独立材质透明度，右侧底色跟随左侧",
+    "统一 Wi-Fi、4G、5G 与 LTE 的视觉大小基准，并提供网络图标独立缩放",
+    "右侧时间支持字体与字重设置，时间、日期和运营商可加粗；扩大轮廓线宽与水平偏移范围",
+    "VPN 染色可保留蜂窝信号格或信号点原色",
+    "诊断导出与默认关闭的手动布局采集，便于反馈机型、设置和胶囊位置问题",
+    "设置主页提供 Discord 反馈入口及 QQ 交流群 1126594257，点击可复制群号",
     "简体中文、繁体中文和英文设置界面"
   ],
   "compatibility": [
-    "iOS 16–18",
+    "iOS 16–26（新系统功能未完全验证）",
     "Rootless 与 RootHide",
     "与 SingleVPN 冲突"
   ],
@@ -47,13 +52,22 @@
     "选择胶囊玻璃样式与常驻模块，横向滑动可切换当前模块。",
     "分别调整左右胶囊的宽度、高度和线宽；按需设置运营商、网络文字与模块图标显示。",
     "为时间、日期或运营商选择系统或已安装字体，并可搜索和预览。",
-    "按需开启主页灵动岛避让、锁屏原生右侧状态及岛内展开通知。",
-    "在 mini Dock 中选择固定或最近使用 App，并可搜索、排序和调整位置。",
+    "按需设置灵动岛避让为隐藏或横向收窄，并分别选择左右保留文字区或图标区；也可开启锁屏原生右侧状态及岛内展开通知。",
+    "在 mini Dock 中最多选择 8 个固定或最近使用 App，并可搜索、排序、调整位置或关闭星环仅保留 App Dock。",
     "按需调整布局、配色与精确数值；设置修改即时生效。",
-    "需要帮助时可通过设置主页的 Discord 入口反馈 BUG 或提出建议。"
+    "遇到布局问题时可导出诊断或手动采集布局，并附机型、iOS 版本与复现步骤。",
+    "需要帮助时可通过设置主页的 Discord 入口反馈，或点击 QQ 交流群复制群号 1126594257。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.2",
+      "changes": [
+        "重新整理左右设置与灵动岛避让，可隐藏或横向收窄并分别保留文字区或图标区；同时优化桌面、App、锁屏与控制中心之间的位置衔接。",
+        "完善玻璃材质、mini Dock 与状态图标：mini Dock 最多支持 8 个 App 且可关闭星环，并扩展材质透明度、网络、字体、线宽、充电及 VPN 显示调节。",
+        "新增诊断导出、手动布局采集及 QQ 群 1126594257 点击复制；放宽安装与运行至 iOS 26。本版为公开测试，部分机型与第三方灵动岛兼容性仍需反馈。"
+      ]
+    },
     {
       "version": "1.0.1",
       "changes": [
@@ -180,15 +194,15 @@
       "description": [
         "iPhoneDuoIcon is now Lunora, with a new icon and a more complete status bar experience. Existing settings are preserved during the upgrade.",
         "Configure the left glass information capsule separately from the right Duo or mini Dock, combining time and date, weather, media, volume, notifications, apps, and more.",
-        "Lunora also provides flexible layouts, independent fonts and colors, carrier and network text, exact numeric input, improved weather responsiveness, and a Discord feedback entry."
+        "Lunora also provides flexible layouts, independent fonts and colors, carrier and network text, exact numeric input, diagnostic export, and Discord and QQ feedback entries."
       ],
-      "notice": "Existing settings are preserved during upgrades. Some animations and device compatibility still need real-world feedback, and the liquid-glass effect remains under refinement. Conflicts with SingleVPN; respring after updating.",
+      "notice": "Version 1.0.2 is a public testing release. Existing settings are preserved during upgrades. Transition positioning on some devices and third-party island compatibility still need feedback, and the brief blue circular location indicator remains under investigation. Installation and runtime are allowed through iOS 26, but not every newer system feature has been verified. Conflicts with SingleVPN; respring after updating.",
       "features": [
         "Independent left information capsule and right Duo or mini Dock configurations",
         "Split Glass, Circular Partition, and Continuous Glass capsule styles",
         "Time and date, weather, media, volume, notification, and other capsule modules with horizontal resting-module switching",
-        "mini Dock with pinned or recent apps, app search, and drag reordering",
-        "Use mini Dock alongside Orbit with independent positioning and automatic avoidance during Orbit expansion",
+        "mini Dock with pinned or recent apps, app search, drag reordering, up to eight selections, and display based on available space",
+        "Use mini Dock alongside Orbit, or disable Orbit for an apps-only Dock, with independent positioning and automatic avoidance during Orbit expansion",
         "Notification app icons, scrolling content, tap-to-open actions, and banners expanding from the Dynamic Island or notch",
         "Option to hide the system volume HUD",
         "Extended capsule width and inline, above, or below AM/PM placement",
@@ -197,7 +211,7 @@
         "System or installed custom fonts for time, date, and carrier text, with search and preview",
         "Optional icon hiding for every module except Weather and Temperature",
         "Custom text, font size, and position for the right network area",
-        "Home Screen Dynamic Island avoidance toggle",
+        "Dynamic Island avoidance with Hide or Narrow Horizontally modes and independent text/icon retention on each side while preserving height",
         "Native right-side status on the Lock Screen, collapsing into Capsule or Orbit after unlocking",
         "In-Island notification expansion style with improved notification fallback behavior",
         "Improved compact, Lock Screen, and Notification Center layouts with correct forced 12/24-hour behavior",
@@ -205,12 +219,17 @@
         "Tap slider values to enter exact numbers",
         "Responsive background weather and location work with cached data and refresh limits",
         "Restored battery-outline traversal animation with improved text proportions, outlines, and signal spacing at custom sizes",
-        "Improved battery sizing during charging expansion and media icon display",
-        "Discord entry for bug reports and suggestions",
+        "Improved battery sizing during charging expansion and media icon display, plus a mirrored charging effect on the left battery outline",
+        "Built-in glass appearance and independent material opacity for the right Capsule, standalone Orbit, and mini Dock, with right-side fill following the left",
+        "Unified visual sizing for Wi-Fi, 4G, 5G, and LTE, with independent regular network-icon scaling",
+        "Font and weight controls for the right clock, bold options for time, date, and carrier, and wider outline-width and horizontal-offset ranges",
+        "Option to preserve cellular strength bars or dots when VPN tinting is enabled",
+        "Diagnostic export and optional manual layout recording for device, settings, and capsule-position reports",
+        "Discord feedback entry and QQ group 1126594257 on the main Settings page, with tap-to-copy",
         "Settings in English, Simplified Chinese, and Traditional Chinese"
       ],
       "compatibility": [
-        "iOS 16–18",
+        "iOS 16–26 (newer system features are not fully verified)",
         "Rootless and RootHide",
         "Conflicts with SingleVPN"
       ],
@@ -220,12 +239,21 @@
         "Choose a capsule glass style and resting module; swipe horizontally to switch the active module.",
         "Adjust left and right capsule width, height, and line width independently; configure carrier text, network text, and module icons as needed.",
         "Choose system or installed fonts for time, date, and carrier text, with search and preview.",
-        "Optionally enable Home Screen Dynamic Island avoidance, native right-side Lock Screen status, and In-Island notifications.",
-        "Choose pinned or recent apps in mini Dock, then search, reorder, and position them as needed.",
+        "Set Dynamic Island avoidance to Hide or Narrow Horizontally and choose whether each side retains text or icons; optionally enable native right-side Lock Screen status and In-Island notifications.",
+        "Choose up to eight pinned or recent apps in mini Dock, then search, reorder, and position them as needed, or disable Orbit for an apps-only Dock.",
         "Adjust layouts, colors, and exact values as desired; settings changes apply immediately.",
-        "Use the Discord entry on the main Settings page for bug reports or suggestions."
+        "For layout issues, export diagnostics or record a manual layout and include the device model, iOS version, and reproduction steps.",
+        "Use the Discord entry for feedback, or tap the QQ group entry to copy 1126594257."
       ],
       "changelog": [
+        {
+          "version": "1.0.2",
+          "changes": [
+            "Reorganized left and right settings and Dynamic Island avoidance, with Hide or Narrow Horizontally modes and independent text or icon retention; also improved positioning across the Home Screen, apps, Lock Screen, and Control Center.",
+            "Improved glass materials, mini Dock, and status icons: mini Dock now supports up to eight apps and an apps-only mode, with expanded material opacity, network, font, outline, charging, and VPN display controls.",
+            "Added diagnostic export, manual layout recording, and tap-to-copy for QQ group 1126594257; installation and runtime now allow iOS 26. This public testing release still needs feedback for some devices and third-party island compatibility."
+          ]
+        },
         {
           "version": "1.0.1",
           "changes": [
