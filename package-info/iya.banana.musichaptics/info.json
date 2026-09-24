@@ -9,7 +9,7 @@
     "MusicHaptics 为越狱 iPhone 带来音乐触感反馈，在播放支持的歌曲时，让振动跟随音乐的节奏与变化。",
     "可选择全部混音或仅人声，搭配弱、中、强三档强度；通过设置或控制中心随时开启与关闭。"
   ],
-  "notice": "首次加载歌曲触感需要联网，部分歌曲可能没有触感或人声轨道。请使用正常播放速度，并关闭杜比全景声；如已开启系统自带音乐触感，请先关闭以免重复反馈。",
+  "notice": "iOS 18 及以上尚未完成兼容验证，不保证可用。当前不支持已测试的环境音乐免费内容及 Shazam 免费试听。首次加载歌曲触感需要联网，部分歌曲可能没有触感或人声轨道。请使用正常播放速度，并关闭杜比全景声；如已开启系统自带音乐触感，请先关闭以免重复反馈。",
   "features": [
     "为支持的歌曲提供同步音乐触感反馈",
     "全部混音与仅人声两种模式",
@@ -20,10 +20,12 @@
   ],
   "compatibility": [
     "最低 iOS 15，无最高版本限制",
-    "iOS 15 / 18 / 26 兼容性待实测",
+    "iOS 15 已完成 Apple Music 下载与播放实测",
+    "iOS 17 有此前版本的 Apple Music 成功记录",
+    "iOS 16 待测；iOS 18 及以上尚未完成兼容验证，不保证可用",
     "需要支持触感反馈的越狱 iPhone",
     "Rootless / RootHide",
-    "arm64 / arm64e",
+    "每个安装包均包含 arm64 / arm64e",
     "需要 PreferenceLoader 和 CCSupport"
   ],
   "usage": [
@@ -35,6 +37,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.2",
+      "changes": [
+        "修复 iOS 15 切换控制中心开关或调整触感强度时意外重新载入桌面的问题。",
+        "修复 iOS 15 歌曲触感下载，并改善 Apple Music 账号地区与系统地区不同时的歌曲匹配。",
+        "iOS 15 已完成 Apple Music 下载与播放实测，iOS 17 有此前版本的成功记录；iOS 16 待测，iOS 18 及以上尚未完成兼容验证。"
+      ]
+    },
     {
       "version": "0.1.1",
       "changes": [
@@ -52,7 +62,7 @@
         "MusicHaptics brings music haptic feedback to jailbroken iPhones, with vibrations that follow the rhythm and changes of supported songs.",
         "Choose Full Mix or Vocals Only with Weak, Medium, or Strong intensity, and toggle playback from Settings or Control Center."
       ],
-      "notice": "An internet connection is needed to load a song's haptics for the first time. Some songs have no haptic or vocal track. Use normal playback speed with Dolby Atmos off. Turn off Apple's built-in Music Haptics before using this tweak to avoid duplicate feedback.",
+      "notice": "iOS 18 and later compatibility remains unverified and is not guaranteed. The tested free Ambient Music content and Shazam previews are not currently supported. An internet connection is needed to load a song's haptics for the first time. Some songs have no haptic or vocal track. Use normal playback speed with Dolby Atmos off. Turn off Apple's built-in Music Haptics before using this tweak to avoid duplicate feedback.",
       "features": [
         "Synchronized music haptic feedback for supported songs",
         "Full Mix and Vocals Only modes",
@@ -63,10 +73,12 @@
       ],
       "compatibility": [
         "Requires iOS 15 or later; no upper version limit",
-        "iOS 15 / 18 / 26 compatibility awaits device testing",
+        "Apple Music download and playback tested on iOS 15",
+        "Earlier Apple Music playback success on iOS 17",
+        "iOS 16 awaits testing; iOS 18 and later compatibility remains unverified and is not guaranteed",
         "Requires a jailbroken iPhone with haptic support",
         "Rootless / RootHide",
-        "arm64 / arm64e",
+        "Both packages include arm64 / arm64e",
         "Requires PreferenceLoader and CCSupport"
       ],
       "usage": [
@@ -77,6 +89,14 @@
         "Use Play Sample to feel the selected intensity. If a song produces no feedback, check Playback Status or retry it."
       ],
       "changelog": [
+        {
+          "version": "0.1.2",
+          "changes": [
+            "Fix unexpected resprings when toggling Control Center or changing haptic intensity on iOS 15.",
+            "Fix song haptic downloads on iOS 15 and improve matching when the Apple Music account region differs from the device region.",
+            "Apple Music download and playback were tested on iOS 15, with earlier success on iOS 17; iOS 16 awaits testing, and iOS 18 or later compatibility remains unverified."
+          ]
+        },
         {
           "version": "0.1.1",
           "changes": [
