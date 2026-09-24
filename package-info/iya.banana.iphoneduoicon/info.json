@@ -7,9 +7,9 @@
   "description": [
     "iPhoneDuoIcon 正式更名为 Lunora · 月珞，带来全新图标与更完整的状态栏体验，升级会保留现有配置。",
     "左侧玻璃信息胶囊与右侧 Duo 或 mini Dock 可独立设置并自由组合，显示时间日期、天气、媒体、音量、通知和 App 等内容。",
-    "提供灵活布局、独立字体与配色、运营商和网络文字、精确数值输入、诊断导出，以及 Discord 与 QQ 反馈入口。"
+    "提供灵活布局、独立字体与配色、运营商和网络文字、精确数值输入、配置备份与诊断导出，以及 Discord 与 QQ 反馈入口。"
   ],
-  "notice": "1.0.2 为公开测试版。升级会保留现有配置；部分机型转场位移和第三方灵动岛兼容性仍需反馈，蓝色圆形定位图标短暂闪现的问题仍在排查。支持安装及运行至 iOS 26，但不代表所有新系统功能均已验证。与 SingleVPN 冲突；更新后请重新加载 SpringBoard。",
+  "notice": "1.0.3 为紧急修复更新。总开关未保存时默认为关闭，已有明确开关值保留；升级后请重新加载 SpringBoard。原先电池显示异常的用户请重点复测关闭状态。部分机型转场位移、第三方灵动岛兼容性及蓝色圆形定位图标问题仍在跟进。iOS 26 已有用户测试通过，不代表所有设备与功能均已验证。与 SingleVPN 冲突。",
   "features": [
     "左侧信息胶囊与右侧 Duo 或 mini Dock 独立配置、自由组合",
     "分区玻璃、圆形分区和一体玻璃三种信息胶囊样式",
@@ -39,7 +39,9 @@
     "VPN 染色可保留蜂窝信号格或信号点原色",
     "诊断导出与默认关闭的手动布局采集，便于反馈机型、设置和胶囊位置问题",
     "设置主页提供 Discord 反馈入口及 QQ 交流群 1126594257，点击可复制群号",
-    "简体中文、繁体中文和英文设置界面"
+    "简体中文、繁体中文和英文设置界面",
+    "胶囊模式可选择不隐藏左侧系统时间",
+    "配置导入／导出带完整性校验，兼容旧配置并保留缺失的新设置"
   ],
   "compatibility": [
     "iOS 16–26（新系统功能未完全验证）",
@@ -48,7 +50,7 @@
   ],
   "usage": [
     "安装时确认移除存在冲突的 SingleVPN；升级自 iPhoneDuoIcon 会保留原有配置。",
-    "进入“设置 → Lunora”分别配置左侧信息胶囊与右侧 Duo 或 mini Dock。",
+    "进入“设置 → Lunora”开启总开关，再分别配置左侧信息胶囊与右侧 Duo 或 mini Dock；未保存总开关时默认为关闭。",
     "选择胶囊玻璃样式与常驻模块，横向滑动可切换当前模块。",
     "分别调整左右胶囊的宽度、高度和线宽；按需设置运营商、网络文字与模块图标显示。",
     "为时间、日期或运营商选择系统或已安装字体，并可搜索和预览。",
@@ -56,10 +58,19 @@
     "在 mini Dock 中最多选择 8 个固定或最近使用 App，并可搜索、排序、调整位置或关闭星环仅保留 App Dock。",
     "按需调整布局、配色与精确数值；设置修改即时生效。",
     "遇到布局问题时可导出诊断或手动采集布局，并附机型、iOS 版本与复现步骤。",
-    "需要帮助时可通过设置主页的 Discord 入口反馈，或点击 QQ 交流群复制群号 1126594257。"
+    "需要帮助时可通过设置主页的 Discord 入口反馈，或点击 QQ 交流群复制群号 1126594257。",
+    "在“维护与关于 → 配置备份”导出或导入配置；导入前会显示支持项数量，缺失项保留当前值，保存的总开关值也会应用。诊断报告不能作为配置导入。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.3",
+      "changes": [
+        "修正总开关及左侧开关关闭后仍干扰原生显示的问题；首次安装默认关闭，保留明确保存的开关值。",
+        "胶囊模式新增“不隐藏左侧时间”，可按需保留原生时间，星环模式不变。",
+        "新增配置导入导出，使用 Base64 包装与完整性校验；兼容旧配置，缺失项保留当前设置，损坏文件拒绝导入。"
+      ]
+    },
     {
       "version": "1.0.2",
       "changes": [
@@ -194,9 +205,9 @@
       "description": [
         "iPhoneDuoIcon is now Lunora, with a new icon and a more complete status bar experience. Existing settings are preserved during the upgrade.",
         "Configure the left glass information capsule separately from the right Duo or mini Dock, combining time and date, weather, media, volume, notifications, apps, and more.",
-        "Lunora also provides flexible layouts, independent fonts and colors, carrier and network text, exact numeric input, diagnostic export, and Discord and QQ feedback entries."
+        "Flexible layouts, independent fonts and colors, carrier and network text, precise numeric controls, configuration backups, diagnostic exports, and Discord and QQ feedback entries."
       ],
-      "notice": "Version 1.0.2 is a public testing release. Existing settings are preserved during upgrades. Transition positioning on some devices and third-party island compatibility still need feedback, and the brief blue circular location indicator remains under investigation. Installation and runtime are allowed through iOS 26, but not every newer system feature has been verified. Conflicts with SingleVPN; respring after updating.",
+      "notice": "1.0.3 is an urgent fix release. The master switch defaults to off when no value has been saved; explicit values are preserved. Reload SpringBoard after updating. Users previously affected by battery display issues should retest with the switch off. Transition positioning, third-party island compatibility and the blue circular location indicator remain under investigation. User testing has passed on iOS 26, but not every device or feature is verified. Conflicts with SingleVPN.",
       "features": [
         "Independent left information capsule and right Duo or mini Dock configurations",
         "Split Glass, Circular Partition, and Continuous Glass capsule styles",
@@ -226,7 +237,9 @@
         "Option to preserve cellular strength bars or dots when VPN tinting is enabled",
         "Diagnostic export and optional manual layout recording for device, settings, and capsule-position reports",
         "Discord feedback entry and QQ group 1126594257 on the main Settings page, with tap-to-copy",
-        "Settings in English, Simplified Chinese, and Traditional Chinese"
+        "Settings in English, Simplified Chinese, and Traditional Chinese",
+        "Optionally keep the native left-side time visible in Capsule mode",
+        "Configuration import/export with integrity checks, older-file compatibility, and preservation of missing settings"
       ],
       "compatibility": [
         "iOS 16–26 (newer system features are not fully verified)",
@@ -235,7 +248,7 @@
       ],
       "usage": [
         "Confirm removal of the conflicting SingleVPN package during installation; upgrading from iPhoneDuoIcon preserves existing settings.",
-        "Open Settings → Lunora to configure the left information capsule separately from the right Duo or mini Dock.",
+        "Open Settings → Lunora, enable the master switch, then configure the left information capsule and right Duo or mini Dock. An unsaved master switch defaults to off.",
         "Choose a capsule glass style and resting module; swipe horizontally to switch the active module.",
         "Adjust left and right capsule width, height, and line width independently; configure carrier text, network text, and module icons as needed.",
         "Choose system or installed fonts for time, date, and carrier text, with search and preview.",
@@ -243,9 +256,18 @@
         "Choose up to eight pinned or recent apps in mini Dock, then search, reorder, and position them as needed, or disable Orbit for an apps-only Dock.",
         "Adjust layouts, colors, and exact values as desired; settings changes apply immediately.",
         "For layout issues, export diagnostics or record a manual layout and include the device model, iOS version, and reproduction steps.",
-        "Use the Discord entry for feedback, or tap the QQ group entry to copy 1126594257."
+        "Use the Discord entry for feedback, or tap the QQ group entry to copy 1126594257.",
+        "Use Maintenance and About → Configuration Backup to export or import settings. Imports show the supported-entry count, preserve missing values and apply the saved master switch. Diagnostic reports are not configuration files."
       ],
       "changelog": [
+        {
+          "version": "1.0.3",
+          "changes": [
+            "Fixed interference with native displays when the master or left-capsule switch is off. New installations default to off; explicitly saved switch values are preserved.",
+            "Added Do Not Hide Left Time for Capsule, allowing the native time to remain visible. Orbit is unchanged.",
+            "Added configuration import/export with Base64 wrapping and integrity checks. Older configurations are accepted, missing settings are preserved, and corrupt files are rejected."
+          ]
+        },
         {
           "version": "1.0.2",
           "changes": [
