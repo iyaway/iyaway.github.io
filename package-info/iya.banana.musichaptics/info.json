@@ -1,0 +1,91 @@
+{
+  "package": "iya.banana.musichaptics",
+  "name": "MusicHaptics",
+  "web_name": "音乐触感",
+  "tagline": "让支持的歌曲化作触感，随音乐感受节奏与人声。",
+  "developer": "Banana",
+  "tint": "#E63D72",
+  "description": [
+    "MusicHaptics 为越狱 iPhone 带来音乐触感反馈，在播放支持的歌曲时，让振动跟随音乐的节奏与变化。",
+    "可选择全部混音或仅人声，搭配弱、中、强三档强度；通过设置或控制中心随时开启与关闭。"
+  ],
+  "notice": "首次加载歌曲触感需要联网，部分歌曲可能没有触感或人声轨道。请使用正常播放速度，并关闭杜比全景声；如已开启系统自带音乐触感，请先关闭以免重复反馈。",
+  "features": [
+    "为支持的歌曲提供同步音乐触感反馈",
+    "全部混音与仅人声两种模式",
+    "弱、中、强三档触感强度",
+    "控制中心快捷开关，与设置状态同步",
+    "提供触感样本、播放状态和歌曲重试入口",
+    "支持 English、简体中文、繁體中文，并提供 Discord 与 QQ 反馈入口"
+  ],
+  "compatibility": [
+    "最低 iOS 15，无最高版本限制",
+    "iOS 15 / 18 / 26 兼容性待实测",
+    "需要支持触感反馈的越狱 iPhone",
+    "Rootless / RootHide",
+    "arm64 / arm64e",
+    "需要 PreferenceLoader 和 CCSupport"
+  ],
+  "usage": [
+    "安装适合越狱环境的版本并重新载入 SpringBoard，然后打开“设置 → 音乐触感”。",
+    "启用插件，选择全部混音或仅人声，并设置触感强度。",
+    "在 Apple Music 中以正常速度播放支持的歌曲；首次加载请保持网络连接。",
+    "在控制中心添加“音乐触感”，即可快速开关。",
+    "可点击“播放样本”体验当前强度；没有反馈时查看“播放状态”或重试当前歌曲。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.1",
+      "changes": [
+        "首次发布音乐触感反馈，支持全部混音与仅人声模式。",
+        "提供弱、中、强三档强度及控制中心快捷开关。",
+        "提供三语言设置、触感样本及 Discord、QQ 反馈入口。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "MusicHaptics",
+      "tagline": "Feel the rhythm and vocals of supported songs through haptic feedback.",
+      "description": [
+        "MusicHaptics brings music haptic feedback to jailbroken iPhones, with vibrations that follow the rhythm and changes of supported songs.",
+        "Choose Full Mix or Vocals Only with Weak, Medium, or Strong intensity, and toggle playback from Settings or Control Center."
+      ],
+      "notice": "An internet connection is needed to load a song's haptics for the first time. Some songs have no haptic or vocal track. Use normal playback speed with Dolby Atmos off. Turn off Apple's built-in Music Haptics before using this tweak to avoid duplicate feedback.",
+      "features": [
+        "Synchronized music haptic feedback for supported songs",
+        "Full Mix and Vocals Only modes",
+        "Weak, Medium, and Strong intensity levels",
+        "Control Center toggle synchronized with Settings",
+        "Haptic sample, playback status, and song retry controls",
+        "English, Simplified Chinese, and Traditional Chinese, with Discord and QQ feedback links"
+      ],
+      "compatibility": [
+        "Requires iOS 15 or later; no upper version limit",
+        "iOS 15 / 18 / 26 compatibility awaits device testing",
+        "Requires a jailbroken iPhone with haptic support",
+        "Rootless / RootHide",
+        "arm64 / arm64e",
+        "Requires PreferenceLoader and CCSupport"
+      ],
+      "usage": [
+        "Install the version matching your jailbreak environment, respring, then open Settings → Music Haptics.",
+        "Enable the tweak, select Full Mix or Vocals Only, and choose an intensity level.",
+        "Play a supported song in Apple Music at normal speed; keep an internet connection for the first load.",
+        "Add Music Haptics to Control Center for quick toggling.",
+        "Use Play Sample to feel the selected intensity. If a song produces no feedback, check Playback Status or retry it."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.1",
+          "changes": [
+            "First release of music haptic feedback with Full Mix and Vocals Only modes.",
+            "Includes Weak, Medium, and Strong intensity levels and a Control Center toggle.",
+            "Includes trilingual settings, a haptic sample, and Discord and QQ feedback links."
+          ]
+        }
+      ]
+    }
+  }
+}
