@@ -9,7 +9,7 @@
     "左侧玻璃信息胶囊与右侧 Duo 或 mini Dock 可独立设置并自由组合，显示时间日期、天气、媒体、音量、通知和 App 等内容。",
     "提供灵活布局、独立字体与配色、运营商和网络文字、精确数值输入、配置备份与诊断导出，以及 Discord 与 QQ 反馈入口。"
   ],
-  "notice": "iOS 15 未经实机测试，仅开放测试安装。升级后请重新加载 SpringBoard。原生灵动岛专项、电话助手兼容及蓝色定位图标表现仍需设备反馈。iOS 26 已有用户测试通过，不代表所有设备与功能均已验证。与 SingleVPN 冲突。",
+  "notice": "iOS 15 未经实机测试，仅开放测试安装。升级后请重新加载 SpringBoard。iOS 26 已有用户测试通过，不代表所有设备与功能均已验证。与 SingleVPN 冲突。",
   "features": [
     "左侧信息胶囊与右侧 Duo 或 mini Dock 独立配置、自由组合",
     "分区玻璃、圆形分区和一体玻璃三种信息胶囊样式",
@@ -48,7 +48,9 @@
     "左右尽量占满空间、仅横向收窄配合文字滚动、玻璃边框原色与可选水珠动画",
     "可调 Wi-Fi 线宽及 Wi-Fi／蜂窝显示强度",
     "长按电池详情、面板箭头、触感反馈与电话助手电池长按兼容开关",
-    "提醒事项支持自然日范围、完成反馈与重复点击防护"
+    "提醒事项支持自然日范围、完成反馈与重复点击防护",
+    "系统状态图标可在左侧胶囊下方独立排列，支持对齐、独立缩放及上下位置调整",
+    "星环与胶囊网络图标支持独立上下位置调整，mini Dock 沿用星环设置"
   ],
   "compatibility": [
     "iOS 15–26（iOS 15 未经实机测试；新系统功能未完全验证）",
@@ -71,6 +73,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.5",
+      "changes": [
+        "新增胶囊下方独立系统图标排，支持对齐、大小和上下位置设置；修复合并显示时模式图标重复。",
+        "新增星环与胶囊网络图标上下位置调节，mini Dock 沿用星环设置；改善文件夹缩略图在外观和应用图标变化后的刷新。",
+        "修正部分卡贴设备的单／双信号识别，改善左侧胶囊在桌面与 App 间的宽度一致性及两侧文字颜色同步。"
+      ]
+    },
     {
       "version": "1.0.4",
       "changes": [
@@ -223,7 +233,7 @@
         "Configure the left glass information capsule separately from the right Duo or mini Dock, combining time and date, weather, media, volume, notifications, apps, and more.",
         "Flexible layouts, independent fonts and colors, carrier and network text, precise numeric controls, configuration backups, diagnostic exports, and Discord and QQ feedback entries."
       ],
-      "notice": "iOS 15 has not been device-tested; installation is experimental. Reload SpringBoard after updating. Native Dynamic Island behavior, CallAssist compatibility and the blue location indicator still need device feedback. User testing has passed on iOS 26, but not every device or feature is verified. Conflicts with SingleVPN.",
+      "notice": "iOS 15 has not been tested on a physical device; installation is available for testing. Reload SpringBoard after upgrading. Users have reported successful testing on iOS 26, but not all devices and features have been verified. Conflicts with SingleVPN.",
       "features": [
         "Independent left information capsule and right Duo or mini Dock configurations",
         "Split Glass, Circular Partition, and Continuous Glass capsule styles",
@@ -262,7 +272,9 @@
         "Fuller-space layouts, narrowing with scrolling text, original-color glass outlines and optional water-drop motion",
         "Adjustable Wi-Fi stroke width and displayed Wi-Fi/cellular strength",
         "Battery details on long press, panel arrows, haptics and optional CallAssist battery long-press compatibility",
-        "Calendar-day reminder ranges, completion feedback and duplicate-tap protection"
+        "Calendar-day reminder ranges, completion feedback and duplicate-tap protection",
+        "Show a separate system status-icon row below the left capsule with alignment, independent size, and vertical position controls",
+        "Adjust network icons vertically in Orbit and Capsule; mini Dock uses the Orbit setting"
       ],
       "compatibility": [
         "iOS 15–26 (iOS 15 untested on devices; newer system features not fully verified)",
@@ -284,6 +296,14 @@
         "For CallAssist battery long presses, enable the corresponding CallAssist feature first, then enable Battery Long-Press Compatibility in Lunora. This suspends Lunora’s own battery-details long press."
       ],
       "changelog": [
+        {
+          "version": "1.0.5",
+          "changes": [
+            "Added a separate status-icon row below the left capsule with alignment, size, and vertical position controls; fixed duplicate Focus icons in merged displays.",
+            "Added vertical network-icon controls for Orbit and Capsule, shared with mini Dock through Orbit settings; improved folder thumbnail updates after appearance or app icon changes.",
+            "Improved single/dual signal detection on some SIM-adapter devices, left capsule width consistency between the Home Screen and apps, and text color synchronization on both sides."
+          ]
+        },
         {
           "version": "1.0.4",
           "changes": [
