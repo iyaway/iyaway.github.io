@@ -52,6 +52,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.9.9",
+      "changes": [
+        "改善小图标与桌面图标的深色效果一致性，减少局部残留浅色，并优化缓存复用。",
+        "修复 Spotlight 搜索图标刷新时可能出现的空白，改善图标显示稳定性。"
+      ]
+    },
+    {
       "version": "0.9.8",
       "changes": [
         "新增“禁用原生深色图标”列表，可按图标、App 名称或 bundle ID 搜索并选择应用。",
@@ -175,6 +182,13 @@
         "Respring after updating; no cache clearing is required, and previously ungenerated icons finish in the background"
       ],
       "changelog": [
+        {
+          "version": "0.9.9",
+          "changes": [
+            "Improves consistency between miniature and Home Screen dark icons, reduces partially light artwork, and improves cache reuse.",
+            "Fixes blank icons that could occur during Spotlight search refreshes and improves icon display stability."
+          ]
+        },
         {
           "version": "0.9.8",
           "changes": [
