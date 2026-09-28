@@ -68,6 +68,7 @@ class BuildRepoTests(unittest.TestCase):
                         "developer": "Banana",
                         "description": ["Long description"],
                         "notice": "Web notice",
+                        "notice_style": "warning",
                         "features": ["Feature one"],
                         "compatibility": ["iOS 16–18", "Rootless"],
                         "usage": ["Install the package"],
@@ -158,6 +159,7 @@ class BuildRepoTests(unittest.TestCase):
             self.assertIn('data-language="zh-Hans"', html_depiction)
             self.assertIn('data-language="en"', html_depiction)
             self.assertIn("English initial release", html_depiction)
+            self.assertEqual(html_depiction.count('class="notice notice-warning"'), 2)
             self.assertIn("Web notice", html_depiction)
             self.assertIn("English web notice", html_depiction)
             self.assertIn("Web notice", json.dumps(depiction))

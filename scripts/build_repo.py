@@ -240,6 +240,8 @@ def load_package_infos(root: Path) -> dict[str, tuple[dict, Path]]:
                 raise ValueError(f"{source}: {key} must be an array of non-empty strings")
             info[key] = value
 
+        if info.get("notice_style", "default") not in ("default", "warning"):
+            raise ValueError(f"{source}: notice_style must be default or warning")
         notice = info.get("notice")
         if notice is not None:
             if not isinstance(notice, str) or not notice.strip():
@@ -530,8 +532,9 @@ def make_html_locale(info: dict, info_dir: Path, locale: str) -> str:
     description_section = (
         f'<section class="description">{description}</section>' if description else ""
     )
+    notice_class = "notice notice-warning" if info.get("notice_style") == "warning" else "notice"
     notice = (
-        f'<aside class="notice" role="note"><strong>{html.escape(localized["notice"])}</strong></aside>'
+        f'<aside class="{notice_class}" role="note"><strong>{html.escape(localized["notice"])}</strong></aside>'
         if localized.get("notice")
         else ""
     )
