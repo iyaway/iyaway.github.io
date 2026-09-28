@@ -50,7 +50,8 @@
     "长按电池详情、面板箭头、触感反馈与电话助手电池长按兼容开关",
     "提醒事项支持自然日范围、完成反馈与重复点击防护",
     "系统状态图标可在左侧胶囊下方独立排列，支持对齐、独立缩放及上下位置调整",
-    "星环与胶囊网络图标支持独立上下位置调整，mini Dock 沿用星环设置"
+    "星环与胶囊网络图标支持独立上下与左右位置调整，mini Dock 沿用星环设置",
+    "左侧胶囊可关闭返回上一个 App 的显示，保持当前模块内容"
   ],
   "compatibility": [
     "iOS 15–26（iOS 15 未经实机测试；新系统功能未完全验证）",
@@ -73,6 +74,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.6",
+      "changes": [
+        "修复左侧胶囊在桌面与 App 间宽度不一致及上下跳动问题；修正合并图标缩放，单个图标不再受影响，多图在避让时也能按设置放大。",
+        "新增星环与胶囊网络图标左右位移，mini Dock 沿用星环设置；统一左右胶囊的圆角曲线。",
+        "新增“显示返回上一个 App”开关，可保持当前模块显示；修复 iOS 16 控制中心在未开启隐藏 VPN 时仍不显示 VPN 的问题。"
+      ]
+    },
     {
       "version": "1.0.5",
       "changes": [
@@ -274,7 +283,8 @@
         "Battery details on long press, panel arrows, haptics and optional CallAssist battery long-press compatibility",
         "Calendar-day reminder ranges, completion feedback and duplicate-tap protection",
         "Show a separate system status-icon row below the left capsule with alignment, independent size, and vertical position controls",
-        "Adjust network icons vertically in Orbit and Capsule; mini Dock uses the Orbit setting"
+        "Adjust network icons horizontally and vertically in Orbit and Capsule; mini Dock uses the Orbit setting",
+        "Optionally hide Return to Previous App in the left capsule and keep the current module visible"
       ],
       "compatibility": [
         "iOS 15–26 (iOS 15 untested on devices; newer system features not fully verified)",
@@ -296,6 +306,14 @@
         "For CallAssist battery long presses, enable the corresponding CallAssist feature first, then enable Battery Long-Press Compatibility in Lunora. This suspends Lunora’s own battery-details long press."
       ],
       "changelog": [
+        {
+          "version": "1.0.6",
+          "changes": [
+            "Fixed left capsule width differences and vertical jumps between the Home Screen and apps. Merged-icon scaling now leaves single icons unchanged and enlarges groups during avoidance.",
+            "Added horizontal network-icon positioning for Orbit and Capsule, with mini Dock using Orbit settings. Unified corner curves on both capsules.",
+            "Added a Show Return to Previous App switch to keep the current module visible. Fixed missing VPN indicators in iOS 16 Control Center when Hide VPN is off."
+          ]
+        },
         {
           "version": "1.0.5",
           "changes": [
