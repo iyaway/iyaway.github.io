@@ -9,7 +9,7 @@
     "MusicHaptics 为越狱 iPhone 带来音乐触感反馈，在播放支持的歌曲时，让振动跟随音乐的节奏与变化。",
     "可选择全部混音或仅人声，搭配弱、中、强三档强度；通过设置或控制中心随时开启与关闭。"
   ],
-  "notice": "iOS 18 及以上尚未完成兼容验证，不保证可用。当前不支持已测试的环境音乐免费内容及 Shazam 免费试听。首次加载歌曲触感需要联网，部分歌曲可能没有触感或人声轨道。请使用正常播放速度，并关闭杜比全景声；如已开启系统自带音乐触感，请先关闭以免重复反馈。",
+  "notice": "若提示触感下载服务未响应，请先在 Shazam 或控制中心启动一次“音乐识别”，结束识别后返回音乐 App，并点击“重试当前歌曲”。iOS 18 及以上尚未完成兼容验证，不保证可用。当前不支持已测试的环境音乐免费内容及 Shazam 免费试听。首次加载歌曲触感需要联网，部分歌曲可能没有触感或人声轨道。请使用正常播放速度，并关闭杜比全景声；如已开启系统自带音乐触感，请先关闭以免重复反馈。",
   "features": [
     "为支持的歌曲提供同步音乐触感反馈",
     "全部混音与仅人声两种模式",
@@ -20,9 +20,9 @@
   ],
   "compatibility": [
     "最低 iOS 15，无最高版本限制",
-    "iOS 15 已完成 Apple Music 下载与播放实测",
-    "iOS 17 有此前版本的 Apple Music 成功记录",
-    "iOS 16 待测；iOS 18 及以上尚未完成兼容验证，不保证可用",
+    "iOS 15、16、17 已有用户实测",
+    "iOS 18 及以上兼容性仍待验证，不保证可用",
+    "部分设备需先启动一次音乐识别，再重试歌曲",
     "需要支持触感反馈的越狱 iPhone",
     "Rootless / RootHide",
     "每个安装包均包含 arm64 / arm64e",
@@ -33,10 +33,19 @@
     "启用插件，选择全部混音或仅人声，并设置触感强度。",
     "在 Apple Music 中以正常速度播放支持的歌曲；首次加载请保持网络连接。",
     "在控制中心添加“音乐触感”，即可快速开关。",
-    "可点击“播放样本”体验当前强度；没有反馈时查看“播放状态”或重试当前歌曲。"
+    "可点击“播放样本”体验当前强度；没有反馈时查看“播放状态”或重试当前歌曲。",
+    "若提示触感下载服务未响应，请先在 Shazam 或控制中心启动一次“音乐识别”，结束识别后返回音乐 App，并点击“重试当前歌曲”。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.3",
+      "changes": [
+        "改善 iOS 16 的歌曲触感下载兼容性。",
+        "新增下载未响应时的操作提示：先启动一次 Shazam 或控制中心“音乐识别”，再重试歌曲。",
+        "iOS 15、16、17 已有用户实测；iOS 18 及以上兼容性仍待验证。"
+      ]
+    },
     {
       "version": "0.1.2",
       "changes": [
@@ -62,7 +71,7 @@
         "MusicHaptics brings music haptic feedback to jailbroken iPhones, with vibrations that follow the rhythm and changes of supported songs.",
         "Choose Full Mix or Vocals Only with Weak, Medium, or Strong intensity, and toggle playback from Settings or Control Center."
       ],
-      "notice": "iOS 18 and later compatibility remains unverified and is not guaranteed. The tested free Ambient Music content and Shazam previews are not currently supported. An internet connection is needed to load a song's haptics for the first time. Some songs have no haptic or vocal track. Use normal playback speed with Dolby Atmos off. Turn off Apple's built-in Music Haptics before using this tweak to avoid duplicate feedback.",
+      "notice": "If the haptic download service does not respond, start music recognition once in Shazam or Control Center, end recognition, return to your music app, and tap Retry Current Song in the tweak settings. iOS 18 and later compatibility remains unverified and is not guaranteed. The tested free Ambient Music content and Shazam previews are not currently supported. An internet connection is needed to load a song's haptics for the first time. Some songs have no haptic or vocal track. Use normal playback speed with Dolby Atmos off. Turn off Apple's built-in Music Haptics before using this tweak to avoid duplicate feedback.",
       "features": [
         "Synchronized music haptic feedback for supported songs",
         "Full Mix and Vocals Only modes",
@@ -73,9 +82,9 @@
       ],
       "compatibility": [
         "Requires iOS 15 or later; no upper version limit",
-        "Apple Music download and playback tested on iOS 15",
-        "Earlier Apple Music playback success on iOS 17",
-        "iOS 16 awaits testing; iOS 18 and later compatibility remains unverified and is not guaranteed",
+        "User-tested on iOS 15, 16 and 17",
+        "iOS 18 and later compatibility remains unverified and is not guaranteed",
+        "Some devices require starting Music Recognition once, then retrying the song",
         "Requires a jailbroken iPhone with haptic support",
         "Rootless / RootHide",
         "Both packages include arm64 / arm64e",
@@ -86,9 +95,18 @@
         "Enable the tweak, select Full Mix or Vocals Only, and choose an intensity level.",
         "Play a supported song in Apple Music at normal speed; keep an internet connection for the first load.",
         "Add Music Haptics to Control Center for quick toggling.",
-        "Use Play Sample to feel the selected intensity. If a song produces no feedback, check Playback Status or retry it."
+        "Use Play Sample to feel the selected intensity. If a song produces no feedback, check Playback Status or retry it.",
+        "If the haptic download service does not respond, start music recognition once in Shazam or Control Center, end recognition, return to your music app, and tap Retry Current Song in the tweak settings."
       ],
       "changelog": [
+        {
+          "version": "0.1.3",
+          "changes": [
+            "Improve song haptic download compatibility on iOS 16.",
+            "Add guidance for unresponsive downloads: start music recognition once in Shazam or Control Center, then retry the song.",
+            "User-tested on iOS 15, 16 and 17; compatibility with iOS 18 and later remains unverified."
+          ]
+        },
         {
           "version": "0.1.2",
           "changes": [
