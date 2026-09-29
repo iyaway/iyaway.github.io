@@ -42,7 +42,8 @@
     "自定义玻璃时钟，支持折射、边缘高光与前景景深遮挡",
     "可选择滑动时保留折射，或在滑动时临时使用柔化效果",
     "可在锁屏播放器出现时隐藏时钟",
-    "日期上下位置可在 -1000～1000 点间调整，系统与自定义时钟共用设置"
+    "日期上下位置可在 -1000～1000 点间调整，系统与自定义时钟共用设置",
+    "提供“重载玻璃服务”按钮，带操作确认和失败提示"
   ],
   "compatibility": [
     "iOS 15–18",
@@ -62,12 +63,20 @@
     "如需保留系统锁屏壁纸，可开启“锁屏使用原壁纸”；此时景深与自动取色会停用。",
     "锁屏和桌面均使用原壁纸时，无需导入空间场景，仍可调整时间字体、手动填充颜色和不透明度。",
     "在壁纸设置中开启或关闭深色壁纸，并使用 0–100% 强度调节整体暗化；0% 保持原图，现有壁纸无需重新导入或转换。",
-    "开启“使用自定义时钟”和“时钟玻璃效果”后使用新效果；首次安装玻璃功能或更新玻璃功能后，请重启用户空间。",
+    "开启“使用自定义时钟”和“时钟玻璃效果”后使用新效果；首次安装或更新玻璃功能后，可在“维护”中选择“重载玻璃服务”。此操作会强制中断图形会话，请先保存工作；若提示失败，请使用越狱工具重载图形会话。日常修改设置无需重载。",
     "“滑动时保留折射”默认关闭，停稳后恢复折射；通知收缩暂未开放，手动字高仍可调整。",
     "在“锁屏时间调整”中使用“日期上下位置（点）”：负数向上、正数向下，0 恢复原位。较大偏移可能移出屏幕，关闭时间修改时恢复原位。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.16",
+      "changes": [
+        "修复部分 iOS 15 设备安装后异常重启的问题，即使未开启玻璃时钟也可能受影响。",
+        "修复 iOS 15 自定义时钟与系统时间重叠、位置偏移的问题，并修复切换时钟或壁纸设置时可能进入安全模式的问题。",
+        "新增“重载玻璃服务”按钮，提供操作确认和失败提示，方便安装或更新玻璃功能后重新加载效果。"
+      ]
+    },
     {
       "version": "1.1.14",
       "changes": [
@@ -240,7 +249,8 @@
         "Custom glass clock with refraction, highlighted edges, and foreground depth occlusion",
         "Keep refraction while swiping or temporarily use a softened effect during motion",
         "Option to hide the clock when the Lock Screen media player is visible",
-        "Adjust date position from -1000 to 1000 points with shared settings for system and custom clocks"
+        "Adjust date position from -1000 to 1000 points with shared settings for system and custom clocks",
+        "Reload Glass Service button with confirmation and failure messages"
       ],
       "compatibility": [
         "iOS 15–18",
@@ -260,11 +270,19 @@
         "Enable Use Stock Lock Wallpaper to keep the system Lock Screen wallpaper; depth and automatic clock coloring are then disabled.",
         "When both screens use stock wallpapers, no spatial scene import is required to adjust clock fonts, manual fill color, or opacity.",
         "Enable or disable Dark Wallpaper and adjust global dimming from 0–100%; 0% keeps the original image, and existing wallpapers require no re-import or conversion.",
-        "Enable Use Custom Clock and Clock Glass Effect. Restart userspace after first installing or updating the glass feature.",
+        "Enable Use Custom Clock and Clock Glass Effect. After first installing or updating glass, use Reload Glass Service under Maintenance. This forcibly interrupts the graphical session, so save your work first. If it fails, reload the graphical session with your jailbreak tool. Normal setting changes do not require a reload.",
         "Keep Refraction While Swiping defaults off and refraction returns when settled. Notification shrinking is temporarily unavailable; manual font height remains adjustable.",
         "Use Date Vertical Offset (pt) under Lock Screen Time Adjustment: negative moves up, positive moves down, and 0 restores the original position. Large offsets can move the date offscreen; disabling clock modification restores its original position."
       ],
       "changelog": [
+        {
+          "version": "1.1.16",
+          "changes": [
+            "Fixed unexpected restarts after installation on some iOS 15 devices, which could occur even with the glass clock disabled.",
+            "Fixed overlapping system and custom clocks and incorrect custom-clock positioning on iOS 15, and fixed a possible Safe Mode trigger when switching clock or wallpaper settings.",
+            "Added Reload Glass Service with confirmation and failure messages to reload effects after installing or updating the glass feature."
+          ]
+        },
         {
           "version": "1.1.14",
           "changes": [
