@@ -30,7 +30,7 @@
     "简体中文、繁体中文和英文设置，保存后即时应用",
     "修正设置页首次进入时的标题显示及桌面翻页时的角标异常闪现",
     "四款顶部条形独立设置是否显示数字，默认关闭；圆点数量固定，不代表未读数量",
-    "双斜线采用圆弧玻璃底、右下模糊斜边与增强光晕，多位数字自动适配",
+    "双斜线采用圆弧玻璃底、右下模糊斜边与增强光晕，多位数字自动适配，数字使用粗体并完整适配 99+",
     "柔光脉冲条支持柔和呼吸，遵循动画开关与系统“减弱动态效果”"
   ],
   "usage": [
@@ -44,6 +44,13 @@
   "notice": "给我的朋友:Billie。最低要求 iOS 15；更高系统版本及不同主题、动画组合的兼容性仍需按实际设备确认。",
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.15",
+      "changes": [
+        "增强双斜线数字可读性：采用粗体，单数字略放大，多位数字自动适配并完整显示 99+。",
+        "优化样式切换时的旧外观清理，针对切换到侧边胶囊后可能残留的遮挡。"
+      ]
+    },
     {
       "version": "0.1.14",
       "changes": [
@@ -119,7 +126,7 @@
         "Settings in English, Simplified Chinese, and Traditional Chinese with immediate application",
         "Corrected initial settings-page titles and abnormal badge flashes during Home Screen paging",
         "Independent Show Number toggles for all four top-bar styles, disabled by default; the fixed dot count does not represent unread counts",
-        "Double Line with a rounded glass backing, a soft diagonal lower-right edge, stronger glow, and fitted multi-digit counts",
+        "Double Line with a rounded glass backing, a soft diagonal lower-right edge, stronger glow, and fitted multi-digit counts using bold text with complete 99+ display",
         "Gentle Soft Pulse Bar breathing that respects the animation toggle and Reduce Motion"
       ],
       "compatibility": [
@@ -135,6 +142,13 @@
         "Optionally enable notification pulses; saved settings apply immediately."
       ],
       "changelog": [
+        {
+          "version": "0.1.15",
+          "changes": [
+            "Improved Double Line number legibility with bold text, slightly larger single digits, and fitted multi-digit counts that keep 99+ fully visible.",
+            "Improved cleanup when switching styles to address possible visual remnants when switching to Side Pill."
+          ]
+        },
         {
           "version": "0.1.14",
           "changes": [
