@@ -10,12 +10,12 @@
     "Rootless 与 RootHide"
   ],
   "description": [
-    "微光角标为桌面通知角标加入玻璃质感与柔和光晕，提供胶囊、光环、悬浮光球、侧边胶囊、玻璃圆环和渐变光线六种样式。",
+    "微光角标为桌面通知角标加入玻璃质感与柔和光晕，提供胶囊、光环、悬浮光球、侧边胶囊、玻璃圆环、渐变光线、双斜线、渐变条、玻璃条、柔光脉冲条和圆点条十一种样式。",
     "每种样式独立保存大小、模糊不透明度、位置和自定义文字颜色；支持从整张图标选择主要彩色区域，无法取得可靠颜色时使用经典红色。",
     "沿用系统原生角标数量，数量增加可触发柔和脉冲；关闭插件后恢复系统角标。"
   ],
   "features": [
-    "胶囊、光环、悬浮光球、侧边胶囊、玻璃圆环和渐变光线六种玻璃角标样式",
+    "十一种角标样式：胶囊、光环、悬浮光球、侧边胶囊、玻璃圆环、渐变光线、双斜线、渐变条、玻璃条、柔光脉冲条和圆点条",
     "自动跟随系统浅色与深色外观；启用自定义文字颜色时保留所选文字颜色",
     "从整张图标提取主要彩色区域，无可靠颜色时回退红色；也可统一自定义颜色",
     "每种样式独立设置数字文字颜色，默认关闭，关闭后恢复系统深浅模式配色",
@@ -28,18 +28,30 @@
     "保留 App 原有角标数量，大数量显示为 99+，关闭插件后恢复系统角标",
     "优化图标动画跟随和首次显示时机，减少角标提前出现或与图标分离",
     "简体中文、繁体中文和英文设置，保存后即时应用",
-    "修正设置页首次进入时的标题显示及桌面翻页时的角标异常闪现"
+    "修正设置页首次进入时的标题显示及桌面翻页时的角标异常闪现",
+    "四款顶部条形独立设置是否显示数字，默认关闭；圆点数量固定，不代表未读数量",
+    "双斜线采用圆弧玻璃底、右下模糊斜边与增强光晕，多位数字自动适配",
+    "柔光脉冲条支持柔和呼吸，遵循动画开关与系统“减弱动态效果”"
   ],
   "usage": [
     "安装后打开“设置 → 微光角标”并开启插件。",
-    "从六种角标样式中选择一种，并按需设置应用配色、自定义颜色和环境光晕强度。",
+    "从十一种角标样式中选择一种，并按需设置应用配色、自定义颜色和环境光晕强度。",
     "进入当前样式的设置页，调整大小、模糊不透明度和位置；需要时开启“自定义文字颜色”并选色。位置归零只影响当前样式的位置。",
+    "选择顶部条形后，可在当前样式设置中开启“显示数字”；关闭数字时保留已选文字颜色。",
     "拖动滑块后松手应用，或点击数值手动输入位置、大小和 模糊不透明度；位置支持最多两位小数。",
     "按需开启通知脉冲；所有设置保存后即时生效。"
   ],
   "notice": "给我的朋友:Billie。最低要求 iOS 15；更高系统版本及不同主题、动画组合的兼容性仍需按实际设备确认。",
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.14",
+      "changes": [
+        "新增双斜线、渐变条、玻璃条、柔光脉冲条和圆点条，共十一种样式。",
+        "新增样式独立保存大小、位置、模糊不透明度和文字颜色；四款顶部条形可分别开关数字显示，保留已有设置。",
+        "双斜线采用圆弧玻璃底与右下柔化斜边，增强光晕并留出数字间距；柔光脉冲条支持呼吸动画，遵循动画开关与“减弱动态效果”。"
+      ]
+    },
     {
       "version": "0.1.13",
       "changes": [
@@ -86,13 +98,13 @@
       "name": "AmbientBadge",
       "tagline": "Give notification badges a glass appearance and a soft ambient glow.",
       "description": [
-        "AmbientBadge gives Home Screen notification badges a glass appearance and a soft ambient glow, with six styles: Capsule, Orbit, Floating Orb, Side Pill, Glass Ring, and Gradient Line.",
+        "AmbientBadge gives Home Screen notification badges a glass appearance and soft ambient glow, with eleven styles: Capsule, Orbit, Floating Orb, Side Pill, Glass Ring, Gradient Line, Double Line, Gradient Bar, Glass Bar, Soft Pulse Bar, and Dot Bar.",
         "Each style saves its own size, blur opacity, position, and custom text color. Colors are selected from substantial colored areas across the whole icon, with a classic red fallback when no reliable color is available.",
         "It preserves native badge counts, can pulse gently when counts increase, and restores system badges when disabled."
       ],
       "notice": "Made by Banana, for Billie. Requires iOS 15 or later; compatibility with newer iOS versions and individual theme or animation combinations still needs confirmation on the relevant device.",
       "features": [
-        "Six glass badge styles: Capsule, Orbit, Floating Orb, Side Pill, Glass Ring, and Gradient Line",
+        "Eleven styles: Capsule, Orbit, Floating Orb, Side Pill, Glass Ring, Gradient Line, Double Line, Gradient Bar, Glass Bar, Soft Pulse Bar, and Dot Bar",
         "Automatic system Light and Dark appearance, with the chosen text color preserved when its custom option is enabled",
         "Whole-icon color extraction with a red fallback, or one unified custom color",
         "Independent custom count-text colors for each style, disabled by default; turning off restores system appearance colors",
@@ -105,7 +117,10 @@
         "Native badge counts with 99+ display and system-badge restoration when disabled",
         "Improved icon animation following and first-display timing to reduce early or detached badges",
         "Settings in English, Simplified Chinese, and Traditional Chinese with immediate application",
-        "Corrected initial settings-page titles and abnormal badge flashes during Home Screen paging"
+        "Corrected initial settings-page titles and abnormal badge flashes during Home Screen paging",
+        "Independent Show Number toggles for all four top-bar styles, disabled by default; the fixed dot count does not represent unread counts",
+        "Double Line with a rounded glass backing, a soft diagonal lower-right edge, stronger glow, and fitted multi-digit counts",
+        "Gentle Soft Pulse Bar breathing that respects the animation toggle and Reduce Motion"
       ],
       "compatibility": [
         "iOS 15 and later",
@@ -113,12 +128,21 @@
       ],
       "usage": [
         "Open Settings → AmbientBadge after installation and enable the tweak.",
-        "Choose one of the six badge styles, then configure app colors, a custom color, and ambient glow intensity as desired.",
+        "Choose one of the eleven badge styles, then configure app colors, a custom color, and ambient glow intensity as desired.",
         "Open the selected style's settings to adjust size, blur opacity, and position, or enable Custom Text Color and choose a color. Reset Position affects only that style's position.",
+        "For a top-bar style, enable Show Number in its style settings if desired. Hiding numbers keeps the chosen text color saved.",
         "Release sliders to apply changes, or tap values to enter position, size, and Blur Opacity manually; position accepts up to two decimal places.",
         "Optionally enable notification pulses; saved settings apply immediately."
       ],
       "changelog": [
+        {
+          "version": "0.1.14",
+          "changes": [
+            "Added Double Line, Gradient Bar, Glass Bar, Soft Pulse Bar, and Dot Bar, bringing the total to eleven styles.",
+            "New styles save size, position, blur opacity, and text color independently. Each top-bar style has its own number toggle, while existing settings are preserved.",
+            "Double Line features a rounded glass backing, a soft diagonal lower-right edge, stronger glow, and more room for numbers. Soft Pulse Bar supports breathing animation, respecting the animation toggle and Reduce Motion."
+          ]
+        },
         {
           "version": "0.1.13",
           "changes": [
