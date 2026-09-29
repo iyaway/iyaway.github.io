@@ -17,14 +17,14 @@
     "mini Dock 支持固定或最近使用 App、应用搜索和拖动排序，最多选择 8 个 App 并按可用空间显示",
     "mini Dock 可与星环共存，也可关闭星环仅保留 App Dock；支持独立位置调整并在星环展开时自动避让",
     "通知 App 图标、内容滚动、点击跳转及从灵动岛或刘海区域展开的横幅动画",
-    "支持隐藏系统音量条",
+    "可隐藏系统音量条，并可选择横屏恢复原生音量条（默认开启）",
     "胶囊水平加长及 AM/PM 同行、上方或下方排列",
     "左右胶囊独立宽度、高度和线宽调节，右侧线宽同时作用于星环",
     "双卡运营商常驻、自定义文字与双行显示",
     "时间、日期和运营商支持系统字体或已安装自定义字体，可搜索、预览和选择",
     "除天气与温度外，各模块可独立隐藏图标",
-    "右侧网络区域支持自定义文字、字号和位置",
-    "灵动岛避让支持隐藏或横向收窄，左右可独立保留文字区或图标区，收窄时保持高度",
+    "右侧网络区域支持自定义文字、字号和位置，自定义配色可沿用 VPN 着色",
+    "灵动岛避让支持隐藏或横向收窄；左右可分别保留文字／图标，或在固定外框内整组滚动",
     "锁屏显示原生右侧状态，解锁后收拢为胶囊或星环",
     "岛内展开通知样式，并修正活动窗口判断导致的通知回退",
     "优化小屏、锁屏和通知中心布局，并正确应用强制 12/24 小时设置",
@@ -43,9 +43,9 @@
     "胶囊模式可选择不隐藏左侧系统时间",
     "配置导入／导出带完整性校验，兼容旧配置并保留缺失的新设置",
     "独立摆放日期、时间、星期及农历，分别设置字体、字号与文字方向",
-    "右侧胶囊支持多行自定义文字与电池信息，可选滚动、缩小或手动换行",
-    "mini Dock 自定义文件夹与图标大小；合并系统状态图标并调整大小",
-    "左右尽量占满空间、仅横向收窄配合文字滚动、玻璃边框原色与可选水珠动画",
+    "右侧胶囊支持多行文字、电池信息及上下行网速，方向标识可选箭头／三角，并可滚动、缩小或手动换行",
+    "mini Dock 自定义文件夹与图标大小，应用及文件夹可选圆形；合并系统状态图标并调整大小",
+    "左右尽量占满空间、玻璃边框原色及可选水珠动画，支持 50%–300% 幅度调节与即时预览",
     "可调 Wi-Fi 线宽及 Wi-Fi／蜂窝显示强度",
     "长按电池详情、面板箭头、触感反馈与电话助手电池长按兼容开关",
     "提醒事项支持自然日范围、完成反馈与重复点击防护",
@@ -64,16 +64,26 @@
     "选择胶囊玻璃样式与常驻模块，横向滑动可切换当前模块。",
     "分别调整左右胶囊的宽度、高度和线宽；按需设置运营商、网络文字与模块图标显示。",
     "为时间、日期或运营商选择系统或已安装字体，并可搜索和预览。",
-    "按需设置灵动岛避让为隐藏或横向收窄，并分别选择左右保留文字区或图标区；也可开启锁屏原生右侧状态及岛内展开通知。",
+    "按需设置灵动岛避让为隐藏或横向收窄，并选择保留区域或图标与文字整组滚动；也可开启锁屏原生右侧状态及岛内展开通知。",
     "在 mini Dock 中最多选择 8 个固定或最近使用 App，并可搜索、排序、调整位置或关闭星环仅保留 App Dock。",
     "按需调整布局、配色与精确数值；设置修改即时生效。",
     "遇到布局问题时可导出诊断或手动采集布局，并附机型、iOS 版本与复现步骤。",
     "需要帮助时可通过设置主页的 Discord 入口反馈，或点击 QQ 交流群复制群号 1126594257。",
     "在“维护与关于 → 配置备份”导出或导入配置；导入前会显示支持项数量，缺失项保留当前值，保存的总开关值也会应用。诊断报告不能作为配置导入。",
-    "需要电话助手电池长按时，先在电话助手启用对应功能，再开启 Lunora 的“兼容电池长按”；开启后暂停 Lunora 自己的电池详情长按。"
+    "需要电话助手电池长按时，先在电话助手启用对应功能，再开启 Lunora 的“兼容电池长按”；开启后暂停 Lunora 自己的电池详情长按。",
+    "在右侧胶囊内容中选择网速及上下行方向、箭头或三角标识；自定义配色时可选网络图标使用 VPN 着色。",
+    "在“交互与动画”开启水珠弹性动画并调整幅度，可预览当前可见胶囊；连续调整会合并预览，遵循系统减弱动态效果。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.7",
+      "changes": [
+        "右侧胶囊新增上行／下行／上下行网速，方向标识可选箭头或三角；自定义配色可让网络图标沿用 VPN 着色，优化星环与胶囊展开时的网络图标尺寸衔接。",
+        "左右胶囊支持收窄后图标与文字整组滚动；水珠动画新增 50%–300% 幅度调节与预览。mini Dock 应用及文件夹可选圆形图标，并新增默认开启的横屏恢复系统音量条选项。",
+        "改善静音及组合状态图标的重复显示与刷新延迟，包括开启“不隐藏左侧时间”的场景；减少音量调节及下拉通知栏时的卡顿。"
+      ]
+    },
     {
       "version": "1.0.6",
       "changes": [
@@ -250,14 +260,14 @@
         "mini Dock with pinned or recent apps, app search, drag reordering, up to eight selections, and display based on available space",
         "Use mini Dock alongside Orbit, or disable Orbit for an apps-only Dock, with independent positioning and automatic avoidance during Orbit expansion",
         "Notification app icons, scrolling content, tap-to-open actions, and banners expanding from the Dynamic Island or notch",
-        "Option to hide the system volume HUD",
+        "Hide the system volume HUD, with optional landscape restoration enabled by default",
         "Extended capsule width and inline, above, or below AM/PM placement",
         "Independent width, height, and line-width controls for the left and right capsules; right-side line width also applies to Orbit",
         "Persistent dual-SIM carrier display with custom text and two-line layout",
         "System or installed custom fonts for time, date, and carrier text, with search and preview",
         "Optional icon hiding for every module except Weather and Temperature",
-        "Custom text, font size, and position for the right network area",
-        "Dynamic Island avoidance with Hide or Narrow Horizontally modes and independent text/icon retention on each side while preserving height",
+        "Custom right-side network text, font size and position, with optional VPN tint for custom network colors",
+        "Dynamic Island avoidance with hiding or horizontal narrowing; retain text/icons independently or scroll their whole group inside a fixed shell",
         "Native right-side status on the Lock Screen, collapsing into Capsule or Orbit after unlocking",
         "In-Island notification expansion style with improved notification fallback behavior",
         "Improved compact, Lock Screen, and Notification Center layouts with correct forced 12/24-hour behavior",
@@ -276,9 +286,9 @@
         "Optionally keep the native left-side time visible in Capsule mode",
         "Configuration import/export with integrity checks, older-file compatibility, and preservation of missing settings",
         "Independent date, time, weekday and lunar-date placement, fonts, sizes and text directions",
-        "Multiline right-capsule text and battery information with scrolling, shrinking or manual line breaks",
-        "Custom mini Dock folders and icon sizing, plus merged system status icons with scaling",
-        "Fuller-space layouts, narrowing with scrolling text, original-color glass outlines and optional water-drop motion",
+        "Multiline right-capsule text, battery information and upload/download rates with arrow or triangle markers, scrolling, shrinking or manual line breaks",
+        "Custom mini Dock folders and icon sizing, optional round app/folder icons, and merged system status icons with scaling",
+        "Fuller-space layouts, original-color glass outlines and optional water-drop motion with 50–300% amplitude and preview",
         "Adjustable Wi-Fi stroke width and displayed Wi-Fi/cellular strength",
         "Battery details on long press, panel arrows, haptics and optional CallAssist battery long-press compatibility",
         "Calendar-day reminder ranges, completion feedback and duplicate-tap protection",
@@ -297,15 +307,25 @@
         "Choose a capsule glass style and resting module; swipe horizontally to switch the active module.",
         "Adjust left and right capsule width, height, and line width independently; configure carrier text, network text, and module icons as needed.",
         "Choose system or installed fonts for time, date, and carrier text, with search and preview.",
-        "Set Dynamic Island avoidance to Hide or Narrow Horizontally and choose whether each side retains text or icons; optionally enable native right-side Lock Screen status and In-Island notifications.",
+        "Choose hiding or horizontal narrowing for Dynamic Island avoidance, retaining a selected area or scrolling icons and text together; optionally enable native right-side Lock Screen status and In-Island notifications.",
         "Choose up to eight pinned or recent apps in mini Dock, then search, reorder, and position them as needed, or disable Orbit for an apps-only Dock.",
         "Adjust layouts, colors, and exact values as desired; settings changes apply immediately.",
         "For layout issues, export diagnostics or record a manual layout and include the device model, iOS version, and reproduction steps.",
         "Use the Discord entry for feedback, or tap the QQ group entry to copy 1126594257.",
         "Use Maintenance and About → Configuration Backup to export or import settings. Imports show the supported-entry count, preserve missing values and apply the saved master switch. Diagnostic reports are not configuration files.",
-        "For CallAssist battery long presses, enable the corresponding CallAssist feature first, then enable Battery Long-Press Compatibility in Lunora. This suspends Lunora’s own battery-details long press."
+        "For CallAssist battery long presses, enable the corresponding CallAssist feature first, then enable Battery Long-Press Compatibility in Lunora. This suspends Lunora’s own battery-details long press.",
+        "Choose network rates, upload/download directions and arrow or triangle markers in right-capsule content. Custom network colors can optionally use VPN tint.",
+        "Enable Water-Drop Spring Animation under Interaction and Animation, then adjust amplitude to preview visible capsules. Rapid changes are combined; Reduce Motion is respected."
       ],
       "changelog": [
+        {
+          "version": "1.0.7",
+          "changes": [
+            "Added right-capsule upload/download rates with arrow or triangle markers, plus VPN tint for custom network colors. Orbit and Capsule expansion now settles at native network-icon size.",
+            "Both capsules can scroll icons and text together when narrowed. Added 50–300% water-drop amplitude with preview, round mini Dock app/folder icons, and a landscape native volume HUD option enabled by default.",
+            "Improved mute and combined-icon deduplication and refresh, including with Do Not Hide Left Time enabled. Reduced stutter during volume changes and Notification Center gestures."
+          ]
+        },
         {
           "version": "1.0.6",
           "changes": [
