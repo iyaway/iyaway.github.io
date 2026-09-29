@@ -24,7 +24,7 @@
     "时间、日期和运营商支持系统字体或已安装自定义字体，可搜索、预览和选择",
     "除天气与温度外，各模块可独立隐藏图标",
     "右侧网络区域支持自定义文字、字号和位置，自定义配色可沿用 VPN 着色",
-    "灵动岛避让支持隐藏或横向收窄；左右可分别保留文字／图标，或在固定外框内整组滚动",
+    "灵动岛避让支持隐藏或横向收窄；左右可分别保留文字／图标，或选择仅文字滚动／在固定外框内整组滚动",
     "锁屏显示原生右侧状态，解锁后收拢为胶囊或星环",
     "岛内展开通知样式，并修正活动窗口判断导致的通知回退",
     "优化小屏、锁屏和通知中心布局，并正确应用强制 12/24 小时设置",
@@ -51,7 +51,12 @@
     "提醒事项支持自然日范围、完成反馈与重复点击防护",
     "系统状态图标可在左侧胶囊下方独立排列，支持对齐、独立缩放及上下位置调整",
     "星环与胶囊网络图标支持独立上下与左右位置调整，mini Dock 沿用星环设置",
-    "左侧胶囊可关闭返回上一个 App 的显示，保持当前模块内容"
+    "左侧胶囊可关闭返回上一个 App 的显示，保持当前模块内容",
+    "真实音频波形，多种音乐可视化样式及音频服务重载入口",
+    "未读通知铃铛可在锁屏后持续显示，直到对应通知已处理",
+    "星环左侧可显示信息，与胶囊分别保存文字、字体及多行排版；网速可与其他内容混排",
+    "系统图标分类筛选，点击胶囊可临时在独立图标行显示全部有效图标",
+    "控制中心可选显示原生右侧图标，收回后以动画恢复星环或胶囊"
   ],
   "compatibility": [
     "iOS 15–26（iOS 15 未经实机测试；新系统功能未完全验证）",
@@ -64,7 +69,7 @@
     "选择胶囊玻璃样式与常驻模块，横向滑动可切换当前模块。",
     "分别调整左右胶囊的宽度、高度和线宽；按需设置运营商、网络文字与模块图标显示。",
     "为时间、日期或运营商选择系统或已安装字体，并可搜索和预览。",
-    "按需设置灵动岛避让为隐藏或横向收窄，并选择保留区域或图标与文字整组滚动；也可开启锁屏原生右侧状态及岛内展开通知。",
+    "按需设置灵动岛避让为隐藏或横向收窄，并选择保留区域、仅文字滚动或图标与文字整组滚动；也可开启锁屏原生右侧状态及岛内展开通知。",
     "在 mini Dock 中最多选择 8 个固定或最近使用 App，并可搜索、排序、调整位置或关闭星环仅保留 App Dock。",
     "按需调整布局、配色与精确数值；设置修改即时生效。",
     "遇到布局问题时可导出诊断或手动采集布局，并附机型、iOS 版本与复现步骤。",
@@ -72,10 +77,20 @@
     "在“维护与关于 → 配置备份”导出或导入配置；导入前会显示支持项数量，缺失项保留当前值，保存的总开关值也会应用。诊断报告不能作为配置导入。",
     "需要电话助手电池长按时，先在电话助手启用对应功能，再开启 Lunora 的“兼容电池长按”；开启后暂停 Lunora 自己的电池详情长按。",
     "在右侧胶囊内容中选择网速及上下行方向、箭头或三角标识；自定义配色时可选网络图标使用 VPN 着色。",
-    "在“交互与动画”开启水珠弹性动画并调整幅度，可预览当前可见胶囊；连续调整会合并预览，遵循系统减弱动态效果。"
+    "在“交互与动画”开启水珠弹性动画并调整幅度，可预览当前可见胶囊；连续调整会合并预览，遵循系统减弱动态效果。",
+    "在“左侧信息胶囊 → 音乐／媒体”选择波形样式；首次使用若无波形，可确认重新加载音频服务后重新播放，期间声音会短暂中断。",
+    "在“状态图标与边框 → 系统图标显示”选择平时显示的图标及点击临时展开；在“交互与动画 → 控制中心”开启原生图标显示。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.8",
+      "changes": [
+        "音乐新增跟随音频变化的多种波形样式，并提供音频服务重载入口；未读通知铃铛可在锁屏后继续保留。",
+        "星环支持左侧信息，与胶囊分别保存内容和文字样式；网速可融入自定义多行文本，修复自定义配色下的 VPN 着色，左右收窄新增仅文字滚动。",
+        "系统图标可分类筛选，点击胶囊可临时显示全部有效图标；修复静音刷新、定位短闪及静音消失时的胶囊移位。新增控制中心原生图标选项，收回后动画恢复星环或胶囊。"
+      ]
+    },
     {
       "version": "1.0.7",
       "changes": [
@@ -267,7 +282,7 @@
         "System or installed custom fonts for time, date, and carrier text, with search and preview",
         "Optional icon hiding for every module except Weather and Temperature",
         "Custom right-side network text, font size and position, with optional VPN tint for custom network colors",
-        "Dynamic Island avoidance with hiding or horizontal narrowing; retain text/icons independently or scroll their whole group inside a fixed shell",
+        "Dynamic Island avoidance can hide or narrow capsules, with independent area retention, text-only scrolling or whole-content scrolling inside a fixed shell",
         "Native right-side status on the Lock Screen, collapsing into Capsule or Orbit after unlocking",
         "In-Island notification expansion style with improved notification fallback behavior",
         "Improved compact, Lock Screen, and Notification Center layouts with correct forced 12/24-hour behavior",
@@ -294,7 +309,12 @@
         "Calendar-day reminder ranges, completion feedback and duplicate-tap protection",
         "Show a separate system status-icon row below the left capsule with alignment, independent size, and vertical position controls",
         "Adjust network icons horizontally and vertically in Orbit and Capsule; mini Dock uses the Orbit setting",
-        "Optionally hide Return to Previous App in the left capsule and keep the current module visible"
+        "Optionally hide Return to Previous App in the left capsule and keep the current module visible",
+        "Real-audio waveforms with multiple music visualization styles and an audio-service reload action",
+        "An optional unread-notification bell remains after locking until corresponding notifications are handled",
+        "Optional content to the left of Orbit, with separate text, font and multiline settings from Capsule; network rates can be mixed with other fields",
+        "Filter system icons by type and temporarily show all active icons in a separate row when tapping the capsule",
+        "Optionally show native right-side icons in Control Center and animate back to Orbit or Capsule after dismissal"
       ],
       "compatibility": [
         "iOS 15–26 (iOS 15 untested on devices; newer system features not fully verified)",
@@ -315,9 +335,19 @@
         "Use Maintenance and About → Configuration Backup to export or import settings. Imports show the supported-entry count, preserve missing values and apply the saved master switch. Diagnostic reports are not configuration files.",
         "For CallAssist battery long presses, enable the corresponding CallAssist feature first, then enable Battery Long-Press Compatibility in Lunora. This suspends Lunora’s own battery-details long press.",
         "Choose network rates, upload/download directions and arrow or triangle markers in right-capsule content. Custom network colors can optionally use VPN tint.",
-        "Enable Water-Drop Spring Animation under Interaction and Animation, then adjust amplitude to preview visible capsules. Rapid changes are combined; Reduce Motion is respected."
+        "Enable Water-Drop Spring Animation under Interaction and Animation, then adjust amplitude to preview visible capsules. Rapid changes are combined; Reduce Motion is respected.",
+        "Choose a waveform style under Left Information Capsule → Music / Media. If no waveform appears on first use, confirm Reload Audio Services and resume playback; audio briefly stops.",
+        "Choose icon filters and temporary expansion under Status Icons and Outline → System Icon Visibility. Enable native Control Center icons under Interaction and Animation → Control Center."
       ],
       "changelog": [
+        {
+          "version": "1.0.8",
+          "changes": [
+            "Added multiple music waveform styles that follow real audio, plus an audio-service reload action. Unread notification bells can now remain after locking.",
+            "Orbit supports left-side content with separate content and font settings from Capsule. Network rates fit into custom multiline text. Fixed VPN tint with custom colors; both capsules can scroll text only when narrowed.",
+            "Filter system icons by type or tap to show all active icons. Fixed mute refresh, location flashes and capsule shifts when mute disappears. An option shows native icons in Control Center and animates back to Orbit or Capsule after dismissal."
+          ]
+        },
         {
           "version": "1.0.7",
           "changes": [
