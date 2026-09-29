@@ -69,6 +69,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.1.14",
+      "changes": [
+        "修复部分设备在锁屏状态文字更新时发生崩溃的问题。",
+        "保留现有玻璃时钟、景深和日期位置设置，无需重新配置。"
+      ]
+    },
+    {
       "version": "1.1.12",
       "changes": [
         "新增日期上下位置滑块，范围为 -1000～1000 点；负数向上、正数向下，0 恢复原位。",
@@ -258,6 +265,13 @@
         "Use Date Vertical Offset (pt) under Lock Screen Time Adjustment: negative moves up, positive moves down, and 0 restores the original position. Large offsets can move the date offscreen; disabling clock modification restores its original position."
       ],
       "changelog": [
+        {
+          "version": "1.1.14",
+          "changes": [
+            "Fixed a crash that could occur when Lock Screen status text updates on some devices.",
+            "Preserved existing glass clock, depth, and date-position settings; no reconfiguration is required."
+          ]
+        },
         {
           "version": "1.1.12",
           "changes": [
