@@ -5,22 +5,22 @@
   "tagline": "为 iOS 15–18 提供深色图标与图片壁纸暗化。",
   "developer": "Banana",
   "description": [
-    "DarkIcon 可在 iOS 15–17 为主屏幕、文件夹与 Spotlight 自动生成随系统外观切换的深色 App 图标，并在 iOS 16–18 为主屏幕与锁屏壁纸提供暗化效果。",
+    "DarkIcon 在 iOS 15–17 为主屏幕、文件夹与 Spotlight 提供跟随系统外观的图标样式，并在 iOS 16–18 为主屏幕与锁屏图片壁纸提供暗化效果。",
     "壁纸暗化可根据图片亮度自适应调整，亮图增强暗化、暗图减少处理；也可手动调节强度并跟随系统深色模式。",
-    "iOS 18 保留系统原生深色图标，插件图标功能不会启用；iOS 17 及以下继续提供原有图标模式。",
-    "设置中的图标预览列表支持搜索、Light/Dark 对比，并标明使用 App 原生深色素材还是算法处理。",
-    "浅色模式直接使用原图；深色结果按 App 身份统一复用磁盘缓存与 64 MiB 热缓存，磁盘已有成品时立即显示。"
+    "iOS 18 保留系统原生图标功能，插件图标样式不会启用；iOS 15–17 可分别配置浅色和深色模式的样式。",
+    "可搜索的图标预览列表展示浅色／深色模式配置的样式，并标明原生素材或算法处理来源。",
+    "默认浅色模式使用原图，深色模式使用深色图标；透明与色调保留主体颜色，采用可调半透明底板与静态边缘高光，成品和主体均可复用缓存。"
   ],
-  "notice": "更新后请重新加载 SpringBoard，无需清除图标缓存。首次尚未生成的图标可能短暂显示原图，并会在后台完成处理。壁纸暗化不保证对所有系统、动态或特殊壁纸类型生效；iOS 15 使用系统自带壁纸暗化。",
+  "notice": "更新后请重新加载 SpringBoard，无需清除图标缓存。首次未生成的图标会在后台处理；无法可靠分离主体的复杂图标可能保留原图。边缘高光为静态效果。壁纸暗化仅支持普通图片壁纸；iOS 15 使用系统自带壁纸暗化。",
   "features": [
     "iOS 16–18 主屏幕与锁屏壁纸自适应暗化",
     "根据图片亮度自动调整暗化程度，并支持手动强度调节",
     "壁纸与图标开关独立控制，壁纸暗化默认关闭",
     "iOS 15–17 跟随系统深浅色外观自动切换桌面图标",
     "支持 Spotlight 下拉搜索中的深色图标显示",
-    "可搜索的图标预览列表，支持 Light/Dark 对比并标明原生或算法处理",
+    "可搜索的图标预览列表，展示浅色／深色模式样式并标明原生或算法来源",
     "预览与图标生成在后台按需执行，避免一次处理全部 App",
-    "浅色模式直接返回原图，避免不必要处理并改善桌面启动",
+    "默认浅色模式使用原图；浅色与深色模式可独立选择透明或色调",
     "深色图标使用磁盘缓存与 64 MiB 热缓存，减少重复读盘并支持内存压力回收",
     "统一按 App 身份获取图标并复用缓存，减少重复生成和替换",
     "磁盘已有深色成品时立即使用，避免延迟替换",
@@ -33,7 +33,10 @@
     "可搜索的“禁用原生深色图标”名单，支持按图标、App 名称或 bundle ID 选择改用当前算法",
     "原生 Dark 与算法策略使用独立缓存，预览同步遵循名单，切换无需清除缓存",
     "改善浅底、渐变、圆角和备用图标的深色效果",
-    "改善日历日期与星期的可读性，同时保留主体颜色和细节"
+    "改善日历日期与星期的可读性，同时保留主体颜色和细节",
+    "浅色／深色模式独立选择原图或深色、透明、色调样式",
+    "分别调整色调底色与背景不透明度，保留主体颜色和细节",
+    "透明与色调图标加入静态亮边，复用主体与成品磁盘缓存"
   ],
   "compatibility": [
     "iOS 15–18",
@@ -43,14 +46,22 @@
   ],
   "usage": [
     "安装插件后重新加载桌面",
-    "进入“设置 → 深色图标”分别配置图标与壁纸暗化；壁纸暗化默认关闭，可选择自适应或手动强度",
-    "在图标预览列表中搜索 App，对比 Light/Dark 效果并查看原生或算法处理来源",
+    "进入“设置 → 深色图标”分别配置图标与壁纸暗化；浅色／深色模式各自选择样式、底色和背景不透明度，壁纸暗化默认关闭",
+    "在图标预览列表中搜索 App，对比浅色／深色模式配置的样式并查看原生或算法处理来源",
     "在“禁用原生深色图标”中搜索并勾选 App，使其跳过原生 Dark 并使用当前算法；取消勾选即可恢复原生优先",
     "需要时仍可在设置中使用“清除图标缓存”；主屏幕、文件夹、Spotlight 与预览会统一复用结果",
     "更新插件后重新加载 SpringBoard，无需清除缓存；首次未生成图标会在后台处理"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.9.10",
+      "changes": [
+        "新增浅色／深色模式独立的图标样式，可选原图或深色、透明、色调，并分别调整底色与背景不透明度。",
+        "改善透明与色调图标处理，保留主体颜色和细节，加入静态边缘高光，并改善浅色、渐变和暗色底的适配。",
+        "优化成品与主体缓存复用，减少切换样式、颜色和小图标显示时的重复处理。"
+      ]
+    },
     {
       "version": "0.9.9",
       "changes": [
@@ -137,22 +148,22 @@
       "name": "DarkIcon",
       "tagline": "Dark icons and image wallpaper dimming for iOS 15–18.",
       "description": [
-        "DarkIcon automatically generates dark app icons that follow system appearance across the Home Screen, folders, and Spotlight on iOS 15–17, and dims Home Screen and Lock Screen wallpapers on iOS 16–18.",
+        "DarkIcon provides icon styles that follow system appearance across the Home Screen, folders, and Spotlight on iOS 15–17, and dims Home Screen and Lock Screen photo wallpapers on iOS 16–18.",
         "Adaptive wallpaper dimming responds to image brightness, applying more dimming to bright images and less to dark images. Manual intensity control and Dark Mode tracking remain available.",
-        "On iOS 18, native system dark icons are preserved and the tweak's icon feature stays disabled. The original icon modes remain available on iOS 17 and earlier.",
-        "The searchable icon preview list compares Light and Dark results and identifies whether an app-provided dark asset or an algorithm was used.",
-        "Light Mode uses original icons directly. Dark results reuse disk cache and a 64 MiB hot cache by app identity, and existing disk results appear immediately."
+        "On iOS 18, native system icon features are preserved and tweak icon styles stay disabled. On iOS 15–17, Light and Dark Mode icon styles can be configured independently.",
+        "The searchable icon preview list displays the styles configured for Light and Dark Mode and identifies native assets or algorithmic processing.",
+        "Defaults remain Original icons in Light Mode and Dark icons in Dark Mode. Clear and Tinted styles preserve subject colors with adjustable translucent backgrounds and static edge highlights; completed icons and subjects are cached for reuse."
       ],
-      "notice": "Respring after updating; clearing the icon cache is not required. Icons that have not been generated yet may briefly show their originals while background processing finishes. Wallpaper dimming is not guaranteed to work with every system, dynamic, or special wallpaper type; iOS 15 uses the system's wallpaper dimming.",
+      "notice": "Respring after updating; no icon cache clearing is required. Previously ungenerated icons finish in the background; complex artwork without a reliable subject may retain its original appearance. Edge highlights are static. Wallpaper dimming supports ordinary photo wallpapers; iOS 15 uses system wallpaper dimming.",
       "features": [
         "Adaptive Home Screen and Lock Screen wallpaper dimming on iOS 16–18",
         "Brightness-aware automatic dimming with optional manual intensity control",
         "Independent wallpaper and icon controls, with wallpaper dimming off by default",
         "Home Screen icons that follow system appearance on iOS 15–17",
         "Dark icon support in Spotlight search",
-        "Searchable icon preview list with Light/Dark comparison and native-versus-algorithm labels",
+        "Searchable icon previews showing Light/Dark styles and native-versus-algorithm sources",
         "On-demand background preview and icon generation instead of processing every app at once",
-        "Use original icons directly in Light Mode for better Home Screen startup",
+        "Original icons by default in Light Mode; independent Clear or Tinted choices for Light and Dark Mode",
         "Disk cache plus a 64 MiB hot cache for dark icons, reducing disk reads while retaining memory-pressure cleanup",
         "Retrieve icons and reuse cache consistently by app identity to reduce repeated generation and replacement",
         "Use existing dark disk results immediately to avoid delayed replacement",
@@ -165,7 +176,10 @@
         "Searchable Disable Native Dark Icons list with app icons, names, and bundle IDs for choosing apps that should use the current algorithm",
         "Separate caches for native Dark and algorithm results, with previews following the list and no cache clearing required when switching",
         "Improved dark results for light backgrounds, gradients, rounded artwork, and fallback icons",
-        "Improved Calendar date and weekday readability while preserving subject colors and details"
+        "Improved Calendar date and weekday readability while preserving subject colors and details",
+        "Independent Original or Dark, Clear, and Tinted icon styles for Light and Dark Mode",
+        "Separate tint background colors and opacity controls while preserving subject colors and details",
+        "Static edge highlights for Clear and Tinted icons, with disk reuse of extracted subjects and completed icons"
       ],
       "compatibility": [
         "iOS 15–18",
@@ -175,13 +189,21 @@
       ],
       "usage": [
         "Install the package and respring",
-        "Open Settings → DarkIcon to configure icon and wallpaper dimming independently; wallpaper dimming is off by default with adaptive or manual intensity options",
-        "Search apps in the icon preview list, compare Light and Dark results, and check whether each result uses a native asset or an algorithm",
+        "Open Settings → DarkIcon to configure icons and wallpaper dimming independently; choose styles, background colors, and opacity separately for Light and Dark Mode. Wallpaper dimming is off by default",
+        "Search apps in Icon Preview to compare configured Light/Dark styles and check native or algorithm sources",
         "Search and select apps under Disable Native Dark Icons to skip their native Dark assets and use the current algorithm; deselect them to restore native priority",
         "Clear Icon Cache remains available when needed; the Home Screen, folders, Spotlight, and previews consistently reuse results",
         "Respring after updating; no cache clearing is required, and previously ungenerated icons finish in the background"
       ],
       "changelog": [
+        {
+          "version": "0.9.10",
+          "changes": [
+            "Adds independent icon styles for Light and Dark Mode: Original or Dark, Clear, and Tinted, with separate background colors and opacity controls.",
+            "Improves Clear and Tinted icons while preserving subject colors and details, adds static edge highlights, and improves handling of light, gradient, and dark backgrounds.",
+            "Improves reuse of completed icons and extracted subjects to reduce repeated processing when changing styles or colors and displaying small icons."
+          ]
+        },
         {
           "version": "0.9.9",
           "changes": [
