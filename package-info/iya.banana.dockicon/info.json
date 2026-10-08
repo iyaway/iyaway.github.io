@@ -36,7 +36,10 @@
     "改善日历日期与星期的可读性，同时保留主体颜色和细节",
     "浅色／深色模式独立选择原图或深色、透明、色调样式",
     "分别调整色调底色与背景不透明度，保留主体颜色和细节",
-    "透明与色调图标加入静态亮边，复用主体与成品磁盘缓存"
+    "透明与色调图标加入静态亮边，复用主体与成品磁盘缓存",
+    "改善复杂主体、渐变及分段底色的图标处理，保留主体细节",
+    "改善相机机身与暗底的区分，并保留镜头、齿轮及灰阶层次",
+    "设置内可直接打开 Discord 邀请、复制 QQ 群号和越狱源地址"
   ],
   "compatibility": [
     "iOS 15–18",
@@ -50,10 +53,19 @@
     "在图标预览列表中搜索 App，对比浅色／深色模式配置的样式并查看原生或算法处理来源",
     "在“禁用原生深色图标”中搜索并勾选 App，使其跳过原生 Dark 并使用当前算法；取消勾选即可恢复原生优先",
     "需要时仍可在设置中使用“清除图标缓存”；主屏幕、文件夹、Spotlight 与预览会统一复用结果",
-    "更新插件后重新加载 SpringBoard，无需清除缓存；首次未生成图标会在后台处理"
+    "更新插件后重新加载 SpringBoard，无需清除缓存；首次未生成图标会在后台处理",
+    "在设置中的社区与越狱源分组打开 Discord 邀请，或点击复制 QQ 群号与源地址"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.9.11",
+      "changes": [
+        "改善深色、透明与色调图标的复杂主体、渐变及分段底色处理，减少背景残留与主体误删，并保留透明／色调主体原色。",
+        "改善相机、设置等图标的亮度与灰阶细节，优化透明与色调图标的静态边缘高光。",
+        "设置新增同组 Discord、QQ群与越狱源入口，可直接打开邀请，并复制群号或源地址。"
+      ]
+    },
     {
       "version": "0.9.10",
       "changes": [
@@ -179,7 +191,10 @@
         "Improved Calendar date and weekday readability while preserving subject colors and details",
         "Independent Original or Dark, Clear, and Tinted icon styles for Light and Dark Mode",
         "Separate tint background colors and opacity controls while preserving subject colors and details",
-        "Static edge highlights for Clear and Tinted icons, with disk reuse of extracted subjects and completed icons"
+        "Static edge highlights for Clear and Tinted icons, with disk reuse of extracted subjects and completed icons",
+        "Improved complex subjects, gradients, and segmented backgrounds while retaining subject details",
+        "Improved separation of Camera bodies from dark backgrounds while preserving lens, gear, and tonal detail",
+        "Settings entries to open the Discord invite and copy the QQ group number or repository URL"
       ],
       "compatibility": [
         "iOS 15–18",
@@ -193,9 +208,18 @@
         "Search apps in Icon Preview to compare configured Light/Dark styles and check native or algorithm sources",
         "Search and select apps under Disable Native Dark Icons to skip their native Dark assets and use the current algorithm; deselect them to restore native priority",
         "Clear Icon Cache remains available when needed; the Home Screen, folders, Spotlight, and previews consistently reuse results",
-        "Respring after updating; no cache clearing is required, and previously ungenerated icons finish in the background"
+        "Respring after updating; no cache clearing is required, and previously ungenerated icons finish in the background",
+        "Use the Community and Repository group in Settings to open the Discord invite or copy the QQ group number and repository URL"
       ],
       "changelog": [
+        {
+          "version": "0.9.11",
+          "changes": [
+            "Improves complex subjects, gradients, and segmented backgrounds in Dark, Clear, and Tinted icons, reducing background residue and accidental subject removal while preserving Clear/Tinted subject colors.",
+            "Improves brightness and tonal detail in Camera, Settings, and other icons, and refines static edge highlights in Clear and Tinted styles.",
+            "Adds grouped Discord, QQ, and repository entries in Settings to open the invite and copy the group number or repository URL."
+          ]
+        },
         {
           "version": "0.9.10",
           "changes": [
