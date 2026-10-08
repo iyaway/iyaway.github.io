@@ -26,12 +26,13 @@
     "位置支持最多两位小数的手动输入；大小与 模糊不透明度 同样支持滑块和数值输入",
     "新通知或数量增加时可选单次柔和脉冲，并遵循系统“减弱动态效果”",
     "保留 App 原有角标数量，大数量显示为 99+，关闭插件后恢复系统角标",
-    "优化图标动画跟随和首次显示时机，减少角标提前出现或与图标分离",
+    "修复解锁时的角标放大残留，并减少桌面静止时的 CPU 占用",
     "简体中文、繁体中文和英文设置，保存后即时应用",
     "修正设置页首次进入时的标题显示及桌面翻页时的角标异常闪现",
     "四款顶部条形独立设置是否显示数字，默认关闭；圆点数量固定，不代表未读数量",
     "双斜线采用圆弧玻璃底、右下模糊斜边与增强光晕，多位数字自动适配，数字使用粗体并完整适配 99+",
-    "柔光脉冲条支持柔和呼吸，遵循动画开关与系统“减弱动态效果”"
+    "柔光脉冲条支持柔和呼吸，遵循动画开关与系统“减弱动态效果”",
+    "设置内提供 Discord、QQ群和 Banana 越狱源入口，支持直接打开或点击复制"
   ],
   "usage": [
     "安装后打开“设置 → 微光角标”并开启插件。",
@@ -39,11 +40,20 @@
     "进入当前样式的设置页，调整大小、模糊不透明度和位置；需要时开启“自定义文字颜色”并选色。位置归零只影响当前样式的位置。",
     "选择顶部条形后，可在当前样式设置中开启“显示数字”；关闭数字时保留已选文字颜色。",
     "拖动滑块后松手应用，或点击数值手动输入位置、大小和 模糊不透明度；位置支持最多两位小数。",
-    "按需开启通知脉冲；所有设置保存后即时生效。"
+    "按需开启通知脉冲；所有设置保存后即时生效。",
+    "在设置的交流组中直接打开 Discord，或点击复制 QQ 群号与越狱源地址。"
   ],
   "notice": "给我的朋友:Billie。最低要求 iOS 15；更高系统版本及不同主题、动画组合的兼容性仍需按实际设备确认。",
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.16",
+      "changes": [
+        "修复解锁进入桌面时的角标放大残留，降低桌面静止时的 CPU 占用。",
+        "修复带千位分隔符的数量识别，例如 5,184 正确显示为 99+，改善角标刷新与恢复。",
+        "设置新增 Discord、QQ群和越狱源入口，支持直接打开或点击复制。"
+      ]
+    },
     {
       "version": "0.1.15",
       "changes": [
@@ -122,12 +132,13 @@
         "Manual position input with up to two decimal places, plus slider and numeric input for size and Blur Opacity",
         "Optional single pulse for new or increased badge counts, respecting Reduce Motion",
         "Native badge counts with 99+ display and system-badge restoration when disabled",
-        "Improved icon animation following and first-display timing to reduce early or detached badges",
+        "Fixed enlarged badge remnants after unlocking and reduced idle Home Screen CPU usage",
         "Settings in English, Simplified Chinese, and Traditional Chinese with immediate application",
         "Corrected initial settings-page titles and abnormal badge flashes during Home Screen paging",
         "Independent Show Number toggles for all four top-bar styles, disabled by default; the fixed dot count does not represent unread counts",
         "Double Line with a rounded glass backing, a soft diagonal lower-right edge, stronger glow, and fitted multi-digit counts using bold text with complete 99+ display",
-        "Gentle Soft Pulse Bar breathing that respects the animation toggle and Reduce Motion"
+        "Gentle Soft Pulse Bar breathing that respects the animation toggle and Reduce Motion",
+        "Discord, QQ group, and Banana repository links in Settings, with direct opening or tap-to-copy actions"
       ],
       "compatibility": [
         "iOS 15 and later",
@@ -139,9 +150,18 @@
         "Open the selected style's settings to adjust size, blur opacity, and position, or enable Custom Text Color and choose a color. Reset Position affects only that style's position.",
         "For a top-bar style, enable Show Number in its style settings if desired. Hiding numbers keeps the chosen text color saved.",
         "Release sliders to apply changes, or tap values to enter position, size, and Blur Opacity manually; position accepts up to two decimal places.",
-        "Optionally enable notification pulses; saved settings apply immediately."
+        "Optionally enable notification pulses; saved settings apply immediately.",
+        "Use the community section in Settings to open Discord or copy the QQ group number and repository URL."
       ],
       "changelog": [
+        {
+          "version": "0.1.16",
+          "changes": [
+            "Fixed enlarged badge remnants after unlocking and reduced idle Home Screen CPU usage.",
+            "Fixed grouped count parsing so values such as 5,184 display as 99+, and improved badge refresh and recovery.",
+            "Added Discord, QQ group, and repository links in Settings, with direct opening or tap-to-copy actions."
+          ]
+        },
         {
           "version": "0.1.15",
           "changes": [
