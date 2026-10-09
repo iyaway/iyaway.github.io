@@ -6,10 +6,10 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana32 基于上游 0.1.1b，进一步改善系统玻璃效果、透明图标、锁屏时钟与小组件兼容性。",
-    "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & banana 共同署名。"
+    "banana43 改善色调设置生效与灵动岛文字显示，新增时钟自适应色调开关，并调整灵动岛、横幅的默认外观。",
+    "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & Banana 共同署名。"
   ],
-  "notice": "⚠️ 新包会替换 dylv.liquidass 与 dylv.liquidass.zh-hans，并继承已有设置。修改“移除小组件背景”后请返回插件首页执行“重启系统界面”。开启运动高光可能增加卡顿、发热和耗电。",
+  "notice": "⚠️ 新包会替换旧包并保留已有设置。安装或升级后请手动使用“重启系统界面”加载新版，安装不会自动重启。iOS 16 的灵动岛玻璃仍有重启后卡在启动画面的已知问题，暂不建议开启。Classic 的模糊参数暂不生效，需调整模糊时请选择增强模式。修改“移除小组件背景”后也需重启系统界面。开启运动高光可能增加卡顿、发热和耗电。",
   "features": [
     "为多种系统界面提供实时液态玻璃效果",
     "支持经典与增强渲染器手动切换",
@@ -25,6 +25,7 @@
     "小组件背景移除与玻璃亮边独立控制",
     "Widget 与 RWB 独立控制及关闭后的状态恢复",
     "锁屏日期格式开关与 Unicode 格式编辑器",
+    "时钟可选择自适应壁纸配色或自定义浅色／深色色调",
     "优化锁屏玻璃时钟、日期与解锁转场",
     "提供 Rootless、RootHide 与八种语言本地化"
   ],
@@ -35,7 +36,9 @@
   ],
   "usage": [
     "根据越狱环境安装 Rootless 或 RootHide 软件包；旧版会被自动替换并保留原设置。",
-    "打开系统“设置”中的 Liquid (Gl)ass，修改会自动保存并实时生效。",
+    "打开系统“设置”中的 Liquid (Gl)ass。色调等外观设置自动保存并实时生效；切换渲染器或首次开关灵动岛效果后，按提示重启系统界面。",
+    "时钟设置中的“自适应色调”关闭后使用自定义浅色／深色配色；Classic 默认开启，Enhanced 默认关闭，两种模式分别保存。",
+    "新默认值为灵动岛浅色黑色约 5% 不透明度、增强模式模糊 2，横幅浅色白色 20% 不透明度；已有自定义值会保留，重置对应选项后才采用新默认值。",
     "在应用图标设置中选择透明或统一着色模式，并按需调整算法、色相和强度。",
     "在锁屏日期设置中启用、编辑或关闭自定义 Unicode 格式。",
     "修改“移除小组件背景”后，请返回插件首页使用“重启系统界面”。",
@@ -43,6 +46,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.1b+banana43",
+      "changes": [
+        "修复色调设置不生效的问题，改善灵动岛文字显示。",
+        "新增时钟自适应色调开关，可选择壁纸配色或自定义浅色与深色色调。",
+        "调整灵动岛与横幅的默认外观，并修复竖向 Dock 的亮边显示。"
+      ]
+    },
     {
       "version": "0.1.1b+banana33",
       "changes": [
@@ -127,10 +138,10 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "The banana32 build is based on upstream 0.1.1b and further improves system glass effects, transparent icons, the Lock Screen clock, and widget compatibility.",
-        "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & banana."
+        "banana43 improves tint preference application and Dynamic Island text, adds an adaptive clock tint toggle, and refines default Island and banner styling.",
+        "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & Banana."
       ],
-      "notice": "⚠️ This package replaces dylv.liquidass and dylv.liquidass.zh-hans while preserving existing preferences. After changing Remove Widget Background, return to the main page and use Restart System UI. Motion highlights may increase lag, heat, and battery use.",
+      "notice": "⚠️ Updates replace the previous package while preserving preferences. After installing or updating, manually use Restart System UI to load the new version; installation does not restart automatically. Dynamic Island glass has a known startup hang on iOS 16 and should remain disabled there. Blur adjustment currently has no effect in Classic; use Enhanced when adjusting blur. Changing Remove Widget Background also requires Restart System UI. Motion highlights may increase lag, heat, and battery use.",
       "features": [
         "Live liquid-glass styling across multiple system surfaces",
         "Manual switching between Classic and Enhanced renderers",
@@ -146,6 +157,7 @@
         "Independent widget background removal and glass edge controls",
         "Independent Widget and RWB controls with proper disable restoration",
         "Lock Screen date-format toggle and Unicode format editor",
+        "Clock tint can adapt to available wallpaper colors or use custom Light/Dark colors",
         "Improved glass Lock Screen clock, date, and unlock transitions",
         "Rootless and RootHide packages with eight-language localization"
       ],
@@ -156,13 +168,23 @@
       ],
       "usage": [
         "Install the Rootless or RootHide package matching your jailbreak environment; the previous package is replaced while preferences are preserved.",
-        "Open Liquid (Gl)ass in Settings; changes save and apply instantly.",
+        "Open Liquid (Gl)ass in Settings. Appearance preferences such as tint save and apply live; follow the restart prompt after switching renderers or toggling Dynamic Island glass.",
+        "Turn off Adaptive Clock Tint to use custom Light/Dark colors. It defaults on in Classic and off in Enhanced, with independent preferences for each renderer.",
+        "New defaults use approximately 5% black for Light-mode Island tint, blur 2 in Enhanced, and 20% white for Light-mode banners. Existing custom values are retained; reset the relevant option to use its new default.",
         "Choose transparent or unified tinting in App Icon settings, then adjust the algorithm, hue, and strength as desired.",
         "Use Lock Screen Date settings to enable, edit, or disable a custom Unicode format.",
         "After changing Remove Widget Background, return to the main page and use Restart System UI.",
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.1b+banana43",
+          "changes": [
+            "Fixed tint preferences not taking effect and improved Dynamic Island text visibility.",
+            "Added adaptive clock tint, with a choice of available wallpaper colors or custom Light and Dark tints.",
+            "Refined default Dynamic Island and banner styling, and fixed glass edges on vertical Docks."
+          ]
+        },
         {
           "version": "0.1.1b+banana33",
           "changes": [
