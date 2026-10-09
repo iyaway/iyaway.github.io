@@ -1,0 +1,104 @@
+{
+  "package": "iya.banana.audioservice",
+  "name": "Banana Audio Service",
+  "web_name": "Banana 音频服务",
+  "tagline": "供其他插件按需使用的公共音频依赖包；非必要无需单独安装。",
+  "developer": "Ryan Nair & Banana",
+  "tint": "#F7AC16",
+  "notice_style": "warning",
+  "notice": "这是公共依赖包，仅在其他插件明确需要时安装；非必要无需单独安装。它本身不显示波形、不生成音乐触感，依赖它的插件可由包管理器自动安装本服务。",
+  "description": [
+    "Banana Audio Service 向本机插件提供共享音频特征，可用于状态栏波形、音频可视化、音乐触感等功能的开发。",
+    "本包只提供数据服务，实际显示和触感由消费插件实现。通过订阅按需工作，无订阅者时停止采样和分析；多个插件可共享一份服务。"
+  ],
+  "features": [
+    "64 点波形、64 段频谱、RMS、峰值、采样率与音频状态",
+    "多客户端独立订阅、续租与退订；按需选择波形或频谱",
+    "服务启用／禁用与手动重载音频服务",
+    "英文、简体中文、繁体中文设置与独立图标",
+    "公开本机订阅协议和 C++ 诊断接入示例"
+  ],
+  "compatibility": [
+    "iOS 15+；不同系统、设备与音频路由仍需实际验证",
+    "Rootless / RootHide；每包包含 arm64 / arm64e",
+    "需要 mobilesubstrate 与 PreferenceLoader",
+    "独立包设置开关、重载权限及各消费插件的依赖版本需实机验收"
+  ],
+  "usage": [
+    "普通用户：按需安装依赖本服务的插件，由包管理器自动安装本包；不要因为看到本包就额外安装。",
+    "设置 → Banana Audio Service 提供启用服务（默认开启）和重载音频服务。关闭会停止本服务的采样、分析与数据输出，影响所有订阅者；开启后等待客户端续订恢复。",
+    "重载音频服务会短暂中断音乐及相关插件，随后可能需要重新播放。安装包不会自动重载服务或卸载其他插件。",
+    "旧版 Lunora 1.0.8 内置另一份音频服务，不能直接让新旧服务同时工作；请等待消费插件的独立依赖版本，或仅在明确停用旧采样器的测试环境切换。",
+    "开发者／依赖声明：在消费插件 control 中添加 Depends: iya.banana.audioservice (>= 1.0.2)，保留其已有依赖。使用本协议无需再附带或链接另一份采样服务。",
+    "开发者／传输：UDP 127.0.0.1:44333，仅限本机。客户端先绑定本机临时端口，再从同一 socket 发送请求并接收回复。当前协议为 MSH2；所有整数和 float32 按小端编码。不要直接把 C 结构体覆盖到网络字节上。",
+    "开发者／32 字节报头：偏移 0 为 4 字节 MSH2；4 为 uint16 type；6 为 uint16 payloadLength；8 为 uint64 clientSessionID；16 为 uint64 serverInstanceID；24 为 uint64 sequence。type：Subscribe=1、Unsubscribe=2、Feature=3。请求 session 与 sequence 必须非零，sequence 单调递增。",
+    "开发者／订阅：发送 type=1，payloadLength=8。载荷偏移 0 为 uint32 featureMask（波形=1、频谱=2、两者=3）；4 为 uint16 rateHz（5–60）；6 为 uint16 graceSeconds（0 或 10，通常使用 0）。首次 serverInstanceID=0，session 使用随机非零值。服务最多接受 32 个客户端。",
+    "开发者／特征：回复 type=3。载荷偏移 0 为 uint64 streamEpoch，8 为 uint32 mask，12 为 uint32 status，16/20/24 分别为 float32 sampleRate/RMS/peak；28 起按 mask 依次放入 64 个波形 float32、64 个频谱 float32。单项载荷 284 字节，两项 540 字节。status 位 0/1/2/3/4 分别代表静音、削波、不连续、非有限输入、系统混音。请校验来源端口、session、服务身份、长度和数值；epoch 变化时清空旧流缓存。",
+    "开发者／续租与退订：每 5 秒重发 Subscribe 续租，携带已观察到的 serverInstanceID，15 秒未续租会过期。退出发送 type=2、payloadLength=0，带匹配的 serverInstanceID 和更大的请求 sequence。各插件只管理自己的 session；不要通过重启服务来取消自己的订阅。",
+    "开发者／重连与静音：服务重载后使用新的随机 session、serverInstanceID=0 重新订阅。静音帧可能降为约每 2 秒一次，不能把低帧率直接当作断线。没有可用音源时继续续租并展示自身的无数据状态。数据来自系统混音，可能同时包含媒体和系统提示音，不是单 App 音轨，也不传输原始 PCM。",
+    "公共协议头（与本包当前协议逐字节一致）：https://github.com/ryannair05/AudioSnapshotServer2/blob/20d26f5061fa7db132da5148e18d814947f1905e/MSHFProtocol.h",
+    "一次性 C++ 诊断示例（订阅、收帧、退订；长期客户端须增加 5 秒续租与重连）：https://github.com/ryannair05/AudioSnapshotServer2/blob/20d26f5061fa7db132da5148e18d814947f1905e/Tests/DeviceProbe.cpp",
+    "原始音频服务来自 Ryan Nair 的 AudioSnapshotServer2，采用 MIT License；公开协议头和示例复用时请保留原版权与许可声明。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "1.0.2",
+      "changes": [
+        "首次作为公共音频依赖包发布，按需提供波形、频谱与音量特征。",
+        "提供服务开关、音频服务重载及三语言设置。",
+        "公开订阅协议与接入示例；仅在其他插件需要时安装。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "Banana Audio Service",
+      "tagline": "A shared audio dependency for other tweaks. Install only when required.",
+      "notice": "This is a shared dependency package. Install it only when another tweak requires it; standalone installation is unnecessary otherwise. It does not display a waveform or generate music haptics by itself. A dependent tweak can install this service automatically through its package dependencies.",
+      "description": [
+        "Banana Audio Service provides shared audio features to local tweaks for uses such as status-bar waveforms, audio visualization and music haptics.",
+        "This package supplies data only; consuming tweaks implement their own display and haptic behavior. Capture and analysis stop when there are no subscribers, and multiple tweaks can share one service."
+      ],
+      "features": [
+        "64 waveform points, 64 spectrum bands, RMS, peak, sample rate and audio status",
+        "Independent multi-client subscriptions, lease renewal and unsubscribe; select waveform or spectrum as needed",
+        "Service enable/disable and manual audio-service reload",
+        "English, Simplified Chinese and Traditional Chinese settings with a dedicated icon",
+        "Public loopback subscription protocol and C++ diagnostic example"
+      ],
+      "compatibility": [
+        "iOS 15+; other systems, devices and audio routes still require real-device validation",
+        "Rootless / RootHide; each package includes arm64 / arm64e",
+        "Requires mobilesubstrate and PreferenceLoader",
+        "Standalone settings, reload permissions and dependent consumer releases require device acceptance"
+      ],
+      "usage": [
+        "Users: install a tweak that requires this service and let the package manager install the dependency. There is no need to install it just because it appears in the repository.",
+        "Settings → Banana Audio Service includes Enable Service (on by default) and Reload Audio Services. Disabling stops this service’s capture, analysis and feature output for every subscriber. Enabling waits for clients to renew their subscriptions.",
+        "Reloading briefly interrupts music and related tweaks; you may need to resume playback. Installation does not automatically reload services or uninstall other tweaks.",
+        "Lunora 1.0.8 includes a separate copy of the audio service. Both copies must not operate together. Wait for a consumer release using the standalone dependency, or switch only in a test environment with the old sampler explicitly disabled.",
+        "Developers / dependency: add Depends: iya.banana.audioservice (>= 1.0.2) to the consumer control file while retaining its other dependencies. Do not bundle or link another capture service when using this protocol.",
+        "Developers / transport: UDP 127.0.0.1:44333, loopback only. Bind a temporary local port and send/receive through the same socket. The current protocol is MSH2; encode all integers and float32 values in little endian. Do not overlay a C structure on wire bytes.",
+        "Developers / 32-byte header: offset 0 = four-byte MSH2 magic; 4 = uint16 type; 6 = uint16 payloadLength; 8 = uint64 clientSessionID; 16 = uint64 serverInstanceID; 24 = uint64 sequence. Types: Subscribe=1, Unsubscribe=2, Feature=3. Request session and sequence must be nonzero; request sequences increase monotonically.",
+        "Developers / subscribe: type=1, payloadLength=8. Payload offset 0 = uint32 featureMask (waveform=1, spectrum=2, both=3); 4 = uint16 rateHz (5–60); 6 = uint16 graceSeconds (0 or 10; normally 0). Initially set serverInstanceID=0 and use a random nonzero session. Up to 32 clients are accepted.",
+        "Developers / feature: type=3. Payload offset 0 = uint64 streamEpoch; 8 = uint32 mask; 12 = uint32 status; 16/20/24 = float32 sampleRate/RMS/peak. At offset 28, append 64 waveform float32 values if requested, followed by 64 spectrum float32 values if requested. Payload length is 284 bytes for one feature or 540 for both. Status bits 0/1/2/3/4 mean silence, clipping, discontinuity, non-finite input and system mix. Validate source port, session, server identity, lengths and values; discard old-stream caches when the epoch changes.",
+        "Developers / renew and unsubscribe: resend Subscribe every 5 seconds with the observed serverInstanceID. Leases expire after 15 seconds without renewal. On exit send type=2, payloadLength=0, the matching serverInstanceID and a higher request sequence. Each tweak manages its own session; restarting the shared service is not a way to unsubscribe one client.",
+        "Developers / reconnect and silence: after a service reload, resubscribe with a new random session and serverInstanceID=0. Silence frames may arrive about once every 2 seconds; a reduced frame rate alone is not a disconnect. Keep renewing when no source is available and display the consumer’s own no-data state. Features represent the system mix, which can include media and system alerts, not an isolated app stream; raw PCM is never transmitted.",
+        "Public protocol header (byte-for-byte identical to this package’s current protocol): https://github.com/ryannair05/AudioSnapshotServer2/blob/20d26f5061fa7db132da5148e18d814947f1905e/MSHFProtocol.h",
+        "One-shot C++ diagnostic example (subscribe, receive, unsubscribe; a long-running client must add 5-second lease renewal and reconnection): https://github.com/ryannair05/AudioSnapshotServer2/blob/20d26f5061fa7db132da5148e18d814947f1905e/Tests/DeviceProbe.cpp",
+        "The original audio service is AudioSnapshotServer2 by Ryan Nair under the MIT License. Preserve the original copyright and license when reusing the public header and example."
+      ],
+      "changelog": [
+        {
+          "version": "1.0.2",
+          "changes": [
+            "First repository release as a shared audio dependency, providing waveform, spectrum and level features on demand.",
+            "Includes a service toggle, audio-service reload and trilingual settings.",
+            "Documents the public subscription protocol and example; install only when another tweak requires it."
+          ]
+        }
+      ]
+    }
+  }
+}
