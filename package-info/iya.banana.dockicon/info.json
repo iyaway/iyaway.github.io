@@ -59,6 +59,14 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.9.12",
+      "changes": [
+        "修复部分应用启动、返回桌面时短暂闪回浅色图标的问题。",
+        "修复部分图标在启动、最小化时出现半处理和背景残留的问题。",
+        "优化图标缓存更新，旧的异常处理结果自动刷新，无需手动清理缓存。"
+      ]
+    },
+    {
       "version": "0.9.11",
       "changes": [
         "改善深色、透明与色调图标的复杂主体、渐变及分段底色处理，减少背景残留与主体误删，并保留透明／色调主体原色。",
@@ -212,6 +220,14 @@
         "Use the Community and Repository group in Settings to open the Discord invite or copy the QQ group number and repository URL"
       ],
       "changelog": [
+        {
+          "version": "0.9.12",
+          "changes": [
+            "Fixes some app icons briefly reverting to Light when launching apps or returning to the Home Screen.",
+            "Fixes partially processed icons and background residue during app launch and minimization.",
+            "Improves icon cache updates and automatically refreshes previously incorrect results without manual cache clearing."
+          ]
+        },
         {
           "version": "0.9.11",
           "changes": [
