@@ -2,42 +2,51 @@
   "package": "iya.banana.musichaptics",
   "name": "MusicHaptics",
   "web_name": "音乐触感",
-  "tagline": "让支持的歌曲化作触感，随音乐感受节奏与人声。",
+  "tagline": "原生音乐触感与四种通用模式，让音乐化作触感。",
   "developer": "Banana",
   "tint": "#E63D72",
   "description": [
-    "MusicHaptics 为越狱 iPhone 带来音乐触感反馈，在播放支持的歌曲时，让振动跟随音乐的节奏与变化。",
-    "可选择全部混音或仅人声，搭配弱、中、强三档强度；通过设置或控制中心随时开启与关闭。"
+    "MusicHaptics 为越狱 iPhone 提供音乐触感。默认使用 Apple 原生数据，可选择全部混音或仅人声。",
+    "通用模式根据音频变化生成触感，提供连续能量、节奏震动、Sound2Hap 实时适配和仿苹果四种选择；无需歌曲编号，也无需安装 Lunora。",
+    "支持弱、中、强三档强度，可在设置或控制中心随时开关。"
   ],
-  "notice": "若提示触感下载服务未响应，请先在 Shazam 或控制中心启动一次“音乐识别”，结束识别后返回音乐 App，并点击“重试当前歌曲”。iOS 18 及以上尚未完成兼容验证，不保证可用。当前不支持已测试的环境音乐免费内容及 Shazam 免费试听。首次加载歌曲触感需要联网，部分歌曲可能没有触感或人声轨道。请使用正常播放速度，并关闭杜比全景声；如已开启系统自带音乐触感，请先关闭以免重复反馈。",
+  "notice": "通用模式需要安装并启用 Banana Audio Service，包管理器会自动安装此依赖。它处理系统混音，其他声音可能混入，不支持仅人声；Sound2Hap 实时适配和仿苹果均为独立实现。原生模式首次加载歌曲触感需联网，部分歌曲没有触感或人声轨道，Shazam 免费试听及部分免费内容可能不支持。若原生触感下载未响应，可先在 Shazam 或控制中心启动一次“音乐识别”，结束后返回并重试。原生模式请使用正常播放速度并关闭杜比全景声；如已开启系统自带音乐触感，请先关闭以免重复反馈。iOS 18 及以上及不同音频输出路线仍需验证。",
   "features": [
-    "为支持的歌曲提供同步音乐触感反馈",
-    "全部混音与仅人声两种模式",
+    "Apple 原生数据：全部混音与仅人声",
+    "通用模式：连续能量、节奏震动、Sound2Hap 实时适配、仿苹果",
+    "通用模式无需歌曲编号，直接使用独立 Banana Audio Service",
     "弱、中、强三档触感强度",
-    "控制中心快捷开关，与设置状态同步",
-    "提供触感样本、播放状态和歌曲重试入口",
-    "支持 English、简体中文、繁體中文，并提供 Discord 与 QQ 反馈入口"
+    "控制中心快捷开关，与设置同步",
+    "触感样本、播放状态与原生歌曲重试入口",
+    "English、简体中文、繁體中文设置及 Discord、QQ 反馈入口"
   ],
   "compatibility": [
     "最低 iOS 15，无最高版本限制",
-    "iOS 15、16、17 已有用户实测",
-    "iOS 18 及以上兼容性仍待验证，不保证可用",
-    "部分设备需先启动一次音乐识别，再重试歌曲",
+    "原生模式已有 iOS 15、16、17 用户实测",
+    "通用模式已有 iPhone 13 Pro Max / iOS 17.3.1 RootHide 用户实测",
+    "iOS 18 及以上、其他设备及音频输出路线仍需验证",
     "需要支持触感反馈的越狱 iPhone",
-    "Rootless / RootHide",
-    "每个安装包均包含 arm64 / arm64e",
-    "需要 PreferenceLoader 和 CCSupport"
+    "Rootless / RootHide；每包包含 arm64 / arm64e",
+    "依赖 Banana Audio Service 1.0.2+、PreferenceLoader 和 CCSupport"
   ],
   "usage": [
-    "安装适合越狱环境的版本并重新载入 SpringBoard，然后打开“设置 → 音乐触感”。",
-    "启用插件，选择全部混音或仅人声，并设置触感强度。",
-    "在 Apple Music 中以正常速度播放支持的歌曲；首次加载请保持网络连接。",
-    "在控制中心添加“音乐触感”，即可快速开关。",
-    "可点击“播放样本”体验当前强度；没有反馈时查看“播放状态”或重试当前歌曲。",
-    "若提示触感下载服务未响应，请先在 Shazam 或控制中心启动一次“音乐识别”，结束识别后返回音乐 App，并点击“重试当前歌曲”。"
+    "安装匹配越狱环境的版本及依赖，重新载入 SpringBoard，再打开“设置 → 音乐触感”。",
+    "在“高级”中选择数据来源；默认 Apple 原生数据，可选择全部混音或仅人声。",
+    "选择“使用通用模式”后，在“震动模式”中选择连续能量、节奏震动、Sound2Hap 实时适配或仿苹果。",
+    "使用通用模式时，确认 Banana Audio Service 已启用，再播放音频。服务首次安装及旧版本迁移请按该依赖包说明操作。",
+    "设置弱、中、强三档强度，或点击“播放样本”体验触感；在控制中心添加“音乐触感”可快速开关。",
+    "原生歌曲无反馈时查看播放状态；若下载服务未响应，先启动并结束一次“音乐识别”，再重试当前歌曲。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.2.0",
+      "changes": [
+        "新增通用模式，提供连续能量、节奏震动、Sound2Hap 实时适配和仿苹果四种触感。",
+        "通用模式使用独立 Banana Audio Service，无需安装 Lunora。",
+        "完善三语言设置、模式切换及音频暂停或中断时的停震处理。"
+      ]
+    },
     {
       "version": "0.1.3",
       "changes": [
@@ -66,39 +75,48 @@
   "locales": {
     "en": {
       "name": "MusicHaptics",
-      "tagline": "Feel the rhythm and vocals of supported songs through haptic feedback.",
+      "tagline": "Native music haptics and four Universal modes turn music into touch.",
       "description": [
-        "MusicHaptics brings music haptic feedback to jailbroken iPhones, with vibrations that follow the rhythm and changes of supported songs.",
-        "Choose Full Mix or Vocals Only with Weak, Medium, or Strong intensity, and toggle playback from Settings or Control Center."
+        "MusicHaptics brings music haptic feedback to jailbroken iPhones. Apple native data is the default, with Full Mix and Vocals Only options.",
+        "Universal mode generates haptics from audio changes, with Continuous Energy, Rhythmic Vibrating Alert, Sound2Hap adaptation and Apple-inspired options. No song identifier or Lunora installation is required.",
+        "Choose Weak, Medium or Strong intensity and toggle haptics from Settings or Control Center."
       ],
-      "notice": "If the haptic download service does not respond, start music recognition once in Shazam or Control Center, end recognition, return to your music app, and tap Retry Current Song in the tweak settings. iOS 18 and later compatibility remains unverified and is not guaranteed. The tested free Ambient Music content and Shazam previews are not currently supported. An internet connection is needed to load a song's haptics for the first time. Some songs have no haptic or vocal track. Use normal playback speed with Dolby Atmos off. Turn off Apple's built-in Music Haptics before using this tweak to avoid duplicate feedback.",
+      "notice": "Universal mode requires Banana Audio Service to be installed and enabled; your package manager installs this dependency automatically. It uses the system audio mix, so other sounds may be included, and vocals-only output is unavailable. Sound2Hap adaptation and Apple-inspired modes are independent implementations. Native mode needs an internet connection to load a song’s haptics for the first time. Some songs have no haptic or vocal track; Shazam previews and some free content may be unsupported. If native downloads do not respond, start music recognition once in Shazam or Control Center, end recognition, then retry. Use normal playback speed with Dolby Atmos off for native mode. Disable Apple’s built-in Music Haptics to avoid duplicate feedback. iOS 18 and later and different audio routes remain unverified.",
       "features": [
-        "Synchronized music haptic feedback for supported songs",
-        "Full Mix and Vocals Only modes",
-        "Weak, Medium, and Strong intensity levels",
+        "Apple native data with Full Mix and Vocals Only",
+        "Universal modes: Continuous Energy, Rhythmic Vibrating Alert, Sound2Hap adaptation and Apple-inspired",
+        "Universal mode uses standalone Banana Audio Service without song identifiers",
+        "Weak, Medium and Strong intensity",
         "Control Center toggle synchronized with Settings",
-        "Haptic sample, playback status, and song retry controls",
-        "English, Simplified Chinese, and Traditional Chinese, with Discord and QQ feedback links"
+        "Haptic sample, playback status and native song retry",
+        "English, Simplified Chinese and Traditional Chinese, with Discord and QQ feedback links"
       ],
       "compatibility": [
         "Requires iOS 15 or later; no upper version limit",
-        "User-tested on iOS 15, 16 and 17",
-        "iOS 18 and later compatibility remains unverified and is not guaranteed",
-        "Some devices require starting Music Recognition once, then retrying the song",
+        "Native mode has user testing on iOS 15, 16 and 17",
+        "Universal mode has user testing on iPhone 13 Pro Max / iOS 17.3.1 RootHide",
+        "iOS 18 and later, other devices and audio routes remain unverified",
         "Requires a jailbroken iPhone with haptic support",
-        "Rootless / RootHide",
-        "Both packages include arm64 / arm64e",
-        "Requires PreferenceLoader and CCSupport"
+        "Rootless / RootHide; both packages include arm64 / arm64e",
+        "Requires Banana Audio Service 1.0.2+, PreferenceLoader and CCSupport"
       ],
       "usage": [
-        "Install the version matching your jailbreak environment, respring, then open Settings → Music Haptics.",
-        "Enable the tweak, select Full Mix or Vocals Only, and choose an intensity level.",
-        "Play a supported song in Apple Music at normal speed; keep an internet connection for the first load.",
-        "Add Music Haptics to Control Center for quick toggling.",
-        "Use Play Sample to feel the selected intensity. If a song produces no feedback, check Playback Status or retry it.",
-        "If the haptic download service does not respond, start music recognition once in Shazam or Control Center, end recognition, return to your music app, and tap Retry Current Song in the tweak settings."
+        "Install the package matching your jailbreak environment and its dependencies, respring, then open Settings → Music Haptics.",
+        "Choose the data source in Advanced. Apple native data is the default, with Full Mix and Vocals Only options.",
+        "Select Universal mode to choose Continuous Energy, Rhythmic Vibrating Alert, Sound2Hap adaptation or Apple-inspired haptics.",
+        "For Universal mode, enable Banana Audio Service and play audio. Follow that dependency’s guidance for first installation and migration.",
+        "Select Weak, Medium or Strong intensity, or use Play Sample. Add Music Haptics to Control Center for quick toggling.",
+        "For native songs without feedback, check Playback Status. If downloads do not respond, start and end Music Recognition once, then retry the current song."
       ],
       "changelog": [
+        {
+          "version": "0.2.0",
+          "changes": [
+            "Add Universal mode with Continuous Energy, Rhythmic Vibrating Alert, Sound2Hap adaptation and Apple-inspired haptics.",
+            "Universal mode uses the standalone Banana Audio Service; Lunora is no longer required.",
+            "Improve trilingual settings, mode switching, and stopping haptics when audio pauses or becomes unavailable."
+          ]
+        },
         {
           "version": "0.1.3",
           "changes": [
