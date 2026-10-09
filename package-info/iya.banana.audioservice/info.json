@@ -15,6 +15,7 @@
     "64 点波形、64 段频谱、RMS、峰值、采样率与音频状态",
     "多客户端独立订阅、续租与退订；按需选择波形或频谱",
     "服务启用／禁用与手动重载音频服务",
+    "旧采样器注入保护：阻止重复启动，并在设置中提示原因",
     "英文、简体中文、繁体中文设置与独立图标",
     "公开本机订阅协议和 C++ 诊断接入示例"
   ],
@@ -28,7 +29,7 @@
     "普通用户：按需安装依赖本服务的插件，由包管理器自动安装本包；不要因为看到本包就额外安装。",
     "设置 → Banana Audio Service 提供启用服务（默认开启）和重载音频服务。关闭会停止本服务的采样、分析与数据输出，影响所有订阅者；开启后等待客户端续订恢复。",
     "重载音频服务会短暂中断音乐及相关插件，随后可能需要重新播放。安装包不会自动重载服务或卸载其他插件。",
-    "旧版 Lunora 1.0.8 内置另一份音频服务，不能直接让新旧服务同时工作；请等待消费插件的独立依赖版本，或仅在明确停用旧采样器的测试环境切换。",
+    "旧版 Lunora 1.0.8 内置另一份音频服务。旧采样器仍有适用的注入配置时，本服务会被阻止，开关显示关闭并置灰。移走旧注入 plist、保留 dylib 不会锁定开关；随后需手动重载音频服务，释放可能已加载的旧实例。本包不会删除或迁移旧文件。",
     "开发者／依赖声明：在消费插件 control 中添加 Depends: iya.banana.audioservice (>= 1.0.2)，保留其已有依赖。使用本协议无需再附带或链接另一份采样服务。",
     "开发者／传输：UDP 127.0.0.1:44333，仅限本机。客户端先绑定本机临时端口，再从同一 socket 发送请求并接收回复。当前协议为 MSH2；所有整数和 float32 按小端编码。不要直接把 C 结构体覆盖到网络字节上。",
     "开发者／32 字节报头：偏移 0 为 4 字节 MSH2；4 为 uint16 type；6 为 uint16 payloadLength；8 为 uint64 clientSessionID；16 为 uint64 serverInstanceID；24 为 uint64 sequence。type：Subscribe=1、Unsubscribe=2、Feature=3。请求 session 与 sequence 必须非零，sequence 单调递增。",
@@ -43,7 +44,7 @@
   "screenshots": [],
   "changelog": [
     {
-      "version": "1.0.2",
+      "version": "1.0.4",
       "changes": [
         "首次作为公共音频依赖包发布，按需提供波形、频谱与音量特征。",
         "提供服务开关、音频服务重载及三语言设置。",
@@ -64,6 +65,7 @@
         "64 waveform points, 64 spectrum bands, RMS, peak, sample rate and audio status",
         "Independent multi-client subscriptions, lease renewal and unsubscribe; select waveform or spectrum as needed",
         "Service enable/disable and manual audio-service reload",
+        "Legacy sampler injection guard prevents duplicate startup and explains the block in Settings",
         "English, Simplified Chinese and Traditional Chinese settings with a dedicated icon",
         "Public loopback subscription protocol and C++ diagnostic example"
       ],
@@ -77,7 +79,7 @@
         "Users: install a tweak that requires this service and let the package manager install the dependency. There is no need to install it just because it appears in the repository.",
         "Settings → Banana Audio Service includes Enable Service (on by default) and Reload Audio Services. Disabling stops this service’s capture, analysis and feature output for every subscriber. Enabling waits for clients to renew their subscriptions.",
         "Reloading briefly interrupts music and related tweaks; you may need to resume playback. Installation does not automatically reload services or uninstall other tweaks.",
-        "Lunora 1.0.8 includes a separate copy of the audio service. Both copies must not operate together. Wait for a consumer release using the standalone dependency, or switch only in a test environment with the old sampler explicitly disabled.",
+        "Lunora 1.0.8 includes another audio service. When the old sampler still has an applicable injection configuration, this service is blocked and its switch is off and unavailable. Moving the old injection plist while retaining the dylib does not lock the switch. Manually reload audio services afterward to release any already-loaded old instance. This package does not delete or migrate old files.",
         "Developers / dependency: add Depends: iya.banana.audioservice (>= 1.0.2) to the consumer control file while retaining its other dependencies. Do not bundle or link another capture service when using this protocol.",
         "Developers / transport: UDP 127.0.0.1:44333, loopback only. Bind a temporary local port and send/receive through the same socket. The current protocol is MSH2; encode all integers and float32 values in little endian. Do not overlay a C structure on wire bytes.",
         "Developers / 32-byte header: offset 0 = four-byte MSH2 magic; 4 = uint16 type; 6 = uint16 payloadLength; 8 = uint64 clientSessionID; 16 = uint64 serverInstanceID; 24 = uint64 sequence. Types: Subscribe=1, Unsubscribe=2, Feature=3. Request session and sequence must be nonzero; request sequences increase monotonically.",
@@ -91,7 +93,7 @@
       ],
       "changelog": [
         {
-          "version": "1.0.2",
+          "version": "1.0.4",
           "changes": [
             "First repository release as a shared audio dependency, providing waveform, spectrum and level features on demand.",
             "Includes a service toggle, audio-service reload and trilingual settings.",
