@@ -6,10 +6,10 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana43 改善色调设置生效与灵动岛文字显示，新增时钟自适应色调开关，并调整灵动岛、横幅的默认外观。",
+    "banana44 修复本次反馈的 iOS 16.3 灵动岛启动卡住问题，完善标签栏排除名单即时生效与照片小组件保护，并提升玻璃效果加载稳定性。",
     "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & Banana 共同署名。"
   ],
-  "notice": "⚠️ 新包会替换旧包并保留已有设置。安装或升级后请手动使用“重启系统界面”加载新版，安装不会自动重启。iOS 16 的灵动岛玻璃仍有重启后卡在启动画面的已知问题，暂不建议开启。Classic 的模糊参数暂不生效，需调整模糊时请选择增强模式。修改“移除小组件背景”后也需重启系统界面。开启运动高光可能增加卡顿、发热和耗电。",
+  "notice": "⚠️ 新包会替换旧包并保留已有设置。安装或升级后请手动使用“重启系统界面”加载新版，安装不会自动重启。Classic 的模糊参数暂不生效，需调整模糊时请选择增强模式。修改“移除小组件背景”后也需重启系统界面。开启运动高光可能增加卡顿、发热和耗电。",
   "features": [
     "为多种系统界面提供实时液态玻璃效果",
     "支持经典与增强渲染器手动切换",
@@ -21,13 +21,14 @@
     "灵动岛玻璃效果，支持展开、收起与闲置隐藏",
     "支持 iOS 15 浮动式与 iPad 风格 Dock 玻璃效果",
     "优化 iPad Dock 的 App 资源库按钮与转场",
-    "全部小组件透明模式，可在移除背景后叠加玻璃效果",
+    "小组件透明模式，可在移除背景后叠加玻璃效果；系统照片小组件保留原生内容",
     "小组件背景移除与玻璃亮边独立控制",
     "Widget 与 RWB 独立控制及关闭后的状态恢复",
     "锁屏日期格式开关与 Unicode 格式编辑器",
     "时钟可选择自适应壁纸配色或自定义浅色／深色色调",
     "优化锁屏玻璃时钟、日期与解锁转场",
-    "提供 Rootless、RootHide 与八种语言本地化"
+    "提供 Rootless、RootHide 与八种语言本地化",
+    "标签栏排除名单实时生效，退出效果后恢复原始外观与交互"
   ],
   "compatibility": [
     "iOS 14–18",
@@ -42,10 +43,19 @@
     "在应用图标设置中选择透明或统一着色模式，并按需调整算法、色相和强度。",
     "在锁屏日期设置中启用、编辑或关闭自定义 Unicode 格式。",
     "修改“移除小组件背景”后，请返回插件首页使用“重启系统界面”。",
+    "系统照片小组件保留原生背景与快照，不再统一清除；标签栏排除名单修改后会即时更新。",
     "如出现掉帧或耗电增加，请减少同时启用的组件。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.1b+banana44",
+      "changes": [
+        "修复 iOS 16.3 开启灵动岛玻璃后卡在启动界面的问题。",
+        "修复标签栏排除名单无法即时生效的问题，退出效果后恢复原始外观与交互。",
+        "保留系统照片小组件的原生内容，并提升玻璃效果加载稳定性。"
+      ]
+    },
     {
       "version": "0.1.1b+banana43",
       "changes": [
@@ -138,10 +148,10 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "banana43 improves tint preference application and Dynamic Island text, adds an adaptive clock tint toggle, and refines default Island and banner styling.",
+        "banana44 fixes the reported iOS 16.3 Dynamic Island startup hang, improves live tab-bar exclusions and Photos widget protection, and makes glass effects load more reliably.",
         "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & Banana."
       ],
-      "notice": "⚠️ Updates replace the previous package while preserving preferences. After installing or updating, manually use Restart System UI to load the new version; installation does not restart automatically. Dynamic Island glass has a known startup hang on iOS 16 and should remain disabled there. Blur adjustment currently has no effect in Classic; use Enhanced when adjusting blur. Changing Remove Widget Background also requires Restart System UI. Motion highlights may increase lag, heat, and battery use.",
+      "notice": "⚠️ Updates replace the previous package while preserving preferences. After installing or updating, manually use Restart System UI to load the new version; installation does not restart automatically. Blur adjustment currently has no effect in Classic; use Enhanced when adjusting blur. Changing Remove Widget Background also requires Restart System UI. Motion highlights may increase lag, heat, and battery use.",
       "features": [
         "Live liquid-glass styling across multiple system surfaces",
         "Manual switching between Classic and Enhanced renderers",
@@ -153,13 +163,14 @@
         "Dynamic Island glass with expansion, collapse, and idle hiding",
         "Floating and iPad-style glass Dock support on iOS 15",
         "Improved iPad Dock App Library button and transitions",
-        "All Widgets Transparent mode that layers glass over removed widget backgrounds",
+        "Transparent widget backgrounds with glass overlays; system Photos widgets retain native content",
         "Independent widget background removal and glass edge controls",
         "Independent Widget and RWB controls with proper disable restoration",
         "Lock Screen date-format toggle and Unicode format editor",
         "Clock tint can adapt to available wallpaper colors or use custom Light/Dark colors",
         "Improved glass Lock Screen clock, date, and unlock transitions",
-        "Rootless and RootHide packages with eight-language localization"
+        "Rootless and RootHide packages with eight-language localization",
+        "Live tab-bar exclusions with restored native appearance and interaction"
       ],
       "compatibility": [
         "iOS 14–18",
@@ -174,9 +185,18 @@
         "Choose transparent or unified tinting in App Icon settings, then adjust the algorithm, hue, and strength as desired.",
         "Use Lock Screen Date settings to enable, edit, or disable a custom Unicode format.",
         "After changing Remove Widget Background, return to the main page and use Restart System UI.",
+        "System Photos widgets retain their native backgrounds and snapshots. Changes to tab-bar exclusions apply live.",
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.1b+banana44",
+          "changes": [
+            "Fixed the startup hang when Dynamic Island glass is enabled on iOS 16.3.",
+            "Fixed live tab-bar exclusions and restored native appearance and interaction when excluded.",
+            "Preserved native content in system Photos widgets and improved glass-effect loading reliability."
+          ]
+        },
         {
           "version": "0.1.1b+banana43",
           "changes": [
