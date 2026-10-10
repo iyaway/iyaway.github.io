@@ -59,6 +59,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.9.14",
+      "changes": [
+        "修复深色模式下文件夹小图显示浅色及关闭文件夹时短暂变浅的问题。",
+        "改善桌面、文件夹与应用启动过渡中的图标一致性，优化缓存复用，减少重复处理与闪烁。"
+      ]
+    },
+    {
       "version": "0.9.12",
       "changes": [
         "修复部分应用启动、返回桌面时短暂闪回浅色图标的问题。",
@@ -220,6 +227,13 @@
         "Use the Community and Repository group in Settings to open the Discord invite or copy the QQ group number and repository URL"
       ],
       "changelog": [
+        {
+          "version": "0.9.14",
+          "changes": [
+            "Fixes folder previews appearing light in Dark Mode and briefly reverting to light when closing a folder.",
+            "Improves icon consistency across the Home Screen, folders, and app launch transitions, with better cache reuse to reduce repeated processing and flicker."
+          ]
+        },
         {
           "version": "0.9.12",
           "changes": [
