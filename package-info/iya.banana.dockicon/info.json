@@ -8,8 +8,9 @@
     "DarkIcon 在 iOS 15–17 为主屏幕、文件夹与 Spotlight 提供跟随系统外观的图标样式，并在 iOS 16–18 为主屏幕与锁屏图片壁纸提供暗化效果。",
     "壁纸暗化可根据图片亮度自适应调整，亮图增强暗化、暗图减少处理；也可手动调节强度并跟随系统深色模式。",
     "iOS 18 保留系统原生图标功能，插件图标样式不会启用；iOS 15–17 可分别配置浅色和深色模式的样式。",
-    "可搜索的图标预览列表展示浅色／深色模式配置的样式，并标明原生素材或算法处理来源。",
-    "默认浅色模式使用原图，深色模式使用深色图标；透明与色调保留主体颜色，采用可调半透明底板与静态边缘高光，成品和主体均可复用缓存。"
+    "可搜索的 App 图库按原图、深色、透明和色调展示已有图标，支持从照片或文件导入原图、深色、透明图片，并可还原单个样式或全部用户图片。导入图直接使用，独立保存，不受图标缓存清理影响；色调可直接复用导入的透明图。",
+    "默认浅色模式使用原图，深色模式使用深色图标；透明与色调保留主体颜色，采用可调半透明底板与静态边缘高光，成品和主体均可复用缓存。",
+    "iOS 16/17 长按桌面进入编辑后，可通过“编辑 → 自定义”切换图标样式与大小，并调节壁纸暗化；iOS 15 不增加此入口，iOS 18 保留系统原生面板。"
   ],
   "notice": "更新后请重新加载 SpringBoard，无需清除图标缓存。首次未生成的图标会在后台处理；无法可靠分离主体的复杂图标可能保留原图。边缘高光为静态效果。壁纸暗化仅支持普通图片壁纸；iOS 15 使用系统自带壁纸暗化。",
   "features": [
@@ -18,8 +19,8 @@
     "壁纸与图标开关独立控制，壁纸暗化默认关闭",
     "iOS 15–17 跟随系统深浅色外观自动切换桌面图标",
     "支持 Spotlight 下拉搜索中的深色图标显示",
-    "可搜索的图标预览列表，展示浅色／深色模式样式并标明原生或算法来源",
-    "预览与图标生成在后台按需执行，避免一次处理全部 App",
+    "可搜索的 App 图库，点选应用后查看各样式已有图标及来源",
+    "图库按需加载，已加载的预览在当前页面内持续保留",
     "默认浅色模式使用原图；浅色与深色模式可独立选择透明或色调",
     "深色图标使用磁盘缓存与 64 MiB 热缓存，减少重复读盘并支持内存压力回收",
     "统一按 App 身份获取图标并复用缓存，减少重复生成和替换",
@@ -39,25 +40,38 @@
     "透明与色调图标加入静态亮边，复用主体与成品磁盘缓存",
     "改善复杂主体、渐变及分段底色的图标处理，保留主体细节",
     "改善相机机身与暗底的区分，并保留镜头、齿轮及灰阶层次",
-    "设置内可直接打开 Discord 邀请、复制 QQ 群号和越狱源地址"
+    "设置内可直接打开 Discord 邀请、复制 QQ 群号和越狱源地址",
+    "原图、深色、透明图片可从照片或文件导入，直接使用并独立保存；支持单样式或全部还原",
+    "已导入的透明图直接用于色调，清理图标缓存不会删除用户图片",
+    "iOS 16/17 桌面自定义面板，支持图标样式、大小与壁纸暗化控制"
   ],
   "compatibility": [
     "iOS 15–18",
     "Rootless 与 RootHide",
     "图标功能支持 iOS 15–17；插件壁纸暗化支持 iOS 16–18",
-    "iOS 15 使用系统壁纸暗化；iOS 18 使用系统原生深色图标"
+    "iOS 15 使用系统壁纸暗化；iOS 18 使用系统原生深色图标",
+    "桌面自定义面板仅支持 iOS 16/17；iOS 18 保留系统原生面板"
   ],
   "usage": [
     "安装插件后重新加载桌面",
     "进入“设置 → 深色图标”分别配置图标与壁纸暗化；浅色／深色模式各自选择样式、底色和背景不透明度，壁纸暗化默认关闭",
-    "在图标预览列表中搜索 App，对比浅色／深色模式配置的样式并查看原生或算法处理来源",
+    "在“图标图库”中按名称或 bundle ID 搜索 App，点进子页面查看原图、深色、透明和色调的已有图标；点按可管理的样式从照片或文件导入图片，也可还原该样式或全部用户图片",
     "在“禁用原生深色图标”中搜索并勾选 App，使其跳过原生 Dark 并使用当前算法；取消勾选即可恢复原生优先",
     "需要时仍可在设置中使用“清除图标缓存”；主屏幕、文件夹、Spotlight 与预览会统一复用结果",
     "更新插件后重新加载 SpringBoard，无需清除缓存；首次未生成图标会在后台处理",
-    "在设置中的社区与越狱源分组打开 Discord 邀请，或点击复制 QQ 群号与源地址"
+    "在设置中的社区与越狱源分组打开 Discord 邀请，或点击复制 QQ 群号与源地址",
+    "iOS 16/17 长按桌面进入编辑状态，点“编辑 → 自定义”调整图标样式和大小；iOS 18 继续使用系统原生面板"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.9.16~gallery2",
+      "changes": [
+        "新增 iOS 16/17 桌面自定义面板，可切换图标样式、大小及壁纸暗化；iOS 18 保留系统原生面板。",
+        "图标预览升级为可搜索的 App 图库，点进应用可查看各样式已有图标，从照片或文件导入原图、深色或透明图片，并支持单样式或全部还原。",
+        "导入图片直接使用并独立保存，清理图标缓存不会删除；色调直接复用已导入的透明图，已加载预览不再随滚动消失。"
+      ]
+    },
     {
       "version": "0.9.14",
       "changes": [
@@ -178,8 +192,9 @@
         "DarkIcon provides icon styles that follow system appearance across the Home Screen, folders, and Spotlight on iOS 15–17, and dims Home Screen and Lock Screen photo wallpapers on iOS 16–18.",
         "Adaptive wallpaper dimming responds to image brightness, applying more dimming to bright images and less to dark images. Manual intensity control and Dark Mode tracking remain available.",
         "On iOS 18, native system icon features are preserved and tweak icon styles stay disabled. On iOS 15–17, Light and Dark Mode icon styles can be configured independently.",
-        "The searchable icon preview list displays the styles configured for Light and Dark Mode and identifies native assets or algorithmic processing.",
-        "Defaults remain Original icons in Light Mode and Dark icons in Dark Mode. Clear and Tinted styles preserve subject colors with adjustable translucent backgrounds and static edge highlights; completed icons and subjects are cached for reuse."
+        "A searchable per-app gallery displays existing Original, Dark, Clear, and Tinted artwork. Import Original, Dark, or Clear images from Photos or Files and restore one style or all imported artwork. Imports are used directly, stored separately, and survive icon-cache clearing; Tinted style reuses an imported Clear image when available.",
+        "Defaults remain Original icons in Light Mode and Dark icons in Dark Mode. Clear and Tinted styles preserve subject colors with adjustable translucent backgrounds and static edge highlights; completed icons and subjects are cached for reuse.",
+        "On iOS 16/17, enter Home Screen editing and choose Edit → Customize to change icon styles and size or control wallpaper dimming. The entry is not added on iOS 15, and iOS 18 retains its native panel."
       ],
       "notice": "Respring after updating; no icon cache clearing is required. Previously ungenerated icons finish in the background; complex artwork without a reliable subject may retain its original appearance. Edge highlights are static. Wallpaper dimming supports ordinary photo wallpapers; iOS 15 uses system wallpaper dimming.",
       "features": [
@@ -188,8 +203,8 @@
         "Independent wallpaper and icon controls, with wallpaper dimming off by default",
         "Home Screen icons that follow system appearance on iOS 15–17",
         "Dark icon support in Spotlight search",
-        "Searchable icon previews showing Light/Dark styles and native-versus-algorithm sources",
-        "On-demand background preview and icon generation instead of processing every app at once",
+        "Searchable per-app gallery showing existing artwork by style and its source",
+        "On-demand gallery loading, with loaded previews retained for the current page",
         "Original icons by default in Light Mode; independent Clear or Tinted choices for Light and Dark Mode",
         "Disk cache plus a 64 MiB hot cache for dark icons, reducing disk reads while retaining memory-pressure cleanup",
         "Retrieve icons and reuse cache consistently by app identity to reduce repeated generation and replacement",
@@ -209,24 +224,37 @@
         "Static edge highlights for Clear and Tinted icons, with disk reuse of extracted subjects and completed icons",
         "Improved complex subjects, gradients, and segmented backgrounds while retaining subject details",
         "Improved separation of Camera bodies from dark backgrounds while preserving lens, gear, and tonal detail",
-        "Settings entries to open the Discord invite and copy the QQ group number or repository URL"
+        "Settings entries to open the Discord invite and copy the QQ group number or repository URL",
+        "Import Original, Dark, or Clear images from Photos or Files for direct use and separate storage; restore one style or all imports",
+        "Tinted style directly reuses imported Clear artwork; icon-cache clearing preserves user images",
+        "Home Screen customization panel on iOS 16/17 for icon styles, size, and wallpaper dimming"
       ],
       "compatibility": [
         "iOS 15–18",
         "Rootless and RootHide",
         "Icon features support iOS 15–17; tweak wallpaper dimming supports iOS 16–18",
-        "Uses system wallpaper dimming on iOS 15 and native system dark icons on iOS 18"
+        "Uses system wallpaper dimming on iOS 15 and native system dark icons on iOS 18",
+        "The added Home Screen customization panel supports iOS 16/17 only; iOS 18 retains its native panel"
       ],
       "usage": [
         "Install the package and respring",
         "Open Settings → DarkIcon to configure icons and wallpaper dimming independently; choose styles, background colors, and opacity separately for Light and Dark Mode. Wallpaper dimming is off by default",
-        "Search apps in Icon Preview to compare configured Light/Dark styles and check native or algorithm sources",
+        "Search by app name or bundle ID in Icon Gallery, then open an app to view existing Original, Dark, Clear, and Tinted artwork. Tap a managed style to import an image from Photos or Files, or restore one style or all imported artwork",
         "Search and select apps under Disable Native Dark Icons to skip their native Dark assets and use the current algorithm; deselect them to restore native priority",
         "Clear Icon Cache remains available when needed; the Home Screen, folders, Spotlight, and previews consistently reuse results",
         "Respring after updating; no cache clearing is required, and previously ungenerated icons finish in the background",
-        "Use the Community and Repository group in Settings to open the Discord invite or copy the QQ group number and repository URL"
+        "Use the Community and Repository group in Settings to open the Discord invite or copy the QQ group number and repository URL",
+        "On iOS 16/17, enter Home Screen editing and choose Edit → Customize to adjust icon styles and size; iOS 18 continues to use the native panel"
       ],
       "changelog": [
+        {
+          "version": "0.9.16~gallery2",
+          "changes": [
+            "Adds a Home Screen customization panel on iOS 16/17 for icon styles, size, and wallpaper dimming; iOS 18 keeps its native panel.",
+            "Upgrades previews to a searchable per-app gallery for existing styles. Import Original, Dark, or Clear images from Photos or Files, and restore one style or all imported artwork.",
+            "Imported artwork is used directly and survives icon-cache clearing. Tinted style reuses imported Clear artwork, and loaded previews remain visible when scrolling."
+          ]
+        },
         {
           "version": "0.9.14",
           "changes": [
