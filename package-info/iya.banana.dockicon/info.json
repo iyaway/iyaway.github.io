@@ -65,7 +65,7 @@
   "screenshots": [],
   "changelog": [
     {
-      "version": "0.9.16~gallery2",
+      "version": "0.9.16",
       "changes": [
         "新增 iOS 16/17 桌面自定义面板，可切换图标样式、大小及壁纸暗化；iOS 18 保留系统原生面板。",
         "图标预览升级为可搜索的 App 图库，点进应用可查看各样式已有图标，从照片或文件导入原图、深色或透明图片，并支持单样式或全部还原。",
@@ -248,7 +248,7 @@
       ],
       "changelog": [
         {
-          "version": "0.9.16~gallery2",
+          "version": "0.9.16",
           "changes": [
             "Adds a Home Screen customization panel on iOS 16/17 for icon styles, size, and wallpaper dimming; iOS 18 keeps its native panel.",
             "Upgrades previews to a searchable per-app gallery for existing styles. Import Original, Dark, or Clear images from Photos or Files, and restore one style or all imported artwork.",
