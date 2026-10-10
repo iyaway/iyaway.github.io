@@ -6,24 +6,24 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana45 修复可能导致 Sileo 等应用启动卡住的标签栏问题，保留排除名单即时生效与 iOS 16.3 灵动岛启动修复。",
+    "banana47 修复部分小组件出现不透明白底或黑底的问题，恢复玻璃显示，并新增默认关闭的照片小组件排除开关。",
     "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & Banana 共同署名。"
   ],
-  "notice": "⚠️ 新包会替换旧包并保留已有设置。安装或升级后请手动使用“重启系统界面”加载新版，安装不会自动重启。Classic 的模糊参数暂不生效，需调整模糊时请选择增强模式。修改“移除小组件背景”后也需重启系统界面。开启运动高光可能增加卡顿、发热和耗电。",
+  "notice": "⚠️ 新包会替换旧包并保留已有设置。安装或升级后请手动使用“重启系统界面”加载新版，安装不会自动重启。Classic 的模糊参数暂不生效，需调整模糊时请选择增强模式。修改“移除小组件背景”或“排除照片小组件”后也需重启系统界面。开启运动高光可能增加卡顿、发热和耗电。",
   "features": [
     "为多种系统界面提供实时液态玻璃效果",
     "支持经典与增强渲染器手动切换",
     "设置自动保存并实时生效，无需额外 Apply",
-    "总开关关闭后完整恢复系统原始样式",
+    "通过总开关统一控制玻璃效果",
     "iOS 26 风格应用图标，支持透明与统一着色模式",
     "支持调整图标渲染算法、着色色相与着色强度",
     "适配主屏幕、App 资源库、文件夹及动态时钟图标",
     "灵动岛玻璃效果，支持展开、收起与闲置隐藏",
     "支持 iOS 15 浮动式与 iPad 风格 Dock 玻璃效果",
     "优化 iPad Dock 的 App 资源库按钮与转场",
-    "小组件透明模式，可在移除背景后叠加玻璃效果；系统照片小组件保留原生内容",
+    "小组件透明模式，可在移除背景后叠加玻璃效果，并可选择排除系统照片小组件",
     "小组件背景移除与玻璃亮边独立控制",
-    "Widget 与 RWB 独立控制及关闭后的状态恢复",
+    "Widget 与 RWB 可独立控制",
     "锁屏日期格式开关与 Unicode 格式编辑器",
     "时钟可选择自适应壁纸配色或自定义浅色／深色色调",
     "优化锁屏玻璃时钟、日期与解锁转场",
@@ -42,12 +42,19 @@
     "新默认值为灵动岛浅色黑色约 5% 不透明度、增强模式模糊 2，横幅浅色白色 20% 不透明度；已有自定义值会保留，重置对应选项后才采用新默认值。",
     "在应用图标设置中选择透明或统一着色模式，并按需调整算法、色相和强度。",
     "在锁屏日期设置中启用、编辑或关闭自定义 Unicode 格式。",
-    "修改“移除小组件背景”后，请返回插件首页使用“重启系统界面”。",
-    "系统照片小组件保留原生背景与快照，不再统一清除；标签栏排除名单修改后会即时更新。",
+    "修改“移除小组件背景”或“排除照片小组件”后，请返回插件首页使用“重启系统界面”。",
+    "“排除照片小组件”默认关闭；开启后保留系统照片小组件的原始背景与快照。标签栏排除名单修改后会即时更新。",
     "如出现掉帧或耗电增加，请减少同时启用的组件。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.1b+banana47",
+      "changes": [
+        "修复部分小组件出现不透明白底或黑底、遮挡玻璃效果的问题。",
+        "新增“排除照片小组件”开关，默认关闭，可按需保留系统照片小组件的原始内容。"
+      ]
+    },
     {
       "version": "0.1.1b+banana45",
       "changes": [
@@ -155,24 +162,24 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "banana45 fixes a tab-bar issue that could hang apps such as Sileo at launch, retaining live exclusions and the iOS 16.3 Dynamic Island startup fix.",
+        "banana47 fixes opaque white or black backgrounds in some widgets, restores their glass appearance, and adds an optional Photos widget exclusion that is off by default.",
         "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & Banana."
       ],
-      "notice": "⚠️ Updates replace the previous package while preserving preferences. After installing or updating, manually use Restart System UI to load the new version; installation does not restart automatically. Blur adjustment currently has no effect in Classic; use Enhanced when adjusting blur. Changing Remove Widget Background also requires Restart System UI. Motion highlights may increase lag, heat, and battery use.",
+      "notice": "⚠️ Updates replace the previous package while preserving preferences. After installing or updating, manually use Restart System UI to load the new version; installation does not restart automatically. Blur adjustment currently has no effect in Classic; use Enhanced when adjusting blur. Changing Remove Widget Background or Exclude Photos Widgets also requires Restart System UI. Motion highlights may increase lag, heat, and battery use.",
       "features": [
         "Live liquid-glass styling across multiple system surfaces",
         "Manual switching between Classic and Enhanced renderers",
         "Preferences save and apply instantly without a separate Apply action",
-        "Full stock-style restoration when the global switch is disabled",
+        "A master switch for glass effects",
         "iOS 26-style app icons with transparent and unified-tint modes",
         "Adjustable icon rendering algorithm, tint hue, and tint strength",
         "App icon support across the Home Screen, App Library, folders, and dynamic clock",
         "Dynamic Island glass with expansion, collapse, and idle hiding",
         "Floating and iPad-style glass Dock support on iOS 15",
         "Improved iPad Dock App Library button and transitions",
-        "Transparent widget backgrounds with glass overlays; system Photos widgets retain native content",
+        "Transparent widget backgrounds with glass overlays and optional exclusion of system Photos widgets",
         "Independent widget background removal and glass edge controls",
-        "Independent Widget and RWB controls with proper disable restoration",
+        "Independent Widget and RWB controls",
         "Lock Screen date-format toggle and Unicode format editor",
         "Clock tint can adapt to available wallpaper colors or use custom Light/Dark colors",
         "Improved glass Lock Screen clock, date, and unlock transitions",
@@ -191,11 +198,18 @@
         "New defaults use approximately 5% black for Light-mode Island tint, blur 2 in Enhanced, and 20% white for Light-mode banners. Existing custom values are retained; reset the relevant option to use its new default.",
         "Choose transparent or unified tinting in App Icon settings, then adjust the algorithm, hue, and strength as desired.",
         "Use Lock Screen Date settings to enable, edit, or disable a custom Unicode format.",
-        "After changing Remove Widget Background, return to the main page and use Restart System UI.",
-        "System Photos widgets retain their native backgrounds and snapshots. Changes to tab-bar exclusions apply live.",
+        "After changing Remove Widget Background or Exclude Photos Widgets, return to the main page and use Restart System UI.",
+        "Exclude Photos Widgets is off by default; enable it to preserve native backgrounds and snapshots in system Photos widgets. Changes to tab-bar exclusions apply live.",
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.1b+banana47",
+          "changes": [
+            "Fixed opaque white or black backgrounds obscuring glass effects in some widgets.",
+            "Added Exclude Photos Widgets, off by default, to optionally preserve native content in system Photos widgets."
+          ]
+        },
         {
           "version": "0.1.1b+banana45",
           "changes": [
