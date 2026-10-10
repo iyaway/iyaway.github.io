@@ -6,7 +6,7 @@
   "tint": "#76B7C5",
   "description": [
     "Liquid (Gl)ass 可为 Dock、文件夹、App 资源库、锁屏通知与音乐卡片、快捷操作、时钟、Widget、键盘、标签栏和系统弹窗等界面加入动态玻璃质感。",
-    "banana44 修复本次反馈的 iOS 16.3 灵动岛启动卡住问题，完善标签栏排除名单即时生效与照片小组件保护，并提升玻璃效果加载稳定性。",
+    "banana45 修复可能导致 Sileo 等应用启动卡住的标签栏问题，保留排除名单即时生效与 iOS 16.3 灵动岛启动修复。",
     "本项目基于 dylv 的 GPL-3.0 开源版本继续维护，由 dylv & Banana 共同署名。"
   ],
   "notice": "⚠️ 新包会替换旧包并保留已有设置。安装或升级后请手动使用“重启系统界面”加载新版，安装不会自动重启。Classic 的模糊参数暂不生效，需调整模糊时请选择增强模式。修改“移除小组件背景”后也需重启系统界面。开启运动高光可能增加卡顿、发热和耗电。",
@@ -48,6 +48,13 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.1b+banana45",
+      "changes": [
+        "修复可能导致 Sileo 等应用启动卡住的标签栏问题。",
+        "保留标签栏排除名单即时生效与原始外观恢复。"
+      ]
+    },
     {
       "version": "0.1.1b+banana44",
       "changes": [
@@ -148,7 +155,7 @@
       "tagline": "Live, instantly adjustable liquid-glass styling for system interfaces on iOS 14–18.",
       "description": [
         "Liquid (Gl)ass adds dynamic glass styling to the Dock, folders, App Library, Lock Screen notifications and media cards, quick actions, clocks, widgets, keyboards, tab bars, system alerts, and other supported surfaces.",
-        "banana44 fixes the reported iOS 16.3 Dynamic Island startup hang, improves live tab-bar exclusions and Photos widget protection, and makes glass effects load more reliably.",
+        "banana45 fixes a tab-bar issue that could hang apps such as Sileo at launch, retaining live exclusions and the iOS 16.3 Dynamic Island startup fix.",
         "This project continues the GPL-3.0 open-source work by dylv and is credited to dylv & Banana."
       ],
       "notice": "⚠️ Updates replace the previous package while preserving preferences. After installing or updating, manually use Restart System UI to load the new version; installation does not restart automatically. Blur adjustment currently has no effect in Classic; use Enhanced when adjusting blur. Changing Remove Widget Background also requires Restart System UI. Motion highlights may increase lag, heat, and battery use.",
@@ -189,6 +196,13 @@
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.1b+banana45",
+          "changes": [
+            "Fixed a tab-bar issue that could hang apps such as Sileo at launch.",
+            "Preserved live tab-bar exclusions and restoration of the original appearance."
+          ]
+        },
         {
           "version": "0.1.1b+banana44",
           "changes": [
