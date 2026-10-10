@@ -1,0 +1,94 @@
+{
+  "package": "iya.banana.replacedefapp",
+  "name": "ReplaceDefApp",
+  "web_name": "默认 App",
+  "tagline": "为 iOS 17 集中管理默认 App 与支持的链接操作。",
+  "developer": "Banana",
+  "tint": "#1F61F0",
+  "notice_style": "warning",
+  "notice": "仅支持 iOS 17.x。已在 iOS 17.3.1 / RootHide 验证导航与欧路旧取词动作；通话、信息尚未真机验证，Rootless 仅完成构建检查。新版专用翻译提供方不保证可用。",
+  "description": [
+    "将电子邮件、信息、通话、导航、浏览器 App 与翻译选择集中到一个设置页面。",
+    "浏览器和邮件使用系统已有默认项；其余功能覆盖支持的外部操作入口，实际能力取决于目标 App 和链接格式。"
+  ],
+  "features": [
+    "六项集中设置：电子邮件、信息、通话、导航、浏览器 App、翻译",
+    "将支持的 Apple 地图位置、搜索和路线链接分发至高德、百度或 Google Maps",
+    "为选中文本调用兼容的取词／文本动作扩展；已验证欧路旧取词动作",
+    "通话／信息候选选择与系统恢复选项；测试仅预览",
+    "启用开关、链接测试、可复制／导出的诊断页",
+    "英文、简体中文、繁体中文设置"
+  ],
+  "compatibility": [
+    "仅 iOS 17.0–17.x；不支持 iOS 16 或 iOS 18 及以上",
+    "Rootless / RootHide；每包包含 arm64 / arm64e",
+    "需要 mobilesubstrate 与 PreferenceLoader",
+    "用户已在 iOS 17.3.1 / Dopamine RootHide 确认导航及欧路取词可用",
+    "通话／信息未实测；Rootless 仅构建检查；其他设备和系统小版本仍需验证"
+  ],
+  "usage": [
+    "按越狱环境安装对应包，手动 respring 后重新打开设置与来源 App；安装包不自动重启。",
+    "进入“设置 → 默认 App”，选择目标 App，再开启默认关闭的分发开关。",
+    "浏览器和邮件直接修改系统默认项，关闭开关不会撤回；选择 Safari／邮件恢复。其他分类选择系统恢复项，或关闭分发开关。",
+    "导航先测试“仅打开目标地图”，再测试“打开原始链接”，并核对目的地。坐标系选项在测试链接菜单；不支持的格式保留原路径。",
+    "翻译需选择兼容的取词／文本动作候选；仅识别到 App 不代表可用。Google 等没有兼容扩展的版本会显示待适配；新版专用提供方不保证可在 iOS 17 运行。",
+    "不替换蜂窝来电、SMS/iMessage/RCS 收发或 Safari 整页翻译；不保证所有 App 内置地图和拨号／消息编辑入口生效。",
+    "通话、信息测试仅预览，不会拨号或发送。诊断支持复制／导出，不保存 URL、号码、消息正文、位置或翻译原文。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "changes": [
+        "集中管理 iOS 17 的邮件、信息、通话、导航、浏览器与翻译选择。",
+        "支持常见地图链接分发及兼容翻译 App 的选中文本取词。",
+        "提供系统恢复选项、测试预览与诊断导出，支持 Rootless / RootHide。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "Default Apps",
+      "tagline": "Manage default apps and supported link actions on iOS 17.",
+      "notice": "iOS 17.x only. Navigation and the legacy Eudic text action were verified on iOS 17.3.1 / RootHide. Calling and messaging remain untested on device; Rootless has build validation only. New dedicated translation providers are not guaranteed to work.",
+      "description": [
+        "Manage email, messaging, calling, navigation, browser and translation choices in one Settings page.",
+        "Browser and email use existing system defaults. Other features cover supported external action entry points, with capabilities depending on the target app and link format."
+      ],
+      "features": [
+        "Six categories: email, messaging, calling, navigation, browser and translation",
+        "Route supported Apple Maps location, search and route links to Amap, Baidu Maps or Google Maps",
+        "Look up selected text using compatible text action extensions; the legacy Eudic action has been verified",
+        "Calling and messaging choices with system restore options; tests only preview requests",
+        "Enable switch, link tests and diagnostics with copy/export",
+        "English, Simplified Chinese and Traditional Chinese settings"
+      ],
+      "compatibility": [
+        "iOS 17.0–17.x only; excludes iOS 16 and iOS 18 or later",
+        "Rootless / RootHide; each package includes arm64 / arm64e",
+        "Requires mobilesubstrate and PreferenceLoader",
+        "User confirmed navigation and Eudic lookup on iOS 17.3.1 / Dopamine RootHide",
+        "Calling and messaging are untested; Rootless has build checks only; other devices and minor versions require validation"
+      ],
+      "usage": [
+        "Install the package for your jailbreak environment, manually respring, then reopen Settings and source apps. Installation does not automatically restart the device.",
+        "Open Settings → Default Apps, select targets and enable routing, which is off by default.",
+        "Browser and email change system defaults directly; disabling routing does not undo them. Select Safari/Mail to restore. For other categories, choose the system restore option or disable routing.",
+        "For navigation, test opening the target map first, then the original link, and check the destination. Coordinate options are in the test-link menu; unsupported formats keep their original behavior.",
+        "Translation requires a compatible text action candidate. App detection alone does not mean support. Google and other versions without a compatible extension remain unavailable; new dedicated providers are not guaranteed to run on iOS 17.",
+        "Does not replace cellular incoming calls, SMS/iMessage/RCS reception or Safari page translation, and does not cover every in-app map, dialer or message editor.",
+        "Calling and messaging tests only preview requests without placing calls or sending messages. Diagnostics can be copied/exported and do not store URLs, numbers, message bodies, locations or translation text."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Manage email, messaging, calling, navigation, browser and translation choices together on iOS 17.",
+            "Route supported map links and look up selected text using compatible translation apps.",
+            "Includes system restore options, test previews and diagnostic export for Rootless / RootHide."
+          ]
+        }
+      ]
+    }
+  }
+}
