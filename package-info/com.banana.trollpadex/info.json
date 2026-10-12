@@ -5,30 +5,41 @@
   "developer": "khanhduytran0 & Banana",
   "tint": "#0A84FF",
   "description": [
-    "TrollPadEx 将熟悉的 iPad 多任务体验带到 iPhone，让应用切换、分屏和窗口管理更加顺手。",
-    "各项功能均可在设置中按需开启，适合希望提升大屏利用率和多任务效率的用户。"
+    "TrollPadEx 为 iPhone 提供 iPad 风格的多任务、应用切换与 Dock 控制。",
+    "支持 iOS 26 原生台前调度与 Windowed Apps，可独立选择 iPad 或 iPhone 应用切换器。"
   ],
   "features": [
-    "网格应用切换器与浮动 Dock",
-    "分屏浏览、侧拉窗口与多任务按钮",
-    "台前调度与外接显示器支持",
-    "浮动键盘及常用键盘选项",
-    "横屏主屏幕、窗口缩放与显示偏好"
+    "独立 iPad 应用切换器开关，默认开启",
+    "台前调度与 iOS 26 Windowed Apps",
+    "iOS 26 Allow Smaller Windows，允许更小的原生应用窗口",
+    "浮动 Dock、最近应用与 App 资源库控制",
+    "键盘、外接显示与横屏主屏幕选项",
+    "备用 Respring 按钮、社区入口及三语言设置"
   ],
   "compatibility": [
-    "iOS 14–18",
+    "iOS 14–18、iOS 26",
     "Rootless",
     "RootHide",
-    "台前调度需 iOS 16 或更高版本"
+    "台前调度需 iOS 16 或更高版本",
+    "Windowed Apps 与 Allow Smaller Windows 仅限 iOS 26"
   ],
   "usage": [
-    "安装后打开“设置”中的 TrollPadEx。",
-    "开启需要的多任务、Dock、键盘或显示选项。",
-    "iOS 16 可通过控制中心切换多任务模式；较新系统可使用系统的“多任务与手势”设置。",
-    "建议逐项启用并确认效果。"
+    "安装后打开“设置”中的 TrollPadEx，按需开启功能。",
+    "iOS 16 通过控制中心切换多任务模式；iOS 17 及以上使用插件入口打开系统“多任务与手势”设置。",
+    "更改 iPad 应用切换器开关后需要 Respring。",
+    "iOS 26 可开启 Allow Smaller Windows；App 自行布局，过小窗口可能裁切内容。",
+    "无法从 Dock 或侧栏拖入应用时，可使用系统的“添加另一个窗口”菜单。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "2.0.3",
+      "changes": [
+        "支持 iOS 26 台前调度与 Windowed Apps，改善多窗口及应用切换稳定性。",
+        "新增独立 iPad 应用切换器和 Allow Smaller Windows 选项。",
+        "新增备用 Respring 按钮与社区入口，完善英、简中、繁中设置。"
+      ]
+    },
     {
       "version": "2.0.1",
       "changes": [
@@ -41,36 +52,50 @@
       "name": "TrollPadEx",
       "tagline": "Bring more flexible multitasking, windowing, and external display experiences to iPhone.",
       "description": [
-        "TrollPadEx brings familiar iPad multitasking features to iPhone for easier app switching, split views, and window management.",
-        "Features can be enabled individually in Settings to match your preferred multitasking workflow."
+        "TrollPadEx brings iPad-style multitasking, app switching and Dock controls to iPhone.",
+        "Supports native iOS 26 Stage Manager and Windowed Apps, with an independent choice of iPad or iPhone app switcher."
       ],
       "features": [
-        "Grid app switcher and floating Dock",
-        "Split View, Slide Over, and multitasking controls",
-        "Stage Manager and external display support",
-        "Floating keyboard and common keyboard options",
-        "Landscape Home Screen, window scaling, and display preferences"
+        "Independent iPad App Switcher option, enabled by default",
+        "Stage Manager and iOS 26 Windowed Apps",
+        "Allow Smaller Windows on iOS 26 for native app layout below the normal minimum",
+        "Floating Dock, recent apps and App Library controls",
+        "Keyboard, external display and landscape Home Screen options",
+        "Alternative Respring action, community links and three-language Settings"
       ],
       "compatibility": [
-        "iOS 14–18",
+        "iOS 14–18 and iOS 26",
         "Rootless",
         "RootHide",
-        "Stage Manager requires iOS 16 or later"
+        "Stage Manager requires iOS 16 or later",
+        "Windowed Apps and Allow Smaller Windows require iOS 26"
       ],
       "usage": [
-        "Open TrollPadEx in Settings after installation.",
-        "Enable the multitasking, Dock, keyboard, or display options you need.",
-        "On iOS 16, switch multitasking modes from Control Center; newer systems can use the system Multitasking & Gestures settings.",
-        "Enable options gradually and confirm their effect on your device."
+        "Open TrollPadEx in Settings after installation and enable the features you need.",
+        "On iOS 16, switch multitasking modes in Control Center. On iOS 17 or later, open the system Multitasking & Gestures page from TrollPadEx.",
+        "Respring after changing the iPad App Switcher option.",
+        "On iOS 26, enable Allow Smaller Windows if needed. Apps manage their layouts and may clip content in very small windows.",
+        "If dragging an app from the Dock or recent-app strip is unavailable, use the native Add Another Window menu."
       ],
       "changelog": [
+        {
+          "version": "2.0.3",
+          "changes": [
+            "Added iOS 26 Stage Manager and Windowed Apps support with improved multitasking and app-switching stability.",
+            "Added independent iPad App Switcher and Allow Smaller Windows options.",
+            "Added an alternative Respring action, community links and improved English, Simplified Chinese and Traditional Chinese Settings."
+          ]
+        },
         {
           "version": "2.0.1",
           "changes": [
             "Improved Stage Manager and the experience on newer iOS versions."
           ]
         }
-      ]
+      ],
+      "notice": "KillBackground13 may block in-app Dock gestures. If the Dock does not appear, temporarily disable KillBackground13 and respring before trying again."
     }
-  }
+  },
+  "notice": "KillBackground13 可能阻止 App 内 Dock 手势。若 Dock 无法出现，请暂时停用 KillBackground13 并 Respring 后重试。",
+  "notice_style": "warning"
 }
