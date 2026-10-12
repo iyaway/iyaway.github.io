@@ -11,7 +11,8 @@
     "可搜索的 App 图库按原图、深色、透明和色调展示已有图标，支持从照片或文件导入原图、深色、透明图片，并可还原单个样式或全部用户图片。导入图片仅补图标圆角，不做颜色处理，独立保存且不受图标缓存清理影响；色调可直接复用导入的透明图。",
     "默认浅色模式使用原图，深色模式使用深色图标；透明与色调保留主体颜色，采用可调半透明底板与静态边缘高光，成品和主体均可复用缓存。",
     "iOS 16/17 长按桌面进入编辑后，可通过“编辑 → 自定义”切换图标样式与大小，并调节壁纸暗化；iOS 15 不增加此入口，iOS 18 保留系统原生面板。",
-    "独立图标包页面可导入常见 SnowBoard ZIP 主题，为原图、深色、透明分别选择图标包，允许多个样式使用同一主题。单个 App 导入优先，未覆盖的图标自动回退；色调直接复用透明图标包。主题日历日期和桌面时钟保持动态。"
+    "独立图标包页面可导入常见 SnowBoard ZIP 主题，为原图、深色、透明分别选择图标包，允许多个样式使用同一主题。单个 App 导入优先，未覆盖的图标自动回退；色调直接复用透明图标包。主题日历日期和桌面时钟保持动态。",
+    "可直接导入符合预算的大型 ZIP 图标包，支持最大 256 MiB、16384 项和 512 MiB 解压总量。无法可靠确定 App 对应关系的图片会计为跳过，不影响其余图标导入。"
   ],
   "notice": "更新后重新加载桌面，并彻底关闭再打开“设置”，无需清除图标缓存。图标包支持常见 PNG 主题资源，不包含 SnowBoard 的全部扩展效果；缺少图标时沿用原有处理。单独图片和图标包不受算法缓存清理影响。首次未生成图标会在后台处理；复杂图标可能保留原图，边缘高光为静态效果。壁纸暗化仅支持普通图片壁纸。 导入图片只补显示圆角，原文件保留；主题明确关闭圆角时保留原形状，旧包默认圆角无需重新导入。",
   "features": [
@@ -50,7 +51,8 @@
     "单独导入优先于图标包，缺失图标回退原生或算法；色调复用透明图",
     "主题日历日期与桌面时钟指针动态更新，设置列表中的 App 图标跟随样式",
     "图标包与单独图片独立保留，清理算法缓存不会删除",
-    "图标包按主题要求显示圆角；单个 App 导入默认补圆角，保留原色、透明细节与原始文件"
+    "图标包按主题要求显示圆角；单个 App 导入默认补圆角，保留原色、透明细节与原始文件",
+    "大型图标包导入：ZIP 最大 256 MiB、16384 项、解压总量 512 MiB；未匹配 App 的文件明确跳过"
   ],
   "compatibility": [
     "iOS 15–18",
@@ -68,10 +70,18 @@
     "更新插件后重新加载 SpringBoard，无需清除缓存；首次未生成图标会在后台处理",
     "在设置中的社区与越狱源分组打开 Discord 邀请，或点击复制 QQ 群号与源地址",
     "iOS 16/17 长按桌面进入编辑状态，点“编辑 → 自定义”调整图标样式和大小；iOS 18 继续使用系统原生面板",
-    "进入“设置 → 深色图标 → 图标包”导入 ZIP 主题，再为原图、深色、透明分别选择主题；点按已导入包可预览与搜索，左滑可删除。单个 App 的独立导入优先，色调直接使用透明资源。"
+    "进入“设置 → 深色图标 → 图标包”导入 ZIP 主题，再为原图、深色、透明分别选择主题；点按已导入包可预览与搜索，左滑可删除。单个 App 的独立导入优先，色调直接使用透明资源。",
+    "大型图标包无需先拆分或重新压缩，只需符合导入预算；导入后可查看图标、重复和跳过数量，未覆盖的应用沿用原有原生或算法结果。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.9.19",
+      "changes": [
+        "提升大型图标包导入能力，支持更大的 ZIP 主题，并减少导入时的重复处理。",
+        "无法匹配应用的图片按跳过处理，不影响其余可识别图标正常导入。"
+      ]
+    },
     {
       "version": "0.9.18",
       "changes": [
@@ -218,7 +228,8 @@
         "A searchable per-app gallery displays existing Original, Dark, Clear and Tinted artwork. Import Original, Dark or Clear images from Photos or Files and restore one style or all imported artwork. Imports receive an icon corner mask without color processing, are stored separately and survive icon-cache clearing; Tinted reuses an imported Clear image when available.",
         "Defaults remain Original icons in Light Mode and Dark icons in Dark Mode. Clear and Tinted styles preserve subject colors with adjustable translucent backgrounds and static edge highlights; completed icons and subjects are cached for reuse.",
         "On iOS 16/17, enter Home Screen editing and choose Edit → Customize to change icon styles and size or control wallpaper dimming. The entry is not added on iOS 15, and iOS 18 retains its native panel.",
-        "A dedicated icon pack page imports common SnowBoard ZIP themes and assigns packs to Original, Dark and Clear styles; multiple styles may share a pack. Individual App imports take priority, missing artwork falls back automatically, and Tinted uses the Clear pack unchanged. Themed Calendar dates and desktop clock hands remain dynamic."
+        "A dedicated icon pack page imports common SnowBoard ZIP themes and assigns packs to Original, Dark and Clear styles; multiple styles may share a pack. Individual App imports take priority, missing artwork falls back automatically, and Tinted uses the Clear pack unchanged. Themed Calendar dates and desktop clock hands remain dynamic.",
+        "Import large ZIP icon packs directly within limits of 256 MiB, 16384 entries and 512 MiB expanded. Artwork without a reliable App mapping is counted as skipped without blocking recognized icons."
       ],
       "notice": "Respring after updating and fully close and reopen Settings; no icon cache clearing is required. Icon packs support common PNG theme artwork, not every SnowBoard extension effect; missing icons use the existing fallback. Individual artwork and icon packs survive algorithm-cache clearing. Initial icons are generated in the background; complex artwork may remain unchanged, and edge highlights are static. Wallpaper dimming supports ordinary photo wallpapers only. Imported artwork receives display-only corner masking while original files remain intact. Themes that explicitly disable masking retain their shape; existing packs receive default corners without reimporting.",
       "features": [
@@ -257,7 +268,8 @@
         "Individual imports override packs; missing icons fall back to native artwork or algorithms, and Tinted reuses Clear artwork",
         "Dynamic themed Calendar dates and desktop clock hands, plus style-aware App icons in Settings lists",
         "Icon packs and individual artwork survive algorithm-cache clearing",
-        "Theme-aware icon corners and default corner masking for individual App imports, preserving original colors, transparency and source files"
+        "Theme-aware icon corners and default corner masking for individual App imports, preserving original colors, transparency and source files",
+        "Large icon pack imports: ZIP files up to 256 MiB, 16384 entries and 512 MiB expanded; unmatched App artwork is explicitly skipped"
       ],
       "compatibility": [
         "iOS 15–18",
@@ -275,9 +287,17 @@
         "Respring after updating; no cache clearing is required, and previously ungenerated icons finish in the background",
         "Use the Community and Repository group in Settings to open the Discord invite or copy the QQ group number and repository URL",
         "On iOS 16/17, enter Home Screen editing and choose Edit → Customize to adjust icon styles and size; iOS 18 continues to use the native panel",
-        "Open Settings → DarkIcon → Icon Packs, import a ZIP theme, then select packs for Original, Dark and Clear. Tap an imported pack to preview and search, or swipe left to remove it. Individual App imports take priority; Tinted uses Clear artwork unchanged."
+        "Open Settings → DarkIcon → Icon Packs, import a ZIP theme, then select packs for Original, Dark and Clear. Tap an imported pack to preview and search, or swipe left to remove it. Individual App imports take priority; Tinted uses Clear artwork unchanged.",
+        "Large icon packs need no splitting or recompression when they fit the import limits. Review imported, duplicate and skipped counts; uncovered apps retain the existing native or algorithm fallback."
       ],
       "changelog": [
+        {
+          "version": "0.9.19",
+          "changes": [
+            "Improves large icon pack imports with higher ZIP limits and less repeated work during import.",
+            "Skips artwork without a known App mapping while importing the remaining recognized icons normally."
+          ]
+        },
         {
           "version": "0.9.18",
           "changes": [
