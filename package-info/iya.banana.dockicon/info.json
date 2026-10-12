@@ -8,12 +8,12 @@
     "DarkIcon 在 iOS 15–17 为主屏幕、文件夹、Spotlight 和设置列表中的 App 图标提供跟随系统外观的样式，并在 iOS 16–18 为主屏幕与锁屏图片壁纸提供暗化效果。",
     "壁纸暗化可根据图片亮度自适应调整，亮图增强暗化、暗图减少处理；也可手动调节强度并跟随系统深色模式。",
     "iOS 18 保留系统原生图标功能，插件图标样式不会启用；iOS 15–17 可分别配置浅色和深色模式的样式。",
-    "可搜索的 App 图库按原图、深色、透明和色调展示已有图标，支持从照片或文件导入原图、深色、透明图片，并可还原单个样式或全部用户图片。导入图直接使用，独立保存，不受图标缓存清理影响；色调可直接复用导入的透明图。",
+    "可搜索的 App 图库按原图、深色、透明和色调展示已有图标，支持从照片或文件导入原图、深色、透明图片，并可还原单个样式或全部用户图片。导入图片仅补图标圆角，不做颜色处理，独立保存且不受图标缓存清理影响；色调可直接复用导入的透明图。",
     "默认浅色模式使用原图，深色模式使用深色图标；透明与色调保留主体颜色，采用可调半透明底板与静态边缘高光，成品和主体均可复用缓存。",
     "iOS 16/17 长按桌面进入编辑后，可通过“编辑 → 自定义”切换图标样式与大小，并调节壁纸暗化；iOS 15 不增加此入口，iOS 18 保留系统原生面板。",
     "独立图标包页面可导入常见 SnowBoard ZIP 主题，为原图、深色、透明分别选择图标包，允许多个样式使用同一主题。单个 App 导入优先，未覆盖的图标自动回退；色调直接复用透明图标包。主题日历日期和桌面时钟保持动态。"
   ],
-  "notice": "更新后重新加载桌面，并彻底关闭再打开“设置”，无需清除图标缓存。图标包支持常见 PNG 主题资源，不包含 SnowBoard 的全部扩展效果；缺少图标时沿用原有处理。单独图片和图标包不受算法缓存清理影响。首次未生成图标会在后台处理；复杂图标可能保留原图，边缘高光为静态效果。壁纸暗化仅支持普通图片壁纸。",
+  "notice": "更新后重新加载桌面，并彻底关闭再打开“设置”，无需清除图标缓存。图标包支持常见 PNG 主题资源，不包含 SnowBoard 的全部扩展效果；缺少图标时沿用原有处理。单独图片和图标包不受算法缓存清理影响。首次未生成图标会在后台处理；复杂图标可能保留原图，边缘高光为静态效果。壁纸暗化仅支持普通图片壁纸。 导入图片只补显示圆角，原文件保留；主题明确关闭圆角时保留原形状，旧包默认圆角无需重新导入。",
   "features": [
     "iOS 16–18 主屏幕与锁屏壁纸自适应暗化",
     "根据图片亮度自动调整暗化程度，并支持手动强度调节",
@@ -49,7 +49,8 @@
     "原图、深色、透明分别绑定图标包，多个样式可共享同一主题并自动切换",
     "单独导入优先于图标包，缺失图标回退原生或算法；色调复用透明图",
     "主题日历日期与桌面时钟指针动态更新，设置列表中的 App 图标跟随样式",
-    "图标包与单独图片独立保留，清理算法缓存不会删除"
+    "图标包与单独图片独立保留，清理算法缓存不会删除",
+    "图标包按主题要求显示圆角；单个 App 导入默认补圆角，保留原色、透明细节与原始文件"
   ],
   "compatibility": [
     "iOS 15–18",
@@ -71,6 +72,13 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.9.18",
+      "changes": [
+        "修复部分图标包显示方角的问题，并为单个 App 导入图片补充图标圆角。",
+        "保留图片原色、透明细节与原始文件；旧包默认自动适配，无需清理缓存或重新导入。"
+      ]
+    },
     {
       "version": "0.9.17",
       "changes": [
@@ -207,12 +215,12 @@
         "DarkIcon provides appearance-aware App icon styles for the Home Screen, folders, Spotlight and Settings lists on iOS 15–17, plus Home Screen and Lock Screen photo wallpaper dimming on iOS 16–18.",
         "Adaptive wallpaper dimming responds to image brightness, applying more dimming to bright images and less to dark images. Manual intensity control and Dark Mode tracking remain available.",
         "On iOS 18, native system icon features are preserved and tweak icon styles stay disabled. On iOS 15–17, Light and Dark Mode icon styles can be configured independently.",
-        "A searchable per-app gallery displays existing Original, Dark, Clear, and Tinted artwork. Import Original, Dark, or Clear images from Photos or Files and restore one style or all imported artwork. Imports are used directly, stored separately, and survive icon-cache clearing; Tinted style reuses an imported Clear image when available.",
+        "A searchable per-app gallery displays existing Original, Dark, Clear and Tinted artwork. Import Original, Dark or Clear images from Photos or Files and restore one style or all imported artwork. Imports receive an icon corner mask without color processing, are stored separately and survive icon-cache clearing; Tinted reuses an imported Clear image when available.",
         "Defaults remain Original icons in Light Mode and Dark icons in Dark Mode. Clear and Tinted styles preserve subject colors with adjustable translucent backgrounds and static edge highlights; completed icons and subjects are cached for reuse.",
         "On iOS 16/17, enter Home Screen editing and choose Edit → Customize to change icon styles and size or control wallpaper dimming. The entry is not added on iOS 15, and iOS 18 retains its native panel.",
         "A dedicated icon pack page imports common SnowBoard ZIP themes and assigns packs to Original, Dark and Clear styles; multiple styles may share a pack. Individual App imports take priority, missing artwork falls back automatically, and Tinted uses the Clear pack unchanged. Themed Calendar dates and desktop clock hands remain dynamic."
       ],
-      "notice": "Respring after updating and fully close and reopen Settings; no icon cache clearing is required. Icon packs support common PNG theme artwork, not every SnowBoard extension effect; missing icons use the existing fallback. Individual artwork and icon packs survive algorithm-cache clearing. Initial icons are generated in the background; complex artwork may remain unchanged, and edge highlights are static. Wallpaper dimming supports ordinary photo wallpapers only.",
+      "notice": "Respring after updating and fully close and reopen Settings; no icon cache clearing is required. Icon packs support common PNG theme artwork, not every SnowBoard extension effect; missing icons use the existing fallback. Individual artwork and icon packs survive algorithm-cache clearing. Initial icons are generated in the background; complex artwork may remain unchanged, and edge highlights are static. Wallpaper dimming supports ordinary photo wallpapers only. Imported artwork receives display-only corner masking while original files remain intact. Themes that explicitly disable masking retain their shape; existing packs receive default corners without reimporting.",
       "features": [
         "Adaptive Home Screen and Lock Screen wallpaper dimming on iOS 16–18",
         "Brightness-aware automatic dimming with optional manual intensity control",
@@ -248,7 +256,8 @@
         "Separate Original, Dark and Clear pack selections, with shared themes and automatic style switching",
         "Individual imports override packs; missing icons fall back to native artwork or algorithms, and Tinted reuses Clear artwork",
         "Dynamic themed Calendar dates and desktop clock hands, plus style-aware App icons in Settings lists",
-        "Icon packs and individual artwork survive algorithm-cache clearing"
+        "Icon packs and individual artwork survive algorithm-cache clearing",
+        "Theme-aware icon corners and default corner masking for individual App imports, preserving original colors, transparency and source files"
       ],
       "compatibility": [
         "iOS 15–18",
@@ -269,6 +278,13 @@
         "Open Settings → DarkIcon → Icon Packs, import a ZIP theme, then select packs for Original, Dark and Clear. Tap an imported pack to preview and search, or swipe left to remove it. Individual App imports take priority; Tinted uses Clear artwork unchanged."
       ],
       "changelog": [
+        {
+          "version": "0.9.18",
+          "changes": [
+            "Fixes square corners in some icon packs and adds icon corner masking to individual App imports.",
+            "Preserves original colors, transparency and source files. Existing packs adapt by default without clearing caches or reimporting."
+          ]
+        },
         {
           "version": "0.9.17",
           "changes": [
