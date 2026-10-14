@@ -49,6 +49,14 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.1b+banana54",
+      "changes": [
+        "支持实时活动背景透明。",
+        "修复键盘玻璃高光开关不生效的问题。",
+        "修复放大图标时打开文件夹的玻璃外框闪烁问题（尚未真机测试）。"
+      ]
+    },
+    {
       "version": "0.1.1b+banana47",
       "changes": [
         "修复部分小组件出现不透明白底或黑底、遮挡玻璃效果的问题。",
@@ -203,6 +211,14 @@
         "Reduce the number of enabled surfaces if animation smoothness or battery life is affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.1b+banana54",
+          "changes": [
+            "Adds transparent Live Activity backgrounds.",
+            "Fixes the keyboard glass highlight switch not taking effect.",
+            "Fixes the glass border flashing when opening folders with enlarged icons (not yet tested on a physical device)."
+          ]
+        },
         {
           "version": "0.1.1b+banana47",
           "changes": [
