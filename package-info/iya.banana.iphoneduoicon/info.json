@@ -52,11 +52,19 @@
     "系统状态图标可在左侧胶囊下方独立排列，支持对齐、独立缩放及上下位置调整",
     "星环与胶囊网络图标支持独立上下与左右位置调整，mini Dock 沿用星环设置",
     "左侧胶囊可关闭返回上一个 App 的显示，保持当前模块内容",
-    "真实音频波形，多种音乐可视化样式及音频服务重载入口",
     "未读通知铃铛可在锁屏后持续显示，直到对应通知已处理",
     "星环左侧可显示信息，与胶囊分别保存文字、字体及多行排版；网速可与其他内容混排",
     "系统图标分类筛选，点击胶囊可临时在独立图标行显示全部有效图标",
-    "控制中心可选显示原生右侧图标，收回后以动画恢复星环或胶囊"
+    "新增左右文字随背景实时反色。",
+    "支持自定义时间格式；农历可选仅月份、仅日期或完整月日，中文使用汉字显示。",
+    "电池、Wi-Fi、蜂窝及双卡颜色支持独立选择“自动／自定义”；已用电量、未点亮蜂窝信号段和 Wi-Fi 弧线可分别透明。",
+    "mini Dock 新增应用角标、通知查看和系统长按快捷菜单。",
+    "文件夹支持网格、扇形、列表及 Apple Watch 样式；扇形支持上下全屏、展开／收起动画和点击空白收起。",
+    "扩大右侧胶囊及星环的水平调整范围，新增左侧避让是否允许左移保留宽度的选项。",
+    "新增解锁、收起控制中心后的恢复动画开关，并集中整理相关设置。",
+    "完善系统状态图标及刘海活动接入，改善 NiceBarX 图标重复、漏显和退出后的残留。",
+    "改善胶囊定位、宽刘海显示及过渡时原生时间／运营商露出的问题，优化天气恢复与左侧面板刷新。",
+    "波形／频谱改用可选独立音频服务，缺少时提供安装指引。"
   ],
   "compatibility": [
     "iOS 15–26（iOS 15 未经实机测试；新系统功能未完全验证）",
@@ -78,11 +86,23 @@
     "需要电话助手电池长按时，先在电话助手启用对应功能，再开启 Lunora 的“兼容电池长按”；开启后暂停 Lunora 自己的电池详情长按。",
     "在右侧胶囊内容中选择网速及上下行方向、箭头或三角标识；自定义配色时可选网络图标使用 VPN 着色。",
     "在“交互与动画”开启水珠弹性动画并调整幅度，可预览当前可见胶囊；连续调整会合并预览，遵循系统减弱动态效果。",
-    "在“左侧信息胶囊 → 音乐／媒体”选择波形样式；首次使用若无波形，可确认重新加载音频服务后重新播放，期间声音会短暂中断。",
-    "在“状态图标与边框 → 系统图标显示”选择平时显示的图标及点击临时展开；在“交互与动画 → 控制中心”开启原生图标显示。"
+    "波形／频谱使用可选的 Banana Audio Service 1.0.4 或更新版本；未安装时可按提示前往 Banana 源手动安装。普通媒体信息和播放控制无需此依赖；服务重载需手动确认，期间声音会短暂中断。",
+    "在“状态图标与边框 → 系统图标显示”选择平时显示的图标及点击临时展开；在“交互与动画 → 控制中心”开启原生图标显示。",
+    "左右内容设置可分别开启文字随背景实时反色；自定义时间格式与农历月份／日期可分别选择。",
+    "每项颜色可独立选择自动或自定义；已用电量、未点亮蜂窝信号段和 Wi-Fi 弧线分别设置透明。",
+    "mini Dock 文件夹可选网格、扇形、列表或 Apple Watch 样式；扇形上下全屏展开，点击空白区域收起。",
+    "左侧避让可选择是否允许向左移动以保留宽度；解锁和收起控制中心后的恢复动画可分别开关。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.9",
+      "changes": [
+        "新增左右文字实时反色、自定义时间和三种农历格式；电池、Wi-Fi、蜂窝及双卡可独立选自动／自定义颜色，已用电量、未亮蜂窝段和 Wi-Fi 弧线分别透明。",
+        "mini Dock 新增角标、通知查看及系统长按菜单；文件夹支持网格、扇形、列表和 Apple Watch 样式，扇形上下全屏并支持展开／收起动画和空白收起。",
+        "扩大右侧胶囊／星环位置范围，新增左移保宽及解锁／收起 CC 恢复动画选项；完善状态图标、刘海活动和 NiceBarX 兼容，改善定位、宽刘海、时间／运营商露出、天气恢复及面板刷新；波形／频谱改为可选独立音频服务。"
+      ]
+    },
     {
       "version": "1.0.8",
       "changes": [
@@ -310,11 +330,19 @@
         "Show a separate system status-icon row below the left capsule with alignment, independent size, and vertical position controls",
         "Adjust network icons horizontally and vertically in Orbit and Capsule; mini Dock uses the Orbit setting",
         "Optionally hide Return to Previous App in the left capsule and keep the current module visible",
-        "Real-audio waveforms with multiple music visualization styles and an audio-service reload action",
         "An optional unread-notification bell remains after locking until corresponding notifications are handled",
         "Optional content to the left of Orbit, with separate text, font and multiline settings from Capsule; network rates can be mixed with other fields",
         "Filter system icons by type and temporarily show all active icons in a separate row when tapping the capsule",
-        "Optionally show native right-side icons in Control Center and animate back to Orbit or Capsule after dismissal"
+        "Added live background-based text inversion for both capsules.",
+        "Added custom time formats and lunar date options for month only, day only, or month and day, with Chinese character formatting.",
+        "Added independent Automatic/Custom colors for the battery, Wi-Fi, cellular and dual-SIM indicators, plus separate transparency options for the used battery track, inactive cellular segments and inactive Wi-Fi arcs.",
+        "Added app badges, notification viewing and native app shortcut menus to mini Dock.",
+        "Added Grid, Fan, List and Apple Watch folder styles. Fan folders support full-height expansion, opening/closing animations and tap-outside dismissal.",
+        "Expanded horizontal positioning ranges for the right capsule and Orbit, and added an option to allow the left capsule to shift left to preserve its width during avoidance.",
+        "Added separate capsule return-animation controls after unlocking and closing Control Center, with related settings grouped together.",
+        "Expanded system status icon and notch activity integration, and improved NiceBarX compatibility for duplicate, missing and lingering custom icons.",
+        "Improved capsule positioning, wide-notch display, and native clock/carrier suppression during transitions, along with weather recovery and left-panel refresh behavior.",
+        "Audio waveforms and spectrum effects now use an optional standalone audio service, with installation guidance when it is missing."
       ],
       "compatibility": [
         "iOS 15–26 (iOS 15 untested on devices; newer system features not fully verified)",
@@ -336,10 +364,22 @@
         "For CallAssist battery long presses, enable the corresponding CallAssist feature first, then enable Battery Long-Press Compatibility in Lunora. This suspends Lunora’s own battery-details long press.",
         "Choose network rates, upload/download directions and arrow or triangle markers in right-capsule content. Custom network colors can optionally use VPN tint.",
         "Enable Water-Drop Spring Animation under Interaction and Animation, then adjust amplitude to preview visible capsules. Rapid changes are combined; Reduce Motion is respected.",
-        "Choose a waveform style under Left Information Capsule → Music / Media. If no waveform appears on first use, confirm Reload Audio Services and resume playback; audio briefly stops.",
-        "Choose icon filters and temporary expansion under Status Icons and Outline → System Icon Visibility. Enable native Control Center icons under Interaction and Animation → Control Center."
+        "Waveforms and spectrum effects optionally use Banana Audio Service 1.0.4 or newer. Follow the missing-service guidance to install it manually from Banana. Media information and playback controls work without it; manually confirmed service reload briefly interrupts audio.",
+        "Choose icon filters and temporary expansion under Status Icons and Outline → System Icon Visibility. Enable native Control Center icons under Interaction and Animation → Control Center.",
+        "Enable live background-based text inversion separately in left and right content settings; choose a custom time format and lunar month/day display.",
+        "Select Automatic or Custom for each color independently; set transparency separately for the used battery track, inactive cellular segments and inactive Wi-Fi arcs.",
+        "Choose Grid, Fan, List or Apple Watch folder styles in mini Dock. Fan folders expand to full height and close when tapping outside.",
+        "Choose whether left-side avoidance may shift left to preserve width; independently control return animations after unlocking and closing Control Center."
       ],
       "changelog": [
+        {
+          "version": "1.0.9",
+          "changes": [
+            "Added live text inversion, custom time and three lunar formats; independent Auto/Custom colors for battery, Wi-Fi, cellular and dual SIM, plus separate transparency for the used battery track, inactive cellular segments and Wi-Fi arcs.",
+            "mini Dock adds badges, notification viewing and native long-press menus; folders offer Grid, Fan, List and Apple Watch styles, with full-height Fan expansion, opening/closing animations and tap-outside dismissal.",
+            "Expanded right positioning; added left-shift and unlock/CC return controls; improved status/notch activity, NiceBarX, positioning, wide notches, native clock/carrier hiding, weather and panel refresh; audio visuals now use an optional service."
+          ]
+        },
         {
           "version": "1.0.8",
           "changes": [
