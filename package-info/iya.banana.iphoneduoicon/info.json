@@ -9,7 +9,7 @@
     "左侧玻璃信息胶囊与右侧 Duo 或 mini Dock 可独立设置并自由组合，显示时间日期、天气、媒体、音量、通知和 App 等内容。",
     "提供灵活布局、独立字体与配色、运营商和网络文字、精确数值输入、配置备份与诊断导出，以及 Discord 与 QQ 反馈入口。"
   ],
-  "notice": "iOS 15 未经实机测试，仅开放测试安装。升级后请重新加载 SpringBoard。iOS 26 已有用户测试通过，不代表所有设备与功能均已验证。与 SingleVPN 冲突。",
+  "notice": "需要原生刘海或灵动岛状态栏，支持已生效的原生刘海模拟；普通无刘海布局无法启用。升级后请注销一次。iOS 26 已有用户测试通过，不代表所有设备与功能均已验证。与 SingleVPN 冲突。",
   "features": [
     "左侧信息胶囊与右侧 Duo 或 mini Dock 独立配置、自由组合",
     "分区玻璃、圆形分区和一体玻璃三种信息胶囊样式",
@@ -64,16 +64,18 @@
     "新增解锁、收起控制中心后的恢复动画开关，并集中整理相关设置。",
     "完善系统状态图标及刘海活动接入，改善 NiceBarX 图标重复、漏显和退出后的残留。",
     "改善胶囊定位、宽刘海显示及过渡时原生时间／运营商露出的问题，优化天气恢复与左侧面板刷新。",
-    "波形／频谱改用可选独立音频服务，缺少时提供安装指引。"
+    "波形／频谱改用可选独立音频服务，缺少时提供安装指引。",
+    "支持 iOS 15 原生刘海状态栏与原生刘海模拟，启用前自动检查布局兼容性"
   ],
   "compatibility": [
-    "iOS 15–26（iOS 15 未经实机测试；新系统功能未完全验证）",
+    "iOS 15–26（原生刘海／灵动岛布局，支持已生效的原生刘海模拟）",
     "Rootless 与 RootHide",
     "与 SingleVPN 冲突"
   ],
   "usage": [
     "安装时确认移除存在冲突的 SingleVPN；升级自 iPhoneDuoIcon 会保留原有配置。",
     "进入“设置 → Lunora”开启总开关，再分别配置左侧信息胶囊与右侧 Duo 或 mini Dock；未保存总开关时默认为关闭。",
+    "需要已生效的原生刘海／灵动岛布局；不支持时总开关会给出提示并保持关闭，已有配置与导入也不能绕过。",
     "选择胶囊玻璃样式与常驻模块，横向滑动可切换当前模块。",
     "分别调整左右胶囊的宽度、高度和线宽；按需设置运营商、网络文字与模块图标显示。",
     "为时间、日期或运营商选择系统或已安装字体，并可搜索和预览。",
@@ -95,6 +97,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.0",
+      "changes": [
+        "新增 iOS 15 原生刘海状态栏适配，支持已生效的原生刘海模拟。",
+        "优化启动稳定性，修复部分设备更新状态栏时的崩溃。",
+        "新增启用前兼容性检查与提示，未支持的布局保持原生显示。"
+      ]
+    },
     {
       "version": "1.0.9",
       "changes": [
@@ -287,7 +297,7 @@
         "Configure the left glass information capsule separately from the right Duo or mini Dock, combining time and date, weather, media, volume, notifications, apps, and more.",
         "Flexible layouts, independent fonts and colors, carrier and network text, precise numeric controls, configuration backups, diagnostic exports, and Discord and QQ feedback entries."
       ],
-      "notice": "iOS 15 has not been tested on a physical device; installation is available for testing. Reload SpringBoard after upgrading. Users have reported successful testing on iOS 26, but not all devices and features have been verified. Conflicts with SingleVPN.",
+      "notice": "Requires a native notch or Dynamic Island status bar; active native notch simulation is supported. Unsupported layouts cannot be enabled. Respring once after upgrading. Users have reported successful testing on iOS 26, but not all devices and features have been verified. Conflicts with SingleVPN.",
       "features": [
         "Independent left information capsule and right Duo or mini Dock configurations",
         "Split Glass, Circular Partition, and Continuous Glass capsule styles",
@@ -342,16 +352,18 @@
         "Added separate capsule return-animation controls after unlocking and closing Control Center, with related settings grouped together.",
         "Expanded system status icon and notch activity integration, and improved NiceBarX compatibility for duplicate, missing and lingering custom icons.",
         "Improved capsule positioning, wide-notch display, and native clock/carrier suppression during transitions, along with weather recovery and left-panel refresh behavior.",
-        "Audio waveforms and spectrum effects now use an optional standalone audio service, with installation guidance when it is missing."
+        "Audio waveforms and spectrum effects now use an optional standalone audio service, with installation guidance when it is missing.",
+        "Supports iOS 15 native notch layouts and native notch simulation, with compatibility checks before enabling"
       ],
       "compatibility": [
-        "iOS 15–26 (iOS 15 untested on devices; newer system features not fully verified)",
+        "iOS 15–26 (native notch or Dynamic Island layouts, including active native notch simulation)",
         "Rootless and RootHide",
         "Conflicts with SingleVPN"
       ],
       "usage": [
         "Confirm removal of the conflicting SingleVPN package during installation; upgrading from iPhoneDuoIcon preserves existing settings.",
         "Open Settings → Lunora, enable the master switch, then configure the left information capsule and right Duo or mini Dock. An unsaved master switch defaults to off.",
+        "A native notch or Dynamic Island layout must be active. Unsupported layouts show guidance and remain disabled, including with saved or imported configurations.",
         "Choose a capsule glass style and resting module; swipe horizontally to switch the active module.",
         "Adjust left and right capsule width, height, and line width independently; configure carrier text, network text, and module icons as needed.",
         "Choose system or installed fonts for time, date, and carrier text, with search and preview.",
@@ -372,6 +384,14 @@
         "Choose whether left-side avoidance may shift left to preserve width; independently control return animations after unlocking and closing Control Center."
       ],
       "changelog": [
+        {
+          "version": "1.1.0",
+          "changes": [
+            "Added iOS 15 native notch status bar support, including active native notch simulation.",
+            "Improved startup stability and fixed crashes during status bar updates on some devices.",
+            "Added compatibility checks and guidance before enabling; unsupported layouts retain the native display."
+          ]
+        },
         {
           "version": "1.0.9",
           "changes": [
