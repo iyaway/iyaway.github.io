@@ -79,9 +79,9 @@
     {
       "version": "1.1.18",
       "changes": [
-        "修复已验证的 iOS16/18 系统上玻璃时钟上滑停住与裁切缺口，保留 iOS17 的玻璃和景深效果。",
-        "修正 iOS16 通知位置与 iOS16/17 历史通知上拉距离；iOS18 底部小组件避开手电筒和相机按钮。",
-        "完善 iOS17/18 Spotlight 小组件隐藏与恢复；隐藏日期支持 iOS15+，小组件选项仅在 iOS16+ 显示。"
+        "修复 iOS16/17/18 系统上玻璃时钟上滑缺口，修复玻璃和景深效果。",
+        "新增 iOS16/17/18 锁屏小组件位置调整，适配通知相应的位置修改。",
+        "隐藏日期支持 iOS15+，小组件选项仅在 iOS16+ 显示。"
       ]
     },
     {
@@ -300,9 +300,9 @@
         {
           "version": "1.1.18",
           "changes": [
-            "Fixed glass-clock exit motion and clipping gaps on verified iOS16/18 systems while preserving the iOS17 glass and depth effects.",
-            "Corrected iOS16 notification placement and iOS16/17 notification-history swipe distance; bottom widgets now clear the iOS18 flashlight and camera buttons.",
-            "Improved widget hiding and restoration around Spotlight on iOS17/18. Date hiding supports iOS15+, while widget options require iOS16+."
+            "Fixed glass-clock clipping gaps when swiping up on iOS16/17/18, and corrected glass and depth effects.",
+            "Added Lock Screen widget position adjustment on iOS16/17/18, with matching notification placement.",
+            "Date hiding supports iOS15+, while widget options are shown only on iOS16+."
           ]
         },
         {
