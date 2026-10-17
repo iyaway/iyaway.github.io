@@ -43,12 +43,17 @@
     "可选择滑动时保留折射，或在滑动时临时使用柔化效果",
     "可在锁屏播放器出现时隐藏时钟",
     "日期上下位置可在 -1000～1000 点间调整，系统与自定义时钟共用设置",
-    "提供“重载玻璃服务”按钮，带操作确认和失败提示"
+    "提供“重载玻璃服务”按钮，带操作确认和失败提示",
+    "iOS15及以上可独立隐藏锁屏日期",
+    "iOS16及以上可隐藏锁屏小组件，或将其放到底部并调整上下位置",
+    "底部小组件避开快捷按钮，并在iOS17/18锁屏Spotlight搜索时隐藏、退出后恢复",
+    "优化iOS16通知位置与iOS16/17历史通知短上拉展开体验"
   ],
   "compatibility": [
     "iOS 15–18",
     "Rootless",
-    "RootHide"
+    "RootHide",
+    "玻璃时钟退场与通知修正已在iOS16.7.2、17.3.1和18.5对应设备上分别验证；其它系统小版本与机型需单独确认。"
   ],
   "usage": [
     "安装后打开 SpatialScene App。",
@@ -65,10 +70,20 @@
     "在壁纸设置中开启或关闭深色壁纸，并使用 0–100% 强度调节整体暗化；0% 保持原图，现有壁纸无需重新导入或转换。",
     "开启“使用自定义时钟”和“时钟玻璃效果”后使用新效果；首次安装或更新玻璃功能后，可在“维护”中选择“重载玻璃服务”。此操作会强制中断图形会话，请先保存工作；若提示失败，请使用越狱工具重载图形会话。日常修改设置无需重载。",
     "“滑动时保留折射”默认关闭，停稳后恢复折射；通知收缩暂未开放，手动字高仍可调整。",
-    "在“锁屏时间调整”中使用“日期上下位置（点）”：负数向上、正数向下，0 恢复原位。较大偏移可能移出屏幕，关闭时间修改时恢复原位。"
+    "在“锁屏时间调整”中使用“日期上下位置（点）”：负数向上、正数向下，0 恢复原位。较大偏移可能移出屏幕，关闭时间修改时恢复原位。",
+    "iOS15及以上可使用“隐藏日期”；iOS16及以上才显示小组件隐藏、底部布局与上下位置选项。",
+    "若更新或重载后小组件偶尔未显示，请重新检查锁屏显示；此间歇问题尚未确认根因，不承诺已彻底修复。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.18",
+      "changes": [
+        "修复已验证的 iOS16/18 系统上玻璃时钟上滑停住与裁切缺口，保留 iOS17 的玻璃和景深效果。",
+        "修正 iOS16 通知位置与 iOS16/17 历史通知上拉距离；iOS18 底部小组件避开手电筒和相机按钮。",
+        "完善 iOS17/18 Spotlight 小组件隐藏与恢复；隐藏日期支持 iOS15+，小组件选项仅在 iOS16+ 显示。"
+      ]
+    },
     {
       "version": "1.1.16",
       "changes": [
@@ -250,12 +265,17 @@
         "Keep refraction while swiping or temporarily use a softened effect during motion",
         "Option to hide the clock when the Lock Screen media player is visible",
         "Adjust date position from -1000 to 1000 points with shared settings for system and custom clocks",
-        "Reload Glass Service button with confirmation and failure messages"
+        "Reload Glass Service button with confirmation and failure messages",
+        "Independently hide the Lock Screen date on iOS15 and later",
+        "Hide Lock Screen widgets or move them to the bottom with vertical adjustment on iOS16 and later",
+        "Keep bottom widgets clear of quick-action buttons and hide/restore them around Lock Screen Spotlight on iOS17/18",
+        "Improved iOS16 notification placement and short-swipe access to notification history on iOS16/17"
       ],
       "compatibility": [
         "iOS 15–18",
         "Rootless",
-        "RootHide"
+        "RootHide",
+        "Clock exit and notification fixes were individually verified on corresponding iOS16.7.2, 17.3.1 and 18.5 devices; other system versions and models require separate confirmation."
       ],
       "usage": [
         "Open the SpatialScene app after installation.",
@@ -272,9 +292,19 @@
         "Enable or disable Dark Wallpaper and adjust global dimming from 0–100%; 0% keeps the original image, and existing wallpapers require no re-import or conversion.",
         "Enable Use Custom Clock and Clock Glass Effect. After first installing or updating glass, use Reload Glass Service under Maintenance. This forcibly interrupts the graphical session, so save your work first. If it fails, reload the graphical session with your jailbreak tool. Normal setting changes do not require a reload.",
         "Keep Refraction While Swiping defaults off and refraction returns when settled. Notification shrinking is temporarily unavailable; manual font height remains adjustable.",
-        "Use Date Vertical Offset (pt) under Lock Screen Time Adjustment: negative moves up, positive moves down, and 0 restores the original position. Large offsets can move the date offscreen; disabling clock modification restores its original position."
+        "Use Date Vertical Offset (pt) under Lock Screen Time Adjustment: negative moves up, positive moves down, and 0 restores the original position. Large offsets can move the date offscreen; disabling clock modification restores its original position.",
+        "Hide Date is available on iOS15 and later. Widget hiding, bottom placement and vertical adjustment options require iOS16 or later.",
+        "If widgets occasionally disappear after an update or reload, check the Lock Screen again. This intermittent issue is not root-caused or claimed fully fixed."
       ],
       "changelog": [
+        {
+          "version": "1.1.18",
+          "changes": [
+            "Fixed glass-clock exit motion and clipping gaps on verified iOS16/18 systems while preserving the iOS17 glass and depth effects.",
+            "Corrected iOS16 notification placement and iOS16/17 notification-history swipe distance; bottom widgets now clear the iOS18 flashlight and camera buttons.",
+            "Improved widget hiding and restoration around Spotlight on iOS17/18. Date hiding supports iOS15+, while widget options require iOS16+."
+          ]
+        },
         {
           "version": "1.1.16",
           "changes": [
