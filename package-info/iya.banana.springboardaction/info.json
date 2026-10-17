@@ -1,0 +1,83 @@
+{
+  "package": "iya.banana.springboardaction",
+  "name": "SpringBoardAction",
+  "web_name": "锁屏快捷动作",
+  "tagline": "自定义锁屏左右快捷动作，支持扇形与无背景圆弧菜单。",
+  "developer": "Banana",
+  "tint": "#FFB52E",
+  "description": [
+    "为锁屏左右按钮配置常用应用、快捷指令和系统动作，并按自己的习惯排列。",
+    "单个动作直接执行，多个动作按所选样式展开；应用和快捷指令需要时使用系统认证。"
+  ],
+  "features": [
+    "左右独立选择应用、系统动作和快捷指令，支持排序",
+    "竖排、Mac 堆栈扇形、无背景圆弧三种展开样式",
+    "动作较多时连续拖动查看，无需逐页翻动",
+    "独立隐藏左右按钮，保留动作配置",
+    "左右独立水平与垂直偏移，统一图标比例",
+    "手电筒、相机、勿扰和静音动作",
+    "支持 English、简体中文和繁體中文"
+  ],
+  "compatibility": [
+    "iOS 16–18",
+    "Rootless",
+    "RootHide"
+  ],
+  "usage": [
+    "首次安装后重启桌面，打开“设置 → 锁屏快捷动作”。",
+    "分别选择左右动作，拖动已选条目排序；多个动作会显示省略号入口。",
+    "在外观中选择展开样式；动作较多时拖动菜单查看。",
+    "按需配置独立隐藏与位置偏移；避免同时启用其他锁屏按钮插件。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "changes": [
+        "自定义左右锁屏快捷动作，支持应用、快捷指令及单侧隐藏。",
+        "提供竖排、Mac 堆栈扇形和无背景圆弧，支持连续拖动查看更多动作。",
+        "统一图标比例，改善菜单边缘显示和省略号颜色；设置保留首次安装提示。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "SpringBoardAction",
+      "tagline": "Customize lock screen quick actions with fan and background-free arc menus.",
+      "description": [
+        "Configure the left and right lock screen buttons with your favorite apps, shortcuts, and system actions.",
+        "A single action runs directly; multiple actions expand in the selected layout. Apps and shortcuts use system authentication when required."
+      ],
+      "features": [
+        "Independent left and right apps, system actions, shortcuts, and ordering",
+        "Vertical, Mac stack fan, and background-free arc layouts",
+        "Continuous dragging for large action collections, without paging",
+        "Hide either button while preserving its configuration",
+        "Independent horizontal and vertical offsets with consistent icon sizing",
+        "Flashlight, camera, Do Not Disturb, and silent actions",
+        "English, Simplified Chinese, and Traditional Chinese"
+      ],
+      "compatibility": [
+        "iOS 16–18",
+        "Rootless",
+        "RootHide"
+      ],
+      "usage": [
+        "Respring after the first installation, then open Settings → SpringBoardAction.",
+        "Select actions for each side and drag selected rows to reorder. Multiple actions use an ellipsis entry.",
+        "Choose an expansion style under Appearance and drag overflowing menus to see more actions.",
+        "Configure hiding and position offsets as needed. Avoid enabling other lock screen button tweaks at the same time."
+      ],
+      "changelog": [
+        {
+          "version": "1.0.0",
+          "changes": [
+            "Customize left and right lock screen actions with apps, shortcuts, and independent button hiding.",
+            "Choose vertical, Mac stack fan, or background-free arc layouts, with continuous dragging to reveal more actions.",
+            "Consistent icon sizing, improved menu edge visibility and ellipsis color, and retained first-installation guidance in Settings."
+          ]
+        }
+      ]
+    }
+  }
+}
