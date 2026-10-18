@@ -1,0 +1,90 @@
+{
+  "package": "iya.banana.multitask",
+  "name": "一芽分屏 (Iya Split)",
+  "web_name": "一芽分屏",
+  "developer": "Banana",
+  "tint": "#6C5CE7",
+  "tagline": "随手分屏，自由安排你的多任务空间。",
+  "notice_style": "default",
+  "notice": "适用于已越狱的 iOS 15～26，提供 RootHide 与 Rootless 版本。已在 iOS 17.3.1 / RootHide 确认分屏与全屏交接；其他系统与 Rootless 的真机兼容性仍需对应设备验证，效果也因应用而异。",
+  "description": [
+    "一芽分屏将可调上下／左右分屏、浮窗与 Stage 集中到一套多任务体验中。",
+    "通过图标手势、侧栏或应用切换器打开应用，自由调整布局并快速交换位置。"
+  ],
+  "features": [
+    "统一选择上滑、下滑或双击图标手势，启动上下分、左右分、Stage 或浮窗。",
+    "拖动分隔条调整两侧比例，边缘松手将运行中的应用直接展开为全屏。",
+    "拖动应用顶部短条预览交换，松手确认、回拖取消，交换后分隔条位置保持不变。",
+    "双指在分隔条两侧撑开退出；Home 保留分屏，锁屏解锁保留应用与比例。",
+    "普通／PullOver 侧栏、收藏应用、Stage 等比／自由缩放和控制中心窗口显隐管理。",
+    "逐应用键盘、缩放、配色与后台相机设置，支持英文、简体中文和繁体中文。"
+  ],
+  "compatibility": [
+    "iOS 15.0～26.x，已越狱设备。",
+    "按越狱环境选择 RootHide 或 Rootless；每包均包含 arm64 / arm64e。",
+    "需要正常的插件注入环境、PreferenceLoader 与 CCSupport。",
+    "真机确认范围：iOS 17.3.1 / RootHide 的分屏操作与全屏交接；其余组合仍待各自验证。"
+  ],
+  "usage": [
+    "安装与你的越狱环境相符的版本，进入“设置 → 一芽分屏”。",
+    "选择统一的启动手势和模式，默认上滑；分屏时在剩余桌面区域对第二个应用图标重复手势。",
+    "拖动中间分隔条调整比例，边缘松手进入全屏；抓住顶部短条朝另一应用拖动，看到预览后松手交换。",
+    "两指均置于屏幕中央 25%～75% 区域、分处分隔条两侧，向外撑开并松手退出；收回可取消。",
+    "在定制页调整 Stage 缩放方式，在逐应用设置与收藏列表中搜索应用名或 bundle ID；控制中心模块可切换窗口显隐。",
+    "后台相机需先启用，再开始新的相机会话；首次安装需用户空间重启以加载相机支持。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "changes": [
+        "首个正式版：支持可调上下／左右分屏、浮窗与 Stage，多种启动手势自由选择。",
+        "支持顶部短条拖动交换、边缘直接全屏及双指撑开退出，保留分隔位置与锁屏布局。",
+        "提供普通／PullOver 侧栏、Stage 等比／自由缩放、逐应用设置、控制中心窗口管理及三语言界面。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "Iya Split",
+      "tagline": "Split your screen and arrange your multitasking space.",
+      "notice": "For jailbroken iOS 15–26, with RootHide and Rootless packages. Split-screen use and fullscreen handoff were confirmed on iOS 17.3.1 / RootHide. Other systems and Rootless still require device validation; app compatibility varies.",
+      "description": [
+        "Iya Split brings adjustable top/bottom and left/right splits, floating windows, and Stage into one multitasking experience.",
+        "Open apps with icon gestures, the sidebar, or the app switcher, then resize layouts and exchange positions."
+      ],
+      "features": [
+        "Choose swipe up, swipe down, or double tap on icons to launch top/bottom, left/right, Stage, or window mode.",
+        "Drag the divider to resize; release at an edge to expand the running app to full screen.",
+        "Drag an app’s top handle to preview a swap, release to confirm, or retract to cancel; the divider stays in place.",
+        "Spread two fingers across the divider to exit. Home keeps the split; lock and unlock preserve apps and ratio.",
+        "Normal/PullOver sidebars, favorites, proportional/free Stage resizing, and Control Center window visibility.",
+        "Per-app keyboard, scaling, colors, and background camera options, with English, Simplified Chinese, and Traditional Chinese."
+      ],
+      "compatibility": [
+        "Jailbroken iOS 15.0–26.x.",
+        "Choose RootHide or Rootless for your environment; both packages include arm64 and arm64e.",
+        "Requires working tweak injection, PreferenceLoader, and CCSupport.",
+        "Device-confirmed scope: split-screen use and fullscreen handoff on iOS 17.3.1 / RootHide; other combinations still require validation."
+      ],
+      "usage": [
+        "Install the package for your jailbreak environment and open Settings → Iya Split.",
+        "Choose a startup gesture and mode; swipe up is the default. For a split, repeat the gesture on a second icon in the remaining desktop area.",
+        "Drag the divider to resize or release at an edge for full screen. Drag a top handle toward the other app and release after the swap preview.",
+        "Place both fingers in the central 25%–75% of the screen, on opposite sides of the divider, spread outward and release to exit; retract to cancel.",
+        "Configure Stage resizing in Customization, search app names or bundle IDs in per-app settings/favorites, and manage window visibility in Control Center.",
+        "Enable background camera before starting a fresh camera session. First installation needs a userspace reboot to load camera support."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "First official release with adjustable top/bottom and left/right splits, floating windows, Stage, and configurable startup gestures.",
+            "Drag top handles to swap apps, expand at an edge, or spread two fingers to exit; keep divider positions and locked-screen layouts.",
+            "Includes Normal/PullOver sidebars, proportional/free Stage resizing, per-app settings, Control Center window management, and three languages."
+          ]
+        }
+      ]
+    }
+  }
+}
