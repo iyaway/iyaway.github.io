@@ -1,0 +1,91 @@
+{
+  "package": "iya.banana.iphoneduoflow",
+  "name": "DuoFlow",
+  "web_name": "DuoFlow · 双境",
+  "developer": "Banana",
+  "tagline": "随倾斜变化的场景效果、横屏侧边 Dock 与可展开状态星环。",
+  "description": [
+    "双境为 iPhone 带来随倾斜变化的黑色渐变或折叠效果，仅改变当前画面，不切换 App 或桌面页。",
+    "横屏侧边 Dock、状态星环和原生切换器扩展分别设置，无需安装 TrollPadEx。"
+  ],
+  "features": [
+    "黑色渐变与折叠动画可选，支持全屏、半屏及横竖屏独立设置",
+    "自然持握校准、平放拿起后恢复基准及手动重新校准",
+    "横屏侧边 Dock 的等比缩放、滚动、边距调整与主屏图标避让",
+    "App 内左滑呼出 Dock，Dock 与星环常驻分别控制",
+    "可展开的时间、电池和网络状态星环，支持位置调整与自动配色",
+    "主屏横屏、原生浮动 Dock、App 资料库与最近 App 独立设置",
+    "iPad 网格或 iPhone 卡片切换器选择，动画和网格缩放分别配置",
+    "同时启用 TrollPadEx 时交还重叠原生功能，保留双境的场景效果与侧边定制",
+    "显隐与 Dock 两个控制中心控件，英文、简体中文和繁体中文设置"
+  ],
+  "compatibility": [
+    "最低安装版本 iOS 15",
+    "Rootless 与 RootHide",
+    "需要 PreferenceLoader 与 CCSupport"
+  ],
+  "usage": [
+    "安装后手动注销一次；在“设置 → 双境”分别启用需要的功能，并在控制中心设置中添加两个双境控件。",
+    "先开启“允许主屏幕横屏”，再启用横屏 Dock；App 内从右边缘向左滑呼出。",
+    "保持自然持握启用场景效果，需要时点“重新校准倾斜基准”。",
+    "修改主屏横屏、浮动 Dock 或切换器样式后，请手动注销一次。",
+    "TrollPadEx 已启用时，在它的设置中调整重叠原生选项；停用它并注销后，双境可独立接管。"
+  ],
+  "notice": "部分功能默认关闭，需分别启用。最低安装版本不等于所有功能均已验证；iOS 15/16、iOS 26 全功能及真机第三方共存验证尚未完成。",
+  "notice_style": "warning",
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "changes": [
+        "首次正式发布，提供随倾斜变化的黑色渐变与折叠动画，支持全屏、半屏和手动校准。",
+        "提供横屏侧边 Dock 与可展开状态星环，支持位置调整、自动配色和 App 内显隐。",
+        "提供独立 iPad App 切换器与原生 Dock 扩展选项；同时启用 TrollPadEx 时交还重叠功能。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "DuoFlow",
+      "tagline": "Tilt-driven scene effects, a landscape side Dock, and an expandable status ring.",
+      "description": [
+        "DuoFlow adds tilt-driven black gradients or fold animation to the current iPhone screen without switching apps or Home Screen pages.",
+        "Configure the landscape side Dock, status ring, and native switcher options independently; TrollPadEx is optional."
+      ],
+      "features": [
+        "Choose black gradients or fold animation with full/half-screen and separate portrait/landscape controls",
+        "Natural holding calibration, pickup baseline recovery, and manual recalibration",
+        "Landscape side Dock with proportional sizing, scrolling, margins, and Home Screen icon avoidance",
+        "Swipe left from the right edge to reveal the in-app Dock; independent Dock and ring persistence",
+        "Expandable time, battery, and network status ring with positioning and adaptive colors",
+        "Independent landscape Home Screen, floating Dock, App Library, and recent-app options",
+        "Choose iPad grid or iPhone cards, with separate animation and grid-scaling controls",
+        "Overlapping native features defer to enabled TrollPadEx while DuoFlow effects and side customization remain available",
+        "Two Control Center modules and English, Simplified Chinese, and Traditional Chinese settings"
+      ],
+      "compatibility": [
+        "Minimum installation version: iOS 15",
+        "Rootless and RootHide",
+        "Requires PreferenceLoader and CCSupport"
+      ],
+      "usage": [
+        "Respring after installing. Enable the desired features in Settings → DuoFlow and add both modules in Control Center settings.",
+        "Enable landscape Home Screen before the side Dock. Swipe left from the right edge to reveal it inside apps.",
+        "Enable scene effects while holding the phone naturally; use Recalibrate when needed.",
+        "Respring after changing landscape Home Screen, floating Dock, or switcher style.",
+        "When TrollPadEx is enabled, configure overlapping native options there. Disable it and respring before using DuoFlow as their independent provider."
+      ],
+      "notice": "Some features start disabled. The minimum installation version does not establish full feature coverage; complete iOS 15/16, iOS 26, and physical-device third-party coexistence testing remains pending.",
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Initial stable release with tilt-driven black gradients and fold animation, full- or half-screen effects, and manual recalibration.",
+            "Landscape side Dock and expandable status ring with positioning, adaptive colors, and in-app visibility controls.",
+            "Independent iPad App Switcher and native Dock options; overlapping features defer to TrollPadEx when both are enabled."
+          ]
+        }
+      ]
+    }
+  }
+}
