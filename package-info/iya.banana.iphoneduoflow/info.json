@@ -17,7 +17,8 @@
     "主屏横屏、原生浮动 Dock、App 资料库与最近 App 独立设置",
     "iPad 网格或 iPhone 卡片切换器选择，动画和网格缩放分别配置",
     "同时启用 TrollPadEx 时交还重叠原生功能，保留双境的场景效果与侧边定制",
-    "显隐与 Dock 两个控制中心控件，英文、简体中文和繁体中文设置"
+    "显隐与 Dock 两个控制中心控件，英文、简体中文和繁体中文设置",
+    "设置页提供手动注销按钮，方便应用需要重新加载的选项"
   ],
   "compatibility": [
     "最低安装版本 iOS 15",
@@ -28,13 +29,20 @@
     "安装后手动注销一次；在“设置 → 双境”分别启用需要的功能，并在控制中心设置中添加两个双境控件。",
     "先开启“允许主屏幕横屏”，再启用横屏 Dock；App 内从右边缘向左滑呼出。",
     "保持自然持握启用场景效果，需要时点“重新校准倾斜基准”。",
-    "修改主屏横屏、浮动 Dock 或切换器样式后，请手动注销一次。",
+    "修改主屏横屏、浮动 Dock 或切换器样式后，可点按设置页右上角或底部的“注销”按钮。",
     "TrollPadEx 已启用时，在它的设置中调整重叠原生选项；停用它并注销后，双境可独立接管。"
   ],
   "notice": "部分功能默认关闭，需分别启用。最低安装版本不等于所有功能均已验证；iOS 15/16、iOS 26 全功能及真机第三方共存验证尚未完成。",
   "notice_style": "warning",
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.1",
+      "changes": [
+        "新增设置页右上角及底部的注销按钮，方便应用需要重新加载的设置。",
+        "修复独立使用双境时关闭“在程序坞中显示 App 资源库”仍然显示的问题；同时启用 TrollPadEx 时继续交还其控制。"
+      ]
+    },
     {
       "version": "0.1.0",
       "changes": [
@@ -61,7 +69,8 @@
         "Independent landscape Home Screen, floating Dock, App Library, and recent-app options",
         "Choose iPad grid or iPhone cards, with separate animation and grid-scaling controls",
         "Overlapping native features defer to enabled TrollPadEx while DuoFlow effects and side customization remain available",
-        "Two Control Center modules and English, Simplified Chinese, and Traditional Chinese settings"
+        "Two Control Center modules and English, Simplified Chinese, and Traditional Chinese settings",
+        "Manual Respring buttons in Settings to apply options that require a reload"
       ],
       "compatibility": [
         "Minimum installation version: iOS 15",
@@ -72,11 +81,18 @@
         "Respring after installing. Enable the desired features in Settings → DuoFlow and add both modules in Control Center settings.",
         "Enable landscape Home Screen before the side Dock. Swipe left from the right edge to reveal it inside apps.",
         "Enable scene effects while holding the phone naturally; use Recalibrate when needed.",
-        "Respring after changing landscape Home Screen, floating Dock, or switcher style.",
+        "After changing landscape Home Screen, floating Dock, or switcher style, use Respring at the top right or bottom of Settings.",
         "When TrollPadEx is enabled, configure overlapping native options there. Disable it and respring before using DuoFlow as their independent provider."
       ],
       "notice": "Some features start disabled. The minimum installation version does not establish full feature coverage; complete iOS 15/16, iOS 26, and physical-device third-party coexistence testing remains pending.",
       "changelog": [
+        {
+          "version": "0.1.1",
+          "changes": [
+            "Added Respring buttons at the top right and bottom of Settings to apply options that require a reload.",
+            "Fixed the App Library remaining visible after its Dock switch was turned off in standalone DuoFlow; enabled TrollPadEx retains control of overlapping options."
+          ]
+        },
         {
           "version": "0.1.0",
           "changes": [
