@@ -20,7 +20,8 @@
     "显隐与 Dock 两个控制中心控件，英文、简体中文和繁体中文设置",
     "设置页提供手动注销按钮，方便应用需要重新加载的选项",
     "横屏桌面可隐藏搜索入口，左侧避让默认开启并支持 0～120 pt 额外距离",
-    "按真实生效范围分组的设置，四个位置滑块均支持直接输入数值"
+    "按真实生效范围分组的设置，四个位置滑块均支持直接输入数值",
+    "总开关关闭时停用功能监听与轮询，控制中心尊重总开关状态"
   ],
   "compatibility": [
     "最低安装版本 iOS 15",
@@ -33,12 +34,20 @@
     "保持自然持握启用场景效果，需要时点“重新校准倾斜基准”。",
     "修改主屏横屏、浮动 Dock 或切换器样式后，可点按设置页右上角或底部的“注销”按钮。",
     "TrollPadEx 已启用时，在它的设置中调整重叠原生选项；停用它并注销后，双境可独立接管。",
-    "左侧避让默认开启，距离 0 为系统安全区基准；增大数值增加左侧留白，关闭开关会保留距离。搜索显隐和避让距离修改即时生效。"
+    "左侧避让默认开启，距离 0 为系统安全区基准；增大数值增加左侧留白，关闭开关会保留距离。搜索显隐和避让距离修改即时生效。",
+    "总开关关闭时，控制中心按钮不会启用功能或改写保存设置；请先到设置中打开总开关。重新开启与紧急关闭所需的通知继续保留。"
   ],
   "notice": "部分功能默认关闭，需分别启用。最低安装版本不等于所有功能均已验证；iOS 15/16、iOS 26 全功能及真机第三方共存验证尚未完成。",
   "notice_style": "warning",
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.3",
+      "changes": [
+        "关闭总开关后停止功能监听、状态刷新与轮询，重新开启时恢复。",
+        "控制中心按钮不再自动打开总开关；总开关关闭时保留各功能的已保存设置。"
+      ]
+    },
     {
       "version": "0.1.2",
       "changes": [
@@ -83,7 +92,8 @@
         "Two Control Center modules and English, Simplified Chinese, and Traditional Chinese settings",
         "Manual Respring buttons in Settings to apply options that require a reload",
         "Optional landscape Home Screen Search hiding, with default-on left clearance and 0–120 pt extra spacing",
-        "Settings grouped by actual scope, with direct numeric input on all four position sliders"
+        "Settings grouped by actual scope, with direct numeric input on all four position sliders",
+        "The master switch stops feature monitoring and polling; Control Center respects its state"
       ],
       "compatibility": [
         "Minimum installation version: iOS 15",
@@ -96,10 +106,18 @@
         "Enable scene effects while holding the phone naturally; use Recalibrate when needed.",
         "After changing landscape Home Screen, floating Dock, or switcher style, use Respring at the top right or bottom of Settings.",
         "When TrollPadEx is enabled, configure overlapping native options there. Disable it and respring before using DuoFlow as their independent provider.",
-        "Left clearance starts enabled. A distance of 0 uses the system safe area; positive values add space, and turning it off keeps the saved distance. Search visibility and clearance changes apply immediately."
+        "Left clearance starts enabled. A distance of 0 uses the system safe area; positive values add space, and turning it off keeps the saved distance. Search visibility and clearance changes apply immediately.",
+        "When the master switch is off, Control Center buttons do not activate features or change saved settings. Enable the master switch in Settings first. Configuration and emergency-disable notifications remain available."
       ],
       "notice": "Some features start disabled. The minimum installation version does not establish full feature coverage; complete iOS 15/16, iOS 26, and physical-device third-party coexistence testing remains pending.",
       "changelog": [
+        {
+          "version": "0.1.3",
+          "changes": [
+            "Turning off the master switch now stops feature monitoring, status refreshes, and polling; turning it back on restores them.",
+            "Control Center buttons no longer enable the master switch automatically and preserve saved feature settings while it is off."
+          ]
+        },
         {
           "version": "0.1.2",
           "changes": [
