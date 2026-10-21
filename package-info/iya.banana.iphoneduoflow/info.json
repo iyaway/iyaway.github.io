@@ -42,6 +42,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.4",
+      "changes": [
+        "修复 App 内侧边程序坞隐藏后，点击原图标区域仍可能打开 App 的问题。",
+        "修复打开并关闭 App 资源库后，侧边程序坞位置跳动、偏移或消失的问题。"
+      ]
+    },
+    {
       "version": "0.1.3",
       "changes": [
         "关闭总开关后停止功能监听、状态刷新与轮询，重新开启时恢复。",
@@ -111,6 +118,13 @@
       ],
       "notice": "Some features start disabled. The minimum installation version does not establish full feature coverage; complete iOS 15/16, iOS 26, and physical-device third-party coexistence testing remains pending.",
       "changelog": [
+        {
+          "version": "0.1.4",
+          "changes": [
+            "Fixed hidden side Dock icons remaining tappable inside apps.",
+            "Fixed the side Dock jumping, drifting, or disappearing after opening and closing App Library."
+          ]
+        },
         {
           "version": "0.1.3",
           "changes": [
