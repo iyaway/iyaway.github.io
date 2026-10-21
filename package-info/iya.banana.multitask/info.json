@@ -8,8 +8,8 @@
   "notice_style": "default",
   "notice": "适用于已越狱的 iOS 15～26，提供 RootHide 与 Rootless 版本。已在 iOS 17.3.1 / RootHide 确认分屏与全屏交接；其他系统与 Rootless 的真机兼容性仍需对应设备验证，效果也因应用而异。",
   "description": [
-    "一芽分屏将可调上下／左右分屏、浮窗与 Stage 集中到一套多任务体验中。",
-    "通过图标手势、侧栏或应用切换器打开应用，自由调整布局并快速交换位置。"
+    "一芽分屏将可调上下／左右分屏、浮窗与台前调度集中到一套多任务体验中。",
+    "通过图标手势、侧栏、应用切换器或通知打开应用，自由调整布局并快速交换位置。"
   ],
   "features": [
     "统一选择上滑、下滑或双击图标手势，启动上下分、左右分、Stage 或浮窗。",
@@ -18,7 +18,11 @@
     "双指在分隔条两侧撑开退出；Home 保留分屏，锁屏解锁保留应用与比例。",
     "普通／PullOver 侧栏直接选择上、浮窗 1、浮窗 2、下、Stage；两种浮窗及 Stage 均支持等比／自由缩放。",
     "逐应用键盘、缩放、配色与后台相机设置，支持英文、简体中文和繁体中文。",
-    "未完成分屏时，普通打开新应用可选自动补齐第二侧（默认）或保留新应用全屏。"
+    "未完成分屏时，普通打开新应用可选自动补齐第二侧（默认）或保留新应用全屏。",
+    "点击通知按指定模式打开，支持锁屏开关及应用白名单／黑名单。",
+    "浮窗 2 提供可调半屏浮窗，可切换侧边并选择显示完整界面；浮窗 1 与台前调度支持四角缩放。",
+    "可选窗口打开动画，分别设置浮窗 1、浮窗 2 与台前调度的键盘位置，逐应用选择优先。",
+    "双击间隔可在100～500毫秒内调整，默认200毫秒；仅双击启动时显示参数与测试区。"
   ],
   "compatibility": [
     "iOS 15.0～26.x，已越狱设备。",
@@ -32,10 +36,21 @@
     "拖动中间分隔条调整比例，边缘松手进入全屏；抓住顶部短条朝另一应用拖动，看到预览后松手交换。",
     "两指均置于屏幕中央 25%～75% 区域、分处分隔条两侧，向外撑开并松手退出；收回可取消。",
     "普通／PullOver 侧栏直接投放到上、浮窗 1、浮窗 2、下或 Stage 目标，覆盖默认样式且不修改默认设置；定制页可分别选择浮窗和 Stage 的等比／自由缩放。",
-    "后台相机需先启用，再开始新的相机会话；首次安装需用户空间重启以加载相机支持。"
+    "后台相机需先启用，再开始新的相机会话；首次安装需用户空间重启以加载相机支持。",
+    "在“点击通知”中启用按指定模式打开，选择模式、锁屏行为及应用范围；默认不处理通知。",
+    "在“键盘设置”中分别选择各浮窗模式的窗口内／最前方键盘；逐应用设置可覆盖全局。",
+    "选择双击启动手势后，调整间隔并在测试区试点；间隔越短，单击等待越少，双击需要更快。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.2",
+      "changes": [
+        "新增点击通知按指定模式打开，支持锁屏开关与应用名单；优化应用冷启动和横竖屏切换。",
+        "浮窗 2 升级为可调半屏浮窗，完善窗口旋转、四角缩放、控制条与打开动画。",
+        "新增分模式全局键盘设置及逐应用覆盖，双击间隔可调并附测试区。"
+      ]
+    },
     {
       "version": "0.1.1",
       "changes": [
@@ -60,7 +75,7 @@
       "notice": "For jailbroken iOS 15–26, with RootHide and Rootless packages. Split-screen use and fullscreen handoff were confirmed on iOS 17.3.1 / RootHide. Other systems and Rootless still require device validation; app compatibility varies.",
       "description": [
         "Iya Split brings adjustable top/bottom and left/right splits, floating windows, and Stage into one multitasking experience.",
-        "Open apps with icon gestures, the sidebar, or the app switcher, then resize layouts and exchange positions."
+        "Open apps with icon gestures, the sidebar, the app switcher or notifications, then resize layouts and exchange positions."
       ],
       "features": [
         "Choose swipe up, swipe down, or double tap on icons to launch top/bottom, left/right, Stage, or window mode.",
@@ -69,7 +84,11 @@
         "Spread two fingers across the divider to exit. Home keeps the split; lock and unlock preserve apps and ratio.",
         "Normal/PullOver sidebars directly select Top, Window 1, Window 2, Bottom or Stage. Both floating styles and Stage support proportional/free resizing.",
         "Per-app keyboard, scaling, colors, and background camera options, with English, Simplified Chinese, and Traditional Chinese.",
-        "While waiting for the second app, ordinary launches can complete the split automatically (default) or keep the new app full screen."
+        "While waiting for the second app, ordinary launches can complete the split automatically (default) or keep the new app full screen.",
+        "Open notifications in a selected mode, with lock-screen control and app allowlists/blocklists.",
+        "Window 2 provides an adjustable half-screen overlay, side switching and full-interface display; Window 1 and Stage support four-corner resizing.",
+        "Choose opening animations and keyboard placement for Window 1, Window 2 and Stage, with per-app overrides.",
+        "Adjust double-tap timing from 100 to 500 ms, default 200 ms. Timing controls and the test area appear only in Double tap startup mode."
       ],
       "compatibility": [
         "Jailbroken iOS 15.0–26.x.",
@@ -83,9 +102,20 @@
         "Drag the divider to resize or release at an edge for full screen. Drag a top handle toward the other app and release after the swap preview.",
         "Place both fingers in the central 25%–75% of the screen, on opposite sides of the divider, spread outward and release to exit; retract to cancel.",
         "Drop onto Top, Window 1, Window 2, Bottom or Stage in either sidebar to override the default style without changing it. Choose floating-window and Stage resizing separately in Customization.",
-        "Enable background camera before starting a fresh camera session. First installation needs a userspace reboot to load camera support."
+        "Enable background camera before starting a fresh camera session. First installation needs a userspace reboot to load camera support.",
+        "Enable Open in chosen mode under Notification taps, then choose the mode, lock-screen behavior and app scope. Notifications are unchanged by default.",
+        "Choose in-window or in-front keyboards per mode in Keyboard settings; per-app settings can override each global choice.",
+        "Select Double tap to adjust its interval and try the test area. Shorter intervals reduce single-tap waiting but require faster double taps."
       ],
       "changelog": [
+        {
+          "version": "0.1.2",
+          "changes": [
+            "Open notifications in a chosen mode, with a lock-screen switch and app lists; improve cold starts and orientation changes.",
+            "Window 2 becomes an adjustable half-screen overlay, with improved app rotation, four-corner resizing, controls and opening animations.",
+            "Set keyboard placement per window mode with per-app overrides; tune double-tap timing in a dedicated test area."
+          ]
+        },
         {
           "version": "0.1.1",
           "changes": [
