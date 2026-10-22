@@ -34,6 +34,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "2.0.5",
+      "changes": [
+        "修复关闭 iPad 键盘后部分 App 无法选择系统中文九宫格的问题，改善键盘设置生效。",
+        "改善关闭 Dock 中 App 资源库入口的行为。"
+      ]
+    },
+    {
       "version": "2.0.4",
       "changes": [
         "修复关闭 iPad 键盘后，部分 App 仍使用全键盘、无法选择系统中文九宫格的问题。",
@@ -87,6 +94,13 @@
         "For the system Chinese 9-Key keyboard, turn off Enable iPadOS Keyboard."
       ],
       "changelog": [
+        {
+          "version": "2.0.5",
+          "changes": [
+            "Fixed the system Chinese 9-Key option being unavailable in some apps after disabling the iPad keyboard, and improved keyboard settings application.",
+            "Improved hiding the App Library entry when its Dock option is turned off."
+          ]
+        },
         {
           "version": "2.0.4",
           "changes": [
