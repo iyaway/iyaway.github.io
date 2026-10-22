@@ -7,9 +7,9 @@
   "description": [
     "iPhoneDuoIcon 正式更名为 Lunora · 月珞，带来全新图标与更完整的状态栏体验，升级会保留现有配置。",
     "左侧玻璃信息胶囊与右侧 Duo 或 mini Dock 可独立设置并自由组合，显示时间日期、天气、媒体、音量、通知和 App 等内容。",
-    "提供灵活布局、独立字体与配色、运营商和网络文字、精确数值输入、配置备份与诊断导出，以及 Discord 与 QQ 反馈入口。"
+    "提供统一屏幕定位、独立字体与配色、可选完全亮边和星环双动画，以及配置备份、更新引导、CPU 诊断与 Discord／QQ 反馈入口。"
   ],
-  "notice": "需要原生刘海或灵动岛状态栏，支持已生效的原生刘海模拟；普通无刘海布局无法启用。升级后请注销一次。iOS 26 已有用户测试通过，不代表所有设备与功能均已验证。与 SingleVPN 冲突。",
+  "notice": "主包支持 iOS 15.1–26，不支持 iOS 15.0.x。建议使用原生刘海或灵动岛布局，支持已生效的原生刘海模拟；普通无刘海布局不保证显示效果。升级后请注销一次。iOS 26 已有用户测试反馈，但未覆盖所有设备与功能。与 SingleVPN 冲突。",
   "features": [
     "左侧信息胶囊与右侧 Duo 或 mini Dock 独立配置、自由组合",
     "分区玻璃、圆形分区和一体玻璃三种信息胶囊样式",
@@ -18,8 +18,8 @@
     "mini Dock 可与星环共存，也可关闭星环仅保留 App Dock；支持独立位置调整并在星环展开时自动避让",
     "通知 App 图标、内容滚动、点击跳转及从灵动岛或刘海区域展开的横幅动画",
     "可隐藏系统音量条，并可选择横屏恢复原生音量条（默认开启）",
-    "胶囊水平加长及 AM/PM 同行、上方或下方排列",
-    "左右胶囊独立宽度、高度和线宽调节，右侧线宽同时作用于星环",
+    "支持 AM/PM 同行、上方或下方排列",
+    "左右显示统一以屏幕边缘定位，可调外侧边距、顶部距离、宽高与整体缩放，内部布局和线宽分别保留",
     "双卡运营商常驻、自定义文字与双行显示",
     "时间、日期和运营商支持系统字体或已安装自定义字体，可搜索、预览和选择",
     "除天气与温度外，各模块可独立隐藏图标",
@@ -31,7 +31,7 @@
     "独立边框、模块图标与 VPN 指示颜色设置",
     "点按滑杆数值可手动输入精确参数",
     "天气与定位后台响应，保留缓存与刷新限频以减少界面卡顿",
-    "恢复电池轮廓绕行动画，并优化手动尺寸下的文字比例、描边与信号间隙",
+    "电池轮廓绕行动画支持用户配置的内部图标比例与信号间距",
     "改善充电展开时的电池尺寸与媒体图标显示，并为左侧电池轮廓加入镜像充电效果",
     "右侧胶囊、独立星环与 mini Dock 支持内置玻璃外观及独立材质透明度，右侧底色跟随左侧",
     "统一 Wi-Fi、4G、5G 与 LTE 的视觉大小基准，并提供网络图标独立缩放",
@@ -45,7 +45,7 @@
     "独立摆放日期、时间、星期及农历，分别设置字体、字号与文字方向",
     "右侧胶囊支持多行文字、电池信息及上下行网速，方向标识可选箭头／三角，并可滚动、缩小或手动换行",
     "mini Dock 自定义文件夹与图标大小，应用及文件夹可选圆形；合并系统状态图标并调整大小",
-    "左右尽量占满空间、玻璃边框原色及可选水珠动画，支持 50%–300% 幅度调节与即时预览",
+    "玻璃边框原色及可选水珠动画，支持 50%–300% 幅度调节与即时预览",
     "可调 Wi-Fi 线宽及 Wi-Fi／蜂窝显示强度",
     "长按电池详情、面板箭头、触感反馈与电话助手电池长按兼容开关",
     "提醒事项支持自然日范围、完成反馈与重复点击防护",
@@ -60,24 +60,36 @@
     "电池、Wi-Fi、蜂窝及双卡颜色支持独立选择“自动／自定义”；已用电量、未点亮蜂窝信号段和 Wi-Fi 弧线可分别透明。",
     "mini Dock 新增应用角标、通知查看和系统长按快捷菜单。",
     "文件夹支持网格、扇形、列表及 Apple Watch 样式；扇形支持上下全屏、展开／收起动画和点击空白收起。",
-    "扩大右侧胶囊及星环的水平调整范围，新增左侧避让是否允许左移保留宽度的选项。",
+    "内部图标位置可单独微调，mini Dock 星环支持左右偏移；左侧避让可选临时左移以保留宽度",
     "新增解锁、收起控制中心后的恢复动画开关，并集中整理相关设置。",
     "完善系统状态图标及刘海活动接入，改善 NiceBarX 图标重复、漏显和退出后的残留。",
-    "改善胶囊定位、宽刘海显示及过渡时原生时间／运营商露出的问题，优化天气恢复与左侧面板刷新。",
+    "改善桌面与 App 的布局一致性、独立日期溢出显示及原生图标过渡显示，减少不必要的刷新",
     "波形／频谱改用可选独立音频服务，缺少时提供安装指引。",
-    "支持 iOS 15 原生刘海状态栏与原生刘海模拟，启用前自动检查布局兼容性"
+    "支持 iOS 15.1–26 的原生刘海／灵动岛布局与已生效的刘海模拟；主包拒绝 iOS 15.0.x",
+    "两页更新与定位引导，说明新功能、整体定位及旧配置迁移，可在维护页重新查看",
+    "控制中心默认跟随原生电池的横向与纵向位置，保留设定的尺寸、缩放和内部布局",
+    "录屏、通话、导航与录音时，左胶囊保留内容并融合系统活动颜色和返回动作",
+    "每处液态玻璃可独立开启柔和的完全亮边，默认关闭",
+    "星环可选择原动画或先对齐再变形，mini Dock 内的星环共用动画模式",
+    "星环和胶囊可常显电池流光，选择系统／电量分级配色，独立控制充电流光及充电颜色",
+    "信号支持全部 SIM、仅 SIM 1 或仅 SIM 2，单卡信号均匀分布",
+    "mini Dock 可选关闭、上滑、下滑或双击联动一芽启动模式，普通点击保持原动作",
+    "可在通知中心滑动过渡时隐藏左胶囊，停稳后恢复，并减少不可见内容的刷新工作",
+    "手动录制 60 秒线程 CPU 信息与稀疏动态库线索，导出报告辅助排查卡顿和发热，不会自动上传",
+    "左侧分体玻璃按保留文字策略收窄时保持端部弧度"
   ],
   "compatibility": [
-    "iOS 15–26（原生刘海／灵动岛布局，支持已生效的原生刘海模拟）",
+    "iOS 15.1–26（主包不支持 iOS 15.0.x）",
+    "建议刘海／灵动岛布局，支持已生效的原生刘海模拟",
     "Rootless 与 RootHide",
     "与 SingleVPN 冲突"
   ],
   "usage": [
     "安装时确认移除存在冲突的 SingleVPN；升级自 iPhoneDuoIcon 会保留原有配置。",
     "进入“设置 → Lunora”开启总开关，再分别配置左侧信息胶囊与右侧 Duo 或 mini Dock；未保存总开关时默认为关闭。",
-    "需要已生效的原生刘海／灵动岛布局；不支持时总开关会给出提示并保持关闭，已有配置与导入也不能绕过。",
+    "建议在已生效的原生刘海／灵动岛布局下使用；普通无刘海布局不保证显示效果。iOS 15.0.x 不能安装主包。",
     "选择胶囊玻璃样式与常驻模块，横向滑动可切换当前模块。",
-    "分别调整左右胶囊的宽度、高度和线宽；按需设置运营商、网络文字与模块图标显示。",
+    "在屏幕定位中调整外侧边距、顶部距离、宽高与整体缩放；文字、图标与星环的内部相对位置仍可分别微调，旧配置会自动换算并保留回退数据。",
     "为时间、日期或运营商选择系统或已安装字体，并可搜索和预览。",
     "按需设置灵动岛避让为隐藏或横向收窄，并选择保留区域、仅文字滚动或图标与文字整组滚动；也可开启锁屏原生右侧状态及岛内展开通知。",
     "在 mini Dock 中最多选择 8 个固定或最近使用 App，并可搜索、排序、调整位置或关闭星环仅保留 App Dock。",
@@ -93,10 +105,23 @@
     "左右内容设置可分别开启文字随背景实时反色；自定义时间格式与农历月份／日期可分别选择。",
     "每项颜色可独立选择自动或自定义；已用电量、未点亮蜂窝信号段和 Wi-Fi 弧线分别设置透明。",
     "mini Dock 文件夹可选网格、扇形、列表或 Apple Watch 样式；扇形上下全屏展开，点击空白区域收起。",
-    "左侧避让可选择是否允许向左移动以保留宽度；解锁和收起控制中心后的恢复动画可分别开关。"
+    "左侧避让可选择是否允许向左移动以保留宽度；解锁和收起控制中心后的恢复动画可分别开关。",
+    "在“右侧显示 → 星环展开动画”选择原动画或“先对齐，再变形”；mini Dock 内的星环使用同一选项。",
+    "每处液态玻璃的“完全亮边”可分别开启，默认关闭；电池设置可分别控制充电流光、常显流光和配色。",
+    "在 mini Dock 设置中选择一芽联动手势：关闭、上滑、下滑或双击。未安装或未启用一芽时保持原有行为。",
+    "在右侧网络设置中选择显示的 SIM；在维护页按需录制并导出 60 秒 CPU 诊断报告。",
+    "首次进入 1.1.2 设置会显示本次更新与定位说明；完成后不再自动重复，可在维护页重新打开。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.2",
+      "changes": [
+        "新增两页更新与定位说明；统一左右整体屏幕定位，保留内部布局并自动迁移旧设置，控制中心可跟随原生电池位置。",
+        "新增可选完全亮边、星环双动画模式、电池流光常显与充电配色、双卡信号选择，以及 mini Dock 一芽分屏手势联动。",
+        "完善刘海活动颜色、文字布局和避让显示，减少重复刷新；新增 60 秒 CPU 诊断。主包最低支持 iOS 15.1，阻止 iOS 15.0.x 安装。"
+      ]
+    },
     {
       "version": "1.1.0",
       "changes": [
@@ -295,9 +320,9 @@
       "description": [
         "iPhoneDuoIcon is now Lunora, with a new icon and a more complete status bar experience. Existing settings are preserved during the upgrade.",
         "Configure the left glass information capsule separately from the right Duo or mini Dock, combining time and date, weather, media, volume, notifications, apps, and more.",
-        "Flexible layouts, independent fonts and colors, carrier and network text, precise numeric controls, configuration backups, diagnostic exports, and Discord and QQ feedback entries."
+        "Unified screen-edge positioning, independent fonts and colors, optional full-edge highlights and two Orbit animations, configuration backups, an update guide, CPU diagnostics, and Discord/QQ feedback entries."
       ],
-      "notice": "Requires a native notch or Dynamic Island status bar; active native notch simulation is supported. Unsupported layouts cannot be enabled. Respring once after upgrading. Users have reported successful testing on iOS 26, but not all devices and features have been verified. Conflicts with SingleVPN.",
+      "notice": "The main package supports iOS 15.1–26 and does not support iOS 15.0.x. Native notch or Dynamic Island layouts are recommended; active native notch simulation is supported. Display behavior on ordinary non-notch layouts is not guaranteed. Respring once after upgrading. Users have reported testing on iOS 26, but not every device and feature is covered. Conflicts with SingleVPN.",
       "features": [
         "Independent left information capsule and right Duo or mini Dock configurations",
         "Split Glass, Circular Partition, and Continuous Glass capsule styles",
@@ -306,8 +331,8 @@
         "Use mini Dock alongside Orbit, or disable Orbit for an apps-only Dock, with independent positioning and automatic avoidance during Orbit expansion",
         "Notification app icons, scrolling content, tap-to-open actions, and banners expanding from the Dynamic Island or notch",
         "Hide the system volume HUD, with optional landscape restoration enabled by default",
-        "Extended capsule width and inline, above, or below AM/PM placement",
-        "Independent width, height, and line-width controls for the left and right capsules; right-side line width also applies to Orbit",
+        "Inline, above, or below AM/PM placement",
+        "Unified screen-edge positioning with outer-edge spacing, top distance, width, height and overall scale; internal layout and outline width remain independent",
         "Persistent dual-SIM carrier display with custom text and two-line layout",
         "System or installed custom fonts for time, date, and carrier text, with search and preview",
         "Optional icon hiding for every module except Weather and Temperature",
@@ -319,7 +344,7 @@
         "Independent border, module-icon, and VPN-indicator colors",
         "Tap slider values to enter exact numbers",
         "Responsive background weather and location work with cached data and refresh limits",
-        "Restored battery-outline traversal animation with improved text proportions, outlines, and signal spacing at custom sizes",
+        "Battery-outline traversal animation respects configured internal icon sizes and signal spacing",
         "Improved battery sizing during charging expansion and media icon display, plus a mirrored charging effect on the left battery outline",
         "Built-in glass appearance and independent material opacity for the right Capsule, standalone Orbit, and mini Dock, with right-side fill following the left",
         "Unified visual sizing for Wi-Fi, 4G, 5G, and LTE, with independent regular network-icon scaling",
@@ -333,7 +358,7 @@
         "Independent date, time, weekday and lunar-date placement, fonts, sizes and text directions",
         "Multiline right-capsule text, battery information and upload/download rates with arrow or triangle markers, scrolling, shrinking or manual line breaks",
         "Custom mini Dock folders and icon sizing, optional round app/folder icons, and merged system status icons with scaling",
-        "Fuller-space layouts, original-color glass outlines and optional water-drop motion with 50–300% amplitude and preview",
+        "Original-color glass outlines and optional water-drop motion with 50–300% amplitude and preview",
         "Adjustable Wi-Fi stroke width and displayed Wi-Fi/cellular strength",
         "Battery details on long press, panel arrows, haptics and optional CallAssist battery long-press compatibility",
         "Calendar-day reminder ranges, completion feedback and duplicate-tap protection",
@@ -348,24 +373,36 @@
         "Added independent Automatic/Custom colors for the battery, Wi-Fi, cellular and dual-SIM indicators, plus separate transparency options for the used battery track, inactive cellular segments and inactive Wi-Fi arcs.",
         "Added app badges, notification viewing and native app shortcut menus to mini Dock.",
         "Added Grid, Fan, List and Apple Watch folder styles. Fan folders support full-height expansion, opening/closing animations and tap-outside dismissal.",
-        "Expanded horizontal positioning ranges for the right capsule and Orbit, and added an option to allow the left capsule to shift left to preserve its width during avoidance.",
+        "Adjust internal icon positions, move mini Dock’s Orbit left or right, and optionally allow temporary leftward movement to retain left-capsule width",
         "Added separate capsule return-animation controls after unlocking and closing Control Center, with related settings grouped together.",
         "Expanded system status icon and notch activity integration, and improved NiceBarX compatibility for duplicate, missing and lingering custom icons.",
-        "Improved capsule positioning, wide-notch display, and native clock/carrier suppression during transitions, along with weather recovery and left-panel refresh behavior.",
+        "Improved layout consistency across Home Screen and apps, independent-date overflow and native-icon transitions, with less unnecessary refreshing",
         "Audio waveforms and spectrum effects now use an optional standalone audio service, with installation guidance when it is missing.",
-        "Supports iOS 15 native notch layouts and native notch simulation, with compatibility checks before enabling"
+        "Supports iOS 15.1–26 native notch/Dynamic Island layouts and active native notch simulation; the main package rejects iOS 15.0.x",
+        "A two-page update and placement guide covers new features, group positioning and configuration migration, with replay from Maintenance",
+        "Follow the native battery horizontally and vertically in Control Center by default, retaining configured size, scale and internal layout",
+        "Keep left-capsule content while reflecting native recording, call, navigation and audio-recording colors and return actions",
+        "Optional soft full-edge highlights for each liquid-glass surface, off by default",
+        "Choose the original Orbit animation or Align First, Then Transform, shared with mini Dock’s Orbit",
+        "Always-on battery flow for Orbit and Capsule, system or battery-level colors, and independent charging-flow and charging-color controls",
+        "Show both SIMs, SIM 1 only or SIM 2 only, with a single SIM distributed evenly",
+        "Assign swipe up, swipe down or double tap in mini Dock to follow Iya Split’s launch mode, or leave integration off; ordinary taps retain their action",
+        "Optionally hide the left capsule during Notification Center gestures and restore it when settled, with less work for invisible content",
+        "Manually record 60 seconds of thread CPU usage with sparse library clues and export a report for stutter or heat investigations; nothing is uploaded automatically",
+        "Left Split Glass retains its end curvature when narrowed with the Keep Text strategy"
       ],
       "compatibility": [
-        "iOS 15–26 (native notch or Dynamic Island layouts, including active native notch simulation)",
+        "iOS 15.1–26 (the main package does not support iOS 15.0.x)",
+        "Native notch or Dynamic Island layouts recommended; active native notch simulation supported",
         "Rootless and RootHide",
         "Conflicts with SingleVPN"
       ],
       "usage": [
         "Confirm removal of the conflicting SingleVPN package during installation; upgrading from iPhoneDuoIcon preserves existing settings.",
         "Open Settings → Lunora, enable the master switch, then configure the left information capsule and right Duo or mini Dock. An unsaved master switch defaults to off.",
-        "A native notch or Dynamic Island layout must be active. Unsupported layouts show guidance and remain disabled, including with saved or imported configurations.",
+        "Use an active native notch or Dynamic Island layout for recommended results. Ordinary non-notch layouts are not guaranteed. The main package cannot be installed on iOS 15.0.x.",
         "Choose a capsule glass style and resting module; swipe horizontally to switch the active module.",
-        "Adjust left and right capsule width, height, and line width independently; configure carrier text, network text, and module icons as needed.",
+        "Use Screen Placement for outer-edge spacing, top distance, width, height and overall scale. Internal text, icon and Orbit offsets remain adjustable; old configurations migrate while retaining rollback data.",
         "Choose system or installed fonts for time, date, and carrier text, with search and preview.",
         "Choose hiding or horizontal narrowing for Dynamic Island avoidance, retaining a selected area or scrolling icons and text together; optionally enable native right-side Lock Screen status and In-Island notifications.",
         "Choose up to eight pinned or recent apps in mini Dock, then search, reorder, and position them as needed, or disable Orbit for an apps-only Dock.",
@@ -381,9 +418,22 @@
         "Enable live background-based text inversion separately in left and right content settings; choose a custom time format and lunar month/day display.",
         "Select Automatic or Custom for each color independently; set transparency separately for the used battery track, inactive cellular segments and inactive Wi-Fi arcs.",
         "Choose Grid, Fan, List or Apple Watch folder styles in mini Dock. Fan folders expand to full height and close when tapping outside.",
-        "Choose whether left-side avoidance may shift left to preserve width; independently control return animations after unlocking and closing Control Center."
+        "Choose whether left-side avoidance may shift left to preserve width; independently control return animations after unlocking and closing Control Center.",
+        "Choose Current Animation or Align First, Then Transform under Right Display → Orbit Reveal Animation; mini Dock’s Orbit shares this option.",
+        "Enable Full Edge Highlight separately for each liquid-glass surface; it is off by default. Battery settings separately control charging flow, always-on flow and colors.",
+        "Choose Off, Swipe Up, Swipe Down or Double Tap for Iya Split integration in mini Dock settings. Behavior stays unchanged when Iya Split is unavailable or disabled.",
+        "Choose which SIM to display in right-side network settings. Record and export a 60-second CPU diagnostic report from Maintenance when needed.",
+        "The first Settings visit on 1.1.2 shows the update and placement guide. It stays dismissed after completion and can be reopened from Maintenance."
       ],
       "changelog": [
+        {
+          "version": "1.1.2",
+          "changes": [
+            "Added a two-page update and placement guide, unified screen-edge positioning for both displays, automatic migration with internal layouts preserved, and native battery anchoring in Control Center.",
+            "Added optional full-edge glass highlights, two Orbit animation modes, always-on battery flow and charging colors, SIM signal selection, and Iya Split gesture integration for mini Dock.",
+            "Improved notch activity colors, text layout and avoidance, and reduced unnecessary refreshes. Added 60-second CPU diagnostics. The main package requires iOS 15.1 or later and blocks iOS 15.0.x."
+          ]
+        },
         {
           "version": "1.1.0",
           "changes": [
