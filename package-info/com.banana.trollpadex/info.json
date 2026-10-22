@@ -28,10 +28,18 @@
     "iOS 16 通过控制中心切换多任务模式；iOS 17 及以上使用插件入口打开系统“多任务与手势”设置。",
     "更改 iPad 应用切换器开关后需要 Respring。",
     "iOS 26 可开启 Allow Smaller Windows；App 自行布局，过小窗口可能裁切内容。",
-    "无法从 Dock 或侧栏拖入应用时，可使用系统的“添加另一个窗口”菜单。"
+    "无法从 Dock 或侧栏拖入应用时，可使用系统的“添加另一个窗口”菜单。",
+    "使用系统中文九宫格时，请关闭 Enable iPadOS Keyboard。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "2.0.4",
+      "changes": [
+        "修复关闭 iPad 键盘后，部分 App 仍使用全键盘、无法选择系统中文九宫格的问题。",
+        "改善键盘设置在 App 中的生效与刷新。"
+      ]
+    },
     {
       "version": "2.0.3",
       "changes": [
@@ -75,9 +83,17 @@
         "On iOS 16, switch multitasking modes in Control Center. On iOS 17 or later, open the system Multitasking & Gestures page from TrollPadEx.",
         "Respring after changing the iPad App Switcher option.",
         "On iOS 26, enable Allow Smaller Windows if needed. Apps manage their layouts and may clip content in very small windows.",
-        "If dragging an app from the Dock or recent-app strip is unavailable, use the native Add Another Window menu."
+        "If dragging an app from the Dock or recent-app strip is unavailable, use the native Add Another Window menu.",
+        "For the system Chinese 9-Key keyboard, turn off Enable iPadOS Keyboard."
       ],
       "changelog": [
+        {
+          "version": "2.0.4",
+          "changes": [
+            "Fixed some apps continuing to use a full keyboard and hiding the system Chinese 9-Key option after the iPad keyboard was disabled.",
+            "Improved how keyboard settings apply and refresh in apps."
+          ]
+        },
         {
           "version": "2.0.3",
           "changes": [
