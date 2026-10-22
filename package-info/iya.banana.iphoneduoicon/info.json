@@ -76,7 +76,9 @@
     "mini Dock 可选关闭、上滑、下滑或双击联动一芽启动模式，普通点击保持原动作",
     "可在通知中心滑动过渡时隐藏左胶囊，停稳后恢复，并减少不可见内容的刷新工作",
     "手动录制 60 秒线程 CPU 信息与稀疏动态库线索，导出报告辅助排查卡顿和发热，不会自动上传",
-    "左侧分体玻璃按保留文字策略收窄时保持端部弧度"
+    "左侧分体玻璃按保留文字策略收窄时保持端部弧度",
+    "可选横屏停用 Lunora，恢复原生状态栏，回到竖屏自动恢复，保留已有配置",
+    "可选 Mikkyy 兼容，保护右侧显示和点击；与横屏停用均默认关闭"
   ],
   "compatibility": [
     "iOS 15.1–26（主包不支持 iOS 15.0.x）",
@@ -110,10 +112,18 @@
     "每处液态玻璃的“完全亮边”可分别开启，默认关闭；电池设置可分别控制充电流光、常显流光和配色。",
     "在 mini Dock 设置中选择一芽联动手势：关闭、上滑、下滑或双击。未安装或未启用一芽时保持原有行为。",
     "在右侧网络设置中选择显示的 SIM；在维护页按需录制并导出 60 秒 CPU 诊断报告。",
-    "首次进入 1.1.2 设置会显示本次更新与定位说明；完成后不再自动重复，可在维护页重新打开。"
+    "首次进入 1.1.2 设置会显示本次更新与定位说明；完成后不再自动重复，可在维护页重新打开。",
+    "在「设置 → Lunora → 运行与兼容」按需开启「横屏时停用 Lunora」或「Mikkyy 兼容」；两项默认关闭。Mikkyy 兼容不会在控制中心过渡、原生展开或主动隐藏时强制显示。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.3-1",
+      "changes": [
+        "新增可选的「横屏时停用 Lunora」：横屏恢复原生状态栏，回到竖屏自动恢复，保留原有配置。",
+        "新增「Mikkyy 兼容」，保护右侧显示和点击。两项默认关闭，可在「运行与兼容」中开启。"
+      ]
+    },
     {
       "version": "1.1.2",
       "changes": [
@@ -389,7 +399,9 @@
         "Assign swipe up, swipe down or double tap in mini Dock to follow Iya Split’s launch mode, or leave integration off; ordinary taps retain their action",
         "Optionally hide the left capsule during Notification Center gestures and restore it when settled, with less work for invisible content",
         "Manually record 60 seconds of thread CPU usage with sparse library clues and export a report for stutter or heat investigations; nothing is uploaded automatically",
-        "Left Split Glass retains its end curvature when narrowed with the Keep Text strategy"
+        "Left Split Glass retains its end curvature when narrowed with the Keep Text strategy",
+        "Optionally disable Lunora in landscape, restore the native status bar and automatically resume in portrait while preserving saved settings",
+        "Optional Mikkyy compatibility protects the right display and taps; both new options are off by default"
       ],
       "compatibility": [
         "iOS 15.1–26 (the main package does not support iOS 15.0.x)",
@@ -423,9 +435,17 @@
         "Enable Full Edge Highlight separately for each liquid-glass surface; it is off by default. Battery settings separately control charging flow, always-on flow and colors.",
         "Choose Off, Swipe Up, Swipe Down or Double Tap for Iya Split integration in mini Dock settings. Behavior stays unchanged when Iya Split is unavailable or disabled.",
         "Choose which SIM to display in right-side network settings. Record and export a 60-second CPU diagnostic report from Maintenance when needed.",
-        "The first Settings visit on 1.1.2 shows the update and placement guide. It stays dismissed after completion and can be reopened from Maintenance."
+        "The first Settings visit on 1.1.2 shows the update and placement guide. It stays dismissed after completion and can be reopened from Maintenance.",
+        "Open Settings → Lunora → Behavior and Compatibility to enable Disable Lunora in Landscape or Mikkyy Compatibility. Both are off by default. Mikkyy compatibility does not force visibility during Control Center transitions, native reveal or deliberate hiding."
       ],
       "changelog": [
+        {
+          "version": "1.1.3-1",
+          "changes": [
+            "Added an optional Disable Lunora in Landscape setting: restore the native status bar in landscape and automatically resume Lunora in portrait, keeping saved settings.",
+            "Added Mikkyy Compatibility to protect the right display and taps. Both options are off by default and available under Behavior and Compatibility."
+          ]
+        },
         {
           "version": "1.1.2",
           "changes": [
