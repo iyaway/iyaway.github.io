@@ -1,0 +1,82 @@
+{
+  "package": "iya.banana.duoicon",
+  "name": "Lunora DuoIcon",
+  "web_name": "Lunora · 月珞 · 星环",
+  "developer": "Banana",
+  "tagline": "Lunora 的精简版本，仅包含右侧星环功能。",
+  "description": [
+    "Lunora 的精简版本，仅包含右侧星环功能，提供星环与胶囊两种样式。"
+  ],
+  "features": [
+    "星环／胶囊两种样式与展开动画",
+    "电量、Wi-Fi、蜂窝与单／双 SIM 状态",
+    "电池流光、自定义配色与文字反色",
+    "胶囊时间、日期、农历与两行文字",
+    "文字对齐、左右偏移与灵动岛避让",
+    "桌面、App 与锁屏显示，控制中心使用原生图标"
+  ],
+  "notice": "与 SingleVPN 冲突。Lunora V1 或 V2 开启时本插件自动让位；两者关闭后按本插件自己的开关恢复。建议使用刘海／灵动岛布局。iOS 26 及不同设备尚未全面验证。",
+  "compatibility": [
+    "iOS 15.1–26（不支持 iOS 15.0.x）",
+    "Rootless 与 RootHide",
+    "建议刘海／灵动岛布局",
+    "与 SingleVPN 冲突"
+  ],
+  "usage": [
+    "进入「设置 → Lunora · 月珞 · 星环」开启总开关（默认关闭），选择星环或胶囊。",
+    "在内容设置中配置时间、日期与农历，在主页面调整配色、偏移及避让。",
+    "使用本插件时先关闭 Lunora V1 与 V2 的总开关。"
+  ],
+  "screenshots": [],
+  "tint": "#248CFF",
+  "notice_style": "warning",
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "changes": [
+        "Lunora 的精简版本，仅包含右侧星环功能，提供星环与胶囊两种样式。",
+        "保留展开动画、电池流光、状态配色、文字反色与灵动岛避让。",
+        "胶囊支持时间、日期和农历、两行显示、文字对齐与左右偏移；支持桌面、App 和锁屏显示。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "Lunora DuoIcon",
+      "tagline": "A streamlined edition of Lunora focused on right-side Orbit functionality.",
+      "description": [
+        "A streamlined edition of Lunora focused on right-side Orbit functionality, with Orbit and Capsule styles."
+      ],
+      "features": [
+        "Orbit and Capsule styles with reveal animations",
+        "Battery, Wi-Fi, cellular and single- or dual-SIM status",
+        "Battery flow, custom colors and inverted text",
+        "Capsule time, date, lunar date and two-line text",
+        "Text alignment, horizontal offsets and Dynamic Island avoidance",
+        "Home Screen, in-app and Lock Screen display; native icons in Control Center"
+      ],
+      "notice": "Conflicts with SingleVPN. Yields while Lunora V1 or V2 is enabled and resumes according to its own switch after both are off. A notch or Dynamic Island layout is recommended. iOS 26 and all device configurations have not been fully validated.",
+      "compatibility": [
+        "iOS 15.1–26; iOS 15.0.x is excluded",
+        "Rootless and RootHide",
+        "Notch or Dynamic Island layout recommended",
+        "Conflicts with SingleVPN"
+      ],
+      "usage": [
+        "Open Settings → Lunora DuoIcon, enable the main switch (off by default), and choose Orbit or Capsule.",
+        "Configure time, date and lunar date in content settings, and adjust colors, offsets and avoidance on the main page.",
+        "Disable the main switches in Lunora V1 and V2 when using DuoIcon."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "A streamlined edition of Lunora focused on right-side Orbit functionality, with Orbit and Capsule styles.",
+            "Includes reveal animations, battery flow, status colors, inverted text and Dynamic Island avoidance.",
+            "Capsule supports time, date and lunar date, two lines, text alignment and horizontal offsets. Available on the Home Screen, in apps and on the Lock Screen."
+          ]
+        }
+      ]
+    }
+  }
+}
