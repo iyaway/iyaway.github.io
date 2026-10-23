@@ -42,6 +42,14 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.5",
+      "changes": [
+        "修复程序坞在转屏、控制中心、通知中心和启动App时错位、闪动或消失的问题。",
+        "修复关闭App资源库后入口图像消失及程序坞图标散开的问题。",
+        "修复iOS15横屏开启侧边程序坞时，无法启动或重复启用引导式访问的问题。"
+      ]
+    },
+    {
       "version": "0.1.4",
       "changes": [
         "修复 App 内侧边程序坞隐藏后，点击原图标区域仍可能打开 App 的问题。",
@@ -118,6 +126,14 @@
       ],
       "notice": "Some features start disabled. The minimum installation version does not establish full feature coverage; complete iOS 15/16, iOS 26, and physical-device third-party coexistence testing remains pending.",
       "changelog": [
+        {
+          "version": "0.1.5",
+          "changes": [
+            "Fixed Dock misplacement, flickering, or disappearance during rotation, Control Center, Notification Center, and app launches.",
+            "Fixed the missing App Library button image and scattered Dock icons after closing App Library.",
+            "Fixed starting and restarting Guided Access with the landscape side Dock enabled on iOS 15."
+          ]
+        },
         {
           "version": "0.1.4",
           "changes": [
