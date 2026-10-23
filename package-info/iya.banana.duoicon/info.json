@@ -8,11 +8,11 @@
     "Lunora 的精简版本，仅包含右侧星环功能，提供星环与胶囊两种样式。"
   ],
   "features": [
-    "星环／胶囊两种样式与展开动画",
+    "星环／胶囊两种样式、独立整体缩放与展开动画",
     "电量、Wi-Fi、蜂窝与单／双 SIM 状态",
     "电池流光、自定义配色与文字反色",
-    "胶囊时间、日期、农历与两行文字",
-    "文字对齐、左右偏移与灵动岛避让",
+    "胶囊时间、日期、农历、两行文字与可选自动缩小",
+    "胶囊宽度、文字对齐、左右偏移与灵动岛避让",
     "桌面、App 与锁屏显示，控制中心使用原生图标"
   ],
   "notice": "与 SingleVPN 冲突。Lunora V1 或 V2 开启时本插件自动让位；两者关闭后按本插件自己的开关恢复。建议使用刘海／灵动岛布局。iOS 26 及不同设备尚未全面验证。",
@@ -24,13 +24,22 @@
   ],
   "usage": [
     "进入「设置 → Lunora · 月珞 · 星环」开启总开关（默认关闭），选择星环或胶囊。",
-    "在内容设置中配置时间、日期与农历，在主页面调整配色、偏移及避让。",
+    "在首页调整整体缩放、胶囊宽度与偏移；在胶囊文字页配置时间、日期、农历和字体。",
+    "自动缩小文字默认开启；关闭后按设定字号显示，超出文字区域时裁切。",
     "使用本插件时先关闭 Lunora V1 与 V2 的总开关。"
   ],
   "screenshots": [],
   "tint": "#248CFF",
   "notice_style": "warning",
   "changelog": [
+    {
+      "version": "0.1.1",
+      "changes": [
+        "新增星环与胶囊独立整体缩放，范围 50%～150%，默认 100%。",
+        "新增胶囊宽度调整（−200～+200 pt），保留右缘与高度，最大宽度受屏幕可用空间限制。",
+        "新增自动缩小文字开关；关闭后按设定字号显示，超出文字区域时裁切。"
+      ]
+    },
     {
       "version": "0.1.0",
       "changes": [
@@ -48,11 +57,11 @@
         "A streamlined edition of Lunora focused on right-side Orbit functionality, with Orbit and Capsule styles."
       ],
       "features": [
-        "Orbit and Capsule styles with reveal animations",
+        "Orbit and Capsule styles, independent overall scaling and reveal animations",
         "Battery, Wi-Fi, cellular and single- or dual-SIM status",
         "Battery flow, custom colors and inverted text",
-        "Capsule time, date, lunar date and two-line text",
-        "Text alignment, horizontal offsets and Dynamic Island avoidance",
+        "Capsule time, date, lunar date, two-line text and optional automatic text shrinking",
+        "Capsule width, text alignment, horizontal offsets and Dynamic Island avoidance",
         "Home Screen, in-app and Lock Screen display; native icons in Control Center"
       ],
       "notice": "Conflicts with SingleVPN. Yields while Lunora V1 or V2 is enabled and resumes according to its own switch after both are off. A notch or Dynamic Island layout is recommended. iOS 26 and all device configurations have not been fully validated.",
@@ -64,10 +73,19 @@
       ],
       "usage": [
         "Open Settings → Lunora DuoIcon, enable the main switch (off by default), and choose Orbit or Capsule.",
-        "Configure time, date and lunar date in content settings, and adjust colors, offsets and avoidance on the main page.",
+        "Adjust overall scale, Capsule width and offsets on the main page; configure time, date, lunar date and fonts on the Capsule text page.",
+        "Automatic text shrinking is on by default. Disable it to use the selected font size and clip any text that exceeds the available area.",
         "Disable the main switches in Lunora V1 and V2 when using DuoIcon."
       ],
       "changelog": [
+        {
+          "version": "0.1.1",
+          "changes": [
+            "Added independent 50%–150% overall scaling for Orbit and Capsule, with a 100% default.",
+            "Added a −200 to +200 pt Capsule width adjustment, keeping its trailing edge and height fixed while respecting available screen space.",
+            "Added an automatic text shrinking switch. Turn it off to use the selected font size; text that exceeds the available area is clipped."
+          ]
+        },
         {
           "version": "0.1.0",
           "changes": [
