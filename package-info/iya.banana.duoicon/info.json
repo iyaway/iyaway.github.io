@@ -13,7 +13,7 @@
     "电池流光、自定义配色与文字反色",
     "胶囊时间、日期、农历、两行文字与可选自动缩小",
     "胶囊宽度、文字对齐、左右偏移与灵动岛避让",
-    "桌面、App 与锁屏显示，控制中心使用原生图标"
+    "桌面、App 与可选锁屏显示，独立解锁／控制中心恢复动画；控制中心使用原生图标"
   ],
   "notice": "与 SingleVPN 冲突。Lunora V1 或 V2 开启时本插件自动让位；两者关闭后按本插件自己的开关恢复。建议使用刘海／灵动岛布局。iOS 26 及不同设备尚未全面验证。",
   "compatibility": [
@@ -26,12 +26,21 @@
     "进入「设置 → Lunora · 月珞 · 星环」开启总开关（默认关闭），选择星环或胶囊。",
     "在首页调整整体缩放、胶囊宽度与偏移；在胶囊文字页配置时间、日期、农历和字体。",
     "自动缩小文字默认开启；关闭后按设定字号显示，超出文字区域时裁切。",
+    "在首页设置锁屏显示及两项恢复动画；关闭锁屏显示后，解锁可从系统图标动画恢复星环／胶囊。",
     "使用本插件时先关闭 Lunora V1 与 V2 的总开关。"
   ],
   "screenshots": [],
   "tint": "#248CFF",
   "notice_style": "warning",
   "changelog": [
+    {
+      "version": "0.1.2",
+      "changes": [
+        "新增锁屏显示开关，可分别控制解锁后与收起控制中心后的恢复动画；控制中心始终使用原生图标。",
+        "修复解锁后星环／胶囊恢复动画偶尔不生效的问题。",
+        "修正电量百分比与充电状态识别，改善充电颜色和流光更新。"
+      ]
+    },
     {
       "version": "0.1.1",
       "changes": [
@@ -62,7 +71,7 @@
         "Battery flow, custom colors and inverted text",
         "Capsule time, date, lunar date, two-line text and optional automatic text shrinking",
         "Capsule width, text alignment, horizontal offsets and Dynamic Island avoidance",
-        "Home Screen, in-app and Lock Screen display; native icons in Control Center"
+        "Home Screen, in-app and optional Lock Screen display, with independent unlock and Control Center return animations; native icons in Control Center"
       ],
       "notice": "Conflicts with SingleVPN. Yields while Lunora V1 or V2 is enabled and resumes according to its own switch after both are off. A notch or Dynamic Island layout is recommended. iOS 26 and all device configurations have not been fully validated.",
       "compatibility": [
@@ -75,9 +84,18 @@
         "Open Settings → Lunora DuoIcon, enable the main switch (off by default), and choose Orbit or Capsule.",
         "Adjust overall scale, Capsule width and offsets on the main page; configure time, date, lunar date and fonts on the Capsule text page.",
         "Automatic text shrinking is on by default. Disable it to use the selected font size and clip any text that exceeds the available area.",
+        "Set Lock Screen display and the two return animation switches on the main page. With Lock Screen display off, unlocking can animate native icons back into Orbit or Capsule.",
         "Disable the main switches in Lunora V1 and V2 when using DuoIcon."
       ],
       "changelog": [
+        {
+          "version": "0.1.2",
+          "changes": [
+            "Added a Lock Screen display switch and separate return animation switches for unlocking and dismissing Control Center. Control Center always uses native icons.",
+            "Fixed Orbit and Capsule return animations occasionally failing after unlocking.",
+            "Corrected battery percentage and charging detection, improving charging color and flow updates."
+          ]
+        },
         {
           "version": "0.1.1",
           "changes": [
