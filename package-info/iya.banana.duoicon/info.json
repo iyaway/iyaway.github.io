@@ -12,10 +12,11 @@
     "电量、Wi-Fi、蜂窝与单／双 SIM 状态",
     "电池流光、自定义配色与文字反色",
     "胶囊时间、日期、农历、两行文字与可选自动缩小",
-    "胶囊宽度、文字对齐、左右偏移与灵动岛避让",
-    "桌面、App 与可选锁屏显示，独立解锁／控制中心恢复动画；控制中心使用原生图标"
+    "胶囊宽高与圆角重算、文字对齐、上下／左右偏移与灵动岛避让",
+    "桌面、App 与可选锁屏显示，独立解锁／控制中心恢复动画；控制中心使用原生图标",
+    "可选第三方电池长按兼容，保留普通短按展开"
   ],
-  "notice": "与 SingleVPN 冲突。Lunora V1 或 V2 开启时本插件自动让位；两者关闭后按本插件自己的开关恢复。建议使用刘海／灵动岛布局。iOS 26 及不同设备尚未全面验证。",
+  "notice": "与 SingleVPN 冲突。Lunora V1 或 V2 开启时本插件自动让位；两者关闭后按本插件自己的开关恢复。建议使用刘海／灵动岛布局。iOS 26 及不同设备尚未全面验证。 个别设备曾反馈点击后停留在系统图标，仍在排查，尚未确认彻底修复；遇到时可下拉控制中心恢复。",
   "compatibility": [
     "iOS 15.1–26（不支持 iOS 15.0.x）",
     "Rootless 与 RootHide",
@@ -24,15 +25,24 @@
   ],
   "usage": [
     "进入「设置 → Lunora · 月珞 · 星环」开启总开关（默认关闭），选择星环或胶囊。",
-    "在首页调整整体缩放、胶囊宽度与偏移；在胶囊文字页配置时间、日期、农历和字体。",
+    "在首页调整整体缩放、胶囊宽高及各样式上下／左右偏移；在胶囊文字页配置时间、日期、农历和字体。",
     "自动缩小文字默认开启；关闭后按设定字号显示，超出文字区域时裁切。",
     "在首页设置锁屏显示及两项恢复动画；关闭锁屏显示后，解锁可从系统图标动画恢复星环／胶囊。",
-    "使用本插件时先关闭 Lunora V1 与 V2 的总开关。"
+    "使用本插件时先关闭 Lunora V1 与 V2 的总开关。",
+    "在电池页开启「兼容电池长按」前，请先在第三方插件中开启其电池长按功能；本插件不提供电池详情面板。"
   ],
   "screenshots": [],
   "tint": "#248CFF",
   "notice_style": "warning",
   "changelog": [
+    {
+      "version": "0.1.4",
+      "changes": [
+        "新增星环与胶囊独立上下偏移，范围 −24～+24 pt，保留原有左右偏移。",
+        "新增胶囊高度调整，改变宽高时重新计算圆角，电池轮廓、信号段与流光同步；星环保持圆形与整体缩放。",
+        "新增可选电池长按兼容，将长按交给第三方已有手势，保留普通点击展开。"
+      ]
+    },
     {
       "version": "0.1.2",
       "changes": [
@@ -70,10 +80,11 @@
         "Battery, Wi-Fi, cellular and single- or dual-SIM status",
         "Battery flow, custom colors and inverted text",
         "Capsule time, date, lunar date, two-line text and optional automatic text shrinking",
-        "Capsule width, text alignment, horizontal offsets and Dynamic Island avoidance",
-        "Home Screen, in-app and optional Lock Screen display, with independent unlock and Control Center return animations; native icons in Control Center"
+        "Capsule width and height with recalculated rounded ends, text alignment, vertical/horizontal offsets and Dynamic Island avoidance",
+        "Home Screen, in-app and optional Lock Screen display, with independent unlock and Control Center return animations; native icons in Control Center",
+        "Optional third-party battery long-press compatibility with normal tap-to-expand retained"
       ],
-      "notice": "Conflicts with SingleVPN. Yields while Lunora V1 or V2 is enabled and resumes according to its own switch after both are off. A notch or Dynamic Island layout is recommended. iOS 26 and all device configurations have not been fully validated.",
+      "notice": "Conflicts with SingleVPN. Yields while Lunora V1 or V2 is enabled and resumes according to its own switch after both are off. A notch or Dynamic Island layout is recommended. iOS 26 and all device configurations have not been fully validated. Some devices have reported native icons remaining after a tap. This is still under investigation; opening Control Center can restore the display.",
       "compatibility": [
         "iOS 15.1–26; iOS 15.0.x is excluded",
         "Rootless and RootHide",
@@ -82,12 +93,21 @@
       ],
       "usage": [
         "Open Settings → Lunora DuoIcon, enable the main switch (off by default), and choose Orbit or Capsule.",
-        "Adjust overall scale, Capsule width and offsets on the main page; configure time, date, lunar date and fonts on the Capsule text page.",
+        "Adjust overall scale, Capsule width/height and per-style vertical/horizontal offsets on the main page; configure time, date, lunar date and fonts on the Capsule text page.",
         "Automatic text shrinking is on by default. Disable it to use the selected font size and clip any text that exceeds the available area.",
         "Set Lock Screen display and the two return animation switches on the main page. With Lock Screen display off, unlocking can animate native icons back into Orbit or Capsule.",
-        "Disable the main switches in Lunora V1 and V2 when using DuoIcon."
+        "Disable the main switches in Lunora V1 and V2 when using DuoIcon.",
+        "Before enabling battery long-press compatibility on the Battery page, enable battery long-press behavior in the third-party tweak. DuoIcon does not provide a battery details panel."
       ],
       "changelog": [
+        {
+          "version": "0.1.4",
+          "changes": [
+            "Added separate vertical offsets for Orbit and Capsule from −24 to +24 pt, alongside the existing horizontal offsets.",
+            "Added Capsule height adjustment with rounded ends recalculated for resized battery outlines, signal segments and flow. Orbit retains its circular shape and overall scaling.",
+            "Added optional battery long-press compatibility with existing third-party gestures while keeping normal tap-to-expand behavior."
+          ]
+        },
         {
           "version": "0.1.2",
           "changes": [
