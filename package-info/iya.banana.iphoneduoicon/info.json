@@ -14,7 +14,7 @@
     "左侧信息胶囊与右侧 Duo 或 mini Dock 独立配置、自由组合",
     "分区玻璃、圆形分区和一体玻璃三种信息胶囊样式",
     "时间日期、天气、媒体、音量和通知等胶囊模块，支持左右滑动切换常驻模块",
-    "mini Dock 支持固定或最近使用 App、应用搜索和拖动排序，最多选择 8 个 App 并按可用空间显示",
+    "mini Dock 支持固定或最近使用 App、应用搜索和拖动排序，收藏应用不限制选择数量，实际显示按可用空间排列",
     "mini Dock 可与星环共存，也可关闭星环仅保留 App Dock；支持独立位置调整并在星环展开时自动避让",
     "通知 App 图标、内容滚动、点击跳转及从灵动岛或刘海区域展开的横幅动画",
     "可隐藏系统音量条，并可选择横屏恢复原生音量条（默认开启）",
@@ -67,7 +67,7 @@
     "波形／频谱改用可选独立音频服务，缺少时提供安装指引。",
     "支持 iOS 15.1–26 的原生刘海／灵动岛布局与已生效的刘海模拟；主包拒绝 iOS 15.0.x",
     "两页更新与定位引导，说明新功能、整体定位及旧配置迁移，可在维护页重新查看",
-    "控制中心默认跟随原生电池的横向与纵向位置，保留设定的尺寸、缩放和内部布局",
+    "控制中心使用独立星环并自动跟随原生电池位置；桌面和 App 保留各自的右侧显示模式与整体定位",
     "录屏、通话、导航与录音时，左胶囊保留内容并融合系统活动颜色和返回动作",
     "每处液态玻璃可独立开启柔和的完全亮边，默认关闭",
     "星环可选择原动画或先对齐再变形，mini Dock 内的星环共用动画模式",
@@ -78,7 +78,12 @@
     "手动录制 60 秒线程 CPU 信息与稀疏动态库线索，导出报告辅助排查卡顿和发热，不会自动上传",
     "左侧分体玻璃按保留文字策略收窄时保持端部弧度",
     "可选横屏停用 Lunora，恢复原生状态栏，回到竖屏自动恢复，保留已有配置",
-    "可选 Mikkyy 兼容，保护右侧显示和点击；与横屏停用均默认关闭"
+    "可选 Mikkyy 兼容，保护右侧显示和点击；与横屏停用均默认关闭",
+    "收藏 App 可统一设置仅有通知时显示，开启后可选择点击直接打开 App（默认）或查看通知小窗",
+    "mini Dock 可选跟随已加载且启用的微光角标样式；未安装、未启用或不兼容时保留普通角标",
+    "星环与旁侧自定义信息作为整体避让灵动岛，并沿用保留区域、滚动和隐藏策略",
+    "检测到启动失去响应后，下次启动暂停 Lunora 加载并保留配置，可在设置中手动允许重试",
+    "开启 CC 原生右侧图标和恢复动画时，常态内容等待原生交接与收回完成再恢复，mini Dock 图标不会提前覆盖原生图标"
   ],
   "compatibility": [
     "iOS 15.1–26（主包不支持 iOS 15.0.x）",
@@ -91,10 +96,10 @@
     "进入“设置 → Lunora”开启总开关，再分别配置左侧信息胶囊与右侧 Duo 或 mini Dock；未保存总开关时默认为关闭。",
     "建议在已生效的原生刘海／灵动岛布局下使用；普通无刘海布局不保证显示效果。iOS 15.0.x 不能安装主包。",
     "选择胶囊玻璃样式与常驻模块，横向滑动可切换当前模块。",
-    "在屏幕定位中调整外侧边距、顶部距离、宽高与整体缩放；文字、图标与星环的内部相对位置仍可分别微调，旧配置会自动换算并保留回退数据。",
+    "从 1.1.3 起，在“屏幕定位”中调整外侧边距、顶部距离、宽高及整体缩放；内部文字、图标与星环偏移继续单独设置，旧配置会自动换算并保留回退数据。",
     "为时间、日期或运营商选择系统或已安装字体，并可搜索和预览。",
     "按需设置灵动岛避让为隐藏或横向收窄，并选择保留区域、仅文字滚动或图标与文字整组滚动；也可开启锁屏原生右侧状态及岛内展开通知。",
-    "在 mini Dock 中最多选择 8 个固定或最近使用 App，并可搜索、排序、调整位置或关闭星环仅保留 App Dock。",
+    "在 mini Dock 中选择收藏或最近使用 App，可搜索、排序和调整位置；收藏应用不限制选择数量，实际可见数量取决于空间，也可关闭星环仅保留 App Dock。",
     "按需调整布局、配色与精确数值；设置修改即时生效。",
     "遇到布局问题时可导出诊断或手动采集布局，并附机型、iOS 版本与复现步骤。",
     "需要帮助时可通过设置主页的 Discord 入口反馈，或点击 QQ 交流群复制群号 1126594257。",
@@ -112,11 +117,21 @@
     "每处液态玻璃的“完全亮边”可分别开启，默认关闭；电池设置可分别控制充电流光、常显流光和配色。",
     "在 mini Dock 设置中选择一芽联动手势：关闭、上滑、下滑或双击。未安装或未启用一芽时保持原有行为。",
     "在右侧网络设置中选择显示的 SIM；在维护页按需录制并导出 60 秒 CPU 诊断报告。",
-    "首次进入 1.1.2 设置会显示本次更新与定位说明；完成后不再自动重复，可在维护页重新打开。",
-    "在「设置 → Lunora → 运行与兼容」按需开启「横屏时停用 Lunora」或「Mikkyy 兼容」；两项默认关闭。Mikkyy 兼容不会在控制中心过渡、原生展开或主动隐藏时强制显示。"
+    "首次进入 1.1.4 设置会显示本次更新与定位说明；完成后不再自动重复，可在维护页重新打开。",
+    "在「设置 → Lunora → 运行与兼容」按需开启「横屏时停用 Lunora」或「Mikkyy 兼容」；两项默认关闭。Mikkyy 兼容不会在控制中心过渡、原生展开或主动隐藏时强制显示。",
+    "收藏通知显示、通知点击方式及跟随微光角标均在 mini Dock 设置中调整。通知点击方式仅在“仅有通知时显示”开启后显示，默认直接打开 App。",
+    "若设置提示启动失败保护已触发，先检查其他插件与系统状态，再在维护页允许下次启动并手动注销重试；已有配置保留。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.4",
+      "changes": [
+        "mini Dock 收藏应用取消数量上限，新增“仅有通知时显示”和通知点击方式选择，支持跟随微光角标样式。",
+        "改善桌面、App 与控制中心之间的显示和恢复动画，星环与旁侧信息整体避让；修复左胶囊偶发消失、内容恢复延迟及电量和充电颜色同步异常。",
+        "新增启动失败保护：检测到启动失去响应后暂停加载并保留配置，可在设置中手动恢复；完善诊断并减少不必要的刷新。"
+      ]
+    },
     {
       "version": "1.1.3-1",
       "changes": [
@@ -337,7 +352,7 @@
         "Independent left information capsule and right Duo or mini Dock configurations",
         "Split Glass, Circular Partition, and Continuous Glass capsule styles",
         "Time and date, weather, media, volume, notification, and other capsule modules with horizontal resting-module switching",
-        "mini Dock with pinned or recent apps, app search, drag reordering, up to eight selections, and display based on available space",
+        "mini Dock supports pinned or recent apps, search and drag sorting. Favorites have no selection cap; visible icons fit the available space.",
         "Use mini Dock alongside Orbit, or disable Orbit for an apps-only Dock, with independent positioning and automatic avoidance during Orbit expansion",
         "Notification app icons, scrolling content, tap-to-open actions, and banners expanding from the Dynamic Island or notch",
         "Hide the system volume HUD, with optional landscape restoration enabled by default",
@@ -390,7 +405,7 @@
         "Audio waveforms and spectrum effects now use an optional standalone audio service, with installation guidance when it is missing.",
         "Supports iOS 15.1–26 native notch/Dynamic Island layouts and active native notch simulation; the main package rejects iOS 15.0.x",
         "A two-page update and placement guide covers new features, group positioning and configuration migration, with replay from Maintenance",
-        "Follow the native battery horizontally and vertically in Control Center by default, retaining configured size, scale and internal layout",
+        "Control Center uses an independent Orbit anchored automatically to its native battery; Home Screen and apps retain their own display mode and group placement.",
         "Keep left-capsule content while reflecting native recording, call, navigation and audio-recording colors and return actions",
         "Optional soft full-edge highlights for each liquid-glass surface, off by default",
         "Choose the original Orbit animation or Align First, Then Transform, shared with mini Dock’s Orbit",
@@ -401,7 +416,12 @@
         "Manually record 60 seconds of thread CPU usage with sparse library clues and export a report for stutter or heat investigations; nothing is uploaded automatically",
         "Left Split Glass retains its end curvature when narrowed with the Keep Text strategy",
         "Optionally disable Lunora in landscape, restore the native status bar and automatically resume in portrait while preserving saved settings",
-        "Optional Mikkyy compatibility protects the right display and taps; both new options are off by default"
+        "Optional Mikkyy compatibility protects the right display and taps; both new options are off by default",
+        "Optionally show all favorites only while notifications are present, with taps opening the app by default or an optional notification preview",
+        "Optionally follow a loaded and enabled AmbientBadge renderer; ordinary badges remain when it is missing, disabled or unsupported",
+        "Orbit and adjacent custom information avoid the island as one group, retaining area, scrolling and hiding policies",
+        "After a detected unresponsive startup, pause Lunora on the next startup while preserving settings, with manual retry from Settings",
+        "With native CC icons and return animation enabled, resting content waits for native handoff and collapse to finish; mini Dock icons do not cover native icons prematurely"
       ],
       "compatibility": [
         "iOS 15.1–26 (the main package does not support iOS 15.0.x)",
@@ -414,10 +434,10 @@
         "Open Settings → Lunora, enable the master switch, then configure the left information capsule and right Duo or mini Dock. An unsaved master switch defaults to off.",
         "Use an active native notch or Dynamic Island layout for recommended results. Ordinary non-notch layouts are not guaranteed. The main package cannot be installed on iOS 15.0.x.",
         "Choose a capsule glass style and resting module; swipe horizontally to switch the active module.",
-        "Use Screen Placement for outer-edge spacing, top distance, width, height and overall scale. Internal text, icon and Orbit offsets remain adjustable; old configurations migrate while retaining rollback data.",
+        "Since 1.1.3, use Screen Placement for outer-edge spacing, top distance, width, height and overall scale. Internal text, icon and Orbit offsets remain adjustable; old configurations migrate while retaining rollback data.",
         "Choose system or installed fonts for time, date, and carrier text, with search and preview.",
         "Choose hiding or horizontal narrowing for Dynamic Island avoidance, retaining a selected area or scrolling icons and text together; optionally enable native right-side Lock Screen status and In-Island notifications.",
-        "Choose up to eight pinned or recent apps in mini Dock, then search, reorder, and position them as needed, or disable Orbit for an apps-only Dock.",
+        "Select favorites or recent apps in mini Dock, then search, reorder and position them. Favorites have no selection cap; visible icons depend on available space. Disable Orbit for an apps-only Dock.",
         "Adjust layouts, colors, and exact values as desired; settings changes apply immediately.",
         "For layout issues, export diagnostics or record a manual layout and include the device model, iOS version, and reproduction steps.",
         "Use the Discord entry for feedback, or tap the QQ group entry to copy 1126594257.",
@@ -435,10 +455,20 @@
         "Enable Full Edge Highlight separately for each liquid-glass surface; it is off by default. Battery settings separately control charging flow, always-on flow and colors.",
         "Choose Off, Swipe Up, Swipe Down or Double Tap for Iya Split integration in mini Dock settings. Behavior stays unchanged when Iya Split is unavailable or disabled.",
         "Choose which SIM to display in right-side network settings. Record and export a 60-second CPU diagnostic report from Maintenance when needed.",
-        "The first Settings visit on 1.1.2 shows the update and placement guide. It stays dismissed after completion and can be reopened from Maintenance.",
-        "Open Settings → Lunora → Behavior and Compatibility to enable Disable Lunora in Landscape or Mikkyy Compatibility. Both are off by default. Mikkyy compatibility does not force visibility during Control Center transitions, native reveal or deliberate hiding."
+        "The first Settings visit on 1.1.4 shows the update and placement guide. It stays dismissed after completion and can be reopened from Maintenance.",
+        "Open Settings → Lunora → Behavior and Compatibility to enable Disable Lunora in Landscape or Mikkyy Compatibility. Both are off by default. Mikkyy compatibility does not force visibility during Control Center transitions, native reveal or deliberate hiding.",
+        "Adjust notification-only favorites, notification tap behavior and Follow AmbientBadge Style in mini Dock settings. The notification-tap option appears only with notification-only favorites enabled and defaults to opening the app.",
+        "If Settings reports startup protection, check the system and other tweaks, then allow the next startup from Maintenance and manually reload SpringBoard to retry. Existing settings are preserved."
       ],
       "changelog": [
+        {
+          "version": "1.1.4",
+          "changes": [
+            "Removed the selection limit for mini Dock favorites, added notification-only visibility and notification tap behavior, and added support for AmbientBadge styles.",
+            "Improved display and return animations across apps, Home Screen and Control Center. Orbit and adjacent info avoid the island together. Fixed left-capsule disappearance, delayed content recovery, and battery level and charging-color updates.",
+            "Added startup protection: after a detected unresponsive startup, Lunora pauses loading on the next startup while preserving settings, with manual recovery in Settings. Improved diagnostics and reduced unnecessary refreshes."
+          ]
+        },
         {
           "version": "1.1.3-1",
           "changes": [
