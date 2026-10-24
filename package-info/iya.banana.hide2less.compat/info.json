@@ -1,0 +1,65 @@
+{
+  "package": "iya.banana.hide2less.compat",
+  "name": "Hide2Less Compatibility",
+  "tagline": "为 Hide2Less 转换后的 Rootless 插件提供所需的兼容支持。",
+  "developer": "Banana",
+  "tint": "#146E57",
+  "notice_style": "warning",
+  "notice": "仅在转换后的插件提示需要 compat 时安装。此包适用于 Rootless；先安装本包，再安装对应插件。",
+  "description": [
+    "Hide2Less 转换结果按需使用的独立兼容包，没有独立界面。",
+    "同一设备安装一次，多款需要 compat 的转换后插件可以共用。"
+  ],
+  "features": [
+    "为需要 compat 的 Hide2Less 转换结果提供共享兼容支持",
+    "支持从 Banana 源自动下载依赖，或使用 Hide2Less 导出的安装包手动安装"
+  ],
+  "compatibility": [
+    "最低 iOS 15，仅 Rootless 环境",
+    "只有转换结果声明依赖时才需要安装，不代表所有插件都能兼容"
+  ],
+  "usage": [
+    "添加并刷新 Banana 源 https://iyaway.github.io/，让包管理器在安装需要它的插件时下载本包。",
+    "也可从 Hide2Less 的“分享兼容包”导出，与插件一起分发；先安装 compat，再安装插件。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "changes": [
+        "首次发布，为需要 compat 的 Hide2Less 转换结果提供共享兼容支持。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "Hide2Less Compatibility",
+      "tagline": "Shared compatibility support for Rootless tweaks converted by Hide2Less.",
+      "notice": "Install only when a converted tweak requires compat. This package is for Rootless. Install it before the corresponding tweak.",
+      "description": [
+        "A separate compatibility package used when required by Hide2Less conversion results, without a standalone interface.",
+        "Install once on a device and share it across converted tweaks that require compat."
+      ],
+      "features": [
+        "Shared compatibility support for Hide2Less conversion results that require compat",
+        "Download automatically from the Banana repository or install the package exported by Hide2Less manually"
+      ],
+      "compatibility": [
+        "Requires iOS 15 or later and a Rootless environment",
+        "Needed only when declared as a dependency; does not guarantee compatibility for every tweak"
+      ],
+      "usage": [
+        "Add and refresh the Banana repository at https://iyaway.github.io/ so your package manager can download this dependency when needed.",
+        "Alternatively, use Share compatibility package in Hide2Less and distribute it with the tweak. Install compat first, then the tweak."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Initial release with shared compatibility support for Hide2Less conversion results that require compat."
+          ]
+        }
+      ]
+    }
+  }
+}
