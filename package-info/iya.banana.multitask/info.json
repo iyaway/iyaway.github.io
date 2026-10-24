@@ -21,8 +21,10 @@
     "未完成分屏时，普通打开新应用可选自动补齐第二侧（默认）或保留新应用全屏。",
     "点击通知按指定模式打开，支持锁屏开关及应用白名单／黑名单。",
     "浮窗 2 提供可调半屏浮窗，可切换侧边并选择显示完整界面；浮窗 1 与台前调度支持四角缩放。",
-    "可选窗口打开动画，分别设置浮窗 1、浮窗 2 与台前调度的键盘位置，逐应用选择优先。",
-    "双击间隔可在100～500毫秒内调整，默认200毫秒；仅双击启动时显示参数与测试区。"
+    "可选窗口打开动画；上下分、左右分、浮窗 1、浮窗 2 与台前调度可分别设置键盘位置，逐应用选择优先。",
+    "双击间隔可在100～500毫秒内调整，默认200毫秒；仅双击启动时显示参数与测试区。",
+    "上下分、左右分与浮窗 2 可设置背景透明；分隔条两端菜单可旋转对应应用、切换完整界面，交换后状态随应用移动。",
+    "浮窗 1 与台前调度从窗口外沿四角调整大小，减少对应用内按钮的遮挡。"
   ],
   "compatibility": [
     "iOS 15.0～26.x，已越狱设备。",
@@ -38,11 +40,20 @@
     "普通／PullOver 侧栏直接投放到上、浮窗 1、浮窗 2、下或 Stage 目标，覆盖默认样式且不修改默认设置；定制页可分别选择浮窗和 Stage 的等比／自由缩放。",
     "后台相机需先启用，再开始新的相机会话；首次安装需用户空间重启以加载相机支持。",
     "在“点击通知”中启用按指定模式打开，选择模式、锁屏行为及应用范围；默认不处理通知。",
-    "在“键盘设置”中分别选择各浮窗模式的窗口内／最前方键盘；逐应用设置可覆盖全局。",
-    "选择双击启动手势后，调整间隔并在测试区试点；间隔越短，单击等待越少，双击需要更快。"
+    "在“键盘设置”中分别选择五种模式的窗口内／最前方键盘，逐应用设置可覆盖全局。上下／左右分屏默认窗口内；分隔条两端菜单分别控制当前两侧应用。",
+    "选择双击启动手势后，调整间隔并在测试区试点；间隔越短，单击等待越少，双击需要更快。",
+    "在分屏设置中调整上下／左右分屏的透明背景及完整界面；浮窗 2 的个性化设置提供透明背景，横条可快捷切换完整界面。浮窗 1、台前调度请从窗外四角开始拖动缩放。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.3",
+      "changes": [
+        "上下／左右分屏新增独立键盘设置，可选窗口内或在前方，并支持逐应用覆盖。",
+        "新增分屏背景透明、旋转与完整界面快捷操作；交换应用后保留各自状态，浮窗 2 可快捷切换完整界面。",
+        "调整浮窗 1 与台前调度的四角缩放触控区域，减少对应用内按钮的遮挡。"
+      ]
+    },
     {
       "version": "0.1.2",
       "changes": [
@@ -87,8 +98,10 @@
         "While waiting for the second app, ordinary launches can complete the split automatically (default) or keep the new app full screen.",
         "Open notifications in a selected mode, with lock-screen control and app allowlists/blocklists.",
         "Window 2 provides an adjustable half-screen overlay, side switching and full-interface display; Window 1 and Stage support four-corner resizing.",
-        "Choose opening animations and keyboard placement for Window 1, Window 2 and Stage, with per-app overrides.",
-        "Adjust double-tap timing from 100 to 500 ms, default 200 ms. Timing controls and the test area appear only in Double tap startup mode."
+        "Choose opening animations and keyboard placement separately for both split modes, Window 1, Window 2 and Stage, with per-app overrides.",
+        "Adjust double-tap timing from 100 to 500 ms, default 200 ms. Timing controls and the test area appear only in Double tap startup mode.",
+        "Set transparent container backgrounds for both split modes and Window 2. Divider-end menus rotate the corresponding app and toggle full-interface display; choices follow apps when swapped.",
+        "Resize Window 1 and Stage from exterior corners to reduce interference with app buttons."
       ],
       "compatibility": [
         "Jailbroken iOS 15.0–26.x.",
@@ -104,10 +117,19 @@
         "Drop onto Top, Window 1, Window 2, Bottom or Stage in either sidebar to override the default style without changing it. Choose floating-window and Stage resizing separately in Customization.",
         "Enable background camera before starting a fresh camera session. First installation needs a userspace reboot to load camera support.",
         "Enable Open in chosen mode under Notification taps, then choose the mode, lock-screen behavior and app scope. Notifications are unchanged by default.",
-        "Choose in-window or in-front keyboards per mode in Keyboard settings; per-app settings can override each global choice.",
-        "Select Double tap to adjust its interval and try the test area. Shorter intervals reduce single-tap waiting but require faster double taps."
+        "Choose in-window or in-front keyboards for each of the five modes in Keyboard settings; per-app settings override each global choice. Both split modes default to in-window. Each divider-end menu controls its corresponding app.",
+        "Select Double tap to adjust its interval and try the test area. Shorter intervals reduce single-tap waiting but require faster double taps.",
+        "Choose transparent backgrounds and full-interface display for both split modes in Split View settings. Window 2 offers transparent backgrounds in Customization and a quick full-interface toggle. Start Window 1 and Stage resizing from the exterior corners."
       ],
       "changelog": [
+        {
+          "version": "0.1.3",
+          "changes": [
+            "Choose in-window or in-front keyboards separately for both split modes, with per-app overrides.",
+            "Add transparent split backgrounds, rotation and full-interface controls; keep app choices when swapping, with a quick full-interface toggle for Window 2.",
+            "Adjust Window 1 and Stage corner-resize touch regions to reduce interference with app buttons."
+          ]
+        },
         {
           "version": "0.1.2",
           "changes": [
