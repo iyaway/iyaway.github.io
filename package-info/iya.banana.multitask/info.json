@@ -12,11 +12,11 @@
     "通过图标手势、侧栏、应用切换器或通知打开应用，自由调整布局并快速交换位置。"
   ],
   "features": [
-    "统一选择上滑、下滑或双击图标手势，启动上下分、左右分、Stage 或浮窗。",
+    "统一选择上滑、下滑或双击图标手势，启动上下分、左右分、台前调度 或浮窗。",
     "拖动分隔条调整两侧比例，边缘松手将运行中的应用直接展开为全屏。",
     "拖动应用顶部短条预览交换，松手确认、回拖取消，交换后分隔条位置保持不变。",
     "双指在分隔条两侧撑开退出；Home 保留分屏，锁屏解锁保留应用与比例。",
-    "普通／PullOver 侧栏直接选择上、浮窗 1、浮窗 2、下、Stage；两种浮窗及 Stage 均支持等比／自由缩放。",
+    "普通／PullOver 侧栏直接选择上、浮窗 1、浮窗 2、下、台前调度；两种浮窗及 台前调度 均支持等比／自由缩放。",
     "逐应用键盘、缩放、配色与后台相机设置，支持英文、简体中文和繁体中文。",
     "未完成分屏时，普通打开新应用可选自动补齐第二侧（默认）或保留新应用全屏。",
     "点击通知按指定模式打开，支持锁屏开关及应用白名单／黑名单。",
@@ -24,7 +24,10 @@
     "可选窗口打开动画；上下分、左右分、浮窗 1、浮窗 2 与台前调度可分别设置键盘位置，逐应用选择优先。",
     "双击间隔可在100～500毫秒内调整，默认200毫秒；仅双击启动时显示参数与测试区。",
     "上下分、左右分与浮窗 2 可设置背景透明；分隔条两端菜单可旋转对应应用、切换完整界面，交换后状态随应用移动。",
-    "浮窗 1 与台前调度从窗口外沿四角调整大小，减少对应用内按钮的遮挡。"
+    "浮窗 1 与台前调度从窗口外沿四角调整大小，减少对应用内按钮的遮挡。",
+    "可选状态栏长按和多任务卡片直接启动，按统一启动模式打开当前应用。",
+    "可设置普通窗口数量与单窗口调度，并将窗口独立保留。",
+    "浮窗 1 与台前调度提供直接全屏控制，优化窗口切换与锁屏恢复。"
   ],
   "compatibility": [
     "iOS 15.0～26.x，已越狱设备。",
@@ -37,15 +40,25 @@
     "选择统一的启动手势和模式，默认上滑。分屏时可对第二个图标重复手势；等待第二个 App 时的普通打开行为可在分屏设置中选择。",
     "拖动中间分隔条调整比例，边缘松手进入全屏；抓住顶部短条朝另一应用拖动，看到预览后松手交换。",
     "两指均置于屏幕中央 25%～75% 区域、分处分隔条两侧，向外撑开并松手退出；收回可取消。",
-    "普通／PullOver 侧栏直接投放到上、浮窗 1、浮窗 2、下或 Stage 目标，覆盖默认样式且不修改默认设置；定制页可分别选择浮窗和 Stage 的等比／自由缩放。",
+    "普通／PullOver 侧栏直接投放到上、浮窗 1、浮窗 2、下或 台前调度 目标，覆盖默认样式且不修改默认设置；定制页可分别选择浮窗和 台前调度 的等比／自由缩放。",
     "后台相机需先启用，再开始新的相机会话；首次安装需用户空间重启以加载相机支持。",
     "在“点击通知”中启用按指定模式打开，选择模式、锁屏行为及应用范围；默认不处理通知。",
-    "在“键盘设置”中分别选择五种模式的窗口内／最前方键盘，逐应用设置可覆盖全局。上下／左右分屏默认窗口内；分隔条两端菜单分别控制当前两侧应用。",
+    "在“键盘设置”中分别选择五种模式的窗口内／屏幕前方键盘，逐应用设置可覆盖全局。上下／左右分屏默认窗口内；分隔条两端菜单分别控制当前两侧应用。",
     "选择双击启动手势后，调整间隔并在测试区试点；间隔越短，单击等待越少，双击需要更快。",
-    "在分屏设置中调整上下／左右分屏的透明背景及完整界面；浮窗 2 的个性化设置提供透明背景，横条可快捷切换完整界面。浮窗 1、台前调度请从窗外四角开始拖动缩放。"
+    "在分屏设置中调整上下／左右分屏的透明背景及完整界面；浮窗 2 的个性化设置提供透明背景，横条可快捷切换完整界面。浮窗 1、台前调度请从窗外四角开始拖动缩放。",
+    "在首页开启“长按状态栏启动”；分屏设置中的“多任务卡片直接启动”单独控制卡片手势，两项默认关闭。开启状态栏入口后，长按优先用于一芽分屏，关闭可恢复原长按操作。",
+    "在“个性化 → 窗口调度”设置单窗口或数量限制；长按窗口菜单选择“独立保留”，该窗口不计入普通数量。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.4",
+      "changes": [
+        "新增窗口调度、普通窗口数量限制与独立保留。",
+        "新增可选状态栏长按与多任务卡片直接启动。",
+        "完善浮窗全屏切换与锁屏恢复，重新整理各模式键盘设置。"
+      ]
+    },
     {
       "version": "0.1.3",
       "changes": [
@@ -101,7 +114,10 @@
         "Choose opening animations and keyboard placement separately for both split modes, Window 1, Window 2 and Stage, with per-app overrides.",
         "Adjust double-tap timing from 100 to 500 ms, default 200 ms. Timing controls and the test area appear only in Double tap startup mode.",
         "Set transparent container backgrounds for both split modes and Window 2. Divider-end menus rotate the corresponding app and toggle full-interface display; choices follow apps when swapped.",
-        "Resize Window 1 and Stage from exterior corners to reduce interference with app buttons."
+        "Resize Window 1 and Stage from exterior corners to reduce interference with app buttons.",
+        "Optionally hold the status bar or launch directly from app-switcher cards using the selected startup mode.",
+        "Set ordinary-window limits or single-window scheduling, and retain selected windows independently.",
+        "Window 1 and Stage offer native fullscreen controls, with improved window transitions and lock-screen recovery."
       ],
       "compatibility": [
         "Jailbroken iOS 15.0–26.x.",
@@ -119,9 +135,19 @@
         "Enable Open in chosen mode under Notification taps, then choose the mode, lock-screen behavior and app scope. Notifications are unchanged by default.",
         "Choose in-window or in-front keyboards for each of the five modes in Keyboard settings; per-app settings override each global choice. Both split modes default to in-window. Each divider-end menu controls its corresponding app.",
         "Select Double tap to adjust its interval and try the test area. Shorter intervals reduce single-tap waiting but require faster double taps.",
-        "Choose transparent backgrounds and full-interface display for both split modes in Split View settings. Window 2 offers transparent backgrounds in Customization and a quick full-interface toggle. Start Window 1 and Stage resizing from the exterior corners."
+        "Choose transparent backgrounds and full-interface display for both split modes in Split View settings. Window 2 offers transparent backgrounds in Customization and a quick full-interface toggle. Start Window 1 and Stage resizing from the exterior corners.",
+        "Enable Long-press status bar on the main page, or Open card directly in Split View settings. Both are off by default. When enabled, the status-bar shortcut takes priority over other holds there; disable it to restore the original hold.",
+        "Choose single-window scheduling or ordinary-window limits in Customization → Window scheduling. Keep independently in a window menu excludes that window from ordinary limits."
       ],
       "changelog": [
+        {
+          "version": "0.1.4",
+          "changes": [
+            "Add window scheduling, ordinary-window limits and independent retention.",
+            "Add optional status-bar holds and direct app-switcher launches.",
+            "Improve floating-window fullscreen transitions and lock-screen recovery, and clarify keyboard settings for each mode."
+          ]
+        },
         {
           "version": "0.1.3",
           "changes": [
