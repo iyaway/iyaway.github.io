@@ -47,13 +47,15 @@
     "iOS15及以上可独立隐藏锁屏日期",
     "iOS16及以上可隐藏锁屏小组件，或将其放到底部并调整上下位置",
     "底部小组件避开快捷按钮，并在iOS17/18锁屏Spotlight搜索时隐藏、退出后恢复",
-    "优化iOS16通知位置与iOS16/17历史通知短上拉展开体验"
+    "优化iOS16通知位置与iOS16/17历史通知短上拉展开体验",
+    "iOS17开启景深时可正常点击原位置锁屏小组件进入App"
   ],
   "compatibility": [
     "iOS 15–18",
     "Rootless",
     "RootHide",
-    "玻璃时钟退场与通知修正已在iOS16.7.2、17.3.1和18.5对应设备上分别验证；其它系统小版本与机型需单独确认。"
+    "玻璃时钟退场与通知修正已在iOS16.7.2、17.3.1和18.5对应设备上分别验证；其它系统小版本与机型需单独确认。",
+    "1.1.18-1的小组件交互修正已在15 Pro/iOS17.3.1/RootHide验证；iOS16/18保留原有实现。"
   ],
   "usage": [
     "安装后打开 SpatialScene App。",
@@ -76,6 +78,13 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.18-1",
+      "changes": [
+        "修复 iOS17 开启景深时，锁屏小组件能按压但无法进入 App 的问题。",
+        "保留现有玻璃时钟、景深效果与通知布局。"
+      ]
+    },
     {
       "version": "1.1.18",
       "changes": [
@@ -269,13 +278,15 @@
         "Independently hide the Lock Screen date on iOS15 and later",
         "Hide Lock Screen widgets or move them to the bottom with vertical adjustment on iOS16 and later",
         "Keep bottom widgets clear of quick-action buttons and hide/restore them around Lock Screen Spotlight on iOS17/18",
-        "Improved iOS16 notification placement and short-swipe access to notification history on iOS16/17"
+        "Improved iOS16 notification placement and short-swipe access to notification history on iOS16/17",
+        "Open apps from original-position Lock Screen widgets while depth effects are enabled on iOS17"
       ],
       "compatibility": [
         "iOS 15–18",
         "Rootless",
         "RootHide",
-        "Clock exit and notification fixes were individually verified on corresponding iOS16.7.2, 17.3.1 and 18.5 devices; other system versions and models require separate confirmation."
+        "Clock exit and notification fixes were individually verified on corresponding iOS16.7.2, 17.3.1 and 18.5 devices; other system versions and models require separate confirmation.",
+        "The widget interaction fix in 1.1.18-1 was verified on iPhone 15 Pro/iOS17.3.1/RootHide; existing iOS16/18 implementations are retained."
       ],
       "usage": [
         "Open the SpatialScene app after installation.",
@@ -297,6 +308,13 @@
         "If widgets occasionally disappear after an update or reload, check the Lock Screen again. This intermittent issue is not root-caused or claimed fully fixed."
       ],
       "changelog": [
+        {
+          "version": "1.1.18-1",
+          "changes": [
+            "Fixed Lock Screen widgets responding to taps without opening their apps when depth effects are enabled on iOS17.",
+            "Preserved the existing glass clock, depth effects, and notification placement."
+          ]
+        },
         {
           "version": "1.1.18",
           "changes": [
