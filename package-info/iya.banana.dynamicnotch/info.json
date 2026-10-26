@@ -6,13 +6,14 @@
   "developer": "Banana",
   "tint": "#F7BC25",
   "notice_style": "warning",
-  "notice": "仅推荐刘海屏且未开启灵动岛的设备安装。已开启原生或模拟灵动岛的设备不建议安装。 Beta 测试版。用户已在 iOS 16、17、18 上测试；iOS 15、26 仍待设备验证。低电量模式或减少透明度开启时，玻璃会使用黑底。",
+  "notice": "仅推荐刘海屏且未开启灵动岛的设备安装。已开启原生或模拟灵动岛的设备不建议安装。 用户已在 iOS 15、16、17、18 上测试；iOS 26 仍待设备验证。低电量模式或减少透明度开启时，玻璃会使用黑底。",
   "description": [
     "DynamicNotch 将通知、音乐、通话和计时等活动显示在刘海区域，保留系统状态栏。",
     "提供紧凑提示、长按展开与独立玻璃外观，可按需选择活动类型和通知呈现方式。"
   ],
   "features": [
     "整合通知、音乐、通话、计时器、秒表、录音、录屏、静音与音量等提示",
+    "支持专注／勿扰、系统开关及 Apple Watch 充电状态提示",
     "支持可用的实时活动紧凑显示与长按展开",
     "通知正文自动换行，可选自动展开，点击执行系统默认操作",
     "独立玻璃外观，可调填充、模糊、折射、厚度与边缘高光",
@@ -21,7 +22,7 @@
   ],
   "compatibility": [
     "仅推荐刘海屏、未开启灵动岛（含模拟灵动岛）的设备",
-    "支持目标 iOS 15–26；用户已测试 iOS 16、17、18",
+    "支持目标 iOS 15–26；用户已测试 iOS 15、16、17、18",
     "RootHide 与 Rootless",
     "部分活动与控制依系统版本和 App 支持而定",
     "音乐波形需要 BananaAudioService 1.0.4 或更新版本",
@@ -36,6 +37,14 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.0",
+      "changes": [
+        "新增专注／勿扰、系统开关及 Apple Watch 充电提示。",
+        "改善通知 App 图标、来电自动展开与刘海两侧留白。",
+        "优化铃声、静音及音量提示接管，减少自动调音量时的重复状态反馈。"
+      ]
+    },
+    {
       "version": "0.1.0~beta1",
       "changes": [
         "首个 Beta 公开测试版，支持通知、音乐、通话、计时及实时活动等刘海提示。",
@@ -48,13 +57,14 @@
     "en": {
       "name": "DynamicNotch",
       "tagline": "Notch notifications, activities and adjustable glass.",
-      "notice": "Recommended only for notched iPhones with Dynamic Island disabled. Installation is not recommended when a native or simulated Dynamic Island is enabled. Beta release. User-tested on iOS 16, 17 and 18; iOS 15 and 26 still await device validation. Glass uses a black background while Low Power Mode or Reduce Transparency is enabled.",
+      "notice": "Recommended only for notched iPhones with Dynamic Island disabled. Installation is not recommended when a native or simulated Dynamic Island is enabled. User-tested on iOS 15, 16, 17 and 18; iOS 26 still awaits device validation. Glass uses a black background while Low Power Mode or Reduce Transparency is enabled.",
       "description": [
         "DynamicNotch brings notifications, music, calls and timers to the notch while keeping the system status bar.",
         "Choose compact alerts, expanded views and independent glass styling, with configurable activity types and notification presentation."
       ],
       "features": [
         "Notifications, music, calls, timers, stopwatch, voice and screen recording, ringer and volume alerts",
+        "Focus / Do Not Disturb, system toggle and Apple Watch charging alerts",
         "Compact and expanded views for supported Live Activities",
         "Wrapped notification text, optional automatic expansion and native default actions on tap",
         "Independent glass with adjustable fill, blur, refraction, thickness and edge highlights",
@@ -63,7 +73,7 @@
       ],
       "compatibility": [
         "Recommended only for notched iPhones with native or simulated Dynamic Island disabled",
-        "Targets iOS 15–26; user-tested on iOS 16, 17 and 18",
+        "Targets iOS 15–26; user-tested on iOS 15, 16, 17 and 18",
         "RootHide and Rootless",
         "Some activities and controls depend on the iOS version and app",
         "Music waveforms require BananaAudioService 1.0.4 or later",
@@ -76,6 +86,14 @@
         "Glass controls appear when glass is enabled. Low Power Mode or Reduce Transparency switches the background to black."
       ],
       "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Added Focus / Do Not Disturb, system toggle and Apple Watch charging alerts.",
+            "Improved notification app icons, automatic incoming-call expansion and compact notch spacing.",
+            "Improved ringer, silent-mode and volume alerts to reduce duplicate status feedback during volume automation."
+          ]
+        },
         {
           "version": "0.1.0~beta1",
           "changes": [
