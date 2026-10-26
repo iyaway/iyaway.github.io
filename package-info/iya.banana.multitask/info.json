@@ -52,6 +52,12 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.4-1",
+      "changes": [
+        "修复浮窗 1 标题栏和底部工具栏无法点击的问题，保留四角缩放及台前调度控制条操作。"
+      ]
+    },
+    {
       "version": "0.1.4",
       "changes": [
         "新增窗口调度、普通窗口数量限制与独立保留。",
@@ -140,6 +146,12 @@
         "Choose single-window scheduling or ordinary-window limits in Customization → Window scheduling. Keep independently in a window menu excludes that window from ordinary limits."
       ],
       "changelog": [
+        {
+          "version": "0.1.4-1",
+          "changes": [
+            "Fix unresponsive Window 1 title and bottom controls while preserving corner resizing and Stage controls."
+          ]
+        },
         {
           "version": "0.1.4",
           "changes": [
