@@ -9,12 +9,13 @@
   ],
   "features": [
     "星环／胶囊两种样式、独立整体缩放与展开动画",
-    "电量、Wi-Fi、蜂窝与单／双 SIM 状态",
+    "电量、Wi-Fi、蜂窝与单／双 SIM 状态；星环电量可选左侧／顶部／右侧",
     "电池流光、自定义配色与文字反色",
     "胶囊时间、日期、农历、两行文字与可选自动缩小",
     "胶囊宽高与圆角重算、文字对齐、上下／左右偏移与灵动岛避让",
     "桌面、App 与可选锁屏显示，独立解锁／控制中心恢复动画；控制中心使用原生图标",
-    "可选第三方电池长按兼容，保留普通短按展开"
+    "可选第三方电池长按兼容，保留普通短按展开",
+    "设置内一键导出版本、系统信息及已有动画记录"
   ],
   "notice": "与 SingleVPN 冲突。Lunora V1 或 V2 开启时本插件自动让位；两者关闭后按本插件自己的开关恢复。建议使用刘海／灵动岛布局。iOS 26 及不同设备尚未全面验证。 个别设备曾反馈点击后停留在系统图标，仍在排查，尚未确认彻底修复；遇到时可下拉控制中心恢复。",
   "compatibility": [
@@ -29,12 +30,21 @@
     "自动缩小文字默认开启；关闭后按设定字号显示，超出文字区域时裁切。",
     "在首页设置锁屏显示及两项恢复动画；关闭锁屏显示后，解锁可从系统图标动画恢复星环／胶囊。",
     "使用本插件时先关闭 Lunora V1 与 V2 的总开关。",
-    "在电池页开启「兼容电池长按」前，请先在第三方插件中开启其电池长按功能；本插件不提供电池详情面板。"
+    "在电池页开启「兼容电池长按」前，请先在第三方插件中开启其电池长按功能；本插件不提供电池详情面板。",
+    "在「电量百分比 → 星环电量位置」选择左侧、顶部或右侧；主页面底部可一键导出诊断。"
   ],
   "screenshots": [],
   "tint": "#248CFF",
   "notice_style": "warning",
   "changelog": [
+    {
+      "version": "0.1.6",
+      "changes": [
+        "新增星环电量右侧位置，保留原有左侧和顶部选项。",
+        "修复解锁恢复时星环收拢末段错位和跳动，保留原有缩放与偏移设置。",
+        "改进电池长按兼容，新增设置内一键导出诊断。"
+      ]
+    },
     {
       "version": "0.1.4",
       "changes": [
@@ -77,12 +87,13 @@
       ],
       "features": [
         "Orbit and Capsule styles, independent overall scaling and reveal animations",
-        "Battery, Wi-Fi, cellular and single- or dual-SIM status",
+        "Battery, Wi-Fi, cellular and single- or dual-SIM status; Orbit percentage positions on the left, top or right",
         "Battery flow, custom colors and inverted text",
         "Capsule time, date, lunar date, two-line text and optional automatic text shrinking",
         "Capsule width and height with recalculated rounded ends, text alignment, vertical/horizontal offsets and Dynamic Island avoidance",
         "Home Screen, in-app and optional Lock Screen display, with independent unlock and Control Center return animations; native icons in Control Center",
-        "Optional third-party battery long-press compatibility with normal tap-to-expand retained"
+        "Optional third-party battery long-press compatibility with normal tap-to-expand retained",
+        "One-tap export of version/system information and saved animation records in Settings"
       ],
       "notice": "Conflicts with SingleVPN. Yields while Lunora V1 or V2 is enabled and resumes according to its own switch after both are off. A notch or Dynamic Island layout is recommended. iOS 26 and all device configurations have not been fully validated. Some devices have reported native icons remaining after a tap. This is still under investigation; opening Control Center can restore the display.",
       "compatibility": [
@@ -97,9 +108,18 @@
         "Automatic text shrinking is on by default. Disable it to use the selected font size and clip any text that exceeds the available area.",
         "Set Lock Screen display and the two return animation switches on the main page. With Lock Screen display off, unlocking can animate native icons back into Orbit or Capsule.",
         "Disable the main switches in Lunora V1 and V2 when using DuoIcon.",
-        "Before enabling battery long-press compatibility on the Battery page, enable battery long-press behavior in the third-party tweak. DuoIcon does not provide a battery details panel."
+        "Before enabling battery long-press compatibility on the Battery page, enable battery long-press behavior in the third-party tweak. DuoIcon does not provide a battery details panel.",
+        "Choose Left, Top or Right under Battery Percentage → Orbit Percentage Position. Export diagnostics from the bottom of the main page."
       ],
       "changelog": [
+        {
+          "version": "0.1.6",
+          "changes": [
+            "Added a right-side battery percentage position for Orbit, alongside Left and Top.",
+            "Fixed Orbit position jumps near the end of the unlock return animation while preserving scale and offset settings.",
+            "Improved battery long-press compatibility and added one-tap diagnostic export in Settings."
+          ]
+        },
         {
           "version": "0.1.4",
           "changes": [
