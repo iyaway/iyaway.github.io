@@ -1,38 +1,47 @@
 {
   "package": "iya.banana.hide2less",
   "name": "Hide2Less",
-  "tagline": "在手机上将受支持的 RootHide 插件包转换为 Rootless 安装包。",
+  "tagline": "在手机上将受支持的 RootHide 插件和 App 包转换为 Rootless 安装包。",
   "developer": "Banana",
   "tint": "#146E57",
   "notice_style": "warning",
-  "notice": "并非所有安装包都能转换，转换成功也不代表插件运行兼容。请在目标设备验证，特别是包含自带恢复工具的安装包。结果可能依赖 Hide2Less compat，可一起分发，或添加并刷新 Banana 源下载依赖。",
+  "notice": "并非所有安装包都能转换，转换成功也不代表运行兼容。结果可能依赖 Hide2Less compat，可一起分发，或添加并刷新 Banana 源下载依赖。",
   "description": [
-    "独立的手机端转换工具。选择 DEB 后生成新的安装包，保留原始文件。",
-    "通过系统分享将结果交给用户选择的包管理器，或保存到文件；不会自动安装插件。"
+    "独立的手机端转换工具。选择 DEB 后生成新的 Rootless 安装包，保留原始文件。",
+    "通过系统分享将结果交给用户选择的包管理器，或保存到文件；不会自动安装软件。"
   ],
   "features": [
-    "App 提供 Rootless、RootHide 两种安装包，转换结果统一为 Rootless",
+    "工具提供 Rootless、RootHide 两种安装包，转换结果统一为 Rootless",
+    "支持受支持的插件包、App 包及混合包转换",
     "兼容转换与直接转换两种模式",
-    "支持更多常见插件安装包的读取与转换",
-    "按需导出已内置的 compat 兼容包，可随插件分发或从 Banana 源获取",
+    "按需导出已内置的 compat 兼容包，可随转换结果分发或从 Banana 源获取",
     "文件导入、转换进度与日志、系统分享",
+    "主界面右上角显示版本号，与关于页同步",
     "简体中文、繁体中文、英文及社区入口",
     "安装更新后自动关闭旧版应用，重新打开加载新版"
   ],
   "compatibility": [
-    "最低 iOS 15；按当前越狱环境安装对应的 Rootless 或 RootHide App 包",
-    "工具需要 dpkg >= 1.21.18、ldid、shell-cmds；compat 仅由转换后的 Rootless 插件按需使用",
-    "不会扩展原插件的系统或硬件支持范围；仅有 arm64e 的插件仍要求相应设备支持",
-    "RootHide 已在 iPhone 15 Pro / iOS 17.3.1 验证导入、转换和分享；已收到 iOS 16 Rootless 用户正常使用的反馈。转换后的插件仍需在目标环境验证运行。"
+    "最低 iOS 15；按当前越狱环境安装对应的 Rootless 或 RootHide 工具包",
+    "工具需要 dpkg >= 1.21.18、ldid、shell-cmds；转换结果按需依赖 compat，App 转换结果还依赖系统应用注册组件",
+    "不会扩展原安装包的系统或硬件支持范围；仅有 arm64e 的程序仍要求相应设备支持",
+    "转换结果仍需在目标越狱环境验证运行。"
   ],
   "usage": [
-    "安装与你的越狱环境对应的 App 包。安装更新完成后重新打开 Hide2Less，选择 .deb 文件。",
+    "安装与你的越狱环境对应的工具包。安装更新完成后重新打开 Hide2Less，选择 .deb 文件。",
     "选择兼容转换或直接转换；完成后从系统分享窗口保存结果，或交给包管理器。",
-    "若提示依赖 compat，使用“分享兼容包”将其与插件一起分发；接收者先安装 compat，再安装插件。也可添加并刷新 https://iyaway.github.io/ 自动下载依赖。",
+    "若提示依赖 compat，使用“分享兼容包”与转换包一起分发；接收者先安装 compat，再安装转换包。也可添加并刷新 https://iyaway.github.io/ 自动下载依赖。",
     "两种环境均通过系统分享导出或保存结果。遇到不支持的安装包时，按提示交由开发者适配。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.3",
+      "changes": [
+        "新增受支持的 App 包转换，提升插件包转换兼容性。",
+        "改进转换结果保存与失败提示。",
+        "主界面右上角显示版本号，与关于页保持一致。"
+      ]
+    },
     {
       "version": "0.1.2",
       "changes": [
@@ -61,34 +70,43 @@
   "locales": {
     "en": {
       "name": "Hide2Less",
-      "tagline": "Convert supported RootHide tweak packages to Rootless packages on device.",
-      "notice": "Not every package can be converted, and successful conversion does not prove runtime compatibility. Verify results on the target device, especially packages with their own recovery tools. Results may require Hide2Less compat; distribute it with the tweak, or add and refresh the Banana repository to obtain it.",
+      "tagline": "Convert supported RootHide tweak and app packages to Rootless packages on device.",
+      "notice": "Not every package can be converted, and successful conversion does not prove runtime compatibility. Results may require Hide2Less compat; distribute it with the converted package, or add and refresh the Banana repository to obtain it.",
       "description": [
-        "An independent on-device converter. Choose a DEB to create a new package while preserving the original file.",
-        "Use system sharing to send the result to a package manager of your choice or save it to Files. Tweaks are never installed automatically."
+        "An independent on-device converter. Choose a DEB to create a new Rootless package while preserving the original file.",
+        "Use system sharing to send results to a package manager of your choice or save them to Files. Software is never installed automatically."
       ],
       "features": [
-        "Rootless and RootHide app packages; converted packages always target Rootless",
+        "Rootless and RootHide tool packages; converted packages always target Rootless",
+        "Convert supported tweak, app and mixed packages",
         "Compatibility and direct conversion modes",
-        "Improved reading and conversion support for additional tweak packages",
-        "Export the bundled compat package when needed, distribute it with tweaks, or obtain it from the Banana repository",
+        "Export the bundled compat package when needed, distribute it with converted packages, or obtain it from the Banana repository",
         "File import, progress and logs, and system sharing",
+        "Show the version at the top right of the home screen, consistent with About",
         "Simplified Chinese, Traditional Chinese, English, and community links",
         "Close the old app after installation or upgrade; reopen to load the new version"
       ],
       "compatibility": [
-        "Requires iOS 15 or later; install the app package for your Rootless or RootHide environment",
-        "Requires dpkg >= 1.21.18, ldid and shell-cmds; compat is used only when required by a converted Rootless tweak",
-        "Does not expand the original tweak's system or hardware support; arm64e-only tweaks still require compatible hardware",
-        "Import, conversion and sharing were verified on iPhone 15 Pro / iOS 17.3.1 with RootHide. An iOS 16 Rootless user also reported normal operation. Converted tweaks still require runtime verification in their target environment."
+        "Requires iOS 15 or later; install the tool package for your Rootless or RootHide environment",
+        "Requires dpkg >= 1.21.18, ldid and shell-cmds; converted packages use compat when needed, while app conversions also require the system application registration component",
+        "Does not expand the original package's system or hardware support; arm64e-only programs still require compatible hardware",
+        "Converted packages require runtime verification in their target jailbreak environment."
       ],
       "usage": [
-        "Install the app package for your jailbreak environment. Reopen Hide2Less after installation or upgrade, then select a .deb file.",
+        "Install the tool package for your jailbreak environment. Reopen Hide2Less after installation or upgrade, then select a .deb file.",
         "Choose compatibility or direct mode. When conversion finishes, save the result or send it to a package manager using system sharing.",
-        "If compat is required, use Share compatibility package to distribute it with the tweak. Recipients install compat first, then the tweak. Alternatively, add and refresh https://iyaway.github.io/ for automatic dependency downloads.",
+        "If compat is required, use Share compatibility package to distribute it with the converted package. Recipients install compat first, then the converted package. Alternatively, add and refresh https://iyaway.github.io/ for automatic dependency downloads.",
         "Both environments export or save results through system sharing. Unsupported packages require developer adaptation."
       ],
       "changelog": [
+        {
+          "version": "0.1.3",
+          "changes": [
+            "Add conversion for supported app packages and improve tweak package compatibility.",
+            "Improve saving conversion results and failure messages.",
+            "Show the version at the top right of the home screen and keep it consistent with About."
+          ]
+        },
         {
           "version": "0.1.2",
           "changes": [
