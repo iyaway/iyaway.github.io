@@ -39,6 +39,12 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.1",
+      "changes": [
+        "修复 iOS 15 桌面、多任务等场景下的刘海避让同步，改善提示展开、收起及界面切换后的恢复。"
+      ]
+    },
+    {
       "version": "0.1.0-2",
       "changes": [
         "修复通知声音与解锁后的误提示，支持显示系统通知提供的联系人头像。",
@@ -104,6 +110,12 @@
         "Glass controls appear when glass is enabled. Low Power Mode or Reduce Transparency switches the background to black."
       ],
       "changelog": [
+        {
+          "version": "0.1.1",
+          "changes": [
+            "Fixed notch-avoidance synchronization across the iOS 15 Home Screen and app switcher, with better restoration when alerts expand, collapse or views change."
+          ]
+        },
         {
           "version": "0.1.0-2",
           "changes": [
