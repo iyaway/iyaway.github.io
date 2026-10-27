@@ -16,6 +16,7 @@
     "支持专注／勿扰、系统开关及 Apple Watch 充电状态提示",
     "支持可用的实时活动紧凑显示与长按展开",
     "通知正文自动换行，可选自动展开，点击执行系统默认操作",
+    "通知优先显示系统提供的联系人头像，缺失时保留 App 图标",
     "独立玻璃外观，可调填充、模糊、折射、厚度与边缘高光",
     "支持上划收起／隐藏及恢复仍在进行的隐藏活动",
     "支持与 Lunora 配合的刘海闪避及收起恢复",
@@ -37,6 +38,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.0-2",
+      "changes": [
+        "修复通知声音与解锁后的误提示，支持显示系统通知提供的联系人头像。",
+        "改进通话静音、扬声器及录屏停止的状态同步，优化其他活动控制。",
+        "统一通话按钮图标与选中样式，修正玻璃下的图标颜色。"
+      ]
+    },
     {
       "version": "0.1.0-1",
       "changes": [
@@ -74,6 +83,7 @@
         "Focus / Do Not Disturb, system toggle and Apple Watch charging alerts",
         "Compact and expanded views for supported Live Activities",
         "Wrapped notification text, optional automatic expansion and native default actions on tap",
+        "Contact avatars from supported system notifications, with app icons as a fallback",
         "Independent glass with adjustable fill, blur, refraction, thickness and edge highlights",
         "Swipe to collapse or hide, and restore hidden activities that are still running",
         "Notch avoidance and restoration with Lunora",
@@ -94,6 +104,14 @@
         "Glass controls appear when glass is enabled. Low Power Mode or Reduce Transparency switches the background to black."
       ],
       "changelog": [
+        {
+          "version": "0.1.0-2",
+          "changes": [
+            "Fixed notification sound handling and false alerts after unlocking, and added contact avatars from supported system notifications.",
+            "Improved call mute, speaker and screen-recording controls and state synchronization, along with other activity controls.",
+            "Refined call icons and selected buttons, preserving their colors over glass."
+          ]
+        },
         {
           "version": "0.1.0-1",
           "changes": [
