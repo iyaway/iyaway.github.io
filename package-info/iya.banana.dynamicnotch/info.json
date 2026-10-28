@@ -39,6 +39,12 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.1-1",
+      "changes": [
+        "修复 iOS 15 桌面上 Lunora 不闪避刘海的问题，改善展开、收起与切换 App 后的恢复。"
+      ]
+    },
+    {
       "version": "0.1.1",
       "changes": [
         "修复 iOS 15 桌面、多任务等场景下的刘海避让同步，改善提示展开、收起及界面切换后的恢复。"
@@ -110,6 +116,12 @@
         "Glass controls appear when glass is enabled. Low Power Mode or Reduce Transparency switches the background to black."
       ],
       "changelog": [
+        {
+          "version": "0.1.1-1",
+          "changes": [
+            "Fixed missing Lunora notch avoidance on the iOS 15 Home Screen, with better restoration when alerts expand, collapse or apps change."
+          ]
+        },
         {
           "version": "0.1.1",
           "changes": [
