@@ -7,7 +7,8 @@
   "description": [
     "iPhoneDuoIcon 正式更名为 Lunora · 月珞，带来全新图标与更完整的状态栏体验，升级会保留现有配置。",
     "左侧玻璃信息胶囊与右侧 Duo 或 mini Dock 可独立设置并自由组合，显示时间日期、天气、媒体、音量、通知和 App 等内容。",
-    "提供统一屏幕定位、独立字体与配色、可选完全亮边和星环双动画，以及配置备份、更新引导、CPU 诊断与 Discord／QQ 反馈入口。"
+    "提供统一屏幕定位、独立字体与配色、可选完全亮边和星环双动画，以及配置备份、更新引导、CPU 诊断与 Discord／QQ 反馈入口。",
+    "新增农历独立格式、电量与旁侧信息位置选择，以及可选音量边框、Wi-Fi 底边标记、活动标记与来电专属显示；维护页可彻底重置配置。"
   ],
   "notice": "主包支持 iOS 15.1–26，不支持 iOS 15.0.x。建议使用原生刘海或灵动岛布局，支持已生效的原生刘海模拟；普通无刘海布局不保证显示效果。升级后请注销一次。iOS 26 已有用户测试反馈，但未覆盖所有设备与功能。与 SingleVPN 冲突。",
   "features": [
@@ -85,7 +86,12 @@
     "检测到启动失去响应后，下次启动暂停 Lunora 加载并保留配置，可在设置中手动允许重试",
     "开启 CC 原生右侧图标和恢复动画时，常态内容等待原生交接与收回完成再恢复，mini Dock 图标不会提前覆盖原生图标",
     "支持静音、闹钟等状态及 ETC 图标接入，并在原生 VPN 提示出现时临时让位",
-    "熄屏时暂停水滴采样与右侧文字滚动，亮屏后恢复；手动诊断保留文字来源线索"
+    "熄屏时暂停水滴采样与右侧文字滚动，亮屏后恢复；手动诊断保留文字来源线索",
+    "农历支持独立格式，数字和汉字月日可混排，并保留原有仅月份／仅日期／月日预设",
+    "星环电量可放环外左侧、顶部中间或环外右侧，旁侧自定义信息可选左右；胶囊顶部电量可选左、中、右",
+    "左侧可用音量边框保留内容，左右胶囊可选 Wi-Fi 底边强度标记，拥挤时保留原图标",
+    "活动标记支持呼吸圆点、实心圆点、圆环及 REC 样式；右侧可在电话来电响铃时专属显示听筒，结束后恢复原模式",
+    "维护页可在备份提醒和手动确认后彻底重置配置，清空旧参数并关闭 Lunora，保留导出的备份及启动失败保护"
   ],
   "compatibility": [
     "iOS 15.1–26（主包不支持 iOS 15.0.x）",
@@ -122,10 +128,22 @@
     "首次进入 1.1.5 设置会显示本次更新与定位说明；完成后不再自动重复，可在维护页重新打开。",
     "在「设置 → Lunora → 运行与兼容」按需开启「横屏时停用 Lunora」或「Mikkyy 兼容」；两项默认关闭。Mikkyy 兼容不会在控制中心过渡、原生展开或主动隐藏时强制显示。",
     "收藏通知显示、通知点击方式及跟随微光角标均在 mini Dock 设置中调整。通知点击方式仅在“仅有通知时显示”开启后显示，默认直接打开 App。",
-    "若设置提示启动失败保护已触发，先检查其他插件与系统状态，再在维护页允许下次启动并手动注销重试；已有配置保留。"
+    "若设置提示启动失败保护已触发，先检查其他插件与系统状态，再在维护页允许下次启动并手动注销重试；已有配置保留。",
+    "在“时间／日期”或农历样式中设置独立农历格式：d/M 为数字日月，ddd/MMM 为汉字日月，留空沿用原有显示预设。",
+    "音量边框位于“左侧信息胶囊 → 模块设置 → 音量”；左侧 Wi-Fi 底边标记位于“状态图标与边框”，活动标记样式位于“显示与交互”。",
+    "右侧 Wi-Fi 底边标记用于胶囊模式，在 Duo 的网络设置中开启；来电专属显示在“右侧显示”中开启，支持胶囊、星环与 mini Dock。新选项默认保留原有效果。",
+    "需恢复初始配置时，先在维护页导出配置备份，再选择“彻底重置配置”并确认。重置后主开关关闭，不会自动注销；已导出的备份与启动失败保护保留。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.6",
+      "changes": [
+        "新增农历独立格式，支持数字或汉字月日；星环电量与旁侧信息、胶囊顶部电量可分别调整显示位置。",
+        "新增保留原内容的音量边框、左右胶囊 Wi-Fi 底边强度标记、活动标记样式与右侧来电专属显示，新功能按需开启。",
+        "维护页新增彻底重置配置，提醒备份后清空历史设置并恢复默认关闭状态；完善系统图标独立开关。"
+      ]
+    },
     {
       "version": "1.1.5",
       "changes": [
@@ -355,7 +373,8 @@
       "description": [
         "iPhoneDuoIcon is now Lunora, with a new icon and a more complete status bar experience. Existing settings are preserved during the upgrade.",
         "Configure the left glass information capsule separately from the right Duo or mini Dock, combining time and date, weather, media, volume, notifications, apps, and more.",
-        "Unified screen-edge positioning, independent fonts and colors, optional full-edge highlights and two Orbit animations, configuration backups, an update guide, CPU diagnostics, and Discord/QQ feedback entries."
+        "Unified screen-edge positioning, independent fonts and colors, optional full-edge highlights and two Orbit animations, configuration backups, an update guide, CPU diagnostics, and Discord/QQ feedback entries.",
+        "Includes independent lunar formats, percentage and side-content placement, optional volume borders, Wi-Fi bottom marks, activity marks and an incoming-call right display, plus a complete configuration reset in Maintenance."
       ],
       "notice": "The main package supports iOS 15.1–26 and does not support iOS 15.0.x. Native notch or Dynamic Island layouts are recommended; active native notch simulation is supported. Display behavior on ordinary non-notch layouts is not guaranteed. Respring once after upgrading. Users have reported testing on iOS 26, but not every device and feature is covered. Conflicts with SingleVPN.",
       "features": [
@@ -433,7 +452,12 @@
         "After a detected unresponsive startup, pause Lunora on the next startup while preserving settings, with manual retry from Settings",
         "With native CC icons and return animation enabled, resting content waits for native handoff and collapse to finish; mini Dock icons do not cover native icons prematurely",
         "Supports silent-mode, alarm and ETC status icons, and temporarily yields to native VPN prompts",
-        "Pauses water-drop sampling and right-side text scrolling while the screen is off, resumes on wake, and retains text-source clues in manual diagnostics"
+        "Pauses water-drop sampling and right-side text scrolling while the screen is off, resumes on wake, and retains text-source clues in manual diagnostics",
+        "Independent lunar-date formatting combines numeric or Chinese month/day fields while retaining month-only, day-only and month/day presets",
+        "Place Orbit percentage outside left, at top center or outside right and choose either side for custom content; align the Capsule top percentage left, center or right",
+        "An optional left volume border preserves content; both capsules offer Wi-Fi bottom strength marks with the original icon retained when space is limited",
+        "Choose pulsing dots, solid dots, rings or REC activity marks; optionally show a handset while an incoming phone call rings and restore the current right display afterward",
+        "Maintenance offers a complete configuration reset with a backup reminder and manual confirmation, clearing saved settings and turning Lunora off while keeping exported backups and startup protection"
       ],
       "compatibility": [
         "iOS 15.1–26 (the main package does not support iOS 15.0.x)",
@@ -470,9 +494,21 @@
         "The first Settings visit on 1.1.5 shows the update and placement guide. It stays dismissed after completion and can be reopened from Maintenance.",
         "Open Settings → Lunora → Behavior and Compatibility to enable Disable Lunora in Landscape or Mikkyy Compatibility. Both are off by default. Mikkyy compatibility does not force visibility during Control Center transitions, native reveal or deliberate hiding.",
         "Adjust notification-only favorites, notification tap behavior and Follow AmbientBadge Style in mini Dock settings. The notification-tap option appears only with notification-only favorites enabled and defaults to opening the app.",
-        "If Settings reports startup protection, check the system and other tweaks, then allow the next startup from Maintenance and manually reload SpringBoard to retry. Existing settings are preserved."
+        "If Settings reports startup protection, check the system and other tweaks, then allow the next startup from Maintenance and manually reload SpringBoard to retry. Existing settings are preserved.",
+        "Set an independent lunar format in Time / Date or Lunar Date Style: d/M gives numeric day/month and ddd/MMM gives Chinese day/month names; leave it empty to retain the display preset.",
+        "Enable the volume border under Left Information Capsule → Module Settings → Volume. Left Wi-Fi bottom marks are under Status Icons and Border, and activity styles are under Display and Interaction.",
+        "Enable right Wi-Fi bottom marks in Duo network settings for Capsule mode. Incoming-call-only display is in Right Display and supports Capsule, Orbit and mini Dock. New options retain the original behavior by default.",
+        "Export a configuration backup before choosing Completely Reset Configuration in Maintenance. Confirming clears saved settings and leaves Lunora off without reloading SpringBoard; exported backups and startup protection are kept."
       ],
       "changelog": [
+        {
+          "version": "1.1.6",
+          "changes": [
+            "Added independent lunar-date formats with numeric or Chinese month/day fields, plus placement controls for Orbit percentage and side content and the Capsule top percentage.",
+            "Added a volume border that preserves content, Wi-Fi bottom strength marks for both capsules, activity-mark styles and an incoming-call-only right display. New features are opt-in.",
+            "Added a complete configuration reset in Maintenance with a backup reminder, clearing old settings and returning Lunora to off; improved individual status-icon switches."
+          ]
+        },
         {
           "version": "1.1.5",
           "changes": [
