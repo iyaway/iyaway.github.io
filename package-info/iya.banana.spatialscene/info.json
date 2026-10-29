@@ -59,7 +59,8 @@
     "RootHide",
     "玻璃时钟退场与通知修正已在iOS16.7.2、17.3.1和18.5对应设备上分别验证；其它系统小版本与机型需单独确认。",
     "1.1.18-1的小组件交互修正已在15 Pro/iOS17.3.1/RootHide验证；iOS16/18保留原有实现。",
-    "1.1.19的横屏显示与桌面运动修正已由用户在当前测试环境确认；其他机型和系统小版本仍需单独验证。"
+    "1.1.19的横屏显示与桌面运动修正已由用户在当前测试环境确认；其他机型和系统小版本仍需单独验证。",
+    "1.1.19-1已在15 Pro/iOS17.3.1/RootHide确认横屏游戏下拉关闭景深、竖屏恢复；其他系统与机型组合需单独确认。"
   ],
   "usage": [
     "安装后打开 SpatialScene App。",
@@ -70,7 +71,7 @@
     "在系统“设置”中启用 SpatialScene，并按需开启主屏幕动态效果。",
     "如只需壁纸景深效果，可关闭“修改锁屏时间”以保留系统时间外观。",
     "在时间设置中调整字体大小、字重、字宽、字高、柔和度与颜色；实验性景深效果可按需开启。",
-    "“横屏自动关闭景深”位于“景深效果”开关正下方，默认关闭；开启后横屏时暂时关闭景深，回到竖屏自动恢复。",
+    "“横屏自动关闭景深”位于“景深效果”开关正下方，默认关闭；开启后横屏时暂时关闭景深，回到竖屏自动恢复。支持先进入横屏游戏，再下拉通知中心的场景。",
     "如需保留系统桌面壁纸，可开启“桌面使用原壁纸”，设置会立即生效。",
     "如需保留系统锁屏壁纸，可开启“锁屏使用原壁纸”；此时景深与自动取色会停用。",
     "锁屏和桌面均使用原壁纸时，无需导入空间场景，仍可调整时间字体、手动填充颜色和不透明度。",
@@ -83,6 +84,12 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.19-1",
+      "changes": [
+        "修复“横屏自动关闭景深”在横屏游戏下拉通知中心时未生效的问题，回到竖屏后正常恢复。"
+      ]
+    },
     {
       "version": "1.1.19",
       "changes": [
@@ -303,7 +310,8 @@
         "RootHide",
         "Clock exit and notification fixes were individually verified on corresponding iOS16.7.2, 17.3.1 and 18.5 devices; other system versions and models require separate confirmation.",
         "The widget interaction fix in 1.1.18-1 was verified on iPhone 15 Pro/iOS17.3.1/RootHide; existing iOS16/18 implementations are retained.",
-        "The landscape display and Home Screen motion fixes in 1.1.19 were accepted in the current user test environment; other models and system versions require separate confirmation."
+        "The landscape display and Home Screen motion fixes in 1.1.19 were accepted in the current user test environment; other models and system versions require separate confirmation.",
+        "Landscape-game depth suppression and portrait restoration in 1.1.19-1 were verified on iPhone15 Pro/iOS17.3.1/RootHide; other device and OS combinations require separate confirmation."
       ],
       "usage": [
         "Open the SpatialScene app after installation.",
@@ -314,7 +322,7 @@
         "Enable SpatialScene in the system Settings app and turn on Home Screen animation if desired.",
         "Disable Modify Lock Screen Clock to preserve the system clock appearance while keeping wallpaper depth effects.",
         "Use Clock settings to adjust font size, weight, width, height, softness, and color, and optionally enable the experimental depth effect.",
-        "Disable Depth in Landscape is directly below Depth Effect and defaults off. Enable it to pause depth in landscape and restore it in portrait.",
+        "Disable Depth in Landscape is directly below Depth Effect and defaults off. Enable it to pause depth in landscape and restore it in portrait. It also works when entering a landscape game before opening Notification Center.",
         "Enable Use Stock Home Wallpaper to keep the system Home Screen wallpaper; the change applies immediately.",
         "Enable Use Stock Lock Wallpaper to keep the system Lock Screen wallpaper; depth and automatic clock coloring are then disabled.",
         "When both screens use stock wallpapers, no spatial scene import is required to adjust clock fonts, manual fill color, or opacity.",
@@ -326,6 +334,12 @@
         "If widgets occasionally disappear after an update or reload, check the Lock Screen again. This intermittent issue is not root-caused or claimed fully fixed."
       ],
       "changelog": [
+        {
+          "version": "1.1.19-1",
+          "changes": [
+            "Fixed Disable Depth in Landscape not taking effect when opening Notification Center from a landscape game, with normal restoration in portrait."
+          ]
+        },
         {
           "version": "1.1.19",
           "changes": [
