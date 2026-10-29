@@ -6,12 +6,12 @@
   "developer": "Banana",
   "tint": "#7B55EB",
   "description": [
-    "灵动程序坞为 iPhone Dock 提供横向转盘和放大两种模式。快速滑动后可继续惯性旋转，减速后自动吸附；按住横滑可放大并选择应用。",
+    "灵动程序坞为 iPhone Dock 提供横向转盘和放大两种模式，图标较多时自动调整大小与间距。快速滑动后可继续惯性旋转，减速后自动吸附；按住横滑可放大并选择应用。",
     "可通过独立应用列表选择与排序最多 24 个应用；列表为空时跟随原生 Dock。关闭插件可恢复原生界面。"
   ],
   "features": [
-    "横向转盘：前后层次、惯性减速、自动吸附与旋转位置保存",
-    "放大模式：按住横滑选择，支持松手打开与移出取消",
+    "横向转盘：自适应图标大小、前后层次、惯性减速、自动吸附与旋转位置保存",
+    "放大模式：中心最大、两侧递减；空间不足自动缩小避让，支持松手打开与移出取消",
     "独立应用列表，最多 24 个应用并支持排序",
     "调整图标大小、放大倍数、栏位置、名称、光晕、背景与触感，显示通知徽标",
     "长按进入系统桌面编辑，支持拖动手柄调整自定义栏位置",
@@ -33,6 +33,14 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.1-1",
+      "changes": [
+        "优化放大模式：中间最大、两侧递减，密集图标自动缩小并避让，减少重叠。",
+        "横向转盘根据应用数量与可用空间调整图标大小，同步优化点击范围和徽标显示。",
+        "调整应用最小化时图标的垂直落点，保留惯性滚动与自动吸附。"
+      ]
+    },
+    {
       "version": "0.1.0-1",
       "changes": [
         "首个正式版，支持横向转盘与放大两种模式，横向滑动支持惯性减速和自动吸附。",
@@ -46,12 +54,12 @@
       "name": "KineticDock",
       "tagline": "A scrolling carousel and touch magnification for your iPhone Dock.",
       "description": [
-        "KineticDock adds Scrolling and Magnification modes to the iPhone Dock. Flick to keep the carousel rotating, then slow down and snap into place, or slide to magnify and select an app.",
+        "KineticDock adds Scrolling and Magnification modes to the iPhone Dock, adapting icon sizes and spacing for larger app collections. Flick to keep the carousel rotating, then slow down and snap into place, or slide to magnify and select an app.",
         "Choose and reorder up to 24 apps in a separate list, or leave it empty to follow the native Dock. Turning KineticDock off restores the native interface."
       ],
       "features": [
-        "Scrolling carousel with depth, inertia, snapping, and saved rotation",
-        "Magnification with slide selection, optional release-to-open, and move-away cancellation",
+        "Scrolling carousel with adaptive icon sizing, depth, inertia, snapping, and saved rotation",
+        "Magnification with graduated icon sizes, adaptive spacing, optional release-to-open, and move-away cancellation",
         "A separate, reorderable list of up to 24 apps",
         "Adjust icon size, magnification, bar position, labels, glow, background, and haptics; display notification badges",
         "Hold for native Home Screen editing and drag the handle to move the custom bar",
@@ -71,6 +79,14 @@
         "In Scrolling mode, tap to open and flick to keep rotating; touch again to take control. In Magnification mode, slide and release to open."
       ],
       "changelog": [
+        {
+          "version": "0.1.1-1",
+          "changes": [
+            "Improved Magnification with a larger center icon, progressively smaller neighbors, and adaptive spacing to reduce overlap.",
+            "The scrolling carousel now adapts icon sizes to app count and available space, with matching hit areas and scaled badges.",
+            "Adjusted vertical icon targets when minimizing apps, while preserving inertial scrolling and snapping."
+          ]
+        },
         {
           "version": "0.1.0-1",
           "changes": [
