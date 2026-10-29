@@ -39,6 +39,14 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.2",
+      "changes": [
+        "修复开启专注提示后，从控制中心开启的模式无法关闭的问题，并恢复对应的刘海提示。更新后请重载桌面。",
+        "来电自动展开不再超时收起，保持到接听或挂断。",
+        "改善紧凑专注状态文字，完整显示“开／关”，长按可查看模式全名。"
+      ]
+    },
+    {
       "version": "0.1.1-1",
       "changes": [
         "修复 iOS 15 桌面上 Lunora 不闪避刘海的问题，改善展开、收起与切换 App 后的恢复。"
@@ -116,6 +124,14 @@
         "Glass controls appear when glass is enabled. Low Power Mode or Reduce Transparency switches the background to black."
       ],
       "changelog": [
+        {
+          "version": "0.1.2",
+          "changes": [
+            "Fixed an issue where enabling Focus alerts could prevent modes started in Control Center from turning off. Respring after updating.",
+            "Automatically expanded incoming-call alerts remain open until answered or ended.",
+            "Compact Focus alerts show a clear On/Off state; hold to see the full mode name."
+          ]
+        },
         {
           "version": "0.1.1-1",
           "changes": [
