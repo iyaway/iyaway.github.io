@@ -1,0 +1,85 @@
+{
+  "package": "iya.banana.pickerwheeldock",
+  "name": "KineticDock",
+  "web_name": "灵动程序坞",
+  "tagline": "横向转盘与指尖放大，让 iPhone 程序坞动起来。",
+  "developer": "Banana",
+  "tint": "#7B55EB",
+  "description": [
+    "灵动程序坞为 iPhone Dock 提供横向转盘和放大两种模式。快速滑动后可继续惯性旋转，减速后自动吸附；按住横滑可放大并选择应用。",
+    "可通过独立应用列表选择与排序最多 24 个应用；列表为空时跟随原生 Dock。关闭插件可恢复原生界面。"
+  ],
+  "features": [
+    "横向转盘：前后层次、惯性减速、自动吸附与旋转位置保存",
+    "放大模式：按住横滑选择，支持松手打开与移出取消",
+    "独立应用列表，最多 24 个应用并支持排序",
+    "调整图标大小、放大倍数、栏位置、名称、光晕、背景与触感，显示通知徽标",
+    "长按进入系统桌面编辑，支持拖动手柄调整自定义栏位置",
+    "简体中文、繁体中文与英文设置，跟随系统语言"
+  ],
+  "compatibility": [
+    "iPhone · iOS 15.x–17.x",
+    "Rootless",
+    "RootHide",
+    "普通 Dock / 已开启的浮动 Dock"
+  ],
+  "notice": "浮动 Dock 需由其他插件开启。iPhone 15 Pro / iOS 17.3.1 已获用户反馈确认；iOS 15/16 尚未完成真机验证。不接管 iPad、横屏或外接屏，不扩容原生 Dock。",
+  "usage": [
+    "安装后进入“设置 → 灵动程序坞”，开启总开关。",
+    "选择“横向滚动”或“放大”模式，按需调整外观与交互选项。",
+    "在“应用列表”中选择和排序应用；清空列表即可跟随原生 Dock。",
+    "横向模式轻点图标打开应用；快甩后继续旋转，再次按住可接管。放大模式可按住横滑后松手打开。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.0-1",
+      "changes": [
+        "首个正式版，支持横向转盘与放大两种模式，横向滑动支持惯性减速和自动吸附。",
+        "支持应用选择与排序，可调整图标大小、位置、名称显示与触感反馈。",
+        "支持 iPhone 普通 Dock 与已开启的浮动 Dock，提供简体中文、繁体中文和英文设置。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "KineticDock",
+      "tagline": "A scrolling carousel and touch magnification for your iPhone Dock.",
+      "description": [
+        "KineticDock adds Scrolling and Magnification modes to the iPhone Dock. Flick to keep the carousel rotating, then slow down and snap into place, or slide to magnify and select an app.",
+        "Choose and reorder up to 24 apps in a separate list, or leave it empty to follow the native Dock. Turning KineticDock off restores the native interface."
+      ],
+      "features": [
+        "Scrolling carousel with depth, inertia, snapping, and saved rotation",
+        "Magnification with slide selection, optional release-to-open, and move-away cancellation",
+        "A separate, reorderable list of up to 24 apps",
+        "Adjust icon size, magnification, bar position, labels, glow, background, and haptics; display notification badges",
+        "Hold for native Home Screen editing and drag the handle to move the custom bar",
+        "English, Simplified Chinese, and Traditional Chinese settings follow the system language"
+      ],
+      "compatibility": [
+        "iPhone · iOS 15.x–17.x",
+        "Rootless",
+        "RootHide",
+        "Standard Dock / externally enabled Floating Dock"
+      ],
+      "notice": "A separate tweak is required to enable the Floating Dock. User feedback confirmed operation on iPhone 15 Pro / iOS 17.3.1; iOS 15/16 have not completed device validation. iPad, landscape, and external displays are not taken over. Native Dock capacity is not expanded.",
+      "usage": [
+        "Open Settings → KineticDock after installation and turn on the main switch.",
+        "Choose Scrolling or Magnification, then adjust appearance and interaction options.",
+        "Select and reorder apps under Applications; leave the list empty to follow the native Dock.",
+        "In Scrolling mode, tap to open and flick to keep rotating; touch again to take control. In Magnification mode, slide and release to open."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.0-1",
+          "changes": [
+            "First stable release with Scrolling and Magnification modes, including inertial scrolling and automatic snapping.",
+            "Choose and reorder apps; adjust icon size, position, labels, and haptic feedback.",
+            "Supports the standard iPhone Dock and an externally enabled Floating Dock, with English, Simplified Chinese, and Traditional Chinese settings."
+          ]
+        }
+      ]
+    }
+  }
+}
