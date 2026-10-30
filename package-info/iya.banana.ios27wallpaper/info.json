@@ -1,0 +1,82 @@
+{
+  "package": "iya.banana.ios27wallpaper",
+  "name": "StockWallpapers",
+  "web_name": "系统壁纸",
+  "tagline": "在iOS 17体验多代系统壁纸与动态效果。",
+  "developer": "Banana",
+  "tint": "#639BCF",
+  "notice_style": "warning",
+  "notice": "仅支持iOS 17.0–17.x。部分画面、动态细节、横屏及强制iPad模式仍在适配。",
+  "description": [
+    "将iOS 18、26、27的多款系统壁纸接入系统墙纸图库，在系列内切换款式。",
+    "当前包含Pride Luminance、Fluidity、Space、Celosia、Flocon、Jurin、Vitra、Marble和V68，共9个系列、42款。"
+  ],
+  "features": [
+    "在一个系列内切换不同款式，支持各系列已适配的解锁、唤醒、明暗和动态效果。",
+    "提供统一启用开关、Celosia自选颜色、图库刷新和可复制的诊断日志。",
+    "改善图库入口刷新与反复打开通知中心后的动态恢复。",
+    "设置名称与文案支持简体中文、繁体中文和英文。"
+  ],
+  "compatibility": [
+    "仅iOS 17.0–17.x；不支持iOS15、16或18及以上。",
+    "提供Rootless／RootHide双包，需要PreferenceLoader及可加载系统插件的越狱环境。",
+    "已在iPhone 13 Pro Max／iOS 17.3.1 RootHide确认图库新增系列及Pride动态恢复；Rootless完成构建检查。",
+    "其他设备、系统小版本及各系列的完整动态行为仍需验证。"
+  ],
+  "usage": [
+    "按越狱环境安装对应包；首次安装建议重新启动越狱环境，确保图库支持加载。",
+    "在“设置→系统壁纸”启用，然后进入“设置→墙纸→添加新墙纸→收藏”选择系列和款式。",
+    "入口可能稍后出现，先退出并重新进入添加页面，必要时使用插件内的图库刷新工具。",
+    "遇到异常可查看并复制诊断日志，说明具体系列、系统版本和出现问题的界面。"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "changes": [
+        "提供9个系列、42种系统壁纸样式，包含iOS 18、26、27的壁纸，当前仅支持iOS 17.x。",
+        "优化图库显示与动态恢复，修复入口缺失及反复下拉通知后停止动画的问题。",
+        "精简设置并加入图库刷新与诊断，支持简体中文、繁体中文和英文名称及文案。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "StockWallpapers",
+      "tagline": "Enjoy stock wallpaper collections and animations on iOS 17.",
+      "notice": "iOS 17.0–17.x only. Some visuals, animation details, landscape behavior and forced iPad mode remain under adaptation.",
+      "description": [
+        "Brings selected stock wallpapers from iOS 18, 26 and 27 into the system wallpaper gallery, with looks grouped within each family.",
+        "Includes Pride Luminance, Fluidity, Space, Celosia, Flocon, Jurin, Vitra, Marble and V68: 9 families and 42 looks."
+      ],
+      "features": [
+        "Switch looks within each family and use its supported unlock, wake, appearance and animation effects.",
+        "One enable switch, custom Celosia color, gallery refresh and copyable diagnostics.",
+        "Improves gallery refresh and animation recovery after repeated Notification Center access.",
+        "Settings names and text in Simplified Chinese, Traditional Chinese and English."
+      ],
+      "compatibility": [
+        "iOS 17.0–17.x only; excludes iOS 15, 16 and 18 or later.",
+        "Rootless and RootHide packages; requires PreferenceLoader and a jailbreak environment that loads system tweaks.",
+        "New gallery families and Pride animation recovery confirmed on iPhone 13 Pro Max/iOS 17.3.1 RootHide; Rootless has build validation.",
+        "Other devices, minor OS versions and complete animation behavior across all families still require validation."
+      ],
+      "usage": [
+        "Install the package for your jailbreak environment. After first installation, restarting the jailbreak environment is recommended so gallery support is loaded.",
+        "Enable Settings→StockWallpapers, then choose a family and look in Settings→Wallpaper→Add New Wallpaper→Collections.",
+        "Entries may take time to appear. Reopen the add-wallpaper page first, then use the gallery refresh tools if needed.",
+        "For issues, copy the diagnostic log and include the family, OS version and affected screen."
+      ],
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Adds 42 wallpaper looks across 9 families from iOS 18, 26 and 27; iOS 17.x only.",
+            "Improves gallery visibility and animation recovery, including missing entries and animations stopping after repeated Notification Center pulls.",
+            "Streamlines Settings with gallery refresh and diagnostics, with Simplified Chinese, Traditional Chinese and English names and text."
+          ]
+        }
+      ]
+    }
+  }
+}
