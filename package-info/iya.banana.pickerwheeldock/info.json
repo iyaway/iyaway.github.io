@@ -33,6 +33,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.2-1",
+      "changes": [
+        "优化 Mac 放大模式的滑动与放大性能，减少卡顿和掉帧。",
+        "优化通知徽标与选中光晕的显示效率，保留现有图标避让和交互效果。"
+      ]
+    },
+    {
       "version": "0.1.1-1",
       "changes": [
         "优化放大模式：中间最大、两侧递减，密集图标自动缩小并避让，减少重叠。",
@@ -79,6 +86,13 @@
         "In Scrolling mode, tap to open and flick to keep rotating; touch again to take control. In Magnification mode, slide and release to open."
       ],
       "changelog": [
+        {
+          "version": "0.1.2-1",
+          "changes": [
+            "Improved sliding and magnification performance in Mac-style Magnification mode to reduce stuttering and dropped frames.",
+            "Improved rendering efficiency for notification badges and selection glow while preserving adaptive icon spacing and interactions."
+          ]
+        },
         {
           "version": "0.1.1-1",
           "changes": [
