@@ -27,7 +27,8 @@
     "浮窗 1 与台前调度从窗口外沿四角调整大小，减少对应用内按钮的遮挡。",
     "可选状态栏长按和多任务卡片直接启动，按统一启动模式打开当前应用。",
     "可设置普通窗口数量与单窗口调度，并将窗口独立保留。",
-    "浮窗 1 与台前调度提供直接全屏控制，优化窗口切换与锁屏恢复。"
+    "浮窗 1 与台前调度提供直接全屏控制，优化窗口切换与锁屏恢复。",
+    "浮窗 1、浮窗 2 与台前调度提供七种粒子开合风格，保留经典效果；加载时在窗口内显示柔和流光。"
   ],
   "compatibility": [
     "iOS 15.0～26.x，已越狱设备。",
@@ -47,10 +48,19 @@
     "选择双击启动手势后，调整间隔并在测试区试点；间隔越短，单击等待越少，双击需要更快。",
     "在分屏设置中调整上下／左右分屏的透明背景及完整界面；浮窗 2 的个性化设置提供透明背景，横条可快捷切换完整界面。浮窗 1、台前调度请从窗外四角开始拖动缩放。",
     "在首页开启“长按状态栏启动”；分屏设置中的“多任务卡片直接启动”单独控制卡片手势，两项默认关闭。开启状态栏入口后，长按优先用于一芽分屏，关闭可恢复原长按操作。",
-    "在“个性化 → 窗口调度”设置单窗口或数量限制；长按窗口菜单选择“独立保留”，该窗口不计入普通数量。"
+    "在“个性化 → 窗口调度”设置单窗口或数量限制；长按窗口菜单选择“独立保留”，该窗口不计入普通数量。",
+    "在“个性化”中分别选择窗口打开与关闭动画。更新后彻底退出并重开目标 App，使新的开窗效果生效。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.5",
+      "changes": [
+        "新增七种窗口开合粒子动画，保留经典效果，可在个性化中选择。",
+        "新增窗口内流光等待，应用就绪后自然衔接开窗动画。",
+        "优化窗口打开时的显示顺序与动画中断后的恢复。"
+      ]
+    },
     {
       "version": "0.1.4-1",
       "changes": [
@@ -123,7 +133,8 @@
         "Resize Window 1 and Stage from exterior corners to reduce interference with app buttons.",
         "Optionally hold the status bar or launch directly from app-switcher cards using the selected startup mode.",
         "Set ordinary-window limits or single-window scheduling, and retain selected windows independently.",
-        "Window 1 and Stage offer native fullscreen controls, with improved window transitions and lock-screen recovery."
+        "Window 1 and Stage offer native fullscreen controls, with improved window transitions and lock-screen recovery.",
+        "Window 1, Window 2 and Stage offer seven particle opening/closing styles, including Classic, with a soft in-window loading shimmer."
       ],
       "compatibility": [
         "Jailbroken iOS 15.0–26.x.",
@@ -143,9 +154,18 @@
         "Select Double tap to adjust its interval and try the test area. Shorter intervals reduce single-tap waiting but require faster double taps.",
         "Choose transparent backgrounds and full-interface display for both split modes in Split View settings. Window 2 offers transparent backgrounds in Customization and a quick full-interface toggle. Start Window 1 and Stage resizing from the exterior corners.",
         "Enable Long-press status bar on the main page, or Open card directly in Split View settings. Both are off by default. When enabled, the status-bar shortcut takes priority over other holds there; disable it to restore the original hold.",
-        "Choose single-window scheduling or ordinary-window limits in Customization → Window scheduling. Keep independently in a window menu excludes that window from ordinary limits."
+        "Choose single-window scheduling or ordinary-window limits in Customization → Window scheduling. Keep independently in a window menu excludes that window from ordinary limits.",
+        "Choose opening and closing animations separately in Customization. After updating, fully quit and reopen target apps to load the new opening effect."
       ],
       "changelog": [
+        {
+          "version": "0.1.5",
+          "changes": [
+            "Add seven particle styles for opening and closing windows, including Classic, selectable in Customization.",
+            "Add an in-window shimmer while loading, transitioning into the opening animation when the app is ready.",
+            "Improve window-opening display order and recovery from interrupted animations."
+          ]
+        },
         {
           "version": "0.1.4-1",
           "changes": [
