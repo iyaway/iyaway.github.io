@@ -2,39 +2,47 @@
   "package": "iya.banana.ios27wallpaper",
   "name": "StockWallpapers",
   "web_name": "系统壁纸",
-  "tagline": "在iOS 17体验多代系统壁纸与动态效果。",
+  "tagline": "在 iOS 16–18 体验多代系统壁纸与动态效果。",
   "developer": "Banana",
   "tint": "#639BCF",
   "notice_style": "warning",
-  "notice": "仅支持iOS 17.0–17.x。部分画面、动态细节、横屏及强制iPad模式仍在适配。",
+  "notice": "支持 iOS 16.0–18.x，暂不支持 iOS 15。部分画面、动态细节、横屏及强制 iPad 模式仍在适配。",
   "description": [
-    "将iOS 18、26、27的多款系统壁纸接入系统墙纸图库，在系列内切换款式。",
-    "当前包含Pride Luminance、Fluidity、Space、Celosia、Flocon、Jurin、Vitra、Marble和V68，共9个系列、42款。"
+    "将 iOS 18、26、27 的多款系统壁纸接入系统墙纸图库，在各自系列内切换款式。",
+    "iOS 16／17 提供 9 个系列、42 款；iOS 18 提供 8 个移植系列、37 款，保留系统原有 Fluidity，并在安装后移除本插件的重复资源。"
   ],
   "features": [
-    "Pride Luminance：11款；Fluidity（iOS 18）：5款；Space（iOS 26）：5款。",
-    "Celosia：3款；Flocon：3款；Jurin：4款。",
-    "Vitra：4款；Marble：5款；V68：2款。合计9个系列、42款，款式在各自系列内切换。",
+    "Pride Luminance：11 款；Fluidity（iOS 18 系列）：5 款，仅在 iOS 16／17 提供移植版本；Space（iOS 26）：5 款。",
+    "Celosia：3 款；Flocon：3 款；Jurin：4 款。",
+    "Vitra：4 款；Marble：5 款；V68：2 款。款式在各自系列内切换。",
     "支持各系列已适配的解锁、唤醒、明暗和动态效果，具体效果依系列而异。",
-    "统一启用开关、Celosia自选颜色、图库刷新和可复制的诊断日志。",
+    "统一启用开关、Celosia 自选颜色、图库刷新和可复制的诊断日志。",
     "设置名称与文案支持简体中文、繁体中文和英文。"
   ],
   "compatibility": [
-    "仅iOS 17.0–17.x；不支持iOS15、16或18及以上。",
-    "提供Rootless／RootHide双包，需要PreferenceLoader及可加载系统插件的越狱环境。",
-    "已在iPhone 13 Pro Max／iOS 17.3.1 RootHide确认图库新增系列及Pride动态恢复；Rootless完成构建检查。",
-    "其他设备、系统小版本及各系列的完整动态行为仍需验证。"
+    "支持 iOS 16.0–18.x；暂不支持 iOS 15 或 iOS 19 及以上。",
+    "Rootless／RootHide 各提供一个统一安装包，按当前越狱环境选择；需要 PreferenceLoader 及可加载系统插件的越狱环境。",
+    "按系统适配壁纸显示、款式选择与动态效果；iOS 18 不重复安装移植版 Fluidity。",
+    "不同设备、系统小版本与横屏／强制 iPad 模式的表现可能不同。"
   ],
   "usage": [
-    "仅在iOS 17.x按越狱环境安装Rootless或RootHide包；首次安装建议重新启动越狱环境，确保图库支持加载。",
-    "进入“设置→系统壁纸”，确认“启用实时壁纸”已打开。",
-    "进入“设置→墙纸→添加新墙纸→收藏”查找系列。收藏缩略图可能不显示系列名称，点入预览后切换款式。",
-    "安装或更新后入口可能稍后出现。先退出“添加新墙纸”页面，再重新进入；只停留在旧页面可能仍看到缓存列表。",
-    "仍未出现时，进入插件的“图库刷新”，点“重新加载壁纸进程”，再点“打开 PosterBoard”；打开后从App切换器中向上划掉，再重新进入“添加新墙纸”。",
-    "无需为刷新入口先删除已设置的壁纸。若仍异常，先打开一次“添加新墙纸”，返回插件的“诊断日志”点“刷新”，复制日志，并提供具体系列、iOS版本、越狱环境和异常界面。"
+    "在 iOS 16／17／18 按越狱环境安装 Rootless 或 RootHide 包，并按包管理器提示完成必要的环境重新加载。",
+    "进入“设置 → 系统壁纸”，确认“启用实时壁纸”已打开。",
+    "进入“设置 → 墙纸 → 添加新墙纸 → 收藏”查找系列。收藏缩略图可能不显示系列名称，点入预览后切换款式。",
+    "安装或更新后入口可能稍后出现。先稍候，退出“添加新墙纸”页面，再重新进入；只停留在旧页面可能仍看到缓存列表。",
+    "仍未出现时，使用插件设置中的“图库刷新”：点“重新加载壁纸进程”，再点“打开 PosterBoard”；打开后从 App 切换器向上划掉，再重新进入“添加新墙纸”。",
+    "无需为刷新入口先删除已设置的壁纸。若仍异常，先打开一次“添加新墙纸”，返回插件的“诊断日志”点“刷新”，复制日志，并提供具体系列、iOS 版本、越狱环境和异常界面。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.1",
+      "changes": [
+        "支持 iOS 16–18，按系统自动适配；暂不支持 iOS 15。",
+        "iOS 16／17 提供 9 系列 42 款，iOS 18 提供 8 系列 37 款，并移除重复的 Fluidity 资源。",
+        "适配 iOS 16 款式选择与 iOS 18 图库显示，更新安装及入口刷新说明。"
+      ]
+    },
     {
       "version": "0.1.0",
       "changes": [
@@ -47,35 +55,43 @@
   "locales": {
     "en": {
       "name": "StockWallpapers",
-      "tagline": "Enjoy stock wallpaper collections and animations on iOS 17.",
-      "notice": "iOS 17.0–17.x only. Some visuals, animation details, landscape behavior and forced iPad mode remain under adaptation.",
+      "tagline": "Enjoy stock wallpaper families and animations on iOS 16–18.",
+      "notice": "Supports iOS 16.0–18.x; iOS 15 is not supported. Some visuals, animation details, landscape behavior and forced iPad mode remain under adaptation.",
       "description": [
         "Brings selected stock wallpapers from iOS 18, 26 and 27 into the system wallpaper gallery, with looks grouped within each family.",
-        "Includes Pride Luminance, Fluidity, Space, Celosia, Flocon, Jurin, Vitra, Marble and V68: 9 families and 42 looks."
+        "iOS 16 and 17 include 9 families and 42 looks. iOS 18 includes 8 ported families and 37 looks, keeps the system Fluidity family, and removes this package’s duplicate Fluidity resources after installation."
       ],
       "features": [
-        "Pride Luminance: 11 looks; Fluidity (iOS 18): 5; Space (iOS 26): 5.",
+        "Pride Luminance: 11 looks; Fluidity (iOS 18 family): 5, ported only on iOS 16/17; Space (iOS 26): 5.",
         "Celosia: 3 looks; Flocon: 3; Jurin: 4.",
-        "Vitra: 4 looks; Marble: 5; V68: 2. Total: 9 families and 42 looks, selected within each family.",
+        "Vitra: 4 looks; Marble: 5; V68: 2. Select looks within their respective families.",
         "Supported unlock, wake, appearance and animation effects vary by family.",
         "One enable switch, custom Celosia color, gallery refresh and copyable diagnostics.",
         "Settings names and text in Simplified Chinese, Traditional Chinese and English."
       ],
       "compatibility": [
-        "iOS 17.0–17.x only; excludes iOS 15, 16 and 18 or later.",
-        "Rootless and RootHide packages; requires PreferenceLoader and a jailbreak environment that loads system tweaks.",
-        "New gallery families and Pride animation recovery confirmed on iPhone 13 Pro Max/iOS 17.3.1 RootHide; Rootless has build validation.",
-        "Other devices, minor OS versions and complete animation behavior across all families still require validation."
+        "Supports iOS 16.0–18.x; excludes iOS 15 and iOS 19 or later.",
+        "One unified package for Rootless and one for RootHide; choose the package matching your jailbreak. Requires PreferenceLoader and a jailbreak environment that loads system tweaks.",
+        "Wallpaper display, look selection and animation are adapted by system version; iOS 18 does not install a duplicate ported Fluidity family.",
+        "Behavior may vary by device, minor OS version, landscape orientation and forced iPad mode."
       ],
       "usage": [
-        "Install the Rootless or RootHide package matching your jailbreak on iOS 17.x only. Restarting the jailbreak environment after first installation is recommended so gallery support is loaded.",
+        "On iOS 16, 17 or 18, install the Rootless or RootHide package matching your jailbreak, and complete any environment reload requested by the package manager.",
         "Open Settings → StockWallpapers and confirm Enable Live Wallpapers is on.",
-        "Find the families in Settings → Wallpaper → Add New Wallpaper → Collections. Collection thumbnails may not show family names; open a preview to switch looks.",
-        "Entries may appear after a delay. Leave Add New Wallpaper and reopen it; a page left open may retain its cached list.",
-        "If entries are still missing, use Gallery Refresh: tap Reload Wallpaper Processes, then Open PosterBoard. Swipe PosterBoard away in the app switcher and reopen Add New Wallpaper.",
+        "Find families in Settings → Wallpaper → Add New Wallpaper → Collections. Thumbnails may not show family names; open a preview to switch looks.",
+        "Entries may appear after a delay. Wait briefly, leave Add New Wallpaper and reopen it; a page left open may retain its cached list.",
+        "If entries remain missing, use Gallery Refresh: tap Reload Wallpaper Processes, then Open PosterBoard. Swipe PosterBoard away in the app switcher and reopen Add New Wallpaper.",
         "You do not need to delete an existing wallpaper to refresh the gallery. If a problem remains, open Add New Wallpaper once, return to Diagnostic Log, tap Refresh and copy the log. Include the family, iOS version, jailbreak environment and affected screen."
       ],
       "changelog": [
+        {
+          "version": "0.1.1",
+          "changes": [
+            "Supports iOS 16–18 with system-specific adaptation; iOS 15 remains unsupported.",
+            "Includes 9 families and 42 looks on iOS 16/17, or 8 families and 37 looks on iOS 18 without duplicate Fluidity resources.",
+            "Adapts look selection on iOS 16 and gallery visibility on iOS 18, with updated installation and gallery-refresh instructions."
+          ]
+        },
         {
           "version": "0.1.0",
           "changes": [
