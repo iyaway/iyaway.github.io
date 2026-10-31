@@ -16,6 +16,8 @@
     "Celosia：3 款；Flocon：3 款；Jurin：4 款。",
     "Vitra：4 款；Marble：5 款；V68：2 款。款式在各自系列内切换。",
     "支持各系列已适配的解锁、唤醒、明暗和动态效果，具体效果依系列而异。",
+    "浅色／深色／自动外观选项：Space、Celosia、V68及移植版Fluidity，选择保存到当前壁纸。",
+    "景深效果选项：Space（仅手机模式）、Celosia、Vitra、V68及移植版Fluidity；移植版Fluidity仅在iOS16／17提供。",
     "统一启用开关、Celosia 自选颜色、图库刷新和可复制的诊断日志。",
     "设置名称与文案支持简体中文、繁体中文和英文。"
   ],
@@ -29,12 +31,23 @@
     "在 iOS 16／17／18 按越狱环境安装 Rootless 或 RootHide 包，并按包管理器提示完成必要的环境重新加载。",
     "进入“设置 → 系统壁纸”，确认“启用实时壁纸”已打开。",
     "进入“设置 → 墙纸 → 添加新墙纸 → 收藏”查找系列。收藏缩略图可能不显示系列名称，点入预览后切换款式。",
+    "在支持系列的编辑页选择外观或景深，点“完成”保存；取消编辑不会覆盖原选择。V68手动切换款式会退出自动外观。",
+    "切换系统外观后，部分预览可能需要退出编辑页再重新进入刷新；无需删除或重新添加壁纸。",
+    "景深遵循系统小组件限制，遮挡效果取决于壁纸与时钟的重叠区域。",
     "安装或更新后入口可能稍后出现。先稍候，退出“添加新墙纸”页面，再重新进入；只停留在旧页面可能仍看到缓存列表。",
     "仍未出现时，使用插件设置中的“图库刷新”：点“重新加载壁纸进程”，再点“打开 PosterBoard”；打开后从 App 切换器向上划掉，再重新进入“添加新墙纸”。",
     "无需为刷新入口先删除已设置的壁纸。若仍异常，先打开一次“添加新墙纸”，返回插件的“诊断日志”点“刷新”，复制日志，并提供具体系列、iOS 版本、越狱环境和异常界面。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.2",
+      "changes": [
+        "新增支持系列的浅色、深色与自动外观选项，选择随单张壁纸保存。",
+        "补齐支持系列的景深效果控制，改善前景遮挡与保存后的显示。",
+        "优化 V68 外观选项与款式切换联动，保留已有壁纸配置。"
+      ]
+    },
     {
       "version": "0.1.1",
       "changes": [
@@ -66,6 +79,8 @@
         "Celosia: 3 looks; Flocon: 3; Jurin: 4.",
         "Vitra: 4 looks; Marble: 5; V68: 2. Select looks within their respective families.",
         "Supported unlock, wake, appearance and animation effects vary by family.",
+        "Light, Dark and Automatic appearance options for Space, Celosia, V68 and ported Fluidity, saved per wallpaper.",
+        "Depth Effect options for Space (phone mode only), Celosia, Vitra, V68 and ported Fluidity. Ported Fluidity is available only on iOS 16/17.",
         "One enable switch, custom Celosia color, gallery refresh and copyable diagnostics.",
         "Settings names and text in Simplified Chinese, Traditional Chinese and English."
       ],
@@ -79,11 +94,22 @@
         "On iOS 16, 17 or 18, install the Rootless or RootHide package matching your jailbreak, and complete any environment reload requested by the package manager.",
         "Open Settings → StockWallpapers and confirm Enable Live Wallpapers is on.",
         "Find families in Settings → Wallpaper → Add New Wallpaper → Collections. Thumbnails may not show family names; open a preview to switch looks.",
+        "Choose appearance or Depth Effect in a supported family and tap Done to save; cancelling keeps your previous selection. Manually switching V68 looks exits Automatic appearance.",
+        "After changing system appearance, some previews may need to be closed and reopened to refresh. You do not need to delete or recreate the wallpaper.",
+        "Depth Effect follows system widget restrictions and depends on overlap between the wallpaper and clock.",
         "Entries may appear after a delay. Wait briefly, leave Add New Wallpaper and reopen it; a page left open may retain its cached list.",
         "If entries remain missing, use Gallery Refresh: tap Reload Wallpaper Processes, then Open PosterBoard. Swipe PosterBoard away in the app switcher and reopen Add New Wallpaper.",
         "You do not need to delete an existing wallpaper to refresh the gallery. If a problem remains, open Add New Wallpaper once, return to Diagnostic Log, tap Refresh and copy the log. Include the family, iOS version, jailbreak environment and affected screen."
       ],
       "changelog": [
+        {
+          "version": "0.1.2",
+          "changes": [
+            "Adds Light, Dark and Automatic appearance options for supported families, saved per wallpaper.",
+            "Adds Depth Effect controls for supported families and improves foreground and saved wallpaper display.",
+            "Improves V68 appearance and look selection while preserving existing wallpaper configurations."
+          ]
+        },
         {
           "version": "0.1.1",
           "changes": [
