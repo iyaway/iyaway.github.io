@@ -28,7 +28,9 @@
     "可选状态栏长按和多任务卡片直接启动，按统一启动模式打开当前应用。",
     "可设置普通窗口数量与单窗口调度，并将窗口独立保留。",
     "浮窗 1 与台前调度提供直接全屏控制，优化窗口切换与锁屏恢复。",
-    "浮窗 1、浮窗 2 与台前调度提供七种粒子开合风格，保留经典效果；加载时在窗口内显示柔和流光。"
+    "浮窗 1、浮窗 2 与台前调度提供七种粒子开合风格，保留经典效果；加载时在窗口内显示柔和流光。",
+    "全屏与浮窗之间提供收拢／展开过渡，并支持减弱动态效果。",
+    "浮窗 1 与台前调度支持 0.5×～2× 的逐应用内容缩放，标题栏滑块与设置页共享保存值。"
   ],
   "compatibility": [
     "iOS 15.0～26.x，已越狱设备。",
@@ -49,10 +51,19 @@
     "在分屏设置中调整上下／左右分屏的透明背景及完整界面；浮窗 2 的个性化设置提供透明背景，横条可快捷切换完整界面。浮窗 1、台前调度请从窗外四角开始拖动缩放。",
     "在首页开启“长按状态栏启动”；分屏设置中的“多任务卡片直接启动”单独控制卡片手势，两项默认关闭。开启状态栏入口后，长按优先用于一芽分屏，关闭可恢复原长按操作。",
     "在“个性化 → 窗口调度”设置单窗口或数量限制；长按窗口菜单选择“独立保留”，该窗口不计入普通数量。",
-    "在“个性化”中分别选择窗口打开与关闭动画。更新后彻底退出并重开目标 App，使新的开窗效果生效。"
+    "在“个性化”中分别选择窗口打开与关闭动画。更新后彻底退出并重开目标 App，使新的开窗效果生效。",
+    "在“逐应用设置 → 选择应用 → 内容缩放”中分别设置浮窗 1 和台前调度比例；长按标题栏调整后松手会保存，重开自动恢复。",
+    "关闭“窗口打开动画”时，全屏与小窗直接切换；系统开启“减弱动态效果”时使用短淡化。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.6",
+      "changes": [
+        "新增全屏与浮窗之间的收拢／展开动画。",
+        "浮窗 1 与台前调度可按应用保存内容缩放比例，标题栏和逐应用设置同步。"
+      ]
+    },
     {
       "version": "0.1.5",
       "changes": [
@@ -134,7 +145,9 @@
         "Optionally hold the status bar or launch directly from app-switcher cards using the selected startup mode.",
         "Set ordinary-window limits or single-window scheduling, and retain selected windows independently.",
         "Window 1 and Stage offer native fullscreen controls, with improved window transitions and lock-screen recovery.",
-        "Window 1, Window 2 and Stage offer seven particle opening/closing styles, including Classic, with a soft in-window loading shimmer."
+        "Window 1, Window 2 and Stage offer seven particle opening/closing styles, including Classic, with a soft in-window loading shimmer.",
+        "Shrink and expand between fullscreen apps and floating windows, with Reduce Motion support.",
+        "Set per-app content scale from 0.5× to 2× separately for Window 1 and Stage, shared by title-bar sliders and Settings."
       ],
       "compatibility": [
         "Jailbroken iOS 15.0–26.x.",
@@ -155,9 +168,18 @@
         "Choose transparent backgrounds and full-interface display for both split modes in Split View settings. Window 2 offers transparent backgrounds in Customization and a quick full-interface toggle. Start Window 1 and Stage resizing from the exterior corners.",
         "Enable Long-press status bar on the main page, or Open card directly in Split View settings. Both are off by default. When enabled, the status-bar shortcut takes priority over other holds there; disable it to restore the original hold.",
         "Choose single-window scheduling or ordinary-window limits in Customization → Window scheduling. Keep independently in a window menu excludes that window from ordinary limits.",
-        "Choose opening and closing animations separately in Customization. After updating, fully quit and reopen target apps to load the new opening effect."
+        "Choose opening and closing animations separately in Customization. After updating, fully quit and reopen target apps to load the new opening effect.",
+        "Choose Window 1 and Stage ratios in Per-App Settings → app → Content scale. Title-bar adjustments are saved when released and restored when reopening.",
+        "With opening animations off, fullscreen/window handoffs are immediate. Reduce Motion uses a short dissolve."
       ],
       "changelog": [
+        {
+          "version": "0.1.6",
+          "changes": [
+            "Add shrink and expand transitions between fullscreen apps and floating windows.",
+            "Remember per-app content scale for Window 1 and Stage, shared between title-bar controls and Per-App Settings."
+          ]
+        },
         {
           "version": "0.1.5",
           "changes": [
