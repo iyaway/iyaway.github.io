@@ -2,16 +2,19 @@
   "package": "iya.banana.pickerwheeldock",
   "name": "KineticDock",
   "web_name": "灵动程序坞",
-  "tagline": "横向转盘与指尖放大，让 iPhone 程序坞动起来。",
+  "tagline": "叠放、放大、滚筒与转盘，让 iPhone 程序坞动起来。",
   "developer": "Banana",
   "tint": "#7B55EB",
   "description": [
-    "灵动程序坞为 iPhone Dock 提供横向转盘和放大两种模式，图标较多时自动调整大小与间距。快速滑动后可继续惯性旋转，减速后自动吸附；按住横滑可放大并选择应用。",
+    "灵动程序坞为 iPhone Dock 提供叠放、放大、滚筒和转盘四种模式。滚筒只显示当前一段图标，两端逐渐缩小；转盘按可用宽度展开圆弧，图标随盘移动与倾斜。快速滑动后惯性减速并自动吸附，轻点图标即可打开应用。",
     "可通过独立应用列表选择与排序最多 24 个应用；列表为空时跟随原生 Dock。关闭插件可恢复原生界面。"
   ],
   "features": [
-    "横向转盘：自适应图标大小、前后层次、惯性减速、自动吸附与旋转位置保存",
+    "叠放：前后层次、惯性减速、自动吸附与旋转位置保存",
     "放大模式：中心最大、两侧递减；空间不足自动缩小避让，支持松手打开与移出取消",
+    "滚筒：单排滚动、两端渐小，无后排图标",
+    "转盘：按 Dock 宽度调整图标与圆弧布局，随盘移动和倾斜",
+    "滚筒与转盘严格限制在 Dock 圆角边界内显示",
     "独立应用列表，最多 24 个应用并支持排序",
     "调整图标大小、放大倍数、栏位置、名称、光晕、背景与触感，显示通知徽标",
     "长按进入系统桌面编辑，支持拖动手柄调整自定义栏位置",
@@ -26,12 +29,20 @@
   "notice": "浮动 Dock 需由其他插件开启。iPhone 15 Pro / iOS 17.3.1 已获用户反馈确认；iOS 15/16 尚未完成真机验证。不接管 iPad、横屏或外接屏，不扩容原生 Dock。",
   "usage": [
     "安装后进入“设置 → 灵动程序坞”，开启总开关。",
-    "选择“横向滚动”或“放大”模式，按需调整外观与交互选项。",
+    "选择“叠放”“放大”“滚筒”或“转盘”模式，按需调整外观与交互选项。",
     "在“应用列表”中选择和排序应用；清空列表即可跟随原生 Dock。",
-    "横向模式轻点图标打开应用；快甩后继续旋转，再次按住可接管。放大模式可按住横滑后松手打开。"
+    "叠放、滚筒和转盘模式轻点图标打开应用，快甩后继续滚动，再次按住可接管。放大模式可按住横滑后松手打开。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.3-1",
+      "changes": [
+        "新增滚筒与转盘模式，原“横向滚动”更名为“叠放”，保留 Mac 放大。",
+        "转盘按 Dock 可用宽度调整图标与圆弧布局，展示更多应用；滚筒两端图标逐渐缩小。",
+        "滚筒、转盘限制在 Dock 圆角边界内显示，保留惯性滚动、自动吸附与轻点打开。"
+      ]
+    },
     {
       "version": "0.1.2-1",
       "changes": [
@@ -59,14 +70,17 @@
   "locales": {
     "en": {
       "name": "KineticDock",
-      "tagline": "A scrolling carousel and touch magnification for your iPhone Dock.",
+      "tagline": "Stack, Magnification, Drum, and Turntable for your iPhone Dock.",
       "description": [
-        "KineticDock adds Scrolling and Magnification modes to the iPhone Dock, adapting icon sizes and spacing for larger app collections. Flick to keep the carousel rotating, then slow down and snap into place, or slide to magnify and select an app.",
+        "KineticDock adds four iPhone Dock modes: Stack, Magnification, Drum, and Turntable. Drum scrolls a single visible strip with smaller icons toward the edges. Turntable adapts its arc to the available width, with icons moving and tilting together. Flick to coast and snap into place, or tap an icon to open.",
         "Choose and reorder up to 24 apps in a separate list, or leave it empty to follow the native Dock. Turning KineticDock off restores the native interface."
       ],
       "features": [
-        "Scrolling carousel with adaptive icon sizing, depth, inertia, snapping, and saved rotation",
+        "Stack with depth, inertia, snapping, and saved rotation",
         "Magnification with graduated icon sizes, adaptive spacing, optional release-to-open, and move-away cancellation",
+        "Drum with a single scrolling strip and smaller edge icons, without a rear row",
+        "Turntable with width-adaptive icons and arc, moving and tilting with the disk",
+        "Drum and Turntable stay within the rounded Dock boundary",
         "A separate, reorderable list of up to 24 apps",
         "Adjust icon size, magnification, bar position, labels, glow, background, and haptics; display notification badges",
         "Hold for native Home Screen editing and drag the handle to move the custom bar",
@@ -81,11 +95,19 @@
       "notice": "A separate tweak is required to enable the Floating Dock. User feedback confirmed operation on iPhone 15 Pro / iOS 17.3.1; iOS 15/16 have not completed device validation. iPad, landscape, and external displays are not taken over. Native Dock capacity is not expanded.",
       "usage": [
         "Open Settings → KineticDock after installation and turn on the main switch.",
-        "Choose Scrolling or Magnification, then adjust appearance and interaction options.",
+        "Choose Stack, Magnification, Drum, or Turntable, then adjust appearance and interaction options.",
         "Select and reorder apps under Applications; leave the list empty to follow the native Dock.",
-        "In Scrolling mode, tap to open and flick to keep rotating; touch again to take control. In Magnification mode, slide and release to open."
+        "In Stack, Drum, and Turntable, tap to open and flick to keep scrolling; touch again to take control. In Magnification, slide and release to open."
       ],
       "changelog": [
+        {
+          "version": "0.1.3-1",
+          "changes": [
+            "Added Drum and Turntable modes; renamed Scrolling to Stack while keeping Mac-style Magnification.",
+            "Turntable adapts icons and its arc to the available Dock width to show more apps; Drum icons shrink toward both edges.",
+            "Drum and Turntable stay within the rounded Dock boundary, with inertia, snapping, and tap-to-open."
+          ]
+        },
         {
           "version": "0.1.2-1",
           "changes": [
