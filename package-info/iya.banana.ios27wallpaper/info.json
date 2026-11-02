@@ -6,7 +6,7 @@
   "developer": "Banana",
   "tint": "#639BCF",
   "notice_style": "warning",
-  "notice": "支持 iOS 16–18。部分画面、动态细节、横屏及强制 iPad 模式仍在适配。",
+  "notice": "支持 iOS 16–18。部分画面、动态细节、横屏及强制 iPad 模式仍在适配。全量“刷新收藏夹”可能移除额外项目并影响相关已保存壁纸，请先保留需要的原始素材。",
   "description": [
     "将 iOS 18、26、27 的多款系统壁纸接入系统墙纸图库，在各自系列内切换款式。",
     "iOS 16／17 提供 9 个系列、42 款；iOS 18 提供 8 个移植系列、37 款，保留系统原有 Fluidity，并在安装后移除本插件的重复资源。"
@@ -18,8 +18,10 @@
     "支持各系列已适配的解锁、唤醒、明暗和动态效果，具体效果依系列而异。",
     "浅色／深色／自动外观选项：Space、Celosia、V68及移植版Fluidity，选择保存到当前壁纸。",
     "景深效果选项：Space（仅手机模式）、Celosia、Vitra、V68及移植版Fluidity；移植版Fluidity仅在iOS16／17提供。",
-    "统一启用开关、Celosia 自选颜色、图库刷新和可复制的诊断日志。",
-    "设置名称与文案支持简体中文、繁体中文和英文。"
+    "统一启用开关、Celosia 自选颜色、收藏夹管理与可复制的诊断日志。",
+    "设置名称与文案支持简体中文、繁体中文和英文。",
+    "“清理收藏夹”提供素材预览、占用估算与勾选确认，保护已保存壁纸使用的项目；引用无法核实时禁止清理。",
+    "列表刷新仅查看现有内容；全量“刷新收藏夹”须确认后执行，不会自动触发。"
   ],
   "compatibility": [
     "支持 iOS 16–18。",
@@ -35,11 +37,21 @@
     "切换系统外观后，部分预览可能需要退出编辑页再重新进入刷新；无需删除或重新添加壁纸。",
     "景深遵循系统小组件限制，遮挡效果取决于壁纸与时钟的重叠区域。",
     "安装或更新后入口可能稍后出现。先稍候，退出“添加新墙纸”页面，再重新进入；只停留在旧页面可能仍看到缓存列表。",
-    "仍未出现时，使用插件设置中的“图库刷新”：点“重新加载壁纸进程”，再点“打开 PosterBoard”；打开后从 App 切换器向上划掉，再重新进入“添加新墙纸”。",
-    "无需为刷新入口先删除已设置的壁纸。若仍异常，先打开一次“添加新墙纸”，返回插件的“诊断日志”点“刷新”，复制日志，并提供具体系列、iOS 版本、越狱环境和异常界面。"
+    "仍未出现时，在插件设置的“收藏夹管理”中点“重新加载壁纸进程”，再点“打开 PosterBoard”；打开后从 App 切换器划掉，再重新进入添加页面。",
+    "无需为刷新入口先删除已设置的壁纸。若仍异常，先打开一次“添加新墙纸”，返回插件的“诊断日志”点“刷新”，复制日志，并提供具体系列、iOS 版本、越狱环境和异常界面。",
+    "清理前先打开一次“添加新墙纸”，再回到插件设置 → 清理收藏夹，核对预览、标识与占用，勾选需要移除的项目后确认。未选项目和被保存配置使用的项目予以保留；大小为估算，不保证全部可释放。",
+    "“刷新列表”仅读取现有内容。仅在确需全量更新时使用“刷新收藏夹”，先阅读并确认风险；额外收藏项目及相关已保存壁纸配置可能受影响。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.3",
+      "changes": [
+        "修复打开图库时额外收藏项目可能意外消失的问题。",
+        "新增“清理收藏夹”，支持预览、占用估算和勾选确认，保护已保存壁纸使用的项目。",
+        "新增需确认的“刷新收藏夹”，区分列表查看与全量刷新。"
+      ]
+    },
     {
       "version": "0.1.2",
       "changes": [
@@ -69,7 +81,7 @@
     "en": {
       "name": "StockWallpapers",
       "tagline": "Enjoy stock wallpaper families and animations on iOS 16–18.",
-      "notice": "Supports iOS 16–18. Some visuals, animation details, landscape behavior and forced iPad mode remain under adaptation.",
+      "notice": "Supports iOS 16–18. Some visuals, animation details, landscape behavior and forced iPad mode remain under adaptation. A full Refresh Collections may remove additional items and affect related saved wallpapers. Keep the original materials you need before proceeding.",
       "description": [
         "Brings selected stock wallpapers from iOS 18, 26 and 27 into the system wallpaper gallery, with looks grouped within each family.",
         "iOS 16 and 17 include 9 families and 42 looks. iOS 18 includes 8 ported families and 37 looks, keeps the system Fluidity family, and removes this package’s duplicate Fluidity resources after installation."
@@ -81,8 +93,10 @@
         "Supported unlock, wake, appearance and animation effects vary by family.",
         "Light, Dark and Automatic appearance options for Space, Celosia, V68 and ported Fluidity, saved per wallpaper.",
         "Depth Effect options for Space (phone mode only), Celosia, Vitra, V68 and ported Fluidity. Ported Fluidity is available only on iOS 16/17.",
-        "One enable switch, custom Celosia color, gallery refresh and copyable diagnostics.",
-        "Settings names and text in Simplified Chinese, Traditional Chinese and English."
+        "One enable switch, custom Celosia color, Collections management and copyable diagnostics.",
+        "Settings names and text in Simplified Chinese, Traditional Chinese and English.",
+        "Clean Up Collections offers source previews, estimated storage and selection confirmation, protecting items used by saved wallpapers. Unverifiable references are protected.",
+        "List refresh reads existing content. A full Refresh Collections runs only after confirmation and never starts automatically."
       ],
       "compatibility": [
         "Supports iOS 16–18.",
@@ -98,10 +112,20 @@
         "After changing system appearance, some previews may need to be closed and reopened to refresh. You do not need to delete or recreate the wallpaper.",
         "Depth Effect follows system widget restrictions and depends on overlap between the wallpaper and clock.",
         "Entries may appear after a delay. Wait briefly, leave Add New Wallpaper and reopen it; a page left open may retain its cached list.",
-        "If entries remain missing, use Gallery Refresh: tap Reload Wallpaper Processes, then Open PosterBoard. Swipe PosterBoard away in the app switcher and reopen Add New Wallpaper.",
-        "You do not need to delete an existing wallpaper to refresh the gallery. If a problem remains, open Add New Wallpaper once, return to Diagnostic Log, tap Refresh and copy the log. Include the family, iOS version, jailbreak environment and affected screen."
+        "If entries remain missing, open Collections Management in this tweak’s Settings, tap Reload Wallpaper Processes, then Open PosterBoard. Swipe PosterBoard away in the app switcher and reopen Add New Wallpaper.",
+        "You do not need to delete an existing wallpaper to refresh the gallery. If a problem remains, open Add New Wallpaper once, return to Diagnostic Log, tap Refresh and copy the log. Include the family, iOS version, jailbreak environment and affected screen.",
+        "Before cleanup, open Add New Wallpaper once, then return to Settings → StockWallpapers → Clean Up Collections. Check previews, identifiers and storage, select items and confirm. Unselected items and items used by saved configurations are kept. Storage is an estimate, not guaranteed recovered space.",
+        "Refresh List only reads existing content. Use Refresh Collections only when a full update is needed and after reading its confirmation warning; additional items and related saved configurations may be affected."
       ],
       "changelog": [
+        {
+          "version": "0.1.3",
+          "changes": [
+            "Fixes additional Collections items disappearing when opening the wallpaper gallery.",
+            "Adds Clean Up Collections with previews, estimated storage and selection confirmation, protecting items used by saved wallpapers.",
+            "Adds confirmation for Refresh Collections and separates list refresh from a full catalog refresh."
+          ]
+        },
         {
           "version": "0.1.2",
           "changes": [
