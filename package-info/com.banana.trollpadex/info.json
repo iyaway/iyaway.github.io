@@ -34,6 +34,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "2.0.6",
+      "changes": [
+        "修复 iOS 17 关闭 iPad 应用切换器后仍显示网格的问题，恢复 iPhone 卡片与切换动画。",
+        "修复 iOS 17 切换器停留后重新进入时的预览异常与模糊跳变，改善重复切换稳定性。"
+      ]
+    },
+    {
       "version": "2.0.5",
       "changes": [
         "修复关闭 iPad 键盘后部分 App 无法选择系统中文九宫格的问题，改善键盘设置生效。",
@@ -94,6 +101,13 @@
         "For the system Chinese 9-Key keyboard, turn off Enable iPadOS Keyboard."
       ],
       "changelog": [
+        {
+          "version": "2.0.6",
+          "changes": [
+            "Fixed iOS 17 continuing to show a grid after disabling iPad App Switcher, restoring iPhone cards and transitions.",
+            "Fixed preview glitches and blur jumps when reopening the switcher after a pause on iOS 17, with improved repeated-switching stability."
+          ]
+        },
         {
           "version": "2.0.5",
           "changes": [
