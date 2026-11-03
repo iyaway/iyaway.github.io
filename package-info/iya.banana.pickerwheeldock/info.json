@@ -36,6 +36,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.4-1",
+      "changes": [
+        "修复从其他 App 返回桌面后，Dock 偶发无法拖动或旋转的问题。",
+        "改善四种模式的拖动恢复与手势响应，保留现有动画、惯性和点击行为。"
+      ]
+    },
+    {
       "version": "0.1.3-1",
       "changes": [
         "新增滚筒与转盘模式，原“横向滚动”更名为“叠放”，保留 Mac 放大。",
@@ -100,6 +107,13 @@
         "In Stack, Drum, and Turntable, tap to open and flick to keep scrolling; touch again to take control. In Magnification, slide and release to open."
       ],
       "changelog": [
+        {
+          "version": "0.1.4-1",
+          "changes": [
+            "Fixed an issue where the Dock could stop dragging or rotating after returning to the Home Screen from another app.",
+            "Improved drag recovery and gesture responsiveness across all four modes while preserving animations, inertia, and tap behavior."
+          ]
+        },
         {
           "version": "0.1.3-1",
           "changes": [
