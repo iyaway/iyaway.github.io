@@ -34,6 +34,12 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "2.0.6-1",
+      "changes": [
+        "调整 iOS 17 的 iPhone 应用切换器兼容处理，恢复 App 最小化与 Dock 图标的系统动画路径。"
+      ]
+    },
+    {
       "version": "2.0.6",
       "changes": [
         "修复 iOS 17 关闭 iPad 应用切换器后仍显示网格的问题，恢复 iPhone 卡片与切换动画。",
@@ -101,6 +107,12 @@
         "For the system Chinese 9-Key keyboard, turn off Enable iPadOS Keyboard."
       ],
       "changelog": [
+        {
+          "version": "2.0.6-1",
+          "changes": [
+            "Adjusted iPhone App Switcher compatibility on iOS 17 to restore the system animation path for App minimization and Dock icons."
+          ]
+        },
         {
           "version": "2.0.6",
           "changes": [
