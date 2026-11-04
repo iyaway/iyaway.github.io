@@ -1,0 +1,105 @@
+{
+  "package": "iya.banana.ios27animation",
+  "name": "iOS27 Animation",
+  "web_name": "iOS27 动画",
+  "developer": "Banana",
+  "tint": "#007AFF",
+  "tagline": "为iOS15–18带来iOS27风格的系统动画。",
+  "notice": "售价10元，一个激活码最多绑定3台设备。购买请加入QQ群1126594257联系群主。激活后最长可离线使用72小时。",
+  "description": [
+    "iOS27 Animation为App打开与最小化、多任务、解锁、通知、系统窗口、文件夹和控制中心提供iOS27风格的动画。",
+    "可使用统一默认配置，也可为各个场景分别选择动画；App动画支持可选的1.5倍时长。"
+  ],
+  "features": [
+    "App打开与最小化漏斗动画",
+    "切App与多任务转场",
+    "解锁进入桌面动画",
+    "通知与系统窗口动画",
+    "文件夹与控制中心动画",
+    "统一默认配置与场景独立设置",
+    "可选App动画减速及诊断日志",
+    "设备激活、最长72小时离线使用与自助换绑",
+    "简体中文、繁體中文与English设置"
+  ],
+  "compatibility": [
+    "iOS15–18",
+    "Dopamine Rootless／RootHide"
+  ],
+  "usage": [
+    "安装后在设置中打开“iOS27 动画”。",
+    "购买：加入QQ群1126594257联系群主，10元一个激活码，最多绑定3台设备。",
+    "先开启“启用插件”，再激活授权并选择默认或各场景配置；未激活时保持系统动画。",
+    "妥善保存同一组激活码与恢复码；自助换绑时共同填写，离线到期前联网续签。",
+    "设置中可复制QQ群号及Banana源地址，并打开Discord社区：https://discord.gg/vzWgenGeX6"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "1.0.1",
+      "changes": [
+        "优化总开关与授权联动，关闭时停止动画和自动验证，保留已有激活资料。",
+        "修正通知中心闪烁、控制中心显示与收起残影、iOS16文件夹关闭白闪，并补齐锁屏新通知动画。",
+        "改进RootHide授权存储与旧数据迁移，保留原设备绑定和离线授权。"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "changes": [
+        "首次正式发布，提供App转场、多任务、解锁、通知、系统窗口、文件夹与控制中心动画。",
+        "支持按场景选择效果和App动画减速。",
+        "加入设备激活、自助换绑及购买与社区入口。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "iOS27 Animation",
+      "tagline": "iOS27-style system animations for iOS15–18.",
+      "notice": "CNY 10 per activation code, for up to 3 devices. Join QQ group 1126594257 and contact its owner to purchase. Activated devices can work offline for up to 72 hours.",
+      "description": [
+        "iOS27 Animation brings iOS27-style effects to App opening and minimizing, multitasking, unlock, notifications, system windows, folders, and Control Center.",
+        "Choose a shared default or configure scenes individually, with an optional 1.5× duration for App animations."
+      ],
+      "features": [
+        "Funnel animations for App opening and minimizing",
+        "App switching and multitasking transitions",
+        "Unlock-to-home animation",
+        "Notification and system window animations",
+        "Folder and Control Center animations",
+        "Shared default and per-scene settings",
+        "Optional slower App animations and diagnostic logs",
+        "Device activation, up to 72 hours offline, and self-service transfers",
+        "English, Simplified Chinese, and Traditional Chinese settings"
+      ],
+      "compatibility": [
+        "iOS15–18",
+        "Dopamine Rootless / RootHide"
+      ],
+      "usage": [
+        "Open iOS27 Animation in Settings after installation.",
+        "To purchase, join QQ group 1126594257 and contact its owner. Each code costs CNY 10 and supports up to 3 devices.",
+        "Enable the main switch, activate your license, and choose shared or per-scene effects. System animations remain in use until activation.",
+        "Keep the matching activation and recovery codes for self-service transfers. Connect to renew before offline access expires.",
+        "Settings includes the QQ group, Banana repository, and Discord community: https://discord.gg/vzWgenGeX6"
+      ],
+      "changelog": [
+        {
+          "version": "1.0.1",
+          "changes": [
+            "Disabling the main switch now stops animations and automatic license checks while preserving activation data.",
+            "Corrects Notification Center flashing, Control Center display and dismissal artifacts, iOS16 folder flashes, and missing lock-screen notification animations.",
+            "Improves RootHide license storage and migration while retaining device bindings and offline access."
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "changes": [
+            "First release with App transitions, multitasking, unlock, notifications, system windows, folders, and Control Center animations.",
+            "Per-scene effects and optional slower App animations.",
+            "Device activation, self-service transfers, and purchase and community links."
+          ]
+        }
+      ]
+    }
+  }
+}
