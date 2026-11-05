@@ -6,7 +6,7 @@
   "tint": "#6C5CE7",
   "tagline": "随手分屏，自由安排你的多任务空间。",
   "notice_style": "default",
-  "notice": "适用于已越狱的 iOS 15～26，提供 RootHide 与 Rootless 版本。已在 iOS 17.3.1 / RootHide 确认分屏与全屏交接；其他系统与 Rootless 的真机兼容性仍需对应设备验证，效果也因应用而异。",
+  "notice": "适用于已越狱的 iOS 15～26，提供 RootHide 与 Rootless 版本。已在 iOS 17.3.1 / RootHide 确认分屏与全屏交接；其他系统与 Rootless 的真机兼容性仍需对应设备验证，效果也因应用而异。 RootHide 旧版用户请先直接升级到 0.1.6-1 或更新版本，再卸载，避免旧包卸载影响其他插件。",
   "description": [
     "一芽分屏将可调上下／左右分屏、浮窗与台前调度集中到一套多任务体验中。",
     "通过图标手势、侧栏、应用切换器或通知打开应用，自由调整布局并快速交换位置。"
@@ -53,10 +53,18 @@
     "在“个性化 → 窗口调度”设置单窗口或数量限制；长按窗口菜单选择“独立保留”，该窗口不计入普通数量。",
     "在“个性化”中分别选择窗口打开与关闭动画。更新后彻底退出并重开目标 App，使新的开窗效果生效。",
     "在“逐应用设置 → 选择应用 → 内容缩放”中分别设置浮窗 1 和台前调度比例；长按标题栏调整后松手会保存，重开自动恢复。",
-    "关闭“窗口打开动画”时，全屏与小窗直接切换；系统开启“减弱动态效果”时使用短淡化。"
+    "关闭“窗口打开动画”时，全屏与小窗直接切换；系统开启“减弱动态效果”时使用短淡化。",
+    "RootHide 旧版请直接升级修正版，完成升级后再卸载；不要先卸载旧包。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.6-1",
+      "changes": [
+        "修复 RootHide 版本卸载时可能影响其他插件的打包问题。",
+        "更新 Discord 社区入口。"
+      ]
+    },
     {
       "version": "0.1.6",
       "changes": [
@@ -123,7 +131,7 @@
     "en": {
       "name": "Iya Split",
       "tagline": "Split your screen and arrange your multitasking space.",
-      "notice": "For jailbroken iOS 15–26, with RootHide and Rootless packages. Split-screen use and fullscreen handoff were confirmed on iOS 17.3.1 / RootHide. Other systems and Rootless still require device validation; app compatibility varies.",
+      "notice": "For jailbroken iOS 15–26, with RootHide and Rootless packages. Split-screen use and fullscreen handoff were confirmed on iOS 17.3.1 / RootHide. Other systems and Rootless still require device validation; app compatibility varies. On RootHide, directly upgrade to 0.1.6-1 or later before uninstalling to avoid the old package affecting other tweaks.",
       "description": [
         "Iya Split brings adjustable top/bottom and left/right splits, floating windows, and Stage into one multitasking experience.",
         "Open apps with icon gestures, the sidebar, the app switcher or notifications, then resize layouts and exchange positions."
@@ -170,9 +178,17 @@
         "Choose single-window scheduling or ordinary-window limits in Customization → Window scheduling. Keep independently in a window menu excludes that window from ordinary limits.",
         "Choose opening and closing animations separately in Customization. After updating, fully quit and reopen target apps to load the new opening effect.",
         "Choose Window 1 and Stage ratios in Per-App Settings → app → Content scale. Title-bar adjustments are saved when released and restored when reopening.",
-        "With opening animations off, fullscreen/window handoffs are immediate. Reduce Motion uses a short dissolve."
+        "With opening animations off, fullscreen/window handoffs are immediate. Reduce Motion uses a short dissolve.",
+        "On RootHide, directly upgrade the old package to this fixed version before uninstalling; do not remove the old version first."
       ],
       "changelog": [
+        {
+          "version": "0.1.6-1",
+          "changes": [
+            "Fix a RootHide packaging issue that could affect other tweaks when uninstalling.",
+            "Update the Discord community link."
+          ]
+        },
         {
           "version": "0.1.6",
           "changes": [
