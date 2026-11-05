@@ -5,7 +5,7 @@
   "developer": "Banana",
   "tint": "#007AFF",
   "tagline": "为iOS15–18带来iOS27风格的系统动画。",
-  "notice": "售价10元，一个激活码最多绑定3台设备。购买请加入QQ群1126594257联系群主。激活后最长可离线使用72小时。",
+  "notice": "售价10元，一个激活码最多绑定3台设备。购买请加入QQ群1126594257联系群主。正常联网可自动续签；72小时是连续离线使用上限，不是购买后的总使用期限。离线到期后，联网续签即可继续使用，无需重复购买。",
   "description": [
     "iOS27 Animation为App打开与最小化、多任务、解锁、通知、系统窗口、文件夹和控制中心提供iOS27风格的动画。",
     "可使用统一默认配置，也可为各个场景分别选择动画；App动画支持可选的1.5倍时长。"
@@ -55,7 +55,7 @@
     "en": {
       "name": "iOS27 Animation",
       "tagline": "iOS27-style system animations for iOS15–18.",
-      "notice": "CNY 10 per activation code, for up to 3 devices. Join QQ group 1126594257 and contact its owner to purchase. Activated devices can work offline for up to 72 hours.",
+      "notice": "CNY 10 per activation code, for up to 3 devices. Join QQ group 1126594257 and contact its owner to purchase. The plugin renews automatically when connected. The 72-hour limit applies to continuous offline use, not the total duration of your purchase. If offline access expires, reconnect and renew to continue; no repurchase is needed.",
       "description": [
         "iOS27 Animation brings iOS27-style effects to App opening and minimizing, multitasking, unlock, notifications, system windows, folders, and Control Center.",
         "Choose a shared default or configure scenes individually, with an optional 1.5× duration for App animations."
