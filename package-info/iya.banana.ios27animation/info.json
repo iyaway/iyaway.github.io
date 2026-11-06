@@ -8,7 +8,7 @@
   "notice": "售价10元，一个激活码最多绑定3台设备。购买请加入QQ群1126594257联系群主。正常联网可自动续签；72小时是连续离线使用上限，不是购买后的总使用期限。离线到期后，联网续签即可继续使用，无需重复购买。",
   "description": [
     "iOS27 Animation为App打开与最小化、多任务、解锁、通知、系统窗口、文件夹和控制中心提供iOS27风格的动画。",
-    "可使用统一默认配置，也可为各个场景分别选择动画；App动画支持可选的1.5倍时长。"
+    "支持统一默认配置，也可为各个场景分别设置动画，并提供诊断日志导出。"
   ],
   "features": [
     "App打开与最小化漏斗动画",
@@ -17,7 +17,7 @@
     "通知与系统窗口动画",
     "文件夹与控制中心动画",
     "统一默认配置与场景独立设置",
-    "可选App动画减速及诊断日志",
+    "按需开启诊断日志并导出诊断文件",
     "设备激活、最长72小时离线使用与自助换绑",
     "简体中文、繁體中文与English设置"
   ],
@@ -34,6 +34,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.2",
+      "changes": [
+        "优化解锁与通知中心收起动画，改善图标飞入卡顿和突然跳变。",
+        "优化App打开与最小化时的图标衔接，减少闪烁和收尾位置异常。",
+        "修复转场中的潜在崩溃，改善控制中心与第三方布局插件的兼容性。"
+      ]
+    },
     {
       "version": "1.0.1",
       "changes": [
@@ -58,7 +66,7 @@
       "notice": "US$2 per activation code, for up to 3 devices. Join QQ group 1126594257 and contact its owner to purchase. The plugin renews automatically when connected. The 72-hour limit applies to continuous offline use, not the total duration of your purchase. If offline access expires, reconnect and renew to continue; no repurchase is needed.",
       "description": [
         "iOS27 Animation brings iOS27-style effects to App opening and minimizing, multitasking, unlock, notifications, system windows, folders, and Control Center.",
-        "Choose a shared default or configure scenes individually, with an optional 1.5× duration for App animations."
+        "Choose a shared default or configure each scene individually. Optional diagnostic logging and export are available."
       ],
       "features": [
         "Funnel animations for App opening and minimizing",
@@ -67,7 +75,7 @@
         "Notification and system window animations",
         "Folder and Control Center animations",
         "Shared default and per-scene settings",
-        "Optional slower App animations and diagnostic logs",
+        "Optional diagnostic logging and export",
         "Device activation, up to 72 hours offline, and self-service transfers",
         "English, Simplified Chinese, and Traditional Chinese settings"
       ],
@@ -83,6 +91,14 @@
         "Settings includes the QQ group, Banana repository, and Discord community: https://discord.gg/vzWgenGeX6"
       ],
       "changelog": [
+        {
+          "version": "1.0.2",
+          "changes": [
+            "Improves unlock and Notification Center dismissal animations, reducing stutters and sudden jumps during icon arrival.",
+            "Improves the icon handoff when opening and minimizing apps, reducing flicker and incorrect landing positions.",
+            "Fixes potential transition crashes and improves Control Center compatibility with third-party layout tweaks."
+          ]
+        },
         {
           "version": "1.0.1",
           "changes": [
