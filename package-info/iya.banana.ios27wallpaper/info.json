@@ -6,7 +6,7 @@
   "developer": "Banana",
   "tint": "#639BCF",
   "notice_style": "warning",
-  "notice": "支持 iOS 16–18。部分画面、动态细节、横屏及强制 iPad 模式仍在适配。全量“刷新收藏夹”可能移除额外项目并影响相关已保存壁纸，请先保留需要的原始素材。",
+  "notice": "支持 iOS 16–18。部分画面、动态细节、横屏及强制 iPad 模式仍在适配。全量“刷新收藏夹”可能移除额外项目并影响相关已保存壁纸，请先保留需要的原始素材。 卸载清理无法安全核实时会暂停并提示处理后重试；卸载后不再提供本插件动态效果。",
   "description": [
     "将 iOS 18、26、27 的多款系统壁纸接入系统墙纸图库，在各自系列内切换款式。",
     "iOS 16／17 提供 9 个系列、42 款；iOS 18 提供 8 个移植系列、37 款，保留系统原有 Fluidity，并在安装后移除本插件的重复资源。"
@@ -21,7 +21,9 @@
     "统一启用开关、Celosia 自选颜色、收藏夹管理与可复制的诊断日志。",
     "设置名称与文案支持简体中文、繁体中文和英文。",
     "“清理收藏夹”提供素材预览、占用估算与勾选确认，保护已保存壁纸使用的项目；引用无法核实时禁止清理。",
-    "列表刷新仅查看现有内容；全量“刷新收藏夹”须确认后执行，不会自动触发。"
+    "列表刷新仅查看现有内容；全量“刷新收藏夹”须确认后执行，不会自动触发。",
+    "“删除本插件壁纸”可勾选任意系列或批量移除全部本插件收藏入口，保留已保存和当前使用的壁纸配置。",
+    "卸载时自动清理本插件剩余收藏入口，系统和其他来源项目保留；升级不执行清理。"
   ],
   "compatibility": [
     "支持 iOS 16–18。",
@@ -40,10 +42,21 @@
     "仍未出现时，在插件设置的“收藏夹管理”中点“重新加载壁纸进程”，再点“打开 PosterBoard”；打开后从 App 切换器划掉，再重新进入添加页面。",
     "无需为刷新入口先删除已设置的壁纸。若仍异常，先打开一次“添加新墙纸”，返回插件的“诊断日志”点“刷新”，复制日志，并提供具体系列、iOS 版本、越狱环境和异常界面。",
     "清理前先打开一次“添加新墙纸”，再回到插件设置 → 清理收藏夹，核对预览、标识与占用，勾选需要移除的项目后确认。未选项目和被保存配置使用的项目予以保留；大小为估算，不保证全部可释放。",
-    "“刷新列表”仅读取现有内容。仅在确需全量更新时使用“刷新收藏夹”，先阅读并确认风险；额外收藏项目及相关已保存壁纸配置可能受影响。"
+    "“刷新列表”仅读取现有内容。仅在确需全量更新时使用“刷新收藏夹”，先阅读并确认风险；额外收藏项目及相关已保存壁纸配置可能受影响。",
+    "更新后完全退出“设置”再打开，先使用“重新加载壁纸进程”，再打开一次“添加新墙纸”激活新功能。",
+    "在“设置 → 系统壁纸 → 删除本插件壁纸”勾选系列并确认，或选择移除全部入口。已保存和当前使用的壁纸配置保留，普通图库更新不会重新显示已移除系列。",
+    "卸载会自动清理剩余本插件收藏入口。若无法核实清理范围或活动服务无应答，卸载会停止并显示处理提示；按提示重新加载壁纸进程后重试。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.4",
+      "changes": [
+        "新增“删除本插件壁纸”，支持勾选系列或批量移除全部收藏入口。",
+        "卸载时自动清理本插件剩余收藏入口；升级不会执行清理。",
+        "仅移除收藏入口，保留已保存和当前使用的壁纸配置，以及其他来源项目。"
+      ]
+    },
     {
       "version": "0.1.3",
       "changes": [
@@ -81,7 +94,7 @@
     "en": {
       "name": "StockWallpapers",
       "tagline": "Enjoy stock wallpaper families and animations on iOS 16–18.",
-      "notice": "Supports iOS 16–18. Some visuals, animation details, landscape behavior and forced iPad mode remain under adaptation. A full Refresh Collections may remove additional items and affect related saved wallpapers. Keep the original materials you need before proceeding.",
+      "notice": "Supports iOS 16–18. Some visuals, animation details, landscape behavior and forced iPad mode remain under adaptation. A full Refresh Collections may remove additional items and affect related saved wallpapers. Keep the original materials you need before proceeding. Uninstall pauses with an error if cleanup cannot be verified safely. Tweak-provided animation is no longer available after uninstall.",
       "description": [
         "Brings selected stock wallpapers from iOS 18, 26 and 27 into the system wallpaper gallery, with looks grouped within each family.",
         "iOS 16 and 17 include 9 families and 42 looks. iOS 18 includes 8 ported families and 37 looks, keeps the system Fluidity family, and removes this package’s duplicate Fluidity resources after installation."
@@ -96,7 +109,9 @@
         "One enable switch, custom Celosia color, Collections management and copyable diagnostics.",
         "Settings names and text in Simplified Chinese, Traditional Chinese and English.",
         "Clean Up Collections offers source previews, estimated storage and selection confirmation, protecting items used by saved wallpapers. Unverifiable references are protected.",
-        "List refresh reads existing content. A full Refresh Collections runs only after confirmation and never starts automatically."
+        "List refresh reads existing content. A full Refresh Collections runs only after confirmation and never starts automatically.",
+        "Remove StockWallpapers Entries lets you select families or remove all owned Collections entries while keeping saved and current wallpaper configurations.",
+        "Uninstall automatically cleans remaining owned gallery entries while keeping system and other sources; upgrades do not clean entries."
       ],
       "compatibility": [
         "Supports iOS 16–18.",
@@ -115,9 +130,20 @@
         "If entries remain missing, open Collections Management in this tweak’s Settings, tap Reload Wallpaper Processes, then Open PosterBoard. Swipe PosterBoard away in the app switcher and reopen Add New Wallpaper.",
         "You do not need to delete an existing wallpaper to refresh the gallery. If a problem remains, open Add New Wallpaper once, return to Diagnostic Log, tap Refresh and copy the log. Include the family, iOS version, jailbreak environment and affected screen.",
         "Before cleanup, open Add New Wallpaper once, then return to Settings → StockWallpapers → Clean Up Collections. Check previews, identifiers and storage, select items and confirm. Unselected items and items used by saved configurations are kept. Storage is an estimate, not guaranteed recovered space.",
-        "Refresh List only reads existing content. Use Refresh Collections only when a full update is needed and after reading its confirmation warning; additional items and related saved configurations may be affected."
+        "Refresh List only reads existing content. Use Refresh Collections only when a full update is needed and after reading its confirmation warning; additional items and related saved configurations may be affected.",
+        "After updating, close Settings from the app switcher and reopen it. Use Reload Wallpaper Processes, then open Add New Wallpaper once to activate the new code.",
+        "Open Settings → StockWallpapers → Remove StockWallpapers Entries, select families and confirm, or choose removal of all owned entries. Saved and current wallpaper configurations are kept. Removed families stay absent during ordinary gallery updates.",
+        "Uninstall automatically cleans remaining owned Collections entries. If scope cannot be verified or the active service does not respond, uninstall stops with instructions. Follow the prompt to reload wallpaper processes and retry."
       ],
       "changelog": [
+        {
+          "version": "0.1.4",
+          "changes": [
+            "Adds Remove StockWallpapers Entries, with family selection or removal of all owned Collections entries.",
+            "Automatically cleans remaining StockWallpapers entries during uninstall; upgrades do not clean the gallery.",
+            "Removes gallery entries only, keeping saved and current wallpaper configurations and other sources."
+          ]
+        },
         {
           "version": "0.1.3",
           "changes": [
