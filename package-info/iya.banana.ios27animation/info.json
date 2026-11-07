@@ -5,20 +5,20 @@
   "developer": "Banana",
   "tint": "#007AFF",
   "tagline": "为iOS15–18带来iOS27风格的系统动画。",
-  "notice": "售价10元，一个激活码最多绑定3台设备。购买请加入QQ群1126594257联系群主。正常联网可自动续签；72小时是连续离线使用上限，不是购买后的总使用期限。离线到期后，联网续签即可继续使用，无需重复购买。",
+  "notice": "售价10元，一个激活码最多绑定3台设备。购买请加入QQ群1126594257联系群主。只要CF不倒，激活码永久有效，升级后首次使用请保持联网。72小时仅为连续离线使用上限，并非授权有效期。",
   "description": [
-    "iOS27 Animation为App打开与最小化、多任务、解锁、通知、系统窗口、文件夹和控制中心提供iOS27风格的动画。",
+    "iOS27 Animation为App打开与最小化、切换App、解锁、通知、系统窗口、文件夹和控制中心提供iOS27风格的动画。",
     "支持统一默认配置，也可为各个场景分别设置动画，并提供诊断日志导出。"
   ],
   "features": [
     "App打开与最小化漏斗动画",
-    "切App与多任务转场",
+    "切换App转场",
     "解锁进入桌面动画",
     "通知与系统窗口动画",
     "文件夹与控制中心动画",
     "统一默认配置与场景独立设置",
     "按需开启诊断日志并导出诊断文件",
-    "设备激活、最长72小时离线使用与自助换绑",
+    "设备激活、最长72小时离线使用与本机反激活",
     "简体中文、繁體中文与English设置"
   ],
   "compatibility": [
@@ -29,11 +29,20 @@
     "安装后在设置中打开“iOS27 动画”。",
     "购买：加入QQ群1126594257联系群主，10元一个激活码，最多绑定3台设备。",
     "先开启“启用插件”，再激活授权并选择默认或各场景配置；未激活时保持系统动画。",
-    "妥善保存同一组激活码与恢复码；自助换绑时共同填写，离线到期前联网续签。",
+    "换机前请在原设备选择“反激活当前设备”，联网完成后即可释放名额。原设备不可用时，请保留激活码和恢复码并联系管理员。",
     "设置中可复制QQ群号及Banana源地址，并打开Discord社区：https://discord.gg/vzWgenGeX6"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.3",
+      "changes": [
+        "优化 App 打开、关闭动画。",
+        "改善录屏时的流畅度，修复图标小尾巴。",
+        "改善通知横幅边缘闪烁，优化控制中心与第三方布局插件的兼容性。",
+        "升级授权功能，新增“反激活当前设备”，联网完成后立即释放该设备名额。"
+      ]
+    },
     {
       "version": "1.0.2",
       "changes": [
@@ -63,20 +72,20 @@
     "en": {
       "name": "iOS27 Animation",
       "tagline": "iOS27-style system animations for iOS15–18.",
-      "notice": "US$2 per activation code, for up to 3 devices. Join QQ group 1126594257 and contact its owner to purchase. The plugin renews automatically when connected. The 72-hour limit applies to continuous offline use, not the total duration of your purchase. If offline access expires, reconnect and renew to continue; no repurchase is needed.",
+      "notice": "US$2 per activation code, for up to 3 devices. Join QQ group 1126594257 and contact its owner to purchase. Activation codes remain valid permanently as long as Cloudflare remains available. Stay online for the first use after upgrading. The 72-hour limit applies only to continuous offline use, not the validity of your license.",
       "description": [
-        "iOS27 Animation brings iOS27-style effects to App opening and minimizing, multitasking, unlock, notifications, system windows, folders, and Control Center.",
+        "iOS27 Animation brings iOS27-style effects to App opening and minimizing, app switching, unlock, notifications, system windows, folders, and Control Center.",
         "Choose a shared default or configure each scene individually. Optional diagnostic logging and export are available."
       ],
       "features": [
         "Funnel animations for App opening and minimizing",
-        "App switching and multitasking transitions",
+        "App switching transitions",
         "Unlock-to-home animation",
         "Notification and system window animations",
         "Folder and Control Center animations",
         "Shared default and per-scene settings",
         "Optional diagnostic logging and export",
-        "Device activation, up to 72 hours offline, and self-service transfers",
+        "Device activation, up to 72 hours offline, and on-device deactivation",
         "English, Simplified Chinese, and Traditional Chinese settings"
       ],
       "compatibility": [
@@ -87,10 +96,19 @@
         "Open iOS27 Animation in Settings after installation.",
         "To purchase, join QQ group 1126594257 and contact its owner. Each code costs US$2 and supports up to 3 devices.",
         "Enable the main switch, activate your license, and choose shared or per-scene effects. System animations remain in use until activation.",
-        "Keep the matching activation and recovery codes for self-service transfers. Connect to renew before offline access expires.",
+        "Before switching devices, choose “Deactivate This Device” on the old device and complete the operation online to release its slot. If the old device is unavailable, keep your activation and recovery codes and contact the administrator.",
         "Settings includes the QQ group, Banana repository, and Discord community: https://discord.gg/vzWgenGeX6"
       ],
       "changelog": [
+        {
+          "version": "1.0.3",
+          "changes": [
+            "Improves app opening and closing animations.",
+            "Improves smoothness during screen recording and fixes trailing icon artifacts.",
+            "Reduces notification banner edge flicker and improves Control Center compatibility with third-party layout tweaks.",
+            "Upgrades licensing with “Deactivate This Device”; its device slot is released immediately once online deactivation completes."
+          ]
+        },
         {
           "version": "1.0.2",
           "changes": [
