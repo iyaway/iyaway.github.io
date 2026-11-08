@@ -12,25 +12,26 @@
     "通过图标手势、侧栏、应用切换器或通知打开应用，自由调整布局并快速交换位置。"
   ],
   "features": [
-    "统一选择上滑、下滑或双击图标手势，启动上下分、左右分、台前调度 或浮窗。",
+    "首页先选分屏（上下分／左右分）或浮窗（窗口化／半屏浮窗／台前调度），两类分别记忆选择，支持上滑、下滑或双击图标启动。",
     "拖动分隔条调整两侧比例，边缘松手将运行中的应用直接展开为全屏。",
     "拖动应用顶部短条预览交换，松手确认、回拖取消，交换后分隔条位置保持不变。",
     "双指在分隔条两侧撑开退出；Home 保留分屏，锁屏解锁保留应用与比例。",
-    "普通／PullOver 侧栏直接选择上、浮窗 1、浮窗 2、下、台前调度；两种浮窗及 台前调度 均支持等比／自由缩放。",
+    "普通／PullOver 侧栏直接选择上、窗口化、半屏浮窗、下、台前调度；两种浮窗及 台前调度 均支持等比／自由缩放。",
     "逐应用键盘、缩放、配色与后台相机设置，支持英文、简体中文和繁体中文。",
     "未完成分屏时，普通打开新应用可选自动补齐第二侧（默认）或保留新应用全屏。",
     "点击通知按指定模式打开，支持锁屏开关及应用白名单／黑名单。",
-    "浮窗 2 提供可调半屏浮窗，可切换侧边并选择显示完整界面；浮窗 1 与台前调度支持四角缩放。",
-    "可选窗口打开动画；上下分、左右分、浮窗 1、浮窗 2 与台前调度可分别设置键盘位置，逐应用选择优先。",
+    "半屏浮窗 提供可调半屏浮窗，可切换侧边并选择显示完整界面；窗口化 与台前调度支持四角缩放。",
+    "可选窗口打开动画；上下分、左右分、窗口化、半屏浮窗 与台前调度可分别设置键盘位置，逐应用选择优先。",
     "双击间隔可在100～500毫秒内调整，默认200毫秒；仅双击启动时显示参数与测试区。",
-    "上下分、左右分与浮窗 2 可设置背景透明；分隔条两端菜单可旋转对应应用、切换完整界面，交换后状态随应用移动。",
-    "浮窗 1 与台前调度从窗口外沿四角调整大小，减少对应用内按钮的遮挡。",
+    "上下分、左右分与半屏浮窗 可设置背景透明；分隔条两端菜单可旋转对应应用、切换完整界面，交换后状态随应用移动。",
+    "窗口化 与台前调度从窗口外沿四角调整大小，减少对应用内按钮的遮挡。",
     "可选状态栏长按和多任务卡片直接启动，按统一启动模式打开当前应用。",
     "可设置普通窗口数量与单窗口调度，并将窗口独立保留。",
-    "浮窗 1 与台前调度提供直接全屏控制，优化窗口切换与锁屏恢复。",
-    "浮窗 1、浮窗 2 与台前调度提供七种粒子开合风格，保留经典效果；加载时在窗口内显示柔和流光。",
+    "窗口化 与台前调度提供直接全屏控制，优化窗口切换与锁屏恢复。",
+    "窗口化、半屏浮窗 与台前调度提供七种粒子开合风格，保留经典效果；加载时在窗口内显示柔和流光。",
     "全屏与浮窗之间提供收拢／展开过渡，并支持减弱动态效果。",
-    "浮窗 1 与台前调度支持 0.5×～2× 的逐应用内容缩放，标题栏滑块与设置页共享保存值。"
+    "窗口化 与台前调度支持 0.5×～2× 的逐应用内容缩放，标题栏滑块与设置页共享保存值。",
+    "浮窗个性化与启动选择分离，分屏设置紧随其后，三种语言的使用说明同步更新，旧配置保持兼容。"
   ],
   "compatibility": [
     "iOS 15.0～26.x，已越狱设备。",
@@ -40,24 +41,32 @@
   ],
   "usage": [
     "安装与你的越狱环境相符的版本，进入“设置 → 一芽分屏”。",
-    "选择统一的启动手势和模式，默认上滑。分屏时可对第二个图标重复手势；等待第二个 App 时的普通打开行为可在分屏设置中选择。",
+    "在首页选择启动手势，再选择分屏或浮窗及其方向／样式。默认上滑＋上下分；分屏时对第二个图标重复手势。等待第二个应用时的普通打开行为可在分屏设置中选择。",
     "拖动中间分隔条调整比例，边缘松手进入全屏；抓住顶部短条朝另一应用拖动，看到预览后松手交换。",
     "两指均置于屏幕中央 25%～75% 区域、分处分隔条两侧，向外撑开并松手退出；收回可取消。",
-    "普通／PullOver 侧栏直接投放到上、浮窗 1、浮窗 2、下或 台前调度 目标，覆盖默认样式且不修改默认设置；定制页可分别选择浮窗和 台前调度 的等比／自由缩放。",
+    "普通／PullOver 侧栏直接拖入上、窗口化、半屏浮窗、下或台前调度目标，覆盖首页默认且不修改它；浮窗个性化只编辑预览及对应选项，不改变启动选择。",
     "后台相机需先启用，再开始新的相机会话；首次安装需用户空间重启以加载相机支持。",
     "在“点击通知”中启用按指定模式打开，选择模式、锁屏行为及应用范围；默认不处理通知。",
     "在“键盘设置”中分别选择五种模式的窗口内／屏幕前方键盘，逐应用设置可覆盖全局。上下／左右分屏默认窗口内；分隔条两端菜单分别控制当前两侧应用。",
     "选择双击启动手势后，调整间隔并在测试区试点；间隔越短，单击等待越少，双击需要更快。",
-    "在分屏设置中调整上下／左右分屏的透明背景及完整界面；浮窗 2 的个性化设置提供透明背景，横条可快捷切换完整界面。浮窗 1、台前调度请从窗外四角开始拖动缩放。",
+    "在分屏设置中调整上下／左右分屏的透明背景及完整界面；半屏浮窗 的个性化设置提供透明背景，横条可快捷切换完整界面。窗口化、台前调度请从窗外四角开始拖动缩放。",
     "在首页开启“长按状态栏启动”；分屏设置中的“多任务卡片直接启动”单独控制卡片手势，两项默认关闭。开启状态栏入口后，长按优先用于一芽分屏，关闭可恢复原长按操作。",
-    "在“个性化 → 窗口调度”设置单窗口或数量限制；长按窗口菜单选择“独立保留”，该窗口不计入普通数量。",
-    "在“个性化”中分别选择窗口打开与关闭动画。更新后彻底退出并重开目标 App，使新的开窗效果生效。",
-    "在“逐应用设置 → 选择应用 → 内容缩放”中分别设置浮窗 1 和台前调度比例；长按标题栏调整后松手会保存，重开自动恢复。",
+    "在“浮窗个性化 → 窗口调度”设置单窗口或数量限制；长按窗口菜单选择“独立保留”，该窗口不计入普通数量。",
+    "在“浮窗个性化”中分别选择窗口打开与关闭动画。更新后彻底退出并重开目标 App，使新的开窗效果生效。",
+    "在“逐应用设置 → 选择应用 → 内容缩放”中分别设置窗口化 和台前调度比例；长按标题栏调整后松手会保存，重开自动恢复。",
     "关闭“窗口打开动画”时，全屏与小窗直接切换；系统开启“减弱动态效果”时使用短淡化。",
     "RootHide 旧版请直接升级修正版，完成升级后再卸载；不要先卸载旧包。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.7",
+      "changes": [
+        "重整启动选择：先选分屏或浮窗，再选择分屏方向或浮窗样式，两类分别记忆选择。",
+        "浮窗个性化独立于启动模式，统一窗口化、半屏浮窗和台前调度名称，保留旧配置。",
+        "重新整理分屏设置与使用说明，移除设置内更新记录、参与与致谢入口。"
+      ]
+    },
     {
       "version": "0.1.6-1",
       "changes": [
@@ -137,25 +146,26 @@
         "Open apps with icon gestures, the sidebar, the app switcher or notifications, then resize layouts and exchange positions."
       ],
       "features": [
-        "Choose swipe up, swipe down, or double tap on icons to launch top/bottom, left/right, Stage, or window mode.",
+        "Choose Split View (Top / Bottom or Left / Right) or Floating (Windowed, Half-screen floating or Stage), with independent remembered choices and swipe-up, swipe-down or double-tap icon gestures.",
         "Drag the divider to resize; release at an edge to expand the running app to full screen.",
         "Drag an app’s top handle to preview a swap, release to confirm, or retract to cancel; the divider stays in place.",
         "Spread two fingers across the divider to exit. Home keeps the split; lock and unlock preserve apps and ratio.",
-        "Normal/PullOver sidebars directly select Top, Window 1, Window 2, Bottom or Stage. Both floating styles and Stage support proportional/free resizing.",
+        "Normal/PullOver sidebars directly select Top, Windowed, Half-screen floating, Bottom or Stage. Both floating styles and Stage support proportional/free resizing.",
         "Per-app keyboard, scaling, colors, and background camera options, with English, Simplified Chinese, and Traditional Chinese.",
         "While waiting for the second app, ordinary launches can complete the split automatically (default) or keep the new app full screen.",
         "Open notifications in a selected mode, with lock-screen control and app allowlists/blocklists.",
-        "Window 2 provides an adjustable half-screen overlay, side switching and full-interface display; Window 1 and Stage support four-corner resizing.",
-        "Choose opening animations and keyboard placement separately for both split modes, Window 1, Window 2 and Stage, with per-app overrides.",
+        "Half-screen floating provides an adjustable half-screen overlay, side switching and full-interface display; Windowed and Stage support four-corner resizing.",
+        "Choose opening animations and keyboard placement separately for both split modes, Windowed, Half-screen floating and Stage, with per-app overrides.",
         "Adjust double-tap timing from 100 to 500 ms, default 200 ms. Timing controls and the test area appear only in Double tap startup mode.",
-        "Set transparent container backgrounds for both split modes and Window 2. Divider-end menus rotate the corresponding app and toggle full-interface display; choices follow apps when swapped.",
-        "Resize Window 1 and Stage from exterior corners to reduce interference with app buttons.",
+        "Set transparent container backgrounds for both split modes and Half-screen floating. Divider-end menus rotate the corresponding app and toggle full-interface display; choices follow apps when swapped.",
+        "Resize Windowed and Stage from exterior corners to reduce interference with app buttons.",
         "Optionally hold the status bar or launch directly from app-switcher cards using the selected startup mode.",
         "Set ordinary-window limits or single-window scheduling, and retain selected windows independently.",
-        "Window 1 and Stage offer native fullscreen controls, with improved window transitions and lock-screen recovery.",
-        "Window 1, Window 2 and Stage offer seven particle opening/closing styles, including Classic, with a soft in-window loading shimmer.",
+        "Windowed and Stage offer native fullscreen controls, with improved window transitions and lock-screen recovery.",
+        "Windowed, Half-screen floating and Stage offer seven particle opening/closing styles, including Classic, with a soft in-window loading shimmer.",
         "Shrink and expand between fullscreen apps and floating windows, with Reduce Motion support.",
-        "Set per-app content scale from 0.5× to 2× separately for Window 1 and Stage, shared by title-bar sliders and Settings."
+        "Set per-app content scale from 0.5× to 2× separately for Windowed and Stage, shared by title-bar sliders and Settings.",
+        "Separate floating customization from startup selection, place Split settings directly after it, update the guide in all three languages and preserve existing settings."
       ],
       "compatibility": [
         "Jailbroken iOS 15.0–26.x.",
@@ -165,23 +175,31 @@
       ],
       "usage": [
         "Install the package for your jailbreak environment and open Settings → Iya Split.",
-        "Choose a startup gesture and mode; swipe up is the default. Repeat the gesture on a second icon, or choose how ordinary launches behave while waiting for the second app in Split View settings.",
+        "Choose an icon gesture, then Split View or Floating and its direction/style on the main page. Swipe up + Top / Bottom is the default. Repeat on a second icon for a split; ordinary launches while waiting follow Split settings.",
         "Drag the divider to resize or release at an edge for full screen. Drag a top handle toward the other app and release after the swap preview.",
         "Place both fingers in the central 25%–75% of the screen, on opposite sides of the divider, spread outward and release to exit; retract to cancel.",
-        "Drop onto Top, Window 1, Window 2, Bottom or Stage in either sidebar to override the default style without changing it. Choose floating-window and Stage resizing separately in Customization.",
+        "Drag onto the first pane, Windowed, Half-screen floating, second pane or Stage sidebar target to override the main-page default without changing it. Floating customization edits previews and relevant options only; it never selects the startup mode.",
         "Enable background camera before starting a fresh camera session. First installation needs a userspace reboot to load camera support.",
         "Enable Open in chosen mode under Notification taps, then choose the mode, lock-screen behavior and app scope. Notifications are unchanged by default.",
         "Choose in-window or in-front keyboards for each of the five modes in Keyboard settings; per-app settings override each global choice. Both split modes default to in-window. Each divider-end menu controls its corresponding app.",
         "Select Double tap to adjust its interval and try the test area. Shorter intervals reduce single-tap waiting but require faster double taps.",
-        "Choose transparent backgrounds and full-interface display for both split modes in Split View settings. Window 2 offers transparent backgrounds in Customization and a quick full-interface toggle. Start Window 1 and Stage resizing from the exterior corners.",
-        "Enable Long-press status bar on the main page, or Open card directly in Split View settings. Both are off by default. When enabled, the status-bar shortcut takes priority over other holds there; disable it to restore the original hold.",
-        "Choose single-window scheduling or ordinary-window limits in Customization → Window scheduling. Keep independently in a window menu excludes that window from ordinary limits.",
-        "Choose opening and closing animations separately in Customization. After updating, fully quit and reopen target apps to load the new opening effect.",
-        "Choose Window 1 and Stage ratios in Per-App Settings → app → Content scale. Title-bar adjustments are saved when released and restored when reopening.",
+        "Choose transparent backgrounds and full-interface display for both split modes in Split settings. Half-screen floating offers transparent backgrounds in Floating customization and a quick full-interface toggle. Start Windowed and Stage resizing from the exterior corners.",
+        "Enable Long-press status bar on the main page, or Open card directly in Split settings. Both are off by default. When enabled, the status-bar shortcut takes priority over other holds there; disable it to restore the original hold.",
+        "Choose single-window scheduling or ordinary-window limits in Floating customization → Window scheduling. Keep independently in a window menu excludes that window from ordinary limits.",
+        "Choose opening and closing animations separately in Floating customization. After updating, fully quit and reopen target apps to load the new opening effect.",
+        "Choose Windowed and Stage ratios in Per-App Settings → app → Content scale. Title-bar adjustments are saved when released and restored when reopening.",
         "With opening animations off, fullscreen/window handoffs are immediate. Reduce Motion uses a short dissolve.",
         "On RootHide, directly upgrade the old package to this fixed version before uninstalling; do not remove the old version first."
       ],
       "changelog": [
+        {
+          "version": "0.1.7",
+          "changes": [
+            "Choose Split View or Floating first, then a split direction or floating style; each category remembers its choice.",
+            "Separate floating customization from startup selection, clarify Windowed, Half-screen floating and Stage names, and preserve existing settings.",
+            "Reorganize Split settings and the user guide; remove the in-app changelog and credits entries."
+          ]
+        },
         {
           "version": "0.1.6-1",
           "changes": [
