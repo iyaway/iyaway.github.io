@@ -20,7 +20,7 @@
     "景深效果选项：Space（仅手机模式）、Celosia、Vitra、V68及移植版Fluidity；移植版Fluidity仅在iOS16／17提供。",
     "统一启用开关、Celosia 自选颜色、收藏夹管理、精简诊断摘要与完整日志导出。",
     "设置名称与文案支持简体中文、繁体中文和英文。",
-    "“清理收藏夹”提供素材预览、占用估算与勾选确认，保护已保存壁纸使用的项目；引用无法核实时禁止清理。",
+    "“清理收藏夹”直接显示本机收藏缓存，提供预览、占用估算与勾选确认；系统、本插件、已保存引用或无法核实的项目受保护。",
     "列表刷新仅查看现有内容；全量“刷新收藏夹”须确认后执行，不会自动触发。",
     "卸载按系统常规执行，不额外清理收藏入口；手动删除仍在插件设置中提供。",
     "“管理本插件壁纸”提供收藏缓存预览，可单独或批量移除本插件入口，保留已保存／当前配置和本机原素材。",
@@ -43,16 +43,24 @@
     "安装或更新后入口可能稍后出现。先稍候，退出“添加新墙纸”页面，再重新进入；只停留在旧页面可能仍看到缓存列表。",
     "仍未出现时，在插件设置的“收藏夹管理”中点“重新加载壁纸进程”，再点“打开 PosterBoard”；打开后从 App 切换器划掉，再重新进入添加页面。",
     "无需为刷新入口先删除已设置的壁纸。若仍异常，先打开一次“添加新墙纸”，返回插件的“诊断日志”点“刷新”，复制精简摘要，或导出完整日志文件，并提供具体系列、iOS 版本、越狱环境和异常界面。",
-    "清理前先打开一次“添加新墙纸”，再回到插件设置 → 清理收藏夹，核对预览、标识与占用，勾选需要移除的项目后确认。未选项目和被保存配置使用的项目予以保留；大小为估算，不保证全部可释放。",
-    "“刷新列表”仅读取现有内容。仅在确需全量更新时使用“刷新收藏夹”，先阅读并确认风险；额外收藏项目及相关已保存壁纸配置可能受影响。",
+    "进入插件设置 → 清理收藏夹即可读取本机缓存列表，核对预览、标识与占用后勾选并确认。查看列表无需先打开墙纸图库；清理按需结束壁纸进程，保留受保护项、未选项目和保存配置。大小为估算，不保证全部可释放。",
+    "“刷新列表”仅读取现有内容。“刷新收藏夹”仍是全量更新：阅读风险并确认后会打开墙纸图库执行，随后返回设置查看结果。额外收藏项目及相关已保存壁纸配置可能受影响；只执行一次，不自动重试，也不重置已移除的本插件系列选择。",
     "更新后完全退出“设置”再打开，先使用“重新加载壁纸进程”，再打开一次“添加新墙纸”激活新功能。",
     "在“设置 → 系统壁纸 → 管理本插件壁纸”直接查看本机收藏缓存与缩略图，查看列表无需先打开墙纸图库。勾选系列并确认，可移除单项或全部本插件入口；按需结束壁纸进程，保留已保存／当前配置、原素材和其他项目。",
     "需要恢复时点“恢复已移除的入口”，阅读全量刷新风险并确认；随后会打开墙纸图库，完成后返回管理页查看结果。",
-    "如使用Lite测试版，请先卸载Lite，再直接升级完整版0.2.0；不要先卸载完整版，已有壁纸无需重新添加。",
-    "曾在0.1.4卸载失败的用户可直接升级0.2.0，再正常卸载。如需清理收藏入口，请在卸载前使用管理页手动处理；卸载本身不额外清理收藏。"
+    "如使用Lite测试版，请先卸载Lite，再直接升级完整版0.2.1-1；不要先卸载完整版，已有壁纸无需重新添加。",
+    "曾在0.1.4卸载失败的用户可直接升级0.2.1-1，再正常卸载。如需清理收藏入口，请在卸载前使用管理页手动处理；卸载本身不额外清理收藏。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.2.1-1",
+      "changes": [
+        "修复“清理收藏夹”的列表显示与选择清理，保护系统、本插件及已保存壁纸引用的项目。",
+        "完善“刷新收藏夹”的确认及执行反馈，保留既有壁纸移除选择。",
+        "优化缓存读取和异常提示，保持普通卸载与已保存壁纸配置。"
+      ]
+    },
     {
       "version": "0.2.0",
       "changes": [
@@ -128,7 +136,7 @@
         "Depth Effect options for Space (phone mode only), Celosia, Vitra, V68 and ported Fluidity. Ported Fluidity is available only on iOS 16/17.",
         "One enable switch, custom Celosia color, Collections management, compact diagnostic summaries and full log export.",
         "Settings names and text in Simplified Chinese, Traditional Chinese and English.",
-        "Clean Up Collections offers source previews, estimated storage and selection confirmation, protecting items used by saved wallpapers. Unverifiable references are protected.",
+        "Clean Up Collections reads the local cache directly, with previews, estimated storage and selection confirmation. System, owned, saved-reference and unverifiable entries are protected.",
         "List refresh reads existing content. A full Refresh Collections runs only after confirmation and never starts automatically.",
         "Uninstall follows the normal system process without additional gallery cleanup; manual entry removal remains available in Settings.",
         "Manage StockWallpapers Entries shows cached previews and offers individual or bulk entry removal, keeping saved/current configurations and installed original resources.",
@@ -151,15 +159,23 @@
         "Entries may appear after a delay. Wait briefly, leave Add New Wallpaper and reopen it; a page left open may retain its cached list.",
         "If entries remain missing, open Collections Management in this tweak’s Settings, tap Reload Wallpaper Processes, then Open PosterBoard. Swipe PosterBoard away in the app switcher and reopen Add New Wallpaper.",
         "You do not need to delete an existing wallpaper to refresh the gallery. If a problem remains, open Add New Wallpaper once, return to Diagnostic Log, tap Refresh and copy the compact summary or export the full log. Include the family, iOS version, jailbreak environment and affected screen.",
-        "Before cleanup, open Add New Wallpaper once, then return to Settings → StockWallpapers → Clean Up Collections. Check previews, identifiers and storage, select items and confirm. Unselected items and items used by saved configurations are kept. Storage is an estimate, not guaranteed recovered space.",
-        "Refresh List only reads existing content. Use Refresh Collections only when a full update is needed and after reading its confirmation warning; additional items and related saved configurations may be affected.",
+        "Open Settings → StockWallpapers → Clean Up Collections to read the local cache. Check previews, identifiers and storage, select items and confirm. Viewing the list does not require opening the wallpaper gallery first. Cleanup stops wallpaper processes if needed and keeps protected/unselected entries and saved configurations. Storage is an estimate, not guaranteed recovered space.",
+        "Refresh List only reads existing content. Refresh Collections is still a full update: after its warning is confirmed, the wallpaper gallery opens to execute it; return to Settings afterward for the result. Additional items and related saved configurations may be affected. It runs once without retries and does not reset owned-family removal choices.",
         "After updating, close Settings from the app switcher and reopen it. Use Reload Wallpaper Processes, then open Add New Wallpaper once to activate the new code.",
         "Open Settings → StockWallpapers → Manage StockWallpapers Entries to view the local Collections cache and thumbnails directly. Viewing the list does not require opening the wallpaper gallery first. Select families and confirm individual or bulk entry removal. Wallpaper processes stop if needed; saved/current configurations, original resources and other entries are kept.",
         "To restore entries, choose Restore Removed Entries and confirm the full-refresh warning. The wallpaper gallery then opens; return to the manager afterward to check the result.",
-        "If you use a Lite test package, remove Lite before upgrading the full package to 0.2.0. Do not uninstall the full package first. Existing wallpapers do not need to be recreated.",
-        "Users whose 0.1.4 uninstall failed can upgrade directly to 0.2.0, then uninstall normally. Use the manager before uninstalling if entry cleanup is needed; uninstall itself does not additionally clean Collections."
+        "If you use a Lite test package, remove Lite before upgrading the full package to 0.2.1-1. Do not uninstall the full package first. Existing wallpapers do not need to be recreated.",
+        "Users whose 0.1.4 uninstall failed can upgrade directly to 0.2.1-1, then uninstall normally. Use the manager before uninstalling if entry cleanup is needed; uninstall itself does not additionally clean Collections."
       ],
       "changelog": [
+        {
+          "version": "0.2.1-1",
+          "changes": [
+            "Fixes the Clean Up Collections list and selected cleanup, protecting system, owned and saved-reference entries.",
+            "Improves confirmation and result handling for Refresh Collections while retaining existing removal choices.",
+            "Improves cache reading and error messages while keeping normal uninstall and saved wallpaper configurations."
+          ]
+        },
         {
           "version": "0.2.0",
           "changes": [
