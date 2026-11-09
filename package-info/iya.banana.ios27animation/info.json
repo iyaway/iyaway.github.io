@@ -8,7 +8,7 @@
   "notice": "售价10元，一个激活码仅限绑定1台设备。购买请加入QQ群1126594257联系群主。只要CF不倒，激活码永久有效，升级后首次使用请保持联网。72小时仅为连续离线使用上限，并非授权有效期。",
   "description": [
     "iOS27 Animation为App打开与最小化、切换App、解锁、通知、系统窗口、文件夹和控制中心提供iOS27风格的动画。",
-    "支持统一默认配置或各场景独立设置，提供App开合时长调节、弹簧强度滑杆，以及可选的最小化同步桌面图标动画。"
+    "支持统一默认配置或各场景独立设置，提供App开合时长调节、支持直接输入数值的弹簧强度滑杆，以及可选的最小化同步桌面图标动画。"
   ],
   "features": [
     "App打开与最小化漏斗动画",
@@ -19,6 +19,7 @@
     "统一默认配置与场景独立设置",
     "App开合时长倍率0.5–3",
     "各场景弹簧独立开关与1.0–5.0强度滑杆",
+    "双行滑杆与数值直接输入",
     "可选最小化同步桌面图标动画",
     "按需开启诊断日志并导出诊断文件",
     "设备激活、最长72小时离线使用与本机反激活",
@@ -32,12 +33,20 @@
     "安装后从系统“设置”进入“iOS27 动画”，开启插件并完成授权。配置可提前编辑，动画生效仍需有效授权。",
     "购买：加入QQ群1126594257联系群主，10元一个激活码，仅限绑定1台设备。",
     "先开启“启用插件”，再激活授权并选择默认或各场景配置；未激活时保持系统动画。",
-    "App时长倍率数值越大越慢；弹簧强度向右滑动越强，修改从下一次动画生效，无需重载。",
+    "App时长倍率数值越大越慢；弹簧强度向右滑动越强，也可点击数值直接输入；修改从下一次动画生效，无需重载。",
     "换机前请在原设备选择“反激活当前设备”，联网完成后即可释放名额。原设备不可用时，请保留激活码和恢复码并联系管理员。",
     "设置中可复制QQ群号及Banana源地址，并打开Discord社区：https://discord.gg/vzWgenGeX6"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.5",
+      "changes": [
+        "优化App开合圆角及图标与内容的渐变衔接，改善桌面与Dock的收尾效果。",
+        "优化冷启动首帧交接，减少偶发的全屏画面闪现。",
+        "动画时长、弹簧强度滑杆改为双行布局，支持直接输入数值。"
+      ]
+    },
     {
       "version": "1.0.4",
       "changes": [
@@ -87,7 +96,7 @@
       "notice": "US$2 per activation code, for one device. Join QQ group 1126594257 and contact its owner to purchase. Activation codes remain valid permanently as long as Cloudflare remains available. Stay online for the first use after upgrading. The 72-hour limit applies only to continuous offline use, not the validity of your license.",
       "description": [
         "iOS27 Animation brings iOS27-style effects to App opening and minimizing, app switching, unlock, notifications, system windows, folders, and Control Center.",
-        "Use a shared default or per-scene settings, adjust App animation duration and spring strength, and optionally animate desktop icons during minimization."
+        "Use a shared default or per-scene settings, adjust App animation duration and spring strength with sliders or direct numeric input, and optionally animate desktop icons during minimization."
       ],
       "features": [
         "Funnel animations for App opening and minimizing",
@@ -98,6 +107,7 @@
         "Shared default and per-scene settings",
         "0.5–3 duration multiplier for App opening and closing",
         "Independent per-scene spring switches and 1.0–5.0 strength sliders",
+        "Two-row sliders with direct numeric input",
         "Optional desktop icon animation during minimization",
         "Optional diagnostic logging and export",
         "Device activation, up to 72 hours offline, and on-device deactivation",
@@ -111,11 +121,19 @@
         "Open iOS27 Animation from the system Settings app, enable the tweak, and activate your license. Configuration can be edited beforehand; effects still require a valid license.",
         "To purchase, join QQ group 1126594257 and contact its owner. Each code costs US$2 and is valid for one device.",
         "Enable the main switch, activate your license, and choose shared or per-scene effects. System animations remain in use until activation.",
-        "A higher duration multiplier slows App animations. Drag spring strength right for a stronger bounce; changes apply to the next animation without a respring.",
+        "A higher duration multiplier slows App animations. Drag spring strength right for a stronger bounce; tap a value for direct input. Changes apply to the next animation without a respring.",
         "Before switching devices, choose “Deactivate This Device” on the old device and complete the operation online to release its slot. If the old device is unavailable, keep your activation and recovery codes and contact the administrator.",
         "Settings includes the QQ group, Banana repository, and Discord community: https://discord.gg/vzWgenGeX6"
       ],
       "changelog": [
+        {
+          "version": "1.0.5",
+          "changes": [
+            "Improves corners and icon-to-content crossfades when opening and minimizing apps, with smoother Home Screen and Dock handoff.",
+            "Improves the first-frame handoff during cold launches to reduce occasional full-screen flashes.",
+            "Updates duration and spring strength sliders to a two-row layout with direct numeric input."
+          ]
+        },
         {
           "version": "1.0.4",
           "changes": [
