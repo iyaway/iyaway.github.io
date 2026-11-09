@@ -5,7 +5,7 @@
   "developer": "Banana",
   "tint": "#007AFF",
   "tagline": "为iOS15–18带来iOS27风格的系统动画。",
-  "notice": "售价10元，一个激活码仅限绑定1台设备。购买请加入QQ群1126594257联系群主。只要CF不倒，激活码永久有效，升级后首次使用请保持联网。72小时仅为连续离线使用上限，并非授权有效期。",
+  "notice": "购买插件：https://buy.bananaiya.com 。一个激活码仅限绑定1台设备。只要CF不倒，激活码永久有效。72小时仅为连续离线使用上限，并非授权有效期。升级后首次使用请保持联网。",
   "description": [
     "iOS27 Animation为App打开与最小化、切换App、解锁、通知、系统窗口、文件夹和控制中心提供iOS27风格的动画。",
     "支持统一默认配置或各场景独立设置，App打开与最小化可分别调节时长；通知中心动画与弹簧独立控制，圆角可切换系统效果。"
@@ -33,14 +33,23 @@
   ],
   "usage": [
     "安装后从系统“设置”进入“iOS27 动画”，开启插件并完成授权。配置可提前编辑，动画生效仍需有效授权。",
-    "购买：加入QQ群1126594257联系群主，10元一个激活码，仅限绑定1台设备。",
+    "购买插件：https://buy.bananaiya.com 。也可在插件设置中点击“购买插件”打开购买网站。",
     "先开启“启用插件”，再激活授权并选择默认或各场景配置；未激活时保持系统动画。",
     "App打开、最小化时长可分别调整，数值越大越慢；弹簧强度向右滑动越强，也可点击数值直接输入。关闭“开启27圆角”可使用系统圆角；修改从下一次动画生效，无需重载。",
     "换机前请在原设备选择“反激活当前设备”，联网完成后即可释放名额。原设备不可用时，请保留激活码和恢复码并联系管理员。",
-    "设置中可复制QQ群号及Banana源地址，并打开Discord社区：https://discord.gg/vzWgenGeX6"
+    "设置中可复制QQ群号及Banana源地址，并打开Discord社区：https://discord.gg/vzWgenGeX6",
+    "升级后请重新载入桌面，并关闭后重新打开系统“设置”。首次使用请保持联网；原有授权无需重新激活，如出现时间校验提示，请点击“立即续签”。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.7",
+      "changes": [
+        "修复 App 启动时放大的原生图标与漏斗动画重叠，改善桌面和 Dock 的启动表现。",
+        "优化最小化时的桌面图标动画，减少收尾停顿、突然归位和目标图标重复位移。 改善 iOS15–17 的桌面图标动画兼容性。",
+        "修复部分授权时间校验误报（错误 12），保留原授权及设备绑定。 错误 13 增加重载桌面、关闭后重新打开系统“设置”的恢复指引。 更新购买入口：中文页面跳转购买网站，英文页面提供 PayPal 购买说明。"
+      ]
+    },
     {
       "version": "1.0.6",
       "changes": [
@@ -103,7 +112,7 @@
     "en": {
       "name": "iOS27 Animation",
       "tagline": "iOS27-style system animations for iOS15–18.",
-      "notice": "US$2 per activation code, for one device. Join QQ group 1126594257 and contact its owner to purchase. Activation codes remain valid permanently as long as Cloudflare remains available. Stay online for the first use after upgrading. The 72-hour limit applies only to continuous offline use, not the validity of your license.",
+      "notice": "International purchases currently support PayPal only. If PayPal is available in your region, please send me a direct message on Discord. Discord: https://discord.gg/vzWgenGeX6 . Each activation code is for one device. Activation codes remain valid permanently as long as Cloudflare remains available. The 72-hour limit applies only to continuous offline use, not license validity. Stay online for the first use after upgrading.",
       "description": [
         "iOS27 Animation brings iOS27-style effects to App opening and minimizing, app switching, unlock, notifications, system windows, folders, and Control Center.",
         "Use shared or per-scene settings, adjust app opening and minimizing duration separately, configure Notification Center animations and springs independently, and optionally use system corners."
@@ -131,13 +140,22 @@
       ],
       "usage": [
         "Open iOS27 Animation from the system Settings app, enable the tweak, and activate your license. Configuration can be edited beforehand; effects still require a valid license.",
-        "To purchase, join QQ group 1126594257 and contact its owner. Each code costs US$2 and is valid for one device.",
+        "International purchases currently support PayPal only. If PayPal is available in your region, please send me a direct message on Discord: https://discord.gg/vzWgenGeX6 .",
         "Enable the main switch, activate your license, and choose shared or per-scene effects. System animations remain in use until activation.",
         "Adjust opening and minimizing duration separately;higher multipliers slow the animation. Drag spring strength right for a stronger bounce, or enter a value directly. Turn off “Enable iOS27 corners” to use system corners. Changes apply to the next animation without a respring.",
         "Before switching devices, choose “Deactivate This Device” on the old device and complete the operation online to release its slot. If the old device is unavailable, keep your activation and recovery codes and contact the administrator.",
-        "Settings includes the QQ group, Banana repository, and Discord community: https://discord.gg/vzWgenGeX6"
+        "Settings includes the QQ group, Banana repository, and Discord community: https://discord.gg/vzWgenGeX6",
+        "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”."
       ],
       "changelog": [
+        {
+          "version": "1.0.7",
+          "changes": [
+            "Fixes oversized native icons overlapping the funnel when launching apps from the Home Screen or Dock.",
+            "Improves desktop icon animation during minimization, reducing end pauses, abrupt landing, and duplicate target-icon movement. Improves desktop icon animation compatibility on iOS15–17.",
+            "Fixes some authorization time-check errors (12), preserves licenses and device bindings, adds recovery instructions for error 13, and updates purchasing with the Chinese website and English PayPal instructions."
+          ]
+        },
         {
           "version": "1.0.6",
           "changes": [
