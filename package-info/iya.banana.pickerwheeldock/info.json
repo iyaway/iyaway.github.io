@@ -16,25 +16,36 @@
     "转盘：按 Dock 宽度调整图标与圆弧布局，随盘移动和倾斜",
     "滚筒与转盘严格限制在 Dock 圆角边界内显示",
     "独立应用列表，最多 24 个应用并支持排序",
-    "调整图标大小、放大倍数、栏位置、名称、光晕、背景与触感，显示通知徽标",
-    "长按进入系统桌面编辑，支持拖动手柄调整自定义栏位置",
+    "调整图标大小、放大倍数、栏位置、名称、光晕与触感，实时显示完整通知角标",
+    "隐藏 Dock 背景，支持 iOS 26 普通 Dock 的玻璃背景",
+    "长按显示系统快捷菜单，保留菜单扩展；可从菜单进入系统编辑与原生图标拖放",
     "简体中文、繁体中文与英文设置，跟随系统语言"
   ],
   "compatibility": [
-    "iPhone · iOS 15.x–17.x",
+    "iPhone · iOS 15.x–17.x / iOS 26.x（实验兼容）",
     "Rootless",
     "RootHide",
     "普通 Dock / 已开启的浮动 Dock"
   ],
-  "notice": "浮动 Dock 需由其他插件开启。iPhone 15 Pro / iOS 17.3.1 已获用户反馈确认；iOS 15/16 尚未完成真机验证。不接管 iPad、横屏或外接屏，不扩容原生 Dock。",
+  "notice": "浮动 Dock 需由其他插件开启。iOS 26 仍为实验兼容，已在 iOS 26.1 Rootless 虚拟设备验证；iOS 15/16 和 iOS 26 RootHide 尚未完成实机验证。不接管 iPad、横屏或外接屏，不扩容原生 Dock。部分 iOS 17 设备的位置差异仍需通过位置诊断反馈。",
   "usage": [
     "安装后进入“设置 → 灵动程序坞”，开启总开关。",
     "选择“叠放”“放大”“滚筒”或“转盘”模式，按需调整外观与交互选项。",
+    "在“外观”中开启“隐藏 Dock 背景”；长按图标使用系统菜单，可从菜单进入“编辑主屏幕”。",
     "在“应用列表”中选择和排序应用；清空列表即可跟随原生 Dock。",
-    "叠放、滚筒和转盘模式轻点图标打开应用，快甩后继续滚动，再次按住可接管。放大模式可按住横滑后松手打开。"
+    "叠放、滚筒和转盘模式轻点图标打开应用，快甩后继续滚动，再次按住可接管。放大模式可按住横滑后松手打开。",
+    "RootHide 旧版用户请直接升级此版后再卸载，不要先卸载旧版。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.5-3",
+      "changes": [
+        "新增 iOS 26 实验兼容，背景开关覆盖所有支持系统，并修复 iOS 26 普通 Dock 的背景残留。",
+        "长按图标可显示系统快捷菜单，保留菜单扩展、角标更新及系统编辑与拖放入口。",
+        "限制向下偏移并保留位置诊断；修复 RootHide 升级后卸载时影响其他插件的问题。"
+      ]
+    },
     {
       "version": "0.1.4-1",
       "changes": [
@@ -89,24 +100,35 @@
         "Turntable with width-adaptive icons and arc, moving and tilting with the disk",
         "Drum and Turntable stay within the rounded Dock boundary",
         "A separate, reorderable list of up to 24 apps",
-        "Adjust icon size, magnification, bar position, labels, glow, background, and haptics; display notification badges",
-        "Hold for native Home Screen editing and drag the handle to move the custom bar",
+        "Adjust icon size, magnification, position, labels, glow, and haptics, with live full-value notification badges",
+        "Hide the Dock background, including the standard glass background on iOS 26",
+        "Long-press for system quick actions and menu extensions; enter native Home Screen editing and app drag and drop from the menu",
         "English, Simplified Chinese, and Traditional Chinese settings follow the system language"
       ],
       "compatibility": [
-        "iPhone · iOS 15.x–17.x",
+        "iPhone · iOS 15.x–17.x / iOS 26.x (experimental)",
         "Rootless",
         "RootHide",
         "Standard Dock / externally enabled Floating Dock"
       ],
-      "notice": "A separate tweak is required to enable the Floating Dock. User feedback confirmed operation on iPhone 15 Pro / iOS 17.3.1; iOS 15/16 have not completed device validation. iPad, landscape, and external displays are not taken over. Native Dock capacity is not expanded.",
+      "notice": "A separate tweak is required to enable the Floating Dock. iOS 26 compatibility remains experimental and was validated on an iOS 26.1 Rootless virtual device; iOS 15/16 and iOS 26 RootHide have not completed device validation. iPad, landscape, and external displays are not taken over. Native Dock capacity is not expanded. Position differences on some iOS 17 devices still require position reports.",
       "usage": [
         "Open Settings → KineticDock after installation and turn on the main switch.",
         "Choose Stack, Magnification, Drum, or Turntable, then adjust appearance and interaction options.",
+        "Enable Hide Dock Background under Appearance. Long-press an icon for system quick actions and choose Edit Home Screen for native editing.",
         "Select and reorder apps under Applications; leave the list empty to follow the native Dock.",
-        "In Stack, Drum, and Turntable, tap to open and flick to keep scrolling; touch again to take control. In Magnification, slide and release to open."
+        "In Stack, Drum, and Turntable, tap to open and flick to keep scrolling; touch again to take control. In Magnification, slide and release to open.",
+        "RootHide users on an older version should upgrade directly to this release before uninstalling; do not uninstall the older version first."
       ],
       "changelog": [
+        {
+          "version": "0.1.5-3",
+          "changes": [
+            "Added experimental iOS 26 compatibility, with background hiding across all supported systems and a fix for the remaining standard Dock background on iOS 26.",
+            "Long-press icons for system quick actions, preserving menu extensions, badge updates, and access to native Home Screen editing and drag and drop.",
+            "Limited downward offsets and retained position diagnostics; fixed an issue where uninstalling after a RootHide upgrade could affect other tweaks."
+          ]
+        },
         {
           "version": "0.1.4-1",
           "changes": [
