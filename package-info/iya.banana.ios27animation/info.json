@@ -43,6 +43,14 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.0.8",
+      "changes": [
+        "修复通知中心收起后，桌面或 Dock 图标可能消失的状态残留问题。",
+        "改善通知中心动画交接与收尾，减少重复隐藏和提前结束。",
+        "修复文件夹关闭时灰色背景短暂遮挡图标缩略图的问题，改善 iOS15–18 的文件夹显示。"
+      ]
+    },
+    {
       "version": "1.0.7",
       "changes": [
         "修复 App 启动时放大的原生图标与漏斗动画重叠，改善桌面和 Dock 的启动表现。",
@@ -148,6 +156,14 @@
         "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”."
       ],
       "changelog": [
+        {
+          "version": "1.0.8",
+          "changes": [
+            "Fixes a retained display state that could leave Home Screen or Dock icons hidden after dismissing Notification Center.",
+            "Improves Notification Center animation handoff and completion, reducing repeated hiding and premature endings.",
+            "Fixes gray folder backgrounds briefly covering icon previews when closing folders, improving folder display on iOS15–18."
+          ]
+        },
         {
           "version": "1.0.7",
           "changes": [
