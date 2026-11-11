@@ -6,7 +6,7 @@
   "developer": "Banana",
   "tint": "#F7BC25",
   "notice_style": "warning",
-  "notice": "仅推荐刘海屏且未开启灵动岛的设备安装。已开启原生或模拟灵动岛的设备不建议安装。 用户已在 iOS 15、16、17、18 上测试；iOS 26 仍待设备验证。低电量模式或减少透明度开启时，玻璃会使用黑底。",
+  "notice": "仅推荐刘海屏且未开启灵动岛的设备安装。已开启原生或模拟灵动岛的设备不建议安装。用户已在 iOS 15、16、17、18 上测试。iOS 26 仍待设备验证。低电量模式或减少透明度开启时，玻璃会使用黑底。RootHide 旧版请直接覆盖升级。",
   "description": [
     "DynamicNotch 将通知、音乐、通话和计时等活动显示在刘海区域，保留系统状态栏。",
     "提供紧凑提示、长按展开与独立玻璃外观，可按需选择活动类型和通知呈现方式。"
@@ -15,10 +15,10 @@
     "整合通知、音乐、通话、计时器、秒表、录音、录屏、静音与音量等提示",
     "支持专注／勿扰、系统开关及 Apple Watch 充电状态提示",
     "支持可用的实时活动紧凑显示与长按展开",
-    "通知正文自动换行，可选自动展开，点击执行系统默认操作",
+    "通知正文自动换行，可选自动展开和横屏使用系统通知，点击执行系统默认操作",
     "通知优先显示系统提供的联系人头像，缺失时保留 App 图标",
     "独立玻璃外观，可调填充、模糊、折射、厚度与边缘高光",
-    "支持上划收起／隐藏及恢复仍在进行的隐藏活动",
+    "支持上划收起／隐藏及恢复仍在进行的隐藏活动，上划来电小窗可停止本次来电提醒",
     "支持与 Lunora 配合的刘海闪避及收起恢复",
     "支持简体中文、繁體中文和 English 设置"
   ],
@@ -32,12 +32,20 @@
   ],
   "usage": [
     "安装后前往“设置 → 动态刘海”启用并选择需要的活动类型。",
-    "通知接管默认关闭，需要时开启通知及自动展开选项。",
+    "通知接管默认关闭。开启接管后，可选择自动展开，或通过“横屏时使用系统通知”让横屏通知继续走系统。",
     "轻点进入对应内容，长按展开，上划收起／隐藏；可在设置恢复仍在进行的隐藏活动。",
     "开启玻璃后显示参数；低电量模式或减少透明度开启时使用黑底。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.3",
+      "changes": [
+        "横屏时收起刘海活动，修复游戏内音量提示残留和回竖屏后的过期提示补弹。",
+        "新增默认开启的“横屏时使用系统通知”选项，并修复转屏时通知横幅被误拦的问题。",
+        "上划来电小窗可停止本次来电提醒，仍可接听。"
+      ]
+    },
     {
       "version": "0.1.2",
       "changes": [
@@ -93,7 +101,7 @@
     "en": {
       "name": "DynamicNotch",
       "tagline": "Notch notifications, activities and adjustable glass.",
-      "notice": "Recommended only for notched iPhones with Dynamic Island disabled. Installation is not recommended when a native or simulated Dynamic Island is enabled. User-tested on iOS 15, 16, 17 and 18; iOS 26 still awaits device validation. Glass uses a black background while Low Power Mode or Reduce Transparency is enabled.",
+      "notice": "Recommended only for notched iPhones with Dynamic Island disabled. Installation is not recommended when a native or simulated Dynamic Island is enabled. User-tested on iOS 15, 16, 17 and 18. iOS 26 still awaits device validation. Glass uses a black background while Low Power Mode or Reduce Transparency is enabled. Upgrade older RootHide versions in place.",
       "description": [
         "DynamicNotch brings notifications, music, calls and timers to the notch while keeping the system status bar.",
         "Choose compact alerts, expanded views and independent glass styling, with configurable activity types and notification presentation."
@@ -102,10 +110,10 @@
         "Notifications, music, calls, timers, stopwatch, voice and screen recording, ringer and volume alerts",
         "Focus / Do Not Disturb, system toggle and Apple Watch charging alerts",
         "Compact and expanded views for supported Live Activities",
-        "Wrapped notification text, optional automatic expansion and native default actions on tap",
+        "Wrapped notification text, optional automatic expansion, system notifications in landscape and native default actions on tap",
         "Contact avatars from supported system notifications, with app icons as a fallback",
         "Independent glass with adjustable fill, blur, refraction, thickness and edge highlights",
-        "Swipe to collapse or hide, and restore hidden activities that are still running",
+        "Swipe to collapse or hide, restore ongoing activities, or silence an expanded incoming call",
         "Notch avoidance and restoration with Lunora",
         "English, Simplified Chinese and Traditional Chinese Settings"
       ],
@@ -119,11 +127,19 @@
       ],
       "usage": [
         "Open Settings → DynamicNotch after installation, enable it and choose your activity types.",
-        "Notification takeover is off by default; enable notifications and automatic expansion as needed.",
+        "Notification takeover is off by default. After enabling it, choose automatic expansion or use system notifications in landscape as needed.",
         "Tap to open content, hold to expand, and swipe up to collapse or hide. Restore hidden ongoing activities from Settings.",
         "Glass controls appear when glass is enabled. Low Power Mode or Reduce Transparency switches the background to black."
       ],
       "changelog": [
+        {
+          "version": "0.1.3",
+          "changes": [
+            "Notch activities collapse in landscape. Fixed stuck volume alerts in games and expired alerts reappearing on return to portrait.",
+            "Added a default-on option to use system notifications in landscape and fixed banners being blocked during rotation.",
+            "Swipe up on an expanded incoming call to silence its alert while keeping the call available to answer."
+          ]
+        },
         {
           "version": "0.1.2",
           "changes": [
