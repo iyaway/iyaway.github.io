@@ -91,7 +91,8 @@
     "星环电量可放环外左侧、顶部中间或环外右侧，旁侧自定义信息可选左右；胶囊顶部电量可选左、中、右",
     "左侧可用音量边框保留内容，左右胶囊可选 Wi-Fi 底边强度标记，拥挤时保留原图标",
     "活动标记支持呼吸圆点、实心圆点、圆环及 REC 样式；右侧可在电话来电响铃时专属显示听筒，结束后恢复原模式",
-    "维护页可在备份提醒和手动确认后彻底重置配置，清空旧参数并关闭 Lunora，保留导出的备份及启动失败保护"
+    "维护页可在备份提醒和手动确认后彻底重置配置，清空旧参数并关闭 Lunora，保留导出的备份及启动失败保护",
+    "胶囊电量支持自定义前缀和后缀，星环顶部电量可选择显示百分号。"
   ],
   "compatibility": [
     "iOS 15.1–26（主包不支持 iOS 15.0.x）",
@@ -136,6 +137,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.7",
+      "changes": [
+        "胶囊电量支持自定义前缀和后缀，星环顶部电量可选择显示百分号。",
+        "修复横屏停用、左胶囊隐藏和系统音量条恢复，改善 mini Dock 随横竖屏切换。",
+        "更新 Discord 邀请，维护页支持点击复制 Banana 源地址。"
+      ]
+    },
     {
       "version": "1.1.6",
       "changes": [
@@ -457,7 +466,8 @@
         "Place Orbit percentage outside left, at top center or outside right and choose either side for custom content; align the Capsule top percentage left, center or right",
         "An optional left volume border preserves content; both capsules offer Wi-Fi bottom strength marks with the original icon retained when space is limited",
         "Choose pulsing dots, solid dots, rings or REC activity marks; optionally show a handset while an incoming phone call rings and restore the current right display afterward",
-        "Maintenance offers a complete configuration reset with a backup reminder and manual confirmation, clearing saved settings and turning Lunora off while keeping exported backups and startup protection"
+        "Maintenance offers a complete configuration reset with a backup reminder and manual confirmation, clearing saved settings and turning Lunora off while keeping exported backups and startup protection",
+        "Customize the Capsule battery percentage with a prefix and suffix, and optionally show the percent sign above Orbit."
       ],
       "compatibility": [
         "iOS 15.1–26 (the main package does not support iOS 15.0.x)",
@@ -501,6 +511,14 @@
         "Export a configuration backup before choosing Completely Reset Configuration in Maintenance. Confirming clears saved settings and leaves Lunora off without reloading SpringBoard; exported backups and startup protection are kept."
       ],
       "changelog": [
+        {
+          "version": "1.1.7",
+          "changes": [
+            "Customize the Capsule battery percentage with a prefix and suffix, and optionally show the percent sign above Orbit.",
+            "Fixed landscape suspension, left capsule hiding, and system volume HUD restoration. Improved mini Dock behavior during rotation.",
+            "Updated the Discord invite and added tap-to-copy for the Banana repository address in Maintenance."
+          ]
+        },
         {
           "version": "1.1.6",
           "changes": [
