@@ -25,7 +25,10 @@
     "设备激活、最长72小时离线使用与本机反激活",
     "简体中文、繁體中文与English设置",
     "通知中心独立动画与弹簧设置",
-    "“开启27圆角”开关，可使用系统圆角"
+    "“开启27圆角”开关，可使用系统圆角",
+    "iOS 15–17 桌面小组件开合形变，小号、中号、大号可独立设置",
+    "中间区域横向形变可选，默认关闭",
+    "iOS 15–18 手势插件唤起通知中心后支持桌面图标收回动画"
   ],
   "compatibility": [
     "iOS15–18",
@@ -42,6 +45,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.10",
+      "changes": [
+        "改善 App 开合时的图标交接，最小化时图标更早淡入，减少窗口边缘残影。新增「中间区域横向形变」开关，默认关闭。",
+        "iOS 15–17 支持从桌面小组件打开 App 和返回桌面时的形变，小号、中号、大号可分别开关。",
+        "iOS 15–18 支持从已解锁桌面用手势插件唤起通知中心，收回时播放桌面图标动画。"
+      ]
+    },
     {
       "version": "1.0.9",
       "changes": [
@@ -148,7 +159,10 @@
         "Device activation, up to 72 hours offline, and on-device deactivation",
         "English, Simplified Chinese, and Traditional Chinese settings",
         "Independent Notification Center animation and spring settings",
-        "Optional iOS27 corners;turn off to use system corners"
+        "Optional iOS27 corners;turn off to use system corners",
+        "Home Screen widget morphing on iOS 15–17, with separate switches for small, medium, and large widgets",
+        "Optional center icon side warp, off by default",
+        "Home Screen icon animation after dismissing Notification Center opened by gesture tweaks on iOS 15–18"
       ],
       "compatibility": [
         "iOS15–18",
@@ -164,6 +178,14 @@
         "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”. If you use Choicy, allow this tweak to load in SpringBoard so license status can be read."
       ],
       "changelog": [
+        {
+          "version": "1.0.10",
+          "changes": [
+            "Improves the icon handoff when opening and minimizing apps. Icons fade in earlier during minimization to reduce trailing edges. Adds a center icon side warp switch, off by default.",
+            "Adds Home Screen widget morphing when opening apps and returning to Home on iOS 15–17, with separate switches for small, medium, and large widgets.",
+            "Plays the Home Screen icon animation when dismissing Notification Center opened from the unlocked Home Screen by a gesture tweak on iOS 15–18."
+          ]
+        },
         {
           "version": "1.0.9",
           "changes": [
