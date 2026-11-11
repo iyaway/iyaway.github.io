@@ -46,6 +46,12 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.0.11",
+      "changes": [
+        "修复打开和最小化 App 时，图标形变未完整覆盖窗口内容的问题，改善桌面与 Dock 的图标过渡。"
+      ]
+    },
+    {
       "version": "1.0.10",
       "changes": [
         "改善 App 开合时的图标交接，最小化时图标更早淡入，减少窗口边缘残影。新增「中间区域横向形变」开关，默认关闭。",
@@ -178,6 +184,12 @@
         "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”. If you use Choicy, allow this tweak to load in SpringBoard so license status can be read."
       ],
       "changelog": [
+        {
+          "version": "1.0.11",
+          "changes": [
+            "Fixes incomplete icon coverage of the app window during opening and minimization, improving icon transitions on the Home Screen and in the Dock."
+          ]
+        },
         {
           "version": "1.0.10",
           "changes": [
