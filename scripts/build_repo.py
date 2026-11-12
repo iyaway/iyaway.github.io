@@ -501,7 +501,6 @@ def make_html_locale(info: dict, info_dir: Path, locale: str) -> str:
     localized = web_locale(info, locale)
     is_english = locale == "en"
     labels = {
-        "back": "← Banana Repo",
         "screenshots": "Screenshots" if is_english else "截图",
         "features": "Features" if is_english else "功能",
         "usage": "Usage" if is_english else "使用方法",
@@ -572,8 +571,7 @@ def make_html_locale(info: dict, info_dir: Path, locale: str) -> str:
     developer_separator = ": " if is_english else "："
     hidden = " hidden" if is_english else ""
     return f"""<div data-language="{locale}" lang="{'en' if is_english else 'zh-CN'}"{hidden}>
-      <a class="back" href="/">{labels["back"]}</a>
-      <header>{icon}<div><p class="package-id">{package}</p><h1>{html.escape(localized["name"])}</h1><p class="tagline">{html.escape(localized["tagline"])}</p></div></header>
+      <header class="package-hero">{icon}<div><p class="package-id">{package}</p><h1>{html.escape(localized["name"])}</h1><p class="tagline">{html.escape(localized["tagline"])}</p></div></header>
       <div class="compatibility">{compatibility}</div>
       {notice}
       {description_section}
@@ -597,18 +595,48 @@ def make_html_depiction(info: dict, info_dir: Path) -> str:
     <title>{html.escape(zh['name'])} / {html.escape(en['name'])} · Banana Repo</title>
     <meta name="description" content="{html.escape(zh['tagline'] + ' / ' + en['tagline'], quote=True)}">
     <link rel="icon" href="/icon.png">
+    <script>
+      try {{
+        const savedTheme = localStorage.getItem("banana-theme");
+        document.documentElement.dataset.theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      }} catch (_) {{}}
+    </script>
     <link rel="stylesheet" href="/depiction.css">
+    <link rel="stylesheet" href="/vendor/liquid-glass/liquid-glass.css">
+    <link rel="stylesheet" href="/depiction-liquid.css">
   </head>
   <body style="--accent: {html.escape(info['tint'])}">
+    <div class="ambient-scene" aria-hidden="true">
+      <span class="ambient-orb orb-accent"></span>
+      <span class="ambient-orb orb-neutral"></span>
+    </div>
+    <header class="topbar">
+      <a class="mini-brand" href="/" aria-label="Banana Repo">
+        <img src="/icon.png" alt="">
+        <span>Banana</span>
+        <span class="apt-badge">APT</span>
+      </a>
+      <div class="topbar-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="切换深色模式">
+          <svg class="theme-icon theme-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.5"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+          </svg>
+          <svg class="theme-icon theme-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.3 15.2A8.5 8.5 0 0 1 8.8 3.7 8.5 8.5 0 1 0 20.3 15.2Z"></path>
+          </svg>
+        </button>
+        <nav class="language-switcher" aria-label="Language">
+          <button type="button" data-language-button="zh-Hans" aria-pressed="true">中文</button>
+          <button type="button" data-language-button="en" aria-pressed="false">English</button>
+        </nav>
+      </div>
+    </header>
     <main>
-      <nav class="language-switcher" aria-label="Language">
-        <button type="button" data-language-button="zh-Hans" aria-pressed="true">中文</button>
-        <button type="button" data-language-button="en" aria-pressed="false">English</button>
-      </nav>
       {make_html_locale(info, info_dir, "zh-Hans")}
       {make_html_locale(info, info_dir, "en")}
     </main>
-    <script src="/depiction.js"></script>
+    <script type="module" src="/depiction.js"></script>
   </body>
 </html>
 """

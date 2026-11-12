@@ -3,45 +3,108 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#0b0d12">
+    <meta name="theme-color" content="#090b16">
     <title>Banana Repo</title>
     <meta name="description" content="Banana 的 iOS 越狱插件源。">
     <link rel="icon" href="icon.png">
     <link rel="apple-touch-icon" href="icon.png">
+    <script>
+      try {
+        const savedTheme = localStorage.getItem("banana-theme");
+        document.documentElement.dataset.theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      } catch (_) {}
+    </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vendor/liquid-glass/liquid-glass.css">
+    <link rel="stylesheet" href="liquid.css">
   </head>
   <body>
+    <div class="ambient-scene" aria-hidden="true">
+      <span class="ambient-orb orb-yellow"></span>
+      <span class="ambient-orb orb-blue"></span>
+      <span class="ambient-orb orb-green"></span>
+      <span class="ambient-grid"></span>
+    </div>
+
+    <header class="topbar glass-panel">
+      <a class="mini-brand" href="./" aria-label="Banana Repo">
+        <img src="icon.png" alt="">
+        <span>Banana</span>
+        <span class="apt-badge">APT</span>
+      </a>
+      <div class="topbar-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="切换深色模式">
+          <svg class="theme-icon theme-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.5"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+          </svg>
+          <svg class="theme-icon theme-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.3 15.2A8.5 8.5 0 0 1 8.8 3.7 8.5 8.5 0 1 0 20.3 15.2Z"></path>
+          </svg>
+        </button>
+        <nav class="language-switcher" aria-label="Language">
+          <button type="button" data-language-button="zh-Hans" aria-pressed="true">中文</button>
+          <button type="button" data-language-button="en" aria-pressed="false">English</button>
+        </nav>
+      </div>
+    </header>
+
     <main>
-      <nav class="language-switcher" aria-label="Language">
-        <button type="button" data-language-button="zh-Hans" aria-pressed="true">中文</button>
-        <button type="button" data-language-button="en" aria-pressed="false">English</button>
-      </nav>
       <section class="hero">
-        <div class="hero-brand">
-          <img class="repo-icon" src="icon.png" alt="Banana">
-          <div>
-            <p class="eyebrow">APT REPOSITORY</p>
-            <h1>Banana</h1>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span>APT REPOSITORY</p>
+          <div class="hero-brand">
+            <h1>Banana<span> Repo</span></h1>
+          </div>
+          <p class="intro" data-i18n="intro">Banana 的 iOS 越狱插件源，提供 Rootless 与 RootHide 软件包。</p>
+          <div class="actions">
+            <a class="button primary" href="sileo://source/https://iyaway.github.io/" data-i18n="addSileo">添加到 Sileo</a>
+            <a class="button" href="zbra://sources/add/https://iyaway.github.io/" data-i18n="addZebra">添加到 Zebra</a>
+          </div>
+          <div class="source-bar">
+            <span class="source-indicator" aria-hidden="true"></span>
+            <code id="repo-url">https://iyaway.github.io/</code>
+            <button id="copy" type="button" data-i18n="copy">复制源地址</button>
           </div>
         </div>
-        <p class="intro" data-i18n="intro">Banana 的 iOS 越狱插件源，提供 Rootless 与 RootHide 软件包。</p>
-        <div class="actions">
-          <a class="button primary" href="sileo://source/https://iyaway.github.io/" data-i18n="addSileo">添加到 Sileo</a>
-          <a class="button" href="zbra://sources/add/https://iyaway.github.io/" data-i18n="addZebra">添加到 Zebra</a>
-          <button class="button" id="copy" type="button" data-i18n="copy">复制源地址</button>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="icon-halo halo-back"></div>
+          <div class="icon-halo halo-front"></div>
+          <div class="icon-glass">
+            <img class="repo-icon" src="icon.png" alt="">
+          </div>
+          <span class="platform-chip chip-rootless">Rootless</span>
+          <span class="platform-chip chip-roothide">RootHide</span>
         </div>
-        <code id="repo-url">https://iyaway.github.io/</code>
       </section>
 
       <section class="packages" aria-labelledby="packages-title">
         <div class="section-heading">
-          <h2 id="packages-title" data-i18n="packages">软件包</h2>
-          <span id="package-count" data-i18n="loading">读取中</span>
+          <div>
+            <p class="section-kicker" data-i18n="collection">COLLECTION</p>
+            <h2 id="packages-title" data-i18n="packages">软件包</h2>
+          </div>
+          <span id="package-count" class="count-pill" data-i18n="loading">读取中</span>
         </div>
-        <div id="package-list" class="package-list"></div>
+        <label class="search-box glass-panel" for="package-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"></path>
+          </svg>
+          <span class="visually-hidden" data-i18n="searchLabel">搜索软件包</span>
+          <input id="package-search" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="搜索名称或标识符">
+          <kbd>⌘ K</kbd>
+        </label>
+        <div class="package-stage">
+          <div id="package-list" class="package-list"></div>
+        </div>
       </section>
     </main>
-    <footer data-i18n="footer">Banana · 由 GitHub Pages 自动构建与发布</footer>
-    <script src="app.js"></script>
+
+    <footer>
+      <span class="footer-mark"></span>
+      <span data-i18n="footer">Banana · 由 GitHub Pages 自动构建与发布</span>
+    </footer>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
