@@ -77,6 +77,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.9.21",
+      "changes": [
+        "优化 iOS 16 和 17 深色图标模式下的桌面翻页，减少重复取图与文件夹缩略图刷新。",
+        "更新设置中的 Discord 邀请链接。"
+      ]
+    },
+    {
       "version": "0.9.20",
       "changes": [
         "支持 iOS 18、26、27 的图标包与独立图标导入，保留系统原生桌面自定义面板。",
@@ -301,6 +308,13 @@
         "Large icon packs need no splitting or recompression when they fit the import limits. Review imported, duplicate and skipped counts; uncovered apps retain the existing native or algorithm fallback."
       ],
       "changelog": [
+        {
+          "version": "0.9.21",
+          "changes": [
+            "Improves Home Screen paging with Dark icons on iOS 16 and 17 by reducing repeated icon loads and folder thumbnail refreshes.",
+            "Updates the Discord invite link in Settings."
+          ]
+        },
         {
           "version": "0.9.20",
           "changes": [
