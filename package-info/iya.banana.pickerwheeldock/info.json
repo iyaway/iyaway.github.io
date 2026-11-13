@@ -11,6 +11,7 @@
   ],
   "features": [
     "Duo 主屏幕侧栏，可放在左侧或右侧，支持全部四种动效，可调长度，并可独立显示星环、搜索和状态栏",
+    "设置滑块可拖动，也可点击数值直接输入",
     "叠放：前后层次、惯性减速、自动吸附与旋转位置保存",
     "放大模式：中心最大、两侧递减；空间不足自动缩小避让，支持松手打开与移出取消",
     "滚筒：单排滚动、两端渐小，无后排图标",
@@ -23,12 +24,12 @@
     "简体中文、繁体中文与英文设置，跟随系统语言"
   ],
   "compatibility": [
-    "iPhone · iOS 15.x–17.x / iOS 26.x（实验兼容）",
+    "iPhone · iOS 15.x–17.x / iOS 18.x、26.x（实验兼容）",
     "Rootless",
     "RootHide",
     "普通 Dock / 已开启的浮动 Dock"
   ],
-  "notice": "Duo 用于 iPhone 竖屏主屏幕，可直接搭配普通 Dock。部分 iOS 16 设备在返回桌面时仍可能出现图标短暂跳位。iOS 26 为实验兼容，浮动 Dock 由其他插件开启。",
+  "notice": "Duo 用于 iPhone 竖屏主屏幕，可直接搭配普通 Dock。部分 iOS 16 设备在返回桌面时仍可能出现图标短暂跳位。iOS 18 和 iOS 26 为实验兼容，浮动 Dock 由其他插件开启。",
   "usage": [
     "安装后进入“设置 → 灵动程序坞”，开启总开关。",
     "选择“叠放”“放大”“滚筒”或“转盘”模式，按需调整外观与交互选项。",
@@ -40,6 +41,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.7",
+      "changes": [
+        "改善 Duo 小组件对齐、翻页和转屏恢复，修复最后一行图标长按无响应的问题。",
+        "底部 Dock 恢复原有定位方式，角标跟随系统显示权限和当前数量。",
+        "设置滑块支持点击数值直接输入，新增 iOS 18 实验兼容。"
+      ]
+    },
     {
       "version": "0.1.6-1",
       "changes": [
@@ -103,6 +112,7 @@
       ],
       "features": [
         "Duo Home Screen Dock on either side, with all four effects, adjustable length, and independent controls for the status ring, Search, and status bar",
+        "Drag Settings sliders or tap their values to enter a number",
         "Stack with depth, inertia, snapping, and saved rotation",
         "Magnification with graduated icon sizes, adaptive spacing, optional release-to-open, and move-away cancellation",
         "Drum with a single scrolling strip and smaller edge icons, without a rear row",
@@ -115,12 +125,12 @@
         "English, Simplified Chinese, and Traditional Chinese settings follow the system language"
       ],
       "compatibility": [
-        "iPhone · iOS 15.x–17.x / iOS 26.x (experimental)",
+        "iPhone · iOS 15.x–17.x / iOS 18.x and 26.x (experimental)",
         "Rootless",
         "RootHide",
         "Standard Dock / externally enabled Floating Dock"
       ],
-      "notice": "Duo works on the iPhone Home Screen in portrait with the standard Dock. Some iOS 16 devices may still show a brief icon jump when returning to the Home Screen. iOS 26 support is experimental. A separate tweak can enable the optional Floating Dock.",
+      "notice": "Duo works on the iPhone Home Screen in portrait with the standard Dock. Some iOS 16 devices may still show a brief icon jump when returning to the Home Screen. iOS 18 and iOS 26 support is experimental. A separate tweak can enable the optional Floating Dock.",
       "usage": [
         "Open Settings → KineticDock after installation and turn on the main switch.",
         "Choose Stack, Magnification, Drum, or Turntable, then adjust appearance and interaction options.",
@@ -131,6 +141,14 @@
         "RootHide users on an older version should upgrade directly to this release before uninstalling; do not uninstall the older version first."
       ],
       "changelog": [
+        {
+          "version": "0.1.7",
+          "changes": [
+            "Improved Duo widget alignment, paging, and rotation recovery, and fixed long-press on icons in the last row.",
+            "Restored the original bottom Dock positioning and matched badges to the system’s display permissions and current counts.",
+            "Tap a Settings slider value to enter it directly. Added experimental iOS 18 support."
+          ]
+        },
         {
           "version": "0.1.6-1",
           "changes": [
