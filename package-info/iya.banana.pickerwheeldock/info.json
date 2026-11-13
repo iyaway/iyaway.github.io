@@ -42,6 +42,12 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.7-1",
+      "changes": [
+        "修复 Dock 角标有时不会自动刷新、应用清零后仍显示旧数字的问题。"
+      ]
+    },
+    {
       "version": "0.1.7",
       "changes": [
         "改善 Duo 小组件对齐、翻页和转屏恢复，修复最后一行图标长按无响应的问题。",
@@ -141,6 +147,12 @@
         "RootHide users on an older version should upgrade directly to this release before uninstalling; do not uninstall the older version first."
       ],
       "changelog": [
+        {
+          "version": "0.1.7-1",
+          "changes": [
+            "Fixed stale Dock badges that sometimes failed to update or clear after an app reset its badge count."
+          ]
+        },
         {
           "version": "0.1.7",
           "changes": [
