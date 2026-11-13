@@ -43,8 +43,7 @@
     {
       "version": "0.1.6-1",
       "changes": [
-        "新增 Duo 主屏幕侧栏，可选左侧或右侧，支持四种动效，并可调长度、星环、搜索和状态栏。",
-        "关闭测试版的应用内侧边呼出，隐藏对应设置入口。"
+        "新增 Duo 主屏幕侧栏，可选左侧或右侧，支持四种动效，并可调长度、星环、搜索和状态栏。"
       ]
     },
     {
@@ -135,8 +134,7 @@
         {
           "version": "0.1.6-1",
           "changes": [
-            "Added the Duo Home Screen Dock on either side, with all four effects, adjustable length, and controls for the status ring, Search, and status bar.",
-            "Disabled the experimental in-app Dock pull-out and hid its Settings switch."
+            "Added the Duo Home Screen Dock on either side, with all four effects, adjustable length, and controls for the status ring, Search, and status bar."
           ]
         },
         {
