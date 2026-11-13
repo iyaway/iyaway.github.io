@@ -42,6 +42,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.1.7-2",
+      "changes": [
+        "改善 Duo 与 iOS27 Animation 的兼容性，减少解锁和从应用返回桌面时图标短暂跳位。",
+        "改善切换浅色和深色外观时的 Duo 布局稳定性。"
+      ]
+    },
+    {
       "version": "0.1.7-1",
       "changes": [
         "修复 Dock 角标有时不会自动刷新、应用清零后仍显示旧数字的问题。"
@@ -147,6 +154,13 @@
         "RootHide users on an older version should upgrade directly to this release before uninstalling; do not uninstall the older version first."
       ],
       "changelog": [
+        {
+          "version": "0.1.7-2",
+          "changes": [
+            "Improved Duo compatibility with iOS27 Animation to reduce brief icon jumps when unlocking or returning to the Home Screen from an app.",
+            "Improved Duo layout stability when switching between Light and Dark appearance."
+          ]
+        },
         {
           "version": "0.1.7-1",
           "changes": [
