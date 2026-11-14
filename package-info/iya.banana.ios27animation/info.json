@@ -46,6 +46,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.0.12-1",
+      "changes": [
+        "改善授权恢复与续签失败后的重试，减少需要重装的情况。",
+        "普通续签可复用加密核心，减少重复下载。已有激活和 72 小时离线授权保持有效。"
+      ]
+    },
+    {
       "version": "1.0.11",
       "changes": [
         "修复打开和最小化 App 时，图标形变未完整覆盖窗口内容的问题，改善桌面与 Dock 的图标过渡。"
@@ -184,6 +191,13 @@
         "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”. If you use Choicy, allow this tweak to load in SpringBoard so license status can be read."
       ],
       "changelog": [
+        {
+          "version": "1.0.12-1",
+          "changes": [
+            "Improves license recovery and retries after failed renewals, reducing the need to reinstall.",
+            "Routine renewals can reuse the encrypted core to avoid repeated downloads. Existing activations and the 72-hour offline license are preserved."
+          ]
+        },
         {
           "version": "1.0.11",
           "changes": [
