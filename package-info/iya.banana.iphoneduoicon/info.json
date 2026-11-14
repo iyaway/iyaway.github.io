@@ -92,7 +92,9 @@
     "左侧可用音量边框保留内容，左右胶囊可选 Wi-Fi 底边强度标记，拥挤时保留原图标",
     "活动标记支持呼吸圆点、实心圆点、圆环及 REC 样式；右侧可在电话来电响铃时专属显示听筒，结束后恢复原模式",
     "维护页可在备份提醒和手动确认后彻底重置配置，清空旧参数并关闭 Lunora，保留导出的备份及启动失败保护",
-    "胶囊电量支持自定义前缀和后缀，星环顶部电量可选择显示百分号。"
+    "胶囊电量支持自定义前缀和后缀，星环顶部电量可选择显示百分号。",
+    "加入越南语界面，覆盖设置、更新引导、弹窗和胶囊状态文字。越南语翻译：Kitsudo。",
+    "新增可选越南农历，支持数字或越南语月日，并标记闰月。"
   ],
   "compatibility": [
     "iOS 15.1–26（主包不支持 iOS 15.0.x）",
@@ -137,6 +139,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.8",
+      "changes": [
+        "加入越南语界面，覆盖设置、更新引导、弹窗和胶囊状态文字。越南语翻译：Kitsudo。",
+        "新增可选越南农历，支持数字或越南语月日，并标记闰月。",
+        "明确按电量配色的黄色区间为超过 20% 且不超过 60%。"
+      ]
+    },
     {
       "version": "1.1.7",
       "changes": [
@@ -467,7 +477,9 @@
         "An optional left volume border preserves content; both capsules offer Wi-Fi bottom strength marks with the original icon retained when space is limited",
         "Choose pulsing dots, solid dots, rings or REC activity marks; optionally show a handset while an incoming phone call rings and restore the current right display afterward",
         "Maintenance offers a complete configuration reset with a backup reminder and manual confirmation, clearing saved settings and turning Lunora off while keeping exported backups and startup protection",
-        "Customize the Capsule battery percentage with a prefix and suffix, and optionally show the percent sign above Orbit."
+        "Customize the Capsule battery percentage with a prefix and suffix, and optionally show the percent sign above Orbit.",
+        "Added Vietnamese for Settings, the update guide, alerts and capsule status text. Vietnamese translation by Kitsudo.",
+        "Added the optional Vietnamese lunar calendar with numeric or Vietnamese month and day text, including leap months."
       ],
       "compatibility": [
         "iOS 15.1–26 (the main package does not support iOS 15.0.x)",
@@ -511,6 +523,14 @@
         "Export a configuration backup before choosing Completely Reset Configuration in Maintenance. Confirming clears saved settings and leaves Lunora off without reloading SpringBoard; exported backups and startup protection are kept."
       ],
       "changelog": [
+        {
+          "version": "1.1.8",
+          "changes": [
+            "Added Vietnamese for Settings, the update guide, alerts and capsule status text. Vietnamese translation by Kitsudo.",
+            "Added the optional Vietnamese lunar calendar with numeric or Vietnamese month and day text, including leap months.",
+            "Clarified that the yellow battery range is above 20% through 60%."
+          ]
+        },
         {
           "version": "1.1.7",
           "changes": [
