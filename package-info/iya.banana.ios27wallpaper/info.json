@@ -9,12 +9,16 @@
   "notice": "支持 iOS 16–18。部分画面、动态细节、横屏及强制 iPad 模式仍在适配。全量“刷新收藏夹”可能移除额外项目并影响相关已保存壁纸，请先保留需要的原始素材。 卸载按常规执行；需要清理本插件收藏入口时请先在设置内手动删除。卸载后不再提供本插件动态效果。",
   "description": [
     "将 iOS 18、26、27 的多款系统壁纸接入系统墙纸图库，在各自系列内切换款式。",
-    "iOS 16／17 提供 9 个系列、42 款；iOS 18 提供 8 个移植系列、37 款，保留系统原有 Fluidity，并在安装后移除本插件的重复资源。"
+    "通过「壁纸库」按系列下载。iOS 16／17 提供 9 个系列、42 款，iOS 18 提供 8 个移植系列、37 款，并保留系统自带的 Fluidity。"
   ],
   "features": [
+    "壁纸库 App 可预览、按系列下载、更新和重新下载。安装包约 0.59 MB，壁纸资源按需下载。",
+    "可从收藏移除系列、恢复入口或确认后删除本机资源。App 内删除失败后，仍可查看并清理残留文件。",
+    "Duo 可切换内屏和外屏构图，选择靠左、居中或靠右，也可拖动和双指捏合。位置和缩放随当前壁纸保存。",
+    "iOS 16 的锁屏编辑页可从「…」打开支持系列的自动、浅色、深色选项，并调节景深。Duo 的位置与缩放也在该菜单。",
     "Pride Luminance：11 款；Fluidity（iOS 18 系列）：5 款，仅在 iOS 16／17 提供移植版本；Space（iOS 26）：5 款。",
     "Celosia：3 款；Flocon：3 款；Jurin：4 款。",
-    "Vitra：4 款；Marble：5 款；V68：2 款。款式在各自系列内切换。",
+    "Vitra 4 款、Marble 5 款、Duo（V68）2 款，款式在各自系列内切换。",
     "支持各系列已适配的解锁、唤醒、明暗和动态效果，具体效果依系列而异。",
     "浅色／深色／自动外观选项：Space、Celosia、V68及移植版Fluidity，选择保存到当前壁纸。",
     "景深效果选项：Space（仅手机模式）、Celosia、Vitra、V68及移植版Fluidity；移植版Fluidity仅在iOS16／17提供。",
@@ -30,12 +34,15 @@
   "compatibility": [
     "支持 iOS 16–18。",
     "Rootless／RootHide 各提供一个统一安装包，按当前越狱环境选择；需要 PreferenceLoader 及可加载系统插件的越狱环境。",
-    "按系统适配壁纸显示、款式选择与动态效果；iOS 18 不重复安装移植版 Fluidity。",
+    "按系统适配壁纸显示、款式选择与动态效果。iOS 18 的壁纸库不提供移植版 Fluidity 下载。",
     "不同设备、系统小版本与横屏／强制 iPad 模式的表现可能不同。"
   ],
   "usage": [
     "在 iOS 16／17／18 按越狱环境安装 Rootless 或 RootHide 包，并按包管理器提示完成必要的环境重新加载。",
     "进入“设置 → 系统壁纸”，确认“启用实时壁纸”已打开。",
+    "从主屏幕打开「壁纸库」，或在插件设置中点「打开壁纸库」。选一个系列预览和下载。从旧版完整包直接升级会保留已安装的系列和已添加的壁纸配置。",
+    "下载或恢复后，打开「设置 → 墙纸 → 添加新墙纸 → 收藏」。如果系列还没出现，回到壁纸库点右上角刷新旁的「重启」，再重新打开「添加新墙纸」。",
+    "从收藏移除后可用本机资源恢复入口。确认删除本机资源可释放空间，已添加的壁纸配置保留。动态效果、编辑和明暗切换需重新下载后恢复。",
     "进入“设置 → 墙纸 → 添加新墙纸 → 收藏”查找系列。收藏缩略图可能不显示系列名称，点入预览后切换款式。",
     "在支持系列的编辑页选择外观或景深，点“完成”保存；取消编辑不会覆盖原选择。V68手动切换款式会退出自动外观。",
     "切换系统外观后，部分预览可能需要退出编辑页再重新进入刷新；无需删除或重新添加壁纸。",
@@ -48,11 +55,19 @@
     "更新后完全退出“设置”再打开，先使用“重新加载壁纸进程”，再打开一次“添加新墙纸”激活新功能。",
     "在“设置 → 系统壁纸 → 管理本插件壁纸”直接查看本机收藏缓存与缩略图，查看列表无需先打开墙纸图库。勾选系列并确认，可移除单项或全部本插件入口；按需结束壁纸进程，保留已保存／当前配置、原素材和其他项目。",
     "需要恢复时点“恢复已移除的入口”，阅读全量刷新风险并确认；随后会打开墙纸图库，完成后返回管理页查看结果。",
-    "如使用Lite测试版，请先卸载Lite，再直接升级完整版0.2.1-1；不要先卸载完整版，已有壁纸无需重新添加。",
-    "曾在0.1.4卸载失败的用户可直接升级0.2.1-1，再正常卸载。如需清理收藏入口，请在卸载前使用管理页手动处理；卸载本身不额外清理收藏。"
+    "如使用Lite测试版，请先卸载Lite，再直接升级完整版0.2.2；不要先卸载完整版，已有壁纸无需重新添加。",
+    "曾在0.1.4卸载失败的用户可直接升级0.2.2，再正常卸载。如需清理收藏入口，请在卸载前使用管理页手动处理；卸载本身不额外清理收藏。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.2.2",
+      "changes": [
+        "新增壁纸库 App，可预览、按系列下载、更新和重新下载。安装包由约 85 MB 缩小到约 0.59 MB，覆盖升级会保留已安装资源和已添加的壁纸。iOS 18 保留系统 Fluidity。刷新旁可重启壁纸进程。",
+        "支持从收藏移除、恢复入口和确认后删除本机资源。删除资源会保留已添加的壁纸配置，重新下载可恢复动态效果、编辑和明暗切换。App 内删除失败后，仍可查看并清理残留文件。联网和文件操作失败时会显示更具体的错误。",
+        "Duo 新增内屏／外屏构图、左中右预设、拖动和双指缩放，调整随壁纸保存。iOS 16 锁屏编辑页的「…」加入 Duo「位置与缩放」及支持系列的自动／浅色／深色外观，并修复景深开关点了无反应的问题。"
+      ]
+    },
     {
       "version": "0.2.1-1",
       "changes": [
@@ -125,12 +140,16 @@
       "notice": "Supports iOS 16–18. Some visuals, animation details, landscape behavior and forced iPad mode remain under adaptation. A full Refresh Collections may remove additional items and affect related saved wallpapers. Keep the original materials you need before proceeding. Uninstall follows the normal system process. Remove owned Collections entries manually in Settings first if needed. Tweak-provided animation is no longer available after uninstall.",
       "description": [
         "Brings selected stock wallpapers from iOS 18, 26 and 27 into the system wallpaper gallery, with looks grouped within each family.",
-        "iOS 16 and 17 include 9 families and 42 looks. iOS 18 includes 8 ported families and 37 looks, keeps the system Fluidity family, and removes this package’s duplicate Fluidity resources after installation."
+        "Download individual collections through Wallpaper Library. iOS 16 and 17 offer 9 families and 42 looks. iOS 18 offers 8 ported families and 37 looks and keeps the system Fluidity collection."
       ],
       "features": [
+        "Wallpaper Library previews, downloads, updates and redownloads collections on demand. The installation package is about 0.59 MB.",
+        "Hide a collection, restore its entry, or confirm removal of downloaded files. If deletion fails in the app, you can still find and remove leftover files.",
+        "Duo supports inner and outer framing, left, center and right presets, drag and pinch. Position and zoom are saved per wallpaper.",
+        "On iOS 16, use the Lock Screen editor’s More menu for Automatic, Light and Dark on supported collections, Depth Effect, and Duo positioning and zoom.",
         "Pride Luminance: 11 looks; Fluidity (iOS 18 family): 5, ported only on iOS 16/17; Space (iOS 26): 5.",
         "Celosia: 3 looks; Flocon: 3; Jurin: 4.",
-        "Vitra: 4 looks; Marble: 5; V68: 2. Select looks within their respective families.",
+        "Vitra has 4 looks, Marble has 5, and Duo (V68) has 2. Switch looks within each family.",
         "Supported unlock, wake, appearance and animation effects vary by family.",
         "Light, Dark and Automatic appearance options for Space, Celosia, V68 and ported Fluidity, saved per wallpaper.",
         "Depth Effect options for Space (phone mode only), Celosia, Vitra, V68 and ported Fluidity. Ported Fluidity is available only on iOS 16/17.",
@@ -146,12 +165,15 @@
       "compatibility": [
         "Supports iOS 16–18.",
         "One unified package for Rootless and one for RootHide; choose the package matching your jailbreak. Requires PreferenceLoader and a jailbreak environment that loads system tweaks.",
-        "Wallpaper display, look selection and animation are adapted by system version; iOS 18 does not install a duplicate ported Fluidity family.",
+        "Wallpaper display, look selection and animation are adapted per iOS version. Wallpaper Library on iOS 18 omits the ported Fluidity download.",
         "Behavior may vary by device, minor OS version, landscape orientation and forced iPad mode."
       ],
       "usage": [
         "On iOS 16, 17 or 18, install the Rootless or RootHide package matching your jailbreak, and complete any environment reload requested by the package manager.",
         "Open Settings → StockWallpapers and confirm Enable Live Wallpapers is on.",
+        "Open Wallpaper Library from the Home Screen or from the tweak’s Settings. Select a collection to preview and download it. Upgrading over the previous full package keeps installed collections and saved wallpaper configurations.",
+        "After downloading or restoring a collection, open Settings → Wallpaper → Add New Wallpaper → Collections. If it is missing, tap Restart next to Refresh in Wallpaper Library, then reopen Add New Wallpaper.",
+        "Restoring a hidden collection can reuse its local files. Confirm Delete Local Files to free storage while keeping saved wallpaper configurations. Download the collection again to restore animation, editing and appearance switching.",
         "Find families in Settings → Wallpaper → Add New Wallpaper → Collections. Thumbnails may not show family names; open a preview to switch looks.",
         "Choose appearance or Depth Effect in a supported family and tap Done to save; cancelling keeps your previous selection. Manually switching V68 looks exits Automatic appearance.",
         "After changing system appearance, some previews may need to be closed and reopened to refresh. You do not need to delete or recreate the wallpaper.",
@@ -164,10 +186,18 @@
         "After updating, close Settings from the app switcher and reopen it. Use Reload Wallpaper Processes, then open Add New Wallpaper once to activate the new code.",
         "Open Settings → StockWallpapers → Manage StockWallpapers Entries to view the local Collections cache and thumbnails directly. Viewing the list does not require opening the wallpaper gallery first. Select families and confirm individual or bulk entry removal. Wallpaper processes stop if needed; saved/current configurations, original resources and other entries are kept.",
         "To restore entries, choose Restore Removed Entries and confirm the full-refresh warning. The wallpaper gallery then opens; return to the manager afterward to check the result.",
-        "If you use a Lite test package, remove Lite before upgrading the full package to 0.2.1-1. Do not uninstall the full package first. Existing wallpapers do not need to be recreated.",
-        "Users whose 0.1.4 uninstall failed can upgrade directly to 0.2.1-1, then uninstall normally. Use the manager before uninstalling if entry cleanup is needed; uninstall itself does not additionally clean Collections."
+        "If you use a Lite test package, remove Lite before upgrading the full package to 0.2.2. Do not uninstall the full package first. Existing wallpapers do not need to be recreated.",
+        "Users whose 0.1.4 uninstall failed can upgrade directly to 0.2.2, then uninstall normally. Use the manager before uninstalling if entry cleanup is needed; uninstall itself does not additionally clean Collections."
       ],
       "changelog": [
+        {
+          "version": "0.2.2",
+          "changes": [
+            "Wallpaper Library previews, downloads and updates collections on demand. The package shrinks from about 85 MB to 0.59 MB. Upgrades keep local resources and saved wallpapers. iOS 18 keeps system Fluidity. Tap Restart next to Refresh.",
+            "Hide or restore Collections entries, or delete local files after confirming. Saved configurations remain. Redownload to restore animation, editing and appearance switching. Find and remove leftover files after failed deletion. Errors give more detail.",
+            "Duo adds inner and outer framing, left/center/right presets, drag and pinch zoom, saved per wallpaper. On iOS 16, the Lock Screen editor’s More menu adds Duo positioning and Automatic/Light/Dark for supported collections. Depth Effect responds to its toggle."
+          ]
+        },
         {
           "version": "0.2.1-1",
           "changes": [
