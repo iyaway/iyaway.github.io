@@ -48,8 +48,7 @@
     {
       "version": "1.0.12-1",
       "changes": [
-        "改善授权恢复与续签失败后的重试，减少需要重装的情况。",
-        "普通续签可复用加密核心，减少重复下载。已有激活和 72 小时离线授权保持有效。"
+        "改善授权恢复和续签重试。"
       ]
     },
     {
@@ -194,8 +193,7 @@
         {
           "version": "1.0.12-1",
           "changes": [
-            "Improves license recovery and retries after failed renewals, reducing the need to reinstall.",
-            "Routine renewals can reuse the encrypted core to avoid repeated downloads. Existing activations and the 72-hour offline license are preserved."
+            "Improves license recovery and renewal retries."
           ]
         },
         {
