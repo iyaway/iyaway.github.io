@@ -2,44 +2,46 @@
   "package": "iya.banana.ios27wallpaper",
   "name": "StockWallpapers",
   "web_name": "系统壁纸",
-  "tagline": "在 iOS 16–18 体验多代系统壁纸与动态效果。",
+  "tagline": "在 iOS 15–18 体验多代系统壁纸与动态效果。",
   "developer": "Banana",
   "tint": "#639BCF",
   "notice_style": "warning",
-  "notice": "支持 iOS 16–18。部分画面、动态细节、横屏及强制 iPad 模式仍在适配。全量“刷新收藏夹”可能移除额外项目并影响相关已保存壁纸，请先保留需要的原始素材。 卸载按常规执行；需要清理本插件收藏入口时请先在设置内手动删除。卸载后不再提供本插件动态效果。",
+  "notice": "支持 iOS 15–18。iOS 15 在「壁纸库 15」选款。以下收藏夹操作提示适用于 iOS 16–18。部分画面、动态细节、横屏及强制 iPad 模式仍在适配。全量“刷新收藏夹”可能移除额外项目并影响相关已保存壁纸，请先保留需要的原始素材。 卸载按常规执行；需要清理本插件收藏入口时请先在设置内手动删除。卸载后不再提供本插件动态效果。",
   "description": [
-    "将 iOS 18、26、27 的多款系统壁纸接入系统墙纸图库，在各自系列内切换款式。",
-    "通过「壁纸库」按系列下载。iOS 16／17 提供 9 个系列、42 款，iOS 18 提供 8 个移植系列、37 款，并保留系统自带的 Fluidity。"
+    "通过壁纸库按系列下载 iOS 18、26、27 的多款系统壁纸。iOS 15 在「壁纸库 15」选款并同时应用到锁屏和主屏，iOS 16–18 从系统墙纸图库添加。",
+    "iOS 15–17 提供 9 个系列、42 款，iOS 18 提供 8 个移植系列、37 款，并保留系统自带的 Fluidity。"
   ],
   "features": [
-    "壁纸库 App 可预览、按系列下载、更新和重新下载。安装包约 0.59 MB，壁纸资源按需下载。",
-    "可从收藏移除系列、恢复入口或确认后删除本机资源。App 内删除失败后，仍可查看并清理残留文件。",
-    "Duo 可切换内屏和外屏构图，选择靠左、居中或靠右，也可拖动和双指捏合。位置和缩放随当前壁纸保存。",
+    "壁纸资源按需下载。iOS 15 的「壁纸库 15」支持款式、自动／浅色／深色外观与 Duo 内外屏构图。",
+    "iOS 16–18：可从收藏移除系列、恢复入口或确认后删除本机资源。App 内删除失败后，仍可查看并清理残留文件。",
+    "iOS 16–18：Duo 可切换内屏和外屏构图，选择靠左、居中或靠右，也可拖动和双指捏合。位置和缩放随当前壁纸保存。",
     "iOS 16 的锁屏编辑页可从「…」打开支持系列的自动、浅色、深色选项，并调节景深。Duo 的位置与缩放也在该菜单。",
-    "Pride Luminance：11 款；Fluidity（iOS 18 系列）：5 款，仅在 iOS 16／17 提供移植版本；Space（iOS 26）：5 款。",
+    "Pride Luminance：11 款；Fluidity（iOS 18 系列）：5 款，仅在 iOS 15–17 提供移植版本；Space（iOS 26）：5 款。",
     "Celosia：3 款；Flocon：3 款；Jurin：4 款。",
     "Vitra 4 款、Marble 5 款、Duo（V68）2 款，款式在各自系列内切换。",
     "支持各系列已适配的解锁、唤醒、明暗和动态效果，具体效果依系列而异。",
     "浅色／深色／自动外观选项：Space、Celosia、V68及移植版Fluidity，选择保存到当前壁纸。",
-    "景深效果选项：Space（仅手机模式）、Celosia、Vitra、V68及移植版Fluidity；移植版Fluidity仅在iOS16／17提供。",
-    "统一启用开关、Celosia 自选颜色、收藏夹管理、精简诊断摘要与完整日志导出。",
+    "iOS 16–18：景深效果选项：Space（仅手机模式）、Celosia、Vitra、V68及移植版Fluidity；移植版Fluidity仅在iOS16／17提供。",
+    "iOS 16–18：统一启用开关、Celosia 自选颜色、收藏夹管理、精简诊断摘要与完整日志导出。",
     "设置名称与文案支持简体中文、繁体中文和英文。",
-    "“清理收藏夹”直接显示本机收藏缓存，提供预览、占用估算与勾选确认；系统、本插件、已保存引用或无法核实的项目受保护。",
-    "列表刷新仅查看现有内容；全量“刷新收藏夹”须确认后执行，不会自动触发。",
-    "卸载按系统常规执行，不额外清理收藏入口；手动删除仍在插件设置中提供。",
-    "“管理本插件壁纸”提供收藏缓存预览，可单独或批量移除本插件入口，保留已保存／当前配置和本机原素材。",
-    "可恢复已移除的本插件入口，无需重新下载素材；恢复前须确认全量刷新提示。",
-    "诊断默认复制精简摘要，也可导出完整日志文件。"
+    "iOS 16–18：“清理收藏夹”直接显示本机收藏缓存，提供预览、占用估算与勾选确认；系统、本插件、已保存引用或无法核实的项目受保护。",
+    "iOS 16–18：列表刷新仅查看现有内容；全量“刷新收藏夹”须确认后执行，不会自动触发。",
+    "iOS 16–18：卸载按系统常规执行，不额外清理收藏入口；手动删除仍在插件设置中提供。",
+    "iOS 16–18：“管理本插件壁纸”提供收藏缓存预览，可单独或批量移除本插件入口，保留已保存／当前配置和本机原素材。",
+    "iOS 16–18：可恢复已移除的本插件入口，无需重新下载素材；恢复前须确认全量刷新提示。",
+    "iOS 16–18：诊断默认复制精简摘要，也可导出完整日志文件。"
   ],
   "compatibility": [
-    "支持 iOS 16–18。",
+    "支持 iOS 15–18。",
     "Rootless／RootHide 各提供一个统一安装包，按当前越狱环境选择；需要 PreferenceLoader 及可加载系统插件的越狱环境。",
     "按系统适配壁纸显示、款式选择与动态效果。iOS 18 的壁纸库不提供移植版 Fluidity 下载。",
     "不同设备、系统小版本与横屏／强制 iPad 模式的表现可能不同。"
   ],
   "usage": [
-    "在 iOS 16／17／18 按越狱环境安装 Rootless 或 RootHide 包，并按包管理器提示完成必要的环境重新加载。",
-    "进入“设置 → 系统壁纸”，确认“启用实时壁纸”已打开。",
+    "按越狱环境安装 Rootless 或 RootHide 包，并按包管理器提示完成必要的环境重新加载。",
+    "iOS 15：从主屏打开「壁纸库 15」，或在「设置 → 系统壁纸 15」打开。下载系列后点选款式，同时应用到锁屏和主屏。可在库内恢复系统壁纸。",
+    "原 iOS 15 独立版用户请在源里搜索 StockWallpapers 并直接安装 0.2.4。升级会保留已下载壁纸和当前选择。",
+    "iOS 16–18：进入「设置 → 系统壁纸」，确认「启用实时壁纸」已打开。此后的系统墙纸图库和收藏夹说明适用于 iOS 16–18。",
     "从主屏幕打开「壁纸库」，或在插件设置中点「打开壁纸库」。选一个系列预览和下载。从旧版完整包直接升级会保留已安装的系列和已添加的壁纸配置。",
     "下载或恢复后，打开「设置 → 墙纸 → 添加新墙纸 → 收藏」。如果系列还没出现，回到壁纸库点右上角刷新旁的「重启」，再重新打开「添加新墙纸」。",
     "从收藏移除后可用本机资源恢复入口。确认删除本机资源可释放空间，已添加的壁纸配置保留。动态效果、编辑和明暗切换需重新下载后恢复。",
@@ -55,11 +57,18 @@
     "更新后完全退出“设置”再打开，先使用“重新加载壁纸进程”，再打开一次“添加新墙纸”激活新功能。",
     "在“设置 → 系统壁纸 → 管理本插件壁纸”直接查看本机收藏缓存与缩略图，查看列表无需先打开墙纸图库。勾选系列并确认，可移除单项或全部本插件入口；按需结束壁纸进程，保留已保存／当前配置、原素材和其他项目。",
     "需要恢复时点“恢复已移除的入口”，阅读全量刷新风险并确认；随后会打开墙纸图库，完成后返回管理页查看结果。",
-    "如使用Lite测试版，请先卸载Lite，再直接升级完整版0.2.2；不要先卸载完整版，已有壁纸无需重新添加。",
-    "曾在0.1.4卸载失败的用户可直接升级0.2.2，再正常卸载。如需清理收藏入口，请在卸载前使用管理页手动处理；卸载本身不额外清理收藏。"
+    "如使用Lite测试版，请先卸载Lite，再直接升级完整版；不要先卸载完整版，已有壁纸无需重新添加。",
+    "曾在0.1.4卸载失败的用户可直接升级本版，再正常卸载。如需清理收藏入口，请在卸载前使用管理页手动处理；卸载本身不额外清理收藏。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.2.4",
+      "changes": [
+        "统一支持 iOS 15–18。iOS 15 在「壁纸库 15」选款，iOS 16–18 从系统墙纸图库添加。",
+        "旧 iOS 15 独立版可直接升级，保留已下载壁纸和当前选择。"
+      ]
+    },
     {
       "version": "0.2.2",
       "changes": [
@@ -136,41 +145,43 @@
   "locales": {
     "en": {
       "name": "StockWallpapers",
-      "tagline": "Enjoy stock wallpaper families and animations on iOS 16–18.",
-      "notice": "Supports iOS 16–18. Some visuals, animation details, landscape behavior and forced iPad mode remain under adaptation. A full Refresh Collections may remove additional items and affect related saved wallpapers. Keep the original materials you need before proceeding. Uninstall follows the normal system process. Remove owned Collections entries manually in Settings first if needed. Tweak-provided animation is no longer available after uninstall.",
+      "tagline": "Enjoy stock wallpaper families and animations on iOS 15–18.",
+      "notice": "Supports iOS 15–18. Choose looks in Wallpaper Library 15 on iOS 15. The following Collections notes apply to iOS 16–18. Some visuals, animation details, landscape behavior and forced iPad mode remain under adaptation. A full Refresh Collections may remove additional items and affect related saved wallpapers. Keep the original materials you need before proceeding. Uninstall follows the normal system process. Remove owned Collections entries manually in Settings first if needed. Tweak-provided animation is no longer available after uninstall.",
       "description": [
-        "Brings selected stock wallpapers from iOS 18, 26 and 27 into the system wallpaper gallery, with looks grouped within each family.",
-        "Download individual collections through Wallpaper Library. iOS 16 and 17 offer 9 families and 42 looks. iOS 18 offers 8 ported families and 37 looks and keeps the system Fluidity collection."
+        "Download selected stock wallpapers from iOS 18, 26 and 27 by collection. On iOS 15, choose a look in Wallpaper Library 15 for both screens. On iOS 16–18, add wallpapers in the system wallpaper gallery.",
+        "iOS 15–17 offer nine collections and 42 looks. iOS 18 offers eight ported collections and 37 looks and keeps the system Fluidity collection."
       ],
       "features": [
-        "Wallpaper Library previews, downloads, updates and redownloads collections on demand. The installation package is about 0.59 MB.",
-        "Hide a collection, restore its entry, or confirm removal of downloaded files. If deletion fails in the app, you can still find and remove leftover files.",
-        "Duo supports inner and outer framing, left, center and right presets, drag and pinch. Position and zoom are saved per wallpaper.",
+        "Download assets on demand. Wallpaper Library 15 offers looks, Automatic, Light and Dark appearances for supported collections, and inner or outer Duo composition.",
+        "iOS 16–18: Hide a collection, restore its entry, or confirm removal of downloaded files. If deletion fails in the app, you can still find and remove leftover files.",
+        "iOS 16–18: Duo supports inner and outer framing, left, center and right presets, drag and pinch. Position and zoom are saved per wallpaper.",
         "On iOS 16, use the Lock Screen editor’s More menu for Automatic, Light and Dark on supported collections, Depth Effect, and Duo positioning and zoom.",
-        "Pride Luminance: 11 looks; Fluidity (iOS 18 family): 5, ported only on iOS 16/17; Space (iOS 26): 5.",
+        "Pride Luminance: 11 looks; Fluidity (iOS 18 family): 5, ported only on iOS 15–17; Space (iOS 26): 5.",
         "Celosia: 3 looks; Flocon: 3; Jurin: 4.",
         "Vitra has 4 looks, Marble has 5, and Duo (V68) has 2. Switch looks within each family.",
         "Supported unlock, wake, appearance and animation effects vary by family.",
         "Light, Dark and Automatic appearance options for Space, Celosia, V68 and ported Fluidity, saved per wallpaper.",
-        "Depth Effect options for Space (phone mode only), Celosia, Vitra, V68 and ported Fluidity. Ported Fluidity is available only on iOS 16/17.",
-        "One enable switch, custom Celosia color, Collections management, compact diagnostic summaries and full log export.",
+        "iOS 16–18: Depth Effect options for Space (phone mode only), Celosia, Vitra, V68 and ported Fluidity. Ported Fluidity is available only on iOS 16/17.",
+        "iOS 16–18: One enable switch, custom Celosia color, Collections management, compact diagnostic summaries and full log export.",
         "Settings names and text in Simplified Chinese, Traditional Chinese and English.",
-        "Clean Up Collections reads the local cache directly, with previews, estimated storage and selection confirmation. System, owned, saved-reference and unverifiable entries are protected.",
-        "List refresh reads existing content. A full Refresh Collections runs only after confirmation and never starts automatically.",
-        "Uninstall follows the normal system process without additional gallery cleanup; manual entry removal remains available in Settings.",
-        "Manage StockWallpapers Entries shows cached previews and offers individual or bulk entry removal, keeping saved/current configurations and installed original resources.",
-        "Restore removed StockWallpapers entries without downloading resources again; restoration requires confirmation of a full refresh.",
-        "Copy compact diagnostic summaries or export the complete log as a file."
+        "iOS 16–18: Clean Up Collections reads the local cache directly, with previews, estimated storage and selection confirmation. System, owned, saved-reference and unverifiable entries are protected.",
+        "iOS 16–18: List refresh reads existing content. A full Refresh Collections runs only after confirmation and never starts automatically.",
+        "iOS 16–18: Uninstall follows the normal system process without additional gallery cleanup; manual entry removal remains available in Settings.",
+        "iOS 16–18: Manage StockWallpapers Entries shows cached previews and offers individual or bulk entry removal, keeping saved/current configurations and installed original resources.",
+        "iOS 16–18: Restore removed StockWallpapers entries without downloading resources again; restoration requires confirmation of a full refresh.",
+        "iOS 16–18: Copy compact diagnostic summaries or export the complete log as a file."
       ],
       "compatibility": [
-        "Supports iOS 16–18.",
+        "Supports iOS 15–18.",
         "One unified package for Rootless and one for RootHide; choose the package matching your jailbreak. Requires PreferenceLoader and a jailbreak environment that loads system tweaks.",
         "Wallpaper display, look selection and animation are adapted per iOS version. Wallpaper Library on iOS 18 omits the ported Fluidity download.",
         "Behavior may vary by device, minor OS version, landscape orientation and forced iPad mode."
       ],
       "usage": [
-        "On iOS 16, 17 or 18, install the Rootless or RootHide package matching your jailbreak, and complete any environment reload requested by the package manager.",
-        "Open Settings → StockWallpapers and confirm Enable Live Wallpapers is on.",
+        "Install the Rootless or RootHide package matching your jailbreak and complete any reload requested by the package manager.",
+        "iOS 15: Open Wallpaper Library 15 from the Home Screen or Settings → StockWallpapers 15. Download a collection and select a look for both screens. You can restore the system wallpaper from the library.",
+        "If you use the previous standalone iOS 15 edition, find StockWallpapers in the repository and install 0.2.4 directly to keep your downloads and selection.",
+        "iOS 16–18: Open Settings → StockWallpapers and confirm Enable Live Wallpapers is on. The following system wallpaper gallery and Collections instructions apply to iOS 16–18.",
         "Open Wallpaper Library from the Home Screen or from the tweak’s Settings. Select a collection to preview and download it. Upgrading over the previous full package keeps installed collections and saved wallpaper configurations.",
         "After downloading or restoring a collection, open Settings → Wallpaper → Add New Wallpaper → Collections. If it is missing, tap Restart next to Refresh in Wallpaper Library, then reopen Add New Wallpaper.",
         "Restoring a hidden collection can reuse its local files. Confirm Delete Local Files to free storage while keeping saved wallpaper configurations. Download the collection again to restore animation, editing and appearance switching.",
@@ -186,10 +197,17 @@
         "After updating, close Settings from the app switcher and reopen it. Use Reload Wallpaper Processes, then open Add New Wallpaper once to activate the new code.",
         "Open Settings → StockWallpapers → Manage StockWallpapers Entries to view the local Collections cache and thumbnails directly. Viewing the list does not require opening the wallpaper gallery first. Select families and confirm individual or bulk entry removal. Wallpaper processes stop if needed; saved/current configurations, original resources and other entries are kept.",
         "To restore entries, choose Restore Removed Entries and confirm the full-refresh warning. The wallpaper gallery then opens; return to the manager afterward to check the result.",
-        "If you use a Lite test package, remove Lite before upgrading the full package to 0.2.2. Do not uninstall the full package first. Existing wallpapers do not need to be recreated.",
-        "Users whose 0.1.4 uninstall failed can upgrade directly to 0.2.2, then uninstall normally. Use the manager before uninstalling if entry cleanup is needed; uninstall itself does not additionally clean Collections."
+        "If you use a Lite test package, remove Lite before upgrading the full package. Do not uninstall the full package first. Existing wallpapers do not need to be recreated.",
+        "Users whose 0.1.4 uninstall failed can upgrade directly to this release, then uninstall normally. Use the manager before uninstalling if entry cleanup is needed; uninstall itself does not additionally clean Collections."
       ],
       "changelog": [
+        {
+          "version": "0.2.4",
+          "changes": [
+            "One package supports iOS 15–18. Choose looks in Wallpaper Library 15 on iOS 15 or in the system wallpaper gallery on iOS 16–18.",
+            "Upgrade directly from the standalone iOS 15 edition to keep your downloads and current selection."
+          ]
+        },
         {
           "version": "0.2.2",
           "changes": [
