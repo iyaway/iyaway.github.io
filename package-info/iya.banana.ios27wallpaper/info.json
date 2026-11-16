@@ -63,6 +63,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.2.4-2",
+      "changes": [
+        "修复使用 RootHide 安装时，软件包配置失败的问题。",
+        "修复部分 iOS 15 设备上应用 Vitra 后进入安全模式的问题，并改善 Space 动态壁纸兼容性。"
+      ]
+    },
+    {
       "version": "0.2.4",
       "changes": [
         "统一支持 iOS 15–18。iOS 15 在「壁纸库 15」选款，iOS 16–18 从系统墙纸图库添加。",
@@ -201,6 +208,13 @@
         "Users whose 0.1.4 uninstall failed can upgrade directly to this release, then uninstall normally. Use the manager before uninstalling if entry cleanup is needed; uninstall itself does not additionally clean Collections."
       ],
       "changelog": [
+        {
+          "version": "0.2.4-2",
+          "changes": [
+            "Fixes a package configuration failure when installing with RootHide.",
+            "Fixes a safe mode issue when applying Vitra on some iOS 15 devices and improves compatibility for the Space live wallpaper."
+          ]
+        },
         {
           "version": "0.2.4",
           "changes": [
