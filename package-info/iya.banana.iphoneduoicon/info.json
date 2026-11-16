@@ -94,7 +94,8 @@
     "维护页可在备份提醒和手动确认后彻底重置配置，清空旧参数并关闭 Lunora，保留导出的备份及启动失败保护",
     "胶囊电量支持自定义前缀和后缀，星环顶部电量可选择显示百分号。",
     "加入越南语界面，覆盖设置、更新引导、弹窗和胶囊状态文字。越南语翻译：Kitsudo。",
-    "新增可选越南农历，支持数字或越南语月日，并标记闰月。"
+    "新增可选越南农历，支持数字或越南语月日，并标记闰月。",
+    "右侧胶囊新增「当前网络名称」预设，随连接显示 Wi-Fi 名称或当前数据卡的运营商名。"
   ],
   "compatibility": [
     "iOS 15.1–26（主包不支持 iOS 15.0.x）",
@@ -139,6 +140,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.1.9",
+      "changes": [
+        "右侧胶囊新增「当前网络名称」预设，随连接显示 Wi-Fi 名称或当前数据卡的运营商名。",
+        "补齐旋转锁定图标，并沿用原有独立显示开关。",
+        "修复与 NiceBarX 共用图标素材时的重复显示，以及状态关闭后的图标残留。"
+      ]
+    },
     {
       "version": "1.1.8",
       "changes": [
@@ -479,7 +488,8 @@
         "Maintenance offers a complete configuration reset with a backup reminder and manual confirmation, clearing saved settings and turning Lunora off while keeping exported backups and startup protection",
         "Customize the Capsule battery percentage with a prefix and suffix, and optionally show the percent sign above Orbit.",
         "Added Vietnamese for Settings, the update guide, alerts and capsule status text. Vietnamese translation by Kitsudo.",
-        "Added the optional Vietnamese lunar calendar with numeric or Vietnamese month and day text, including leap months."
+        "Added the optional Vietnamese lunar calendar with numeric or Vietnamese month and day text, including leap months.",
+        "Added a Current Network Name preset for the right capsule to show the Wi-Fi name or the active data SIM’s carrier."
       ],
       "compatibility": [
         "iOS 15.1–26 (the main package does not support iOS 15.0.x)",
@@ -523,6 +533,14 @@
         "Export a configuration backup before choosing Completely Reset Configuration in Maintenance. Confirming clears saved settings and leaves Lunora off without reloading SpringBoard; exported backups and startup protection are kept."
       ],
       "changelog": [
+        {
+          "version": "1.1.9",
+          "changes": [
+            "Added a Current Network Name preset for the right capsule to show the Wi-Fi name or the active data SIM’s carrier.",
+            "Added fallback artwork for Rotation Lock and retained its individual visibility switch.",
+            "Fixed duplicate icons and icons that lingered after their state was turned off when sharing artwork with NiceBarX."
+          ]
+        },
         {
           "version": "1.1.8",
           "changes": [
