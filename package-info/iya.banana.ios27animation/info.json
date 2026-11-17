@@ -46,6 +46,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.0.12-2",
+      "changes": [
+        "改善启用 26Home 大图标时 App 开合的角标显示。",
+        "优化解锁、收起通知中心和最小化 App 时桌面图标动画的收尾。"
+      ]
+    },
+    {
       "version": "1.0.12-1",
       "changes": [
         "改善授权恢复和续签重试。"
@@ -190,6 +197,13 @@
         "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”. If you use Choicy, allow this tweak to load in SpringBoard so license status can be read."
       ],
       "changelog": [
+        {
+          "version": "1.0.12-2",
+          "changes": [
+            "Improves badge visibility during app transitions with 26Home large icons enabled.",
+            "Refines how Home Screen icon animations settle after unlocking, dismissing Notification Center, and minimizing an app."
+          ]
+        },
         {
           "version": "1.0.12-1",
           "changes": [
