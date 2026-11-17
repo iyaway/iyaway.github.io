@@ -77,6 +77,12 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "0.9.22",
+      "changes": [
+        "修复 iOS 15 在「设置 → 墙纸 → 选取新墙纸」中可能卡住的问题，保留设置中的图标样式。"
+      ]
+    },
+    {
       "version": "0.9.21",
       "changes": [
         "优化 iOS 16 和 17 深色图标模式下的桌面翻页，减少重复取图与文件夹缩略图刷新。",
@@ -308,6 +314,12 @@
         "Large icon packs need no splitting or recompression when they fit the import limits. Review imported, duplicate and skipped counts; uncovered apps retain the existing native or algorithm fallback."
       ],
       "changelog": [
+        {
+          "version": "0.9.22",
+          "changes": [
+            "Fixes a possible freeze in Settings → Wallpaper → Choose a New Wallpaper on iOS 15 while preserving icon styling in Settings."
+          ]
+        },
         {
           "version": "0.9.21",
           "changes": [
