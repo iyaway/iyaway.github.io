@@ -23,7 +23,7 @@
     "浅色／深色／自动外观选项：Space、Celosia、V68及移植版Fluidity，选择保存到当前壁纸。",
     "iOS 16–18：景深效果选项：Space（仅手机模式）、Celosia、Vitra、V68及移植版Fluidity；移植版Fluidity仅在iOS16／17提供。",
     "iOS 16–18：统一启用开关、Celosia 自选颜色、收藏夹管理、精简诊断摘要与完整日志导出。",
-    "设置名称与文案支持简体中文、繁体中文和英文。",
+    "设置和壁纸库支持简体中文、繁体中文、英文和越南语。",
     "iOS 16–18：“清理收藏夹”直接显示本机收藏缓存，提供预览、占用估算与勾选确认；系统、本插件、已保存引用或无法核实的项目受保护。",
     "iOS 16–18：列表刷新仅查看现有内容；全量“刷新收藏夹”须确认后执行，不会自动触发。",
     "iOS 16–18：卸载按系统常规执行，不额外清理收藏入口；手动删除仍在插件设置中提供。",
@@ -40,7 +40,7 @@
   "usage": [
     "按越狱环境安装 Rootless 或 RootHide 包，并按包管理器提示完成必要的环境重新加载。",
     "iOS 15：从主屏打开「壁纸库 15」，或在「设置 → 系统壁纸 15」打开。下载系列后点选款式，同时应用到锁屏和主屏。可在库内恢复系统壁纸。",
-    "原 iOS 15 独立版用户请在源里搜索 StockWallpapers 并直接安装 0.2.4。升级会保留已下载壁纸和当前选择。",
+    "原 iOS 15 独立版用户可在源里搜索 StockWallpapers 并直接升级到最新版，保留已下载壁纸和当前选择。",
     "iOS 16–18：进入「设置 → 系统壁纸」，确认「启用实时壁纸」已打开。此后的系统墙纸图库和收藏夹说明适用于 iOS 16–18。",
     "从主屏幕打开「壁纸库」，或在插件设置中点「打开壁纸库」。选一个系列预览和下载。从旧版完整包直接升级会保留已安装的系列和已添加的壁纸配置。",
     "下载或恢复后，打开「设置 → 墙纸 → 添加新墙纸 → 收藏」。如果系列还没出现，回到壁纸库点右上角刷新旁的「重启」，再重新打开「添加新墙纸」。",
@@ -62,6 +62,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.2.4-3",
+      "changes": [
+        "改善短屏 iPhone 的壁纸构图，修正 Duo 横移时的取景。",
+        "降低旧款 iOS 16 设备播放 Space 动态壁纸时的渲染负载。",
+        "设置和壁纸库新增越南语，并补齐英文 App 名称。"
+      ]
+    },
     {
       "version": "0.2.4-2",
       "changes": [
@@ -170,7 +178,7 @@
         "Light, Dark and Automatic appearance options for Space, Celosia, V68 and ported Fluidity, saved per wallpaper.",
         "iOS 16–18: Depth Effect options for Space (phone mode only), Celosia, Vitra, V68 and ported Fluidity. Ported Fluidity is available only on iOS 16/17.",
         "iOS 16–18: One enable switch, custom Celosia color, Collections management, compact diagnostic summaries and full log export.",
-        "Settings names and text in Simplified Chinese, Traditional Chinese and English.",
+        "Settings and Wallpaper Library support Simplified Chinese, Traditional Chinese, English and Vietnamese.",
         "iOS 16–18: Clean Up Collections reads the local cache directly, with previews, estimated storage and selection confirmation. System, owned, saved-reference and unverifiable entries are protected.",
         "iOS 16–18: List refresh reads existing content. A full Refresh Collections runs only after confirmation and never starts automatically.",
         "iOS 16–18: Uninstall follows the normal system process without additional gallery cleanup; manual entry removal remains available in Settings.",
@@ -187,7 +195,7 @@
       "usage": [
         "Install the Rootless or RootHide package matching your jailbreak and complete any reload requested by the package manager.",
         "iOS 15: Open Wallpaper Library 15 from the Home Screen or Settings → StockWallpapers 15. Download a collection and select a look for both screens. You can restore the system wallpaper from the library.",
-        "If you use the previous standalone iOS 15 edition, find StockWallpapers in the repository and install 0.2.4 directly to keep your downloads and selection.",
+        "If you use the previous standalone iOS 15 edition, upgrade directly to the latest StockWallpapers to keep your downloads and selection.",
         "iOS 16–18: Open Settings → StockWallpapers and confirm Enable Live Wallpapers is on. The following system wallpaper gallery and Collections instructions apply to iOS 16–18.",
         "Open Wallpaper Library from the Home Screen or from the tweak’s Settings. Select a collection to preview and download it. Upgrading over the previous full package keeps installed collections and saved wallpaper configurations.",
         "After downloading or restoring a collection, open Settings → Wallpaper → Add New Wallpaper → Collections. If it is missing, tap Restart next to Refresh in Wallpaper Library, then reopen Add New Wallpaper.",
@@ -208,6 +216,14 @@
         "Users whose 0.1.4 uninstall failed can upgrade directly to this release, then uninstall normally. Use the manager before uninstalling if entry cleanup is needed; uninstall itself does not additionally clean Collections."
       ],
       "changelog": [
+        {
+          "version": "0.2.4-3",
+          "changes": [
+            "Improved wallpaper framing on shorter iPhone displays and corrected Duo panning.",
+            "Reduced Space live wallpaper rendering load on older iOS 16 devices.",
+            "Added Vietnamese to Settings and Wallpaper Library and completed the English app names."
+          ]
+        },
         {
           "version": "0.2.4-2",
           "changes": [
