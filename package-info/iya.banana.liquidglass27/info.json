@@ -1,0 +1,99 @@
+{
+  "package": "iya.banana.liquidglass27",
+  "name": "LiquidGlass27",
+  "developer": "Banana",
+  "tint": "#3185E8",
+  "tagline": "为 iOS 15–18 带来可独立调节的液态玻璃界面。",
+  "notice_style": "warning",
+  "notice": "插件设有崩溃保护，如果发现安装后无玻璃效果，请看插件设置最上方是否有退出保护的字样。如果有请退出保护，如果不能退出，请提供相关诊断文件和 ips 文件。",
+  "description": [
+    "LiquidGlass27 为系统界面及 App 中的标准组件带来液态玻璃外观，可按喜好统一调整，也可为不同模块单独配置。",
+    "覆盖导航与工具栏、底栏、按钮、搜索、菜单、桌面及锁屏等场景，保留原生内容与交互；具体功能随系统版本、机型和 App 使用的组件而变化。"
+  ],
+  "features": [
+    "导航栏与工具栏胶囊按钮、按钮合并及语义图标",
+    "玻璃底栏与拖动选中胶囊的折射效果",
+    "搜索框、分段选择器、系统菜单与弹窗玻璃",
+    "Dock、文件夹、App 资源库、小组件与通知外观",
+    "控制中心、媒体卡片和音量／亮度 HUD 玻璃",
+    "键盘背景玻璃与可选白底对比增强",
+    "锁屏时钟、日期玻璃及支持机型的灵动岛外观",
+    "全局参数与模块独立参数：通透、折射、背景扩散、高光、着色和可读性",
+    "App 黑名单与可直接输入数值的滑块；大多数设置即时生效",
+    "正式激活、载荷在线更新及可手动选择的正式／测试通道",
+    "启动／解锁保护、可见保护状态与手动退出",
+    "简体中文、繁體中文和 English 设置"
+  ],
+  "compatibility": [
+    "iOS 15／16／17；iOS 18 实验性支持",
+    "Rootless／RootHide 越狱环境",
+    "需要有效激活与联网下载对应系统的载荷",
+    "iOS 15／16 的 iMessage 候选条覆盖与键盘闪烁为已知问题"
+  ],
+  "usage": [
+    "安装后前往系统「设置 → LiquidGlass27」，输入激活码并开启所需模块。首次激活需要联网。",
+    "「更新通道」默认正式版，可通过「更新版本」取得载荷；正式版本为 1.0.4。安装或更新载荷后按提示重启服务。测试版需主动选择，也可切回正式版。",
+    "大多数选项即时生效，部分系统缓存界面需要重新打开；启用模块独立参数后可分别调整该模块。",
+    "购买插件：https://buy.bananaiya.com 。中文用户请将 *.bananaiya.com 加入代理规则（走科学上网）。",
+    "QQ 群：1126594257；Discord：https://discord.gg/vzWgenGeX6 ；Banana 越狱源：https://iyaway.github.io/"
+  ],
+  "screenshots": [],
+  "changelog": [
+    {
+      "version": "1.0.4",
+      "changes": [
+        "首次上架，为 iOS 15–18 带来按组件配置的液态玻璃外观。",
+        "支持全局与模块独立参数、App 黑名单、锁屏时间及日期玻璃，并提供白底对比增强选项。",
+        "内置正式激活、正式／测试载荷通道及崩溃保护，可在设置中更新载荷与手动退出保护。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "LiquidGlass27",
+      "tagline": "Customizable Liquid Glass styling for iOS 15–18.",
+      "notice": "This tweak includes crash protection. If glass effects are missing after installation, check the top of its Settings page for “Exit Protection”. If shown, exit protection. If you cannot exit, please provide the relevant diagnostic files and .ips logs.",
+      "description": [
+        "LiquidGlass27 brings Liquid Glass styling to system interfaces and standard app components, with shared settings or independent adjustments for each component.",
+        "Styles navigation and toolbars, tab bars, buttons, search, menus, the Home Screen, and the Lock Screen while preserving native content and interaction. Availability varies by iOS version, device, and app components."
+      ],
+      "features": [
+        "Capsule-shaped navigation and toolbar buttons, grouped buttons, and semantic icons",
+        "Glass tab bars with refraction while dragging the selection capsule",
+        "Glass search fields, segmented controls, system menus, and alerts",
+        "Dock, folders, App Library, widgets, and notifications",
+        "Control Center, media cards, and volume/brightness HUD glass",
+        "Glass keyboard backgrounds with optional white-background contrast enhancement",
+        "Lock Screen clock and date glass, plus Dynamic Island styling on supported devices",
+        "Global and per-component transparency, refraction, diffusion, highlights, tint, and readability settings",
+        "App exclusions, sliders with direct numeric input, and immediate updates for most settings",
+        "License activation, online payload updates, and manually selectable stable and beta channels",
+        "Startup/unlock protection, visible protection status, and manual recovery",
+        "English, Simplified Chinese, and Traditional Chinese settings"
+      ],
+      "compatibility": [
+        "iOS 15/16/17; experimental iOS 18 support",
+        "Rootless and RootHide jailbreak environments",
+        "Valid activation and an internet connection to download the matching payload are required",
+        "iMessage candidate-strip coverage and keyboard flicker on iOS 15/16 are known issues"
+      ],
+      "usage": [
+        "After installation, open Settings → LiquidGlass27, enter your activation code, and enable the components you want. Stay online for initial activation.",
+        "Stable is the default update channel. Use Update Version to download the payload; the stable release is 1.0.4. Restart services when prompted after installation or a payload update. Beta releases require opt-in, and you can switch back to stable.",
+        "Most options apply immediately; some cached system views may need to be reopened. Enable independent parameters to adjust a component separately.",
+        "International purchases currently support PayPal only. If PayPal is available in your region, send a direct message on Discord: https://discord.gg/vzWgenGeX6 .",
+        "QQ group: 1126594257; Discord: https://discord.gg/vzWgenGeX6 ; Banana repository: https://iyaway.github.io/"
+      ],
+      "changelog": [
+        {
+          "version": "1.0.4",
+          "changes": [
+            "First repository release, bringing component-based Liquid Glass styling to iOS 15–18.",
+            "Includes global and per-component settings, app exclusions, Lock Screen clock and date glass, and optional white-background contrast enhancement.",
+            "Includes license activation, stable and beta payload channels, in-settings payload updates, and crash protection with manual recovery."
+          ]
+        }
+      ]
+    }
+  }
+}
