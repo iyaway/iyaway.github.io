@@ -35,19 +35,10 @@
     "「更新通道」默认正式版，可通过「更新版本」取得载荷；正式版本为 1.0.4。安装或更新载荷后按提示重启服务。测试版需主动选择，也可切回正式版。",
     "大多数选项即时生效，部分系统缓存界面需要重新打开；启用模块独立参数后可分别调整该模块。",
     "购买插件：https://buy.bananaiya.com 。中文用户请将 *.bananaiya.com 加入代理规则（走科学上网）。",
-    "QQ 群：1126594257；Discord：https://discord.gg/vzWgenGeX6 ；Banana 越狱源：https://iyaway.github.io/",
-    "iOS 18 从旧版本升级后，请解锁并打开一次「设置 → LiquidGlass27」，以沿用原授权。全新安装随首次激活完成此步骤。"
+    "QQ 群：1126594257；Discord：https://discord.gg/vzWgenGeX6 ；Banana 越狱源：https://iyaway.github.io/"
   ],
   "screenshots": [],
   "changelog": [
-    {
-      "version": "1.0.5",
-      "changes": [
-        "首次解锁后自动校验本机授权，已有用户可继续使用原授权。iOS 18 升级后请打开一次插件设置。",
-        "修复旧测试载荷下线后无法检查更新、刷新授权提示 unsupported_build 的问题，保留所选更新通道。",
-        "新下载的正式与测试载荷支持按次签发追溯。"
-      ]
-    },
     {
       "version": "1.0.4",
       "changes": [
@@ -91,18 +82,9 @@
         "Stable is the default update channel. Use Update Version to download the payload; the stable release is 1.0.4. Restart services when prompted after installation or a payload update. Beta releases require opt-in, and you can switch back to stable.",
         "Most options apply immediately; some cached system views may need to be reopened. Enable independent parameters to adjust a component separately.",
         "International purchases currently support PayPal only. If PayPal is available in your region, send a direct message on Discord: https://discord.gg/vzWgenGeX6 .",
-        "QQ group: 1126594257; Discord: https://discord.gg/vzWgenGeX6 ; Banana repository: https://iyaway.github.io/",
-        "After upgrading on iOS 18, unlock your device and open Settings → LiquidGlass27 once to keep your existing activation. New installations complete this step during initial activation."
+        "QQ group: 1126594257; Discord: https://discord.gg/vzWgenGeX6 ; Banana repository: https://iyaway.github.io/"
       ],
       "changelog": [
-        {
-          "version": "1.0.5",
-          "changes": [
-            "The device verifies its existing activation after the first unlock. Open the tweak settings once after upgrading on iOS 18.",
-            "Fixed update checks and activation refresh for retired beta builds while respecting the selected update channel.",
-            "New stable and beta payloads carry an issuance watermark."
-          ]
-        },
         {
           "version": "1.0.4",
           "changes": [
