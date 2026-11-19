@@ -36,10 +36,18 @@
     "大多数选项即时生效，部分系统缓存界面需要重新打开；启用模块独立参数后可分别调整该模块。",
     "购买插件：https://buy.bananaiya.com 。中文用户请将 *.bananaiya.com 加入代理规则（走科学上网）。",
     "QQ 群：1126594257；Discord：https://discord.gg/vzWgenGeX6 ；Banana 越狱源：https://iyaway.github.io/",
-    "iOS 18 从旧版本升级后，请解锁并打开一次「设置 → LiquidGlass27」，以沿用原授权。全新安装随首次激活完成此步骤。"
+    "iOS 18 从旧版本升级后，请解锁并打开一次「设置 → LiquidGlass27」，以沿用原授权。全新安装随首次激活完成此步骤。",
+    "已激活而玻璃未出现时，升级基座后重新打开插件设置以恢复本机验证，或点一次「刷新授权」。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.5-2",
+      "changes": [
+        "修复部分设备激活或续期成功后玻璃仍未加载的问题。已有用户可打开设置恢复本机验证。",
+        "改进解锁后的自动恢复，以及退出保护后重新加载桌面的可靠性。"
+      ]
+    },
     {
       "version": "1.0.5",
       "changes": [
@@ -92,9 +100,17 @@
         "Most options apply immediately; some cached system views may need to be reopened. Enable independent parameters to adjust a component separately.",
         "International purchases currently support PayPal only. If PayPal is available in your region, send a direct message on Discord: https://discord.gg/vzWgenGeX6 .",
         "QQ group: 1126594257; Discord: https://discord.gg/vzWgenGeX6 ; Banana repository: https://iyaway.github.io/",
-        "After upgrading on iOS 18, unlock your device and open Settings → LiquidGlass27 once to keep your existing activation. New installations complete this step during initial activation."
+        "After upgrading on iOS 18, unlock your device and open Settings → LiquidGlass27 once to keep your existing activation. New installations complete this step during initial activation.",
+        "If your activation is valid but glass is missing, reopen the tweak settings after updating the base or tap Refresh Authorization once."
       ],
       "changelog": [
+        {
+          "version": "1.0.5-2",
+          "changes": [
+            "Fixed an issue where glass could remain unavailable after activation or renewal. Existing users can reopen the tweak settings to recover device verification.",
+            "Improved automatic recovery after unlocking and Home Screen reloads after exiting protection."
+          ]
+        },
         {
           "version": "1.0.5",
           "changes": [
