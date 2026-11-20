@@ -22,7 +22,8 @@
     "App 黑名单与可直接输入数值的滑块；大多数设置即时生效",
     "正式激活、载荷在线更新及可手动选择的正式／测试通道",
     "启动／解锁保护、可见保护状态与手动退出",
-    "简体中文、繁體中文和 English 设置"
+    "简体中文、繁體中文和 English 设置",
+    "在支持的载荷中，可单独开启状态栏玻璃胶囊。"
   ],
   "compatibility": [
     "iOS 15／16／17；iOS 18 实验性支持",
@@ -31,14 +32,21 @@
     "iOS 15／16 的 iMessage 候选条覆盖与键盘闪烁为已知问题"
   ],
   "usage": [
-    "安装后前往系统「设置 → LiquidGlass27」，输入激活码并开启所需模块。首次激活需要联网。",
-    "「更新通道」默认正式版，可通过「更新版本」取得载荷；正式版本为 1.0.4。安装或更新载荷后按提示重启服务。测试版需主动选择，也可切回正式版。",
+    "首次安装后，联网打开「设置 → LiquidGlass27」并输入激活码。已激活的用户可直接覆盖升级，需要续期时点「刷新授权」。",
+    "基座和载荷分别更新。「更新通道」默认正式版；要试用新载荷，请选择「测试版」并点「更新版本」，完成后按提示重启服务。",
     "大多数选项即时生效，部分系统缓存界面需要重新打开；启用模块独立参数后可分别调整该模块。",
     "购买插件：https://buy.bananaiya.com 。中文用户请将 *.bananaiya.com 加入代理规则（走科学上网）。",
     "QQ 群：1126594257；Discord：https://discord.gg/vzWgenGeX6 ；Banana 越狱源：https://iyaway.github.io/"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.6",
+      "changes": [
+        "升级基座后可沿用原有授权，支持绑定本机的加密载荷。",
+        "新增「状态栏玻璃胶囊」开关，安装支持的载荷后可在设置中开启。"
+      ]
+    },
     {
       "version": "1.0.4",
       "changes": [
@@ -69,7 +77,8 @@
         "App exclusions, sliders with direct numeric input, and immediate updates for most settings",
         "License activation, online payload updates, and manually selectable stable and beta channels",
         "Startup/unlock protection, visible protection status, and manual recovery",
-        "English, Simplified Chinese, and Traditional Chinese settings"
+        "English, Simplified Chinese, and Traditional Chinese settings",
+        "An optional Status Bar Glass Capsules switch for compatible payloads."
       ],
       "compatibility": [
         "iOS 15/16/17; experimental iOS 18 support",
@@ -78,13 +87,20 @@
         "iMessage candidate-strip coverage and keyboard flicker on iOS 15/16 are known issues"
       ],
       "usage": [
-        "After installation, open Settings → LiquidGlass27, enter your activation code, and enable the components you want. Stay online for initial activation.",
-        "Stable is the default update channel. Use Update Version to download the payload; the stable release is 1.0.4. Restart services when prompted after installation or a payload update. Beta releases require opt-in, and you can switch back to stable.",
+        "For a first installation, open Settings → LiquidGlass27 while online and enter your activation code. If already activated, install the update over your existing version and use Refresh Authorization when renewal is needed.",
+        "The base package and payload update separately. Stable is the default channel. To try a beta payload, select Beta, tap Update Version, and restart services when prompted.",
         "Most options apply immediately; some cached system views may need to be reopened. Enable independent parameters to adjust a component separately.",
         "International purchases currently support PayPal only. If PayPal is available in your region, send a direct message on Discord: https://discord.gg/vzWgenGeX6 .",
         "QQ group: 1126594257; Discord: https://discord.gg/vzWgenGeX6 ; Banana repository: https://iyaway.github.io/"
       ],
       "changelog": [
+        {
+          "version": "1.0.6",
+          "changes": [
+            "Keep your existing activation when upgrading the base package, with support for device-bound encrypted payloads.",
+            "Adds a Status Bar Glass Capsules switch in Settings for use with compatible payloads."
+          ]
+        },
         {
           "version": "1.0.4",
           "changes": [
