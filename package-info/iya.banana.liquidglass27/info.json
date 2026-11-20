@@ -23,7 +23,8 @@
     "正式激活、载荷在线更新及可手动选择的正式／测试通道",
     "启动／解锁保护、可见保护状态与手动退出",
     "简体中文、繁體中文和 English 设置",
-    "在支持的载荷中，可单独开启状态栏玻璃胶囊。"
+    "在支持的载荷中，可单独开启状态栏玻璃胶囊。",
+    "支持动态设置，组件选项随已安装的载荷更新。"
   ],
   "compatibility": [
     "iOS 15／16／17；iOS 18 实验性支持",
@@ -40,6 +41,13 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.7",
+      "changes": [
+        "组件设置可随已安装的载荷更新，旧载荷继续使用兼容设置页。",
+        "修正「日期玻璃」开关在部分设备上置灰的问题，并让手机导出的诊断包含载荷加载失败的原因。"
+      ]
+    },
     {
       "version": "1.0.6",
       "changes": [
@@ -78,7 +86,8 @@
         "License activation, online payload updates, and manually selectable stable and beta channels",
         "Startup/unlock protection, visible protection status, and manual recovery",
         "English, Simplified Chinese, and Traditional Chinese settings",
-        "An optional Status Bar Glass Capsules switch for compatible payloads."
+        "An optional Status Bar Glass Capsules switch for compatible payloads.",
+        "Component settings can update with the installed payload."
       ],
       "compatibility": [
         "iOS 15/16/17; experimental iOS 18 support",
@@ -94,6 +103,13 @@
         "QQ group: 1126594257; Discord: https://discord.gg/vzWgenGeX6 ; Banana repository: https://iyaway.github.io/"
       ],
       "changelog": [
+        {
+          "version": "1.0.7",
+          "changes": [
+            "Component settings can update with the installed payload. Older payloads keep their existing settings pages.",
+            "Fixed the Date Glass switch appearing disabled on some devices. Diagnostics exported from the phone now include more detail about payload loading failures."
+          ]
+        },
         {
           "version": "1.0.6",
           "changes": [
