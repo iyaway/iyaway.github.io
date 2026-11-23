@@ -42,6 +42,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.0.8",
+      "changes": [
+        "优化了诊断。",
+        "新增了黑名单 App 选择列表。"
+      ]
+    },
+    {
       "version": "1.0.7",
       "changes": [
         "组件设置可随已安装的载荷更新，旧载荷继续使用兼容设置页。",
@@ -103,6 +110,13 @@
         "QQ group: 1126594257; Discord: https://discord.gg/vzWgenGeX6 ; Banana repository: https://iyaway.github.io/"
       ],
       "changelog": [
+        {
+          "version": "1.0.8",
+          "changes": [
+            "Improved diagnostics.",
+            "Added an app selection list for the blacklist."
+          ]
+        },
         {
           "version": "1.0.7",
           "changes": [
