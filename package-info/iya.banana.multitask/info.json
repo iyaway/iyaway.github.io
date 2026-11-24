@@ -35,7 +35,8 @@
     "普通侧栏单击／双击按首页选择的分屏或浮窗模式启动；拖入指定模式区域时，以拖放目标为准，PullOver 原有交互保留。",
     "设置首页可一键导出诊断文件，包含最近运行日志、版本／系统信息和启动配置摘要。",
     "上下／左右分屏可选择拉伸铺满，让完整画面按宽高独立缩放；默认关闭，分隔条两端菜单可单独切换。",
-    "普通侧栏采用更窄的把手触摸区域，默认向内拉开；从菜单进入高亮移动状态后拖动位置，保留点按打开及原 PullOver 交互。"
+    "普通侧栏采用更窄的把手触摸区域，默认向内拉开；从菜单进入高亮移动状态后拖动位置，保留点按打开及原 PullOver 交互。",
+    "可在设置中隐藏侧栏把手，同时停用侧栏热区和手势；其它启动入口保持可用。"
   ],
   "compatibility": [
     "iOS 15.0～26.x，已越狱设备。",
@@ -63,10 +64,17 @@
     "RootHide 旧版请直接升级修正版，完成升级后再卸载；不要先卸载旧包。",
     "复现问题后，在设置首页“帮助”区域点“导出诊断日志”，通过系统分享面板保存或发送附件，无需手动寻找日志路径。",
     "在“分屏设置 → 上下分／左右分”开启显示完整界面后，可启用“拉伸铺满”；它不会裁切内容，但会改变文字与图像的宽高比例。两端菜单可切换对应应用的拉伸状态。",
-    "普通侧栏把手默认向内拉至少约 16pt 才展开；可在“分屏设置 → 把手操作”选回点按。长按菜单选择“调整把手位置”，变蓝后拖动，松手保存，点把手可取消。"
+    "普通侧栏把手默认向内拉至少约 16pt 才展开；可在“分屏设置 → 把手操作”选回点按。长按菜单选择“调整把手位置”，变蓝后拖动，松手保存，点把手可取消。",
+    "在“分屏设置 → 把手操作”关闭“显示侧栏把手”，侧栏会隐藏，原位置也不再响应手势。重新开启可恢复，已有分屏／浮窗及其它启动方式不受影响。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "0.1.10",
+      "changes": [
+        "新增「显示侧栏把手」开关，关闭后隐藏侧栏入口，并停用对应热区与手势。"
+      ]
+    },
     {
       "version": "0.1.9",
       "changes": [
@@ -192,7 +200,8 @@
         "Normal-sidebar single/double taps follow the main-page split or floating choice; named drop targets override it, and PullOver retains its behavior.",
         "Export recent runtime logs, version/system information and a startup-settings summary from Settings.",
         "Stretch full app content independently in width and height in either split layout; off by default, with per-pane divider-end controls.",
-        "Use a narrower Normal-sidebar handle target with inward-pull opening; highlight it through the position menu to move it, while tap activation and PullOver remain available."
+        "Use a narrower Normal-sidebar handle target with inward-pull opening; highlight it through the position menu to move it, while tap activation and PullOver remain available.",
+        "Hide the sidebar handle and disable the sidebar touch area and gestures, while keeping other launch shortcuts available."
       ],
       "compatibility": [
         "Jailbroken iOS 15.0–26.x.",
@@ -220,9 +229,16 @@
         "On RootHide, directly upgrade the old package to this fixed version before uninstalling; do not remove the old version first.",
         "After reproducing an issue, tap Export diagnostics in the Help section of Settings and save or send the attachment using the system share sheet.",
         "Enable Show full interface under Split settings → Top / Bottom or Left / Right, then choose Stretch to fill. This changes proportions without cropping; divider-end menus can switch stretching for the corresponding app.",
-        "Pull the Normal-sidebar handle inward about 16 pt to open it, or choose Tap in Split settings → Handle interaction. Hold for the menu, choose Adjust handle position, drag after the handle turns blue and release to save; tap it to cancel."
+        "Pull the Normal-sidebar handle inward about 16 pt to open it, or choose Tap in Split settings → Handle interaction. Hold for the menu, choose Adjust handle position, drag after the handle turns blue and release to save; tap it to cancel.",
+        "Turn off Show sidebar handle in Split settings → Handle interaction to hide the sidebar and disable its touch area and gestures. Turn it back on to restore it; existing windows and other launch methods are unchanged."
       ],
       "changelog": [
+        {
+          "version": "0.1.10",
+          "changes": [
+            "Add a Show sidebar handle switch; turning it off hides the sidebar entry and disables its touch area and gestures."
+          ]
+        },
         {
           "version": "0.1.9",
           "changes": [
