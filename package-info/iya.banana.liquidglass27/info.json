@@ -25,7 +25,7 @@
     "简体中文、繁體中文和 English 设置",
     "在支持的载荷中，可单独开启状态栏玻璃胶囊。",
     "支持动态设置，组件选项随已安装的载荷更新。",
-    "国际／国内线路一键切换，购买与授权共用所选线路。"
+    "简体中文设置支持国际／国内线路切换，购买与授权共用所选线路。"
   ],
   "compatibility": [
     "iOS 15／16／17；iOS 18 实验性支持",
@@ -37,11 +37,17 @@
     "首次安装后，联网打开「设置 → LiquidGlass27」并输入激活码。已激活的用户可直接覆盖升级，需要续期时点「刷新授权」。",
     "基座和载荷分别更新。「更新通道」默认正式版；要试用新载荷，请选择「测试版」并点「更新版本」，完成后按提示重启服务。",
     "大多数选项即时生效，部分系统缓存界面需要重新打开；启用模块独立参数后可分别调整该模块。",
-    "可在设置中选择「国际线路」或「国内线路」，购买与授权共用所选线路。国内线路流量有限，请优先留给无法使用国际线路的用户；国内线路不可用时，请配置代理后切换国际线路。",
+    "简体中文设置可选择「国际线路」或「国内线路」，购买与授权共用所选线路。国内线路流量有限，不可用时请配置代理后切换国际线路。其他语言自动使用国际线路。",
     "QQ 群：1126594257；Discord：https://discord.gg/vzWgenGeX6 ；Banana 越狱源：https://iyaway.github.io/"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.9-1",
+      "changes": [
+        "调整线路显示：仅简体中文提供国内线路选项及提示，其他语言自动使用国际线路。"
+      ]
+    },
     {
       "version": "1.0.9",
       "changes": [
@@ -102,8 +108,7 @@
         "Startup/unlock protection, visible protection status, and manual recovery",
         "English, Simplified Chinese, and Traditional Chinese settings",
         "An optional Status Bar Glass Capsules switch for compatible payloads.",
-        "Component settings can update with the installed payload.",
-        "Switch between international and domestic routes for purchases and authorization."
+        "Component settings can update with the installed payload."
       ],
       "compatibility": [
         "iOS 15/16/17; experimental iOS 18 support",
@@ -116,10 +121,15 @@
         "The base package and payload update separately. Stable is the default channel. To try a beta payload, select Beta, tap Update Version, and restart services when prompted.",
         "Most options apply immediately; some cached system views may need to be reopened. Enable independent parameters to adjust a component separately.",
         "International purchases currently support PayPal only. If PayPal is available in your region, send a direct message on Discord: https://discord.gg/vzWgenGeX6 .",
-        "QQ group: 1126594257; Discord: https://discord.gg/vzWgenGeX6 ; Banana repository: https://iyaway.github.io/",
-        "Choose International or Domestic in Settings; purchases and authorization use the selected route. Domestic traffic is limited. If unavailable, configure your proxy and switch to International."
+        "QQ group: 1126594257; Discord: https://discord.gg/vzWgenGeX6 ; Banana repository: https://iyaway.github.io/"
       ],
       "changelog": [
+        {
+          "version": "1.0.9-1",
+          "changes": [
+            "Improved route selection for different languages."
+          ]
+        },
         {
           "version": "1.0.9",
           "changes": [
