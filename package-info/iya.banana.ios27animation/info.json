@@ -47,6 +47,13 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.0.13-1",
+      "changes": [
+        "上滑收回通知中心时，桌面图标保持隐藏，Dock 保持可见。",
+        "松手确认收回后，桌面图标从头播放一次飞入动画；取消手势时不播放。"
+      ]
+    },
+    {
       "version": "1.0.13",
       "changes": [
         "新增锁屏数字密码键盘展开动画，跟随「解锁」动画设置。",
@@ -207,6 +214,13 @@
         "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”. If you use Choicy, allow this tweak to load in SpringBoard so license status can be read."
       ],
       "changelog": [
+        {
+          "version": "1.0.13-1",
+          "changes": [
+            "Home Screen icons stay hidden while you swipe up to dismiss Notification Center. The Dock stays visible.",
+            "When you lift your finger to finish dismissing Notification Center, the icons play their full entrance animation once. Canceling the gesture skips the animation."
+          ]
+        },
         {
           "version": "1.0.13",
           "changes": [
