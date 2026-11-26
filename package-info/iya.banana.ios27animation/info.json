@@ -28,7 +28,8 @@
     "“开启27圆角”开关，可使用系统圆角",
     "iOS 15–17 桌面小组件开合形变，小号、中号、大号可独立设置",
     "中间区域横向形变可选，默认关闭",
-    "iOS 15–18 手势插件唤起通知中心后支持桌面图标收回动画"
+    "iOS 15–18 手势插件唤起通知中心后支持桌面图标收回动画",
+    "新增锁屏数字密码键盘展开动画，跟随「解锁」动画设置。"
   ],
   "compatibility": [
     "iOS15–18",
@@ -45,6 +46,14 @@
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.13",
+      "changes": [
+        "新增锁屏数字密码键盘展开动画，跟随「解锁」动画设置。",
+        "优化原生控制中心首次下拉和收起时的动画衔接。",
+        "修复部分 iOS 18 设备激活时报错 11 的问题。"
+      ]
+    },
     {
       "version": "1.0.12-2",
       "changes": [
@@ -181,7 +190,8 @@
         "Optional iOS27 corners;turn off to use system corners",
         "Home Screen widget morphing on iOS 15–17, with separate switches for small, medium, and large widgets",
         "Optional center icon side warp, off by default",
-        "Home Screen icon animation after dismissing Notification Center opened by gesture tweaks on iOS 15–18"
+        "Home Screen icon animation after dismissing Notification Center opened by gesture tweaks on iOS 15–18",
+        "Adds an entrance animation for the Lock Screen passcode keypad that follows the Unlock animation setting."
       ],
       "compatibility": [
         "iOS15–18",
@@ -197,6 +207,14 @@
         "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”. If you use Choicy, allow this tweak to load in SpringBoard so license status can be read."
       ],
       "changelog": [
+        {
+          "version": "1.0.13",
+          "changes": [
+            "Adds an entrance animation for the Lock Screen passcode keypad that follows the Unlock animation setting.",
+            "Refines the first pull-down and dismissal animations in Control Center.",
+            "Fixes activation error 11 on affected iOS 18 devices."
+          ]
+        },
         {
           "version": "1.0.12-2",
           "changes": [
