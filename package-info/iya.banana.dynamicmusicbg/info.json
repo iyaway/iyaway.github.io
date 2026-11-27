@@ -2,22 +2,22 @@
   "package": "iya.banana.dynamicmusicbg",
   "name": "DynamicMusicBG",
   "web_name": "动态音乐锁屏背景",
-  "tagline": "根据当前音乐封面，在锁屏正在播放控件后方生成流动的动态色彩背景。",
+  "tagline": "让锁屏音乐呈现流动配色、沉浸封面与旋转唱片。",
   "developer": "Banana",
   "tint": "#7C4DFF",
   "description": [
-    "动态音乐锁屏背景会根据完整音乐封面生成更匹配的配色，并在锁屏正在播放控件后方呈现平滑流动的动态背景。",
-    "切换歌曲时颜色自然过渡；暂停播放、开启减弱动态效果或屏幕进入暗显状态时，动画会自动暂停。",
-    "控制 Apple TV 等远程播放设备时，也会根据当前远程封面与播放状态更新背景。"
+    "动态音乐锁屏背景根据完整音乐封面生成自然流动的配色，也可在展开时显示沉浸式专辑封面。",
+    "颜色与封面通过柔和淡入淡出衔接；可独立开启单行时间日期和圆形唱片旋转效果。",
+    "支持本机播放及 Apple TV 等远程播放设备，并可与空间场景、趣味壁纸同时使用。"
   ],
   "features": [
-    "根据完整音乐封面自动生成更匹配的动态色彩背景",
-    "经典流动、氛围流动和轻柔流动三种多层动画效果",
-    "切换歌曲时通过 0.8 秒渐变过渡至新封面配色",
-    "支持 Apple TV 等远程播放设备的封面与播放状态",
-    "播放暂停、减弱动态效果及屏幕暗显时自动暂停动画",
-    "支持调节背景不透明度，并可与空间场景和趣味壁纸同时使用",
-    "设置修改立即生效，并支持 English、简体中文和繁體中文"
+    "经典流动、氛围流动和轻柔流动三种封面配色动画",
+    "可选沉浸封面背景，下半部柔和模糊，并与颜色背景平滑切换",
+    "可选单行时间日期；iOS 16–18 保留原生日期格式和字体，仅在前方添加时间",
+    "iOS 15 使用居中的紧凑时间日期布局，农历位于下一行",
+    "可选圆形唱片旋转，随播放暂停、减弱动态效果及屏幕暗显停止",
+    "切歌时保留新旧封面并平滑渐变，支持 Apple TV 远程封面更新",
+    "支持背景不透明度调节及英文、简体中文、繁体中文设置"
   ],
   "compatibility": [
     "iOS 15–18",
@@ -25,13 +25,21 @@
     "RootHide"
   ],
   "usage": [
-    "安装后打开“设置”中的动态音乐锁屏背景并启用插件。",
-    "选择经典流动、氛围流动或轻柔流动效果。",
-    "如需显示更多下方壁纸，可在外观设置中降低背景不透明度。",
-    "播放带有有效封面的音乐并进入锁屏；正在播放控件出现时，动态背景会自动显示。"
+    "安装后在设置中打开动态音乐锁屏背景，启用插件并播放带有效封面的音乐。",
+    "在展开背景中选择动态颜色或沉浸封面；单行时间日期和旋转唱片可独立开启。",
+    "iOS 16–18 点击锁屏封面展开或收起，收起时恢复大时钟；iOS 15 在锁屏播放控件显示期间直接按设置生效。",
+    "减弱动态效果开启时会减少变换动画；如需透出下方壁纸，可降低背景不透明度。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.16",
+      "changes": [
+        "新增沉浸封面背景，颜色与专辑柔和淡入淡出，切歌过渡更平滑。",
+        "新增单行时间日期及展开／收起动画，保留原生日期格式与字体，并适配 iOS 15 居中布局。",
+        "新增旋转唱片开关，随播放状态联动；修复 iOS 15 安装后启动异常。"
+      ]
+    },
     {
       "version": "1.0.15",
       "changes": [
@@ -60,20 +68,20 @@
   "locales": {
     "en": {
       "name": "DynamicMusicBG",
-      "tagline": "Create a flowing album-art-driven color background behind Lock Screen Now Playing.",
+      "tagline": "Bring flowing colors, immersive covers, and spinning album discs to your Lock Screen.",
       "description": [
-        "DynamicMusicBG uses the complete album artwork to create a better-matched palette and a smoothly animated background behind Lock Screen Now Playing.",
-        "Colors transition naturally when tracks change, while motion pauses automatically when playback pauses, Reduce Motion is enabled, or the display enters its dim state.",
-        "When controlling an Apple TV or another remote playback device, the background also follows the visible remote artwork and playback state."
+        "DynamicMusicBG creates naturally flowing colors from complete album artwork, with an optional immersive cover background when expanded.",
+        "Colors and artwork blend with soft fades. Single-line time and date and circular disc rotation can be enabled independently.",
+        "Supports local playback and remote devices such as Apple TV, alongside SpatialScene and Lenticular Wallpaper."
       ],
       "features": [
-        "Generate a better-matched animated color background from the complete album artwork",
-        "Multi-layer Legacy, Ambient, and Subtle animation styles",
-        "Transition to new artwork colors with a smooth 0.8-second crossfade",
-        "Artwork and playback-state support for Apple TV and other remote playback devices",
-        "Pause motion automatically with playback, Reduce Motion, and display dimming",
-        "Adjust background opacity and coexist with SpatialScene and Lenticular Wallpaper",
-        "Apply Settings changes immediately with English, Simplified Chinese, and Traditional Chinese support"
+        "Legacy, Ambient, and Subtle artwork-driven color animation styles",
+        "Optional immersive artwork with a softly blurred lower area and smooth transitions from colors",
+        "Optional single-line time and date; on iOS 16–18 the original date format and font are preserved with a time prefix",
+        "Centered compact time and date on iOS 15, with the lunar date on the next line",
+        "Optional spinning circular artwork that pauses with playback, Reduce Motion, and display dimming",
+        "Smooth track-change crossfades with old and new artwork, including remote Apple TV updates",
+        "Background opacity control and English, Simplified Chinese, and Traditional Chinese Settings"
       ],
       "compatibility": [
         "iOS 15–18",
@@ -81,12 +89,20 @@
         "RootHide"
       ],
       "usage": [
-        "Open DynamicMusicBG in Settings after installation and enable the tweak.",
-        "Choose the Legacy, Ambient, or Subtle animation style.",
-        "Lower Background Opacity in Appearance to reveal more of the wallpaper underneath.",
-        "Play music with valid artwork and open the Lock Screen; the animated background appears automatically with Now Playing."
+        "Enable DynamicMusicBG in Settings and play music with valid artwork.",
+        "Choose Colors or Artwork under Expanded Background. Single-line time and date and disc rotation are independent options.",
+        "On iOS 16–18, tap Lock Screen artwork to expand or close it; closing restores the large clock. On iOS 15, the chosen options apply directly while Now Playing is visible.",
+        "Reduce Motion reduces transition effects. Lower Background Opacity to reveal more of the wallpaper underneath."
       ],
       "changelog": [
+        {
+          "version": "1.0.16",
+          "changes": [
+            "Added immersive cover backgrounds with soft color-to-artwork fades and smoother track changes.",
+            "Added single-line time/date and expand/collapse animations while preserving native date styling, with a centered layout on iOS 15.",
+            "Added optional spinning album discs linked to playback, and fixed a startup compatibility issue on iOS 15."
+          ]
+        },
         {
           "version": "1.0.15",
           "changes": [
