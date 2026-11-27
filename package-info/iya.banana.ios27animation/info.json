@@ -47,6 +47,12 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.0.13-2",
+      "changes": [
+        "修复将通知中心上拉一半再放回后，再次收起时桌面图标消失的问题。"
+      ]
+    },
+    {
       "version": "1.0.13-1",
       "changes": [
         "上滑收回通知中心时，桌面图标保持隐藏，Dock 保持可见。",
@@ -214,6 +220,12 @@
         "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”. If you use Choicy, allow this tweak to load in SpringBoard so license status can be read."
       ],
       "changelog": [
+        {
+          "version": "1.0.13-2",
+          "changes": [
+            "Fixes Home Screen icons disappearing when you dismiss Notification Center after canceling a partial swipe."
+          ]
+        },
         {
           "version": "1.0.13-1",
           "changes": [
