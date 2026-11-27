@@ -7,7 +7,7 @@
   "tagline": "为iOS15–18带来iOS27风格的系统动画。",
   "notice": "购买插件：https://buy.bananaiya.com 。一个激活码仅限绑定1台设备。只要CF不倒，激活码永久有效。72小时仅为连续离线使用上限，并非授权有效期。升级后首次使用请保持联网。",
   "description": [
-    "iOS27 Animation为App打开与最小化、切换App、解锁、通知、系统窗口、文件夹和控制中心提供iOS27风格的动画。",
+    "iOS27 Animation为App打开与最小化、切换App、解锁、通知、菜单、系统窗口、文件夹和控制中心提供iOS27风格的动画。",
     "支持统一默认配置或各场景独立设置，App打开与最小化可分别调节时长；通知中心动画与弹簧独立控制，圆角可切换系统效果。"
   ],
   "features": [
@@ -29,7 +29,9 @@
     "iOS 15–17 桌面小组件开合形变，小号、中号、大号可独立设置",
     "中间区域横向形变可选，默认关闭",
     "iOS 15–18 手势插件唤起通知中心后支持桌面图标收回动画",
-    "新增锁屏数字密码键盘展开动画，跟随「解锁」动画设置。"
+    "新增锁屏数字密码键盘展开动画，跟随「解锁」动画设置。",
+    "应用内菜单、桌面快捷菜单和底部操作表开合动画，可分别选择配置",
+    "可选通知中心下拉透明背景与松手后的桌面图标发散动画"
   ],
   "compatibility": [
     "iOS15–18",
@@ -42,10 +44,18 @@
     "App打开、最小化时长可分别调整，数值越大越慢；弹簧强度向右滑动越强，也可点击数值直接输入。关闭“开启27圆角”可使用系统圆角；修改从下一次动画生效，无需重载。",
     "换机前请在原设备选择“反激活当前设备”，联网完成后即可释放名额。原设备不可用时，请保留激活码和恢复码并联系管理员。",
     "设置中可复制QQ群号及Banana源地址，并打开Discord社区：https://discord.gg/vzWgenGeX6",
-    "升级后请重新载入桌面，并关闭后重新打开系统“设置”。首次使用请保持联网；原有授权无需重新激活，如出现时间校验提示，请点击“立即续签”。 如使用Choicy，请允许本插件向SpringBoard注入，否则无法读取授权状态。"
+    "升级后请重新载入桌面，并关闭后重新打开系统“设置”。首次使用请保持联网；原有授权无需重新激活，如出现时间校验提示，请点击“立即续签”。 如使用Choicy，请允许本插件向SpringBoard注入，否则无法读取授权状态。",
+    "菜单动画可按类别分别设置；“启用下拉动画”默认关闭，可在通知中心动画设置中开启。"
   ],
   "screenshots": [],
   "changelog": [
+    {
+      "version": "1.0.14",
+      "changes": [
+        "新增应用内菜单、桌面快捷菜单和底部操作表的开合动画，可分别选择配置。",
+        "新增通知中心“启用下拉动画”：下拉时背景透明，松手确认展开后图标快速发散，随后恢复正常背景。"
+      ]
+    },
     {
       "version": "1.0.13-3",
       "changes": [
@@ -188,7 +198,7 @@
       "tagline": "iOS27-style system animations for iOS15–18.",
       "notice": "International purchases currently support PayPal only. If PayPal is available in your region, please send me a direct message on Discord. Discord: https://discord.gg/vzWgenGeX6 . Each activation code is for one device. Activation codes remain valid permanently as long as Cloudflare remains available. The 72-hour limit applies only to continuous offline use, not license validity. Stay online for the first use after upgrading.",
       "description": [
-        "iOS27 Animation brings iOS27-style effects to App opening and minimizing, app switching, unlock, notifications, system windows, folders, and Control Center.",
+        "iOS27 Animation brings iOS27-style effects to app opening and minimizing, app switching, unlock, notifications, menus, system windows, folders, and Control Center.",
         "Use shared or per-scene settings, adjust app opening and minimizing duration separately, configure Notification Center animations and springs independently, and optionally use system corners."
       ],
       "features": [
@@ -210,7 +220,9 @@
         "Home Screen widget morphing on iOS 15–17, with separate switches for small, medium, and large widgets",
         "Optional center icon side warp, off by default",
         "Home Screen icon animation after dismissing Notification Center opened by gesture tweaks on iOS 15–18",
-        "Adds an entrance animation for the Lock Screen passcode keypad that follows the Unlock animation setting."
+        "Adds an entrance animation for the Lock Screen passcode keypad that follows the Unlock animation setting.",
+        "Opening and closing animations for in-app menus, Home Screen quick actions, and action sheets, with independent configuration",
+        "Optional transparent Notification Center pull-down with a quick Home Screen icon spread after release"
       ],
       "compatibility": [
         "iOS15–18",
@@ -223,9 +235,17 @@
         "Adjust opening and minimizing duration separately;higher multipliers slow the animation. Drag spring strength right for a stronger bounce, or enter a value directly. Turn off “Enable iOS27 corners” to use system corners. Changes apply to the next animation without a respring.",
         "Before switching devices, choose “Deactivate This Device” on the old device and complete the operation online to release its slot. If the old device is unavailable, keep your activation and recovery codes and contact the administrator.",
         "Settings includes the QQ group, Banana repository, and Discord community: https://discord.gg/vzWgenGeX6",
-        "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”. If you use Choicy, allow this tweak to load in SpringBoard so license status can be read."
+        "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”. If you use Choicy, allow this tweak to load in SpringBoard so license status can be read.",
+        "Configure menu animations separately by category. The optional pull-down animation is off by default and can be enabled in Notification Center animation settings."
       ],
       "changelog": [
+        {
+          "version": "1.0.14",
+          "changes": [
+            "Adds opening and closing animations for in-app menus, Home Screen quick-action menus, and action sheets, with independent configuration.",
+            "Adds an optional Notification Center pull-down animation: the background stays transparent during the gesture, icons quickly spread out after release confirms opening, then the normal background returns."
+          ]
+        },
         {
           "version": "1.0.13-3",
           "changes": [
