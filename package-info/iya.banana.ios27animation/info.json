@@ -47,6 +47,12 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.0.13-3",
+      "changes": [
+        "在已打开的桌面文件夹中展开或收起通知中心时，图标使用系统动画，改善这一场景的稳定性。"
+      ]
+    },
+    {
       "version": "1.0.13-2",
       "changes": [
         "修复将通知中心上拉一半再放回后，再次收起时桌面图标消失的问题。"
@@ -220,6 +226,12 @@
         "After updating, respring, then fully close and reopen the system Settings app. Stay online for the first use. Existing licenses do not need reactivation; if a time-check message appears, tap “Renew Now”. If you use Choicy, allow this tweak to load in SpringBoard so license status can be read."
       ],
       "changelog": [
+        {
+          "version": "1.0.13-3",
+          "changes": [
+            "Improves stability when opening or dismissing Notification Center from an open Home Screen folder by using the system icon animation."
+          ]
+        },
         {
           "version": "1.0.13-2",
           "changes": [
