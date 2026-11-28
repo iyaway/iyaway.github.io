@@ -50,6 +50,14 @@
   "screenshots": [],
   "changelog": [
     {
+      "version": "1.0.14-1",
+      "changes": [
+        "优化通知中心下拉时桌面图标与 Dock 的同步，改善浮动 Dock 显隐衔接。",
+        "关闭“启用下拉动画”后保留系统下拉表现，收回与解锁动画独立控制。",
+        "优化 App 动画速度设置保存，减少拖动或输入数值时的界面阻塞。"
+      ]
+    },
+    {
       "version": "1.0.14",
       "changes": [
         "新增应用内菜单、桌面快捷菜单和底部操作表的开合动画，可分别选择配置。",
@@ -239,6 +247,14 @@
         "Configure menu animations separately by category. The optional pull-down animation is off by default and can be enabled in Notification Center animation settings."
       ],
       "changelog": [
+        {
+          "version": "1.0.14-1",
+          "changes": [
+            "Refines synchronization and visibility of Home Screen icons and the Dock during Notification Center pull-down, including floating Dock layouts.",
+            "Turning off the pull-down animation keeps the system presentation while dismissal and unlock animations remain independently controlled.",
+            "Improves saving of app animation speed settings to reduce Settings stalls when dragging sliders or entering values."
+          ]
+        },
         {
           "version": "1.0.14",
           "changes": [
