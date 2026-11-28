@@ -1,18 +1,19 @@
 {
   "package": "com.banana.ipadkeyboard",
   "name": "FlickBar",
-  "tagline": "保留 iPhone 原生键盘，加入底部快捷工具栏与字母下滑输入。",
+  "tagline": "保留 iPhone 原生键盘，加入底部快捷工具栏与按键下滑输入。",
   "developer": "Banana",
   "tint": "#1485F5",
   "description": [
     "FlickBar 为 iPhone 系统键盘加入底部编辑快捷工具栏，提供撤销、重做、剪切、复制和粘贴。",
-    "在带提示的字母键上下滑，即可输入对应数字或符号；普通点击仍输入字母。候选栏独立显示，不增加键盘高度。"
+    "下滑带提示的按键即可输入对应数字或符号；支持英文 QWERTY、简体拼音全键盘及九宫格。普通点击保持原生输入，候选栏独立显示，不增加键盘高度。"
   ],
   "features": [
     "底部小图标工具栏：撤销、重做、剪切、复制、粘贴",
     "英文字母 QWERTY 与简体拼音全键盘下滑输入数字或符号",
+    "系统简体拼音九宫格下滑输入数字：标点键 1、字母分组键 2–9、空格键 0",
     "保留 iPhone 原生按键布局和完整候选栏",
-    "首次安装默认关闭，可分别控制工具栏和字母下滑",
+    "首次安装默认关闭，可分别控制工具栏和按键下滑",
     "English、简体中文、繁體中文设置"
   ],
   "compatibility": [
@@ -24,8 +25,8 @@
   ],
   "usage": [
     "安装后打开“设置”→ FlickBar，手动开启总开关。",
-    "按需开启底部编辑工具栏和字母键下滑输入。",
-    "下滑带提示的字母键，例如 q 下滑输入 1；普通点击仍输入字母。",
+    "按需开启底部编辑工具栏和按键下滑输入。",
+    "下滑带提示的按键，例如全键盘 q 下滑输入 1；九宫格标点键下滑为 1、字母分组为 2–9、空格为 0。普通点击保持原生输入。",
     "选中文字后使用剪切、复制；撤销跟随系统编辑分组，可能一次回退连续输入的一整段。",
     "避免同时开启强制更改系统键盘布局的插件。"
   ],
@@ -34,6 +35,13 @@
     "flickbar-keyboard.png"
   ],
   "changelog": [
+    {
+      "version": "0.1.1",
+      "changes": [
+        "新增系统简体拼音九宫格下滑输入数字：标点键为 1、字母分组键为 2–9、空格键为 0。",
+        "保留全键盘原有下滑输入、底部小图标和完整候选栏。"
+      ]
+    },
     {
       "version": "0.1.0",
       "changes": [
@@ -46,14 +54,15 @@
   "locales": {
     "en": {
       "name": "FlickBar",
-      "tagline": "Keep the native iPhone keyboard with a bottom editing toolbar and letter-key flicks.",
+      "tagline": "Keep the native iPhone keyboard with a bottom editing toolbar and key flicks.",
       "description": [
         "FlickBar adds a compact bottom toolbar to the iPhone system keyboard with undo, redo, cut, copy, and paste.",
-        "Flick down on a hinted letter to enter its number or symbol. Normal taps still enter letters; the candidate row stays separate and the keyboard height is unchanged."
+        "Flick down on a hinted key to enter its number or symbol. Supports English QWERTY, Simplified Chinese Pinyin full keyboards, and Pinyin 9-key. Normal taps stay native; the candidate row stays separate and the keyboard height is unchanged."
       ],
       "features": [
         "Compact bottom icons for undo, redo, cut, copy, and paste",
         "Number and symbol flicks on English QWERTY and Simplified Chinese Pinyin letter keys",
+        "Digit flicks on system Simplified Chinese Pinyin 9-key: punctuation for 1, letter groups for 2–9, and space for 0",
         "Native iPhone key layout and full-width candidate row",
         "Disabled on first installation, with separate toolbar and flick controls",
         "English, Simplified Chinese, and Traditional Chinese settings"
@@ -67,13 +76,20 @@
       ],
       "usage": [
         "Open Settings → FlickBar after installation and enable the main switch.",
-        "Enable the editing toolbar and letter-key flicks as needed.",
-        "Flick down on a hinted letter, such as q for 1; normal taps still enter letters.",
+        "Enable the editing toolbar and key flicks as needed.",
+        "Flick down on a hinted key, such as q for 1 on a full keyboard. On Pinyin 9-key, flick punctuation for 1, letter groups for 2–9, or space for 0. Normal taps stay native.",
         "Select text before cutting or copying. Undo follows system editing groups and may revert a whole continuous typing session.",
         "Avoid simultaneously enabling tweaks that force a different system keyboard layout."
       ],
       "notice": "Disabled on first installation; explicitly enabled settings from this release series are preserved on upgrade. The glass and background styling in the screenshot are not supplied by FlickBar.",
       "changelog": [
+        {
+          "version": "0.1.1",
+          "changes": [
+            "Added digit flicks to Simplified Chinese Pinyin 9-key: punctuation for 1, letter groups for 2–9, and space for 0.",
+            "Preserved existing full-keyboard flicks, compact bottom icons, and the full-width candidate row."
+          ]
+        },
         {
           "version": "0.1.0",
           "changes": [
