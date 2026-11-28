@@ -1,0 +1,88 @@
+{
+  "package": "com.banana.ipadkeyboard",
+  "name": "FlickBar",
+  "tagline": "保留 iPhone 原生键盘，加入底部快捷工具栏与字母下滑输入。",
+  "developer": "Banana",
+  "tint": "#1485F5",
+  "description": [
+    "FlickBar 为 iPhone 系统键盘加入底部编辑快捷工具栏，提供撤销、重做、剪切、复制和粘贴。",
+    "在带提示的字母键上下滑，即可输入对应数字或符号；普通点击仍输入字母。候选栏独立显示，不增加键盘高度。"
+  ],
+  "features": [
+    "底部小图标工具栏：撤销、重做、剪切、复制、粘贴",
+    "英文字母 QWERTY 与简体拼音全键盘下滑输入数字或符号",
+    "保留 iPhone 原生按键布局和完整候选栏",
+    "首次安装默认关闭，可分别控制工具栏和字母下滑",
+    "English、简体中文、繁體中文设置"
+  ],
+  "compatibility": [
+    "iOS 15–17，iPhone 系统键盘",
+    "Rootless 与 RootHide",
+    "底部工具栏需要地球键与麦克风之间的原生留白；部分 Home 键机型、横屏或其他布局可能隐藏工具栏",
+    "其他键盘布局保持原样；第三方输入法不保证支持",
+    "实机覆盖仍有限，iOS 16 尚未完成真机验证"
+  ],
+  "usage": [
+    "安装后打开“设置”→ FlickBar，手动开启总开关。",
+    "按需开启底部编辑工具栏和字母键下滑输入。",
+    "下滑带提示的字母键，例如 q 下滑输入 1；普通点击仍输入字母。",
+    "选中文字后使用剪切、复制；撤销跟随系统编辑分组，可能一次回退连续输入的一整段。",
+    "避免同时开启强制更改系统键盘布局的插件。"
+  ],
+  "notice": "首次安装默认关闭，升级保留本版本系列中已明确开启的设置。截图中的玻璃和背景美化不属于 FlickBar 提供的功能。",
+  "screenshots": [
+    "flickbar-keyboard.png"
+  ],
+  "changelog": [
+    {
+      "version": "0.1.0",
+      "changes": [
+        "新增底部撤销、重做、剪切、复制与粘贴快捷工具栏。",
+        "支持字母键下滑输入数字和符号，保留原生键盘布局与完整候选栏。",
+        "首次安装默认关闭，提供中英繁三语设置与独立功能开关。"
+      ]
+    }
+  ],
+  "locales": {
+    "en": {
+      "name": "FlickBar",
+      "tagline": "Keep the native iPhone keyboard with a bottom editing toolbar and letter-key flicks.",
+      "description": [
+        "FlickBar adds a compact bottom toolbar to the iPhone system keyboard with undo, redo, cut, copy, and paste.",
+        "Flick down on a hinted letter to enter its number or symbol. Normal taps still enter letters; the candidate row stays separate and the keyboard height is unchanged."
+      ],
+      "features": [
+        "Compact bottom icons for undo, redo, cut, copy, and paste",
+        "Number and symbol flicks on English QWERTY and Simplified Chinese Pinyin letter keys",
+        "Native iPhone key layout and full-width candidate row",
+        "Disabled on first installation, with separate toolbar and flick controls",
+        "English, Simplified Chinese, and Traditional Chinese settings"
+      ],
+      "compatibility": [
+        "iOS 15–17, iPhone system keyboard",
+        "Rootless and RootHide",
+        "The toolbar requires native space between the globe and microphone; some Home-button devices, landscape modes, or other layouts may hide it",
+        "Other layouts remain unchanged; third-party keyboards are not guaranteed",
+        "Physical-device coverage remains limited; iOS 16 has not been validated on a physical device"
+      ],
+      "usage": [
+        "Open Settings → FlickBar after installation and enable the main switch.",
+        "Enable the editing toolbar and letter-key flicks as needed.",
+        "Flick down on a hinted letter, such as q for 1; normal taps still enter letters.",
+        "Select text before cutting or copying. Undo follows system editing groups and may revert a whole continuous typing session.",
+        "Avoid simultaneously enabling tweaks that force a different system keyboard layout."
+      ],
+      "notice": "Disabled on first installation; explicitly enabled settings from this release series are preserved on upgrade. The glass and background styling in the screenshot are not supplied by FlickBar.",
+      "changelog": [
+        {
+          "version": "0.1.0",
+          "changes": [
+            "Added a bottom editing toolbar with undo, redo, cut, copy, and paste.",
+            "Added letter-key number and symbol flicks while preserving the native layout and full-width candidate row.",
+            "Disabled on first installation, with separate feature controls and English, Simplified Chinese, and Traditional Chinese settings."
+          ]
+        }
+      ]
+    }
+  }
+}
